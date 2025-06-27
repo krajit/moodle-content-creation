@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercise Problem</title>
+</head>
+<body>
+<h2 id="exercise-problem-description">Exercise problem description</h2>
+<p><strong>Question</strong> What is the capital of India?</p>
+<div id="ans" style="display: none;">
+<strong>Ans</strong> New Delhi
+</div>
+<button onclick="
+  const ans = this.previousElementSibling;
+  const showing = ans.style.display !== &#39;none&#39;;
+  ans.style.display = showing ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = showing ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+</body>
+</html>
