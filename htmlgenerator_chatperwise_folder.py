@@ -4,8 +4,8 @@ import subprocess
 from pathlib import Path
 
 # === Settings ===
-input_md = "source_folderWiseChapter.md"
-output_root = Path("output_pages_folder")
+input_md = "source3.md"
+output_root = Path("output_pages_folder4")
 output_root.mkdir(exist_ok=True)
 
 # === Read the full Markdown file ===
