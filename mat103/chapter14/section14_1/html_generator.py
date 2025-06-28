@@ -31,7 +31,7 @@ for i, page in enumerate(pages, start=1):
         def _repl(match):
             inner = match.group(1).strip()
             return f"""
-<button onclick="
+<button class='btn btn-info' onclick="
   const ans = this.nextElementSibling;
   const isVisible = ans.style.display !== 'none';
   ans.style.display = isVisible ? 'none' : 'block';
@@ -55,6 +55,13 @@ for i, page in enumerate(pages, start=1):
         img_file = Path(img).name
         src_path = script_dir / img_file
         dest_dir = chapter_dir
+        dest_dir.mkdir(exist_ok=True)
+        dest_path = dest_dir / img_file
+        if src_path.exists():
+            shutil.copy(src_path, dest_path)
+        else:
+            print(f"⚠️  Image not found: {src_path}")
+
     # === Write temp markdown file for Pandoc ===
     md_path = chapter_dir / "temp.md"
     with open(md_path, "w", encoding="utf-8") as f:

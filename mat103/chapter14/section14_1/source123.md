@@ -41,7 +41,7 @@ Find and sketch the domain of $$f(x,y) = \frac{\sqrt{x+y+1}}{x-1}$$.
 $$
 D = \{ (x, y) \mid x + y + 1 \geq 0,\ x \neq 1 \}
 $$
-![alt text](image.png)
+![](image.png)
 </ans>
 
 ---------------
@@ -56,7 +56,7 @@ $$
 D = \{(x,y) | x < y^2\}
 $$
 
-![alt text](image-1.png)
+![](image-1.png)
 </ans>
 
 
@@ -70,7 +70,7 @@ Find and sketch the domain of $g(x, y) = \sqrt{ 9 - x^2 - y^2}$.
 $$
 D = \{(x, y) \mid 9 - x^2 - y^2 \geq 0\} = \{(x, y) \mid x^2 + y^2 \leq 9\}
 $$
-![alt text](image-2.png)
+![](image-2.png)
 </ans>
 
 -------------------
@@ -84,23 +84,23 @@ $$
 
 **Definition** If $f$ is a function of two variables with domain  $D$, then the **graph** of $f$ is the set of all points $(x, y, z)$ in $\mathbb{R}^3$ such that $z = f(x, y)$ and $(x, y) \in D$. 
 
-![alt text](image-3.png)
+![](image-3.png)
 
 ## Example
 
-Sketch the graph of the function $ f(x, y) = 6 - 3x - 2y $.
+Sketch the graph of the function $f(x, y) = 6 - 3x - 2y$.
 
 <ans>
-![alt text](image-4.png)
+![](image-4.png)
 </ans>
 
 
 ## Example
 
-Sketch the graph of the function $ f(x, y) = \sqrt{9 - x^2 - y^2} $.
+Sketch the graph of the function $f(x, y) = \sqrt{9 - x^2 - y^2}$.
 
 <ans>
-![alt text](image-5.png)
+![](image-5.png)
 </ans>
 </page>
 
@@ -130,7 +130,7 @@ The **level curves** of a function $f$ of two variables are the curves with equa
 Sketch the level curves of the function $f(x, y) = 6 - 3x - 2y$ for the values $k = -6, 0, 6, 12$.
 
 <ans>
-![alt text](image-6.png)
+![](image-6.png)
 </ans>
 
 ---------------------------
@@ -144,7 +144,7 @@ $$
 
 
 <ans>
-![alt text](image-7.png)
+![](image-7.png)
 </ans>
 
 
@@ -156,6 +156,6 @@ $$
 $$
 
 <ans>
-![alt text](image-8.png)
+![](image-8.png)
 </ans>
 </page>
