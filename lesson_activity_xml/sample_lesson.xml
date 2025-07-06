@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <question type="shortanswer">
+    <name>
+      <text>Chapter 1: Introduction</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <h3>Chapter 1: Introduction</h3>
+        <p>This is the first chapter. It introduces the core concepts of the course.</p>
+        <p>Math example: \( E = mc^2 \)</p>
+        <p><em>Type anything and click continue.</em></p>
+      ]]></text>
+    </questiontext>
+    <answer fraction="0">
+      <text></text>
+    </answer>
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>Chapter 2: Application</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <h3>Chapter 2: Application</h3>
+        <p>This section explains how the concepts can be used in real-world scenarios.</p>
+        <p>Example formula: \( a^2 + b^2 = c^2 \)</p>
+        <p><em>Type anything and click continue.</em></p>
+      ]]></text>
+    </questiontext>
+    <answer fraction="0">
+      <text></text>
+    </answer>
+  </question>
+
+  <question type="shortanswer">
+    <name>
+      <text>Chapter 2: Application 3</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <h3>Chapter 2: Application</h3>
+        <p>This section explains how the concepts can be used in real-world scenarios.</p>
+        <p>Example formula: \( a^2 + b^2 = c^2 \)</p>
+        <p><em>Type anything and click continue.</em></p>
+      ]]></text>
+    </questiontext>
+    <answer fraction="0">
+      <text></text>
+    </answer>
+  </question>
+
+
+  <question type="shortanswer">
+    <name>
+      <text>Chapter 2: Application 12</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[
+        <h3>Chapter 2: Application</h3>
+        <p>This section explains how the concepts can be used in real-world scenarios.</p>
+        <p>Example formula: \( a^2 + b^2 = c^2 \)</p>
+        <p><em>Type anything and click continue.</em></p>
+      ]]></text>
+    </questiontext>
+    <answer fraction="0">
+      <text></text>
+    </answer>
+  </question>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Definition: Continuity</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>Definition</strong><br />
+A function <span class="math inline">\(f\)</span> of two variables is
+called <strong>continuous at</strong> <span class="math inline">\((a,
+b)\)</span> if</p>
+<p><span class="math display">\[
+\lim_{(x, y) \to (a, b)} f(x, y) = f(a, b)
+\]</span></p>
+<p>We say <span class="math inline">\(f\)</span> is <strong>continuous
+on</strong> <span class="math inline">\(D\)</span> if <span
+class="math inline">\(f\)</span> is continuous at every point <span
+class="math inline">\((a, b)\)</span> in <span
+class="math inline">\(D\)</span>.</p>
+<p><strong>Note</strong> In this course you will not be asked to prove
+continuity. Use these rules.</p>
+<ul>
+<li>Polynomials are always continuous</li>
+<li>Most forumulas as continuous if you can evaluate the formula at the
+given point.</li>
+</ul>
+<p><strong>Example</strong><br />
+Evaluate<br />
+<span class="math display">\[
+\lim_{(x, y) \to (1, 2)} \left(x^2 y^3 - x^3 y^2 + 3x + 2y\right).
+\]</span></p>
+<p><strong>Solution</strong><br />
+Since <span class="math inline">\(f(x, y) = x^2 y^3 - x^3 y^2 + 3x +
+2y\)</span> is a polynomial, it is continuous everywhere, so we can find
+the limit by direct substitution:</p>
+<p><span class="math display">\[
+\lim_{(x, y) \to (1, 2)} \left(x^2 y^3 - x^3 y^2 + 3x + 2y\right)
+= 1^2 \cdot 2^3 - 1^3 \cdot 2^2 + 3 \cdot 1 + 2 \cdot 2 = 11
+\]</span></p>
+<hr />
+<p><strong>Example</strong><br />
+Where is the function<br />
+<span class="math display">\[
+f(x, y) = \frac{x^2 - y^2}{x^2 + y^2}
+\]</span><br />
+continuous?</p>
+<p><strong>Solution</strong><br />
+The function <span class="math inline">\(f\)</span> is discontinuous at
+<span class="math inline">\((0, 0)\)</span> because it is not defined
+there. Since <span class="math inline">\(f\)</span> is a rational
+function, it is continuous on its domain, which is the set<br />
+<span class="math display">\[
+D = \{(x, y) \mid (x, y) \neq (0, 0)\}.
+\]</span></p>
+</body>
+</html>

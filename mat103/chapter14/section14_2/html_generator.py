@@ -4,8 +4,8 @@ import subprocess
 from pathlib import Path
 
 # === Settings ===
-input_md = "source123.md"
-output_root = Path("output_pages_123")
+input_md = "source.md"
+output_root = Path("output_pages_section_14_2")
 output_root.mkdir(exist_ok=True)
 
 # === Get the directory where this script resides ===
