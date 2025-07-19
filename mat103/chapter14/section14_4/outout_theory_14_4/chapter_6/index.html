@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Differentials in 3 variables</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The <strong>differential</strong> <span
+class="math inline">\(dw\)</span> is defined in terms of the
+differentials <span class="math inline">\(dx\)</span>, <span
+class="math inline">\(dy\)</span>, and <span
+class="math inline">\(dz\)</span> of the independent variables by</p>
+<p><span class="math display">\[
+dw = \frac{\partial w}{\partial x} dx + \frac{\partial w}{\partial y} dy
++ \frac{\partial w}{\partial z} dz
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE</strong><br />
+The dimensions of a rectangular box are measured to be 75 cm, 60 cm, and
+40 cm, and each measurement is correct to within 0.2 cm. Use
+differentials to estimate the largest possible error when the volume of
+the box is calculated from these measurements.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong><br />
+If the dimensions of the box are <span class="math inline">\(x\)</span>,
+<span class="math inline">\(y\)</span>, and <span
+class="math inline">\(z\)</span>, its volume is <span
+class="math inline">\(V = xyz\)</span> and so</p>
+<p><span class="math display">\[
+dV = \frac{\partial V}{\partial x} dx + \frac{\partial V}{\partial y} dy
++ \frac{\partial V}{\partial z} dz = yz\,dx + xz\,dy + xy\,dz
+\]</span></p>
+<p>We are given that <span class="math inline">\(|\Delta x| \leq
+0.2\)</span>, <span class="math inline">\(|\Delta y| \leq 0.2\)</span>,
+and <span class="math inline">\(|\Delta z| \leq 0.2\)</span>.<br />
+To estimate the largest error in the volume, we therefore use <span
+class="math inline">\(dx = 0.2\)</span>, <span class="math inline">\(dy
+= 0.2\)</span>, and <span class="math inline">\(dz = 0.2\)</span>
+together with<br />
+<span class="math inline">\(x = 75\)</span>, <span
+class="math inline">\(y = 60\)</span>, and <span class="math inline">\(z
+= 40\)</span>:</p>
+<p><span class="math display">\[
+\Delta V \approx dV = (60)(40)(0.2) + (75)(40)(0.2) + (75)(60)(0.2) =
+1980
+\]</span></p>
+<p>Thus an error of only 0.2 cm in measuring each dimension could lead
+to an error of approximately 1980 cm³ in the calculated volume! This may
+seem like a large error, but it’s only about 1% of the volume of the
+box.</p>
+</div>
+</body>
+</html>

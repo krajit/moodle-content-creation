@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Partial Differential Equations</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Partial derivatives occur in partial differential equations that
+express certain physical laws.</p>
+<p><strong>Laplace Equation</strong> <span class="math display">\[
+\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=0
+\]</span> They play a role in problems of heat conduction, fluid flow,
+and electric potential.</p>
+<table style="width:11%;">
+<colgroup>
+<col style="width: 11%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Example</strong></td>
+</tr>
+<tr>
+<td>Show that the function <span class="math inline">\(u(x, y) = e^x
+\sin y\)</span> is a solution of Laplace’s equation.</td>
+</tr>
+<tr>
+<td><button class='btn btn-info' onclick="
+const ans = this.nextElementSibling;
+const isVisible = ans.style.display !== 'none';
+ans.style.display = isVisible ? 'none' : 'block';
+this.innerText = isVisible ? 'Show Answer' : 'Hide Answer';
+">Show Answer</button></td>
+</tr>
+<tr>
+<td><span class="math display">\[
+u_x = e^x \sin y \quad\quad u_y = e^x \cos y
+\]</span></td>
+</tr>
+<tr>
+<td><span class="math display">\[
+u_{xx} = e^x \sin y \quad\quad u_{yy} = -e^x \sin y
+\]</span></td>
+</tr>
+<tr>
+<td>So</td>
+</tr>
+<tr>
+<td><span class="math display">\[
+u_{xx} + u_{yy} = e^x \sin y - e^x \sin y = 0
+\]</span></td>
+</tr>
+<tr>
+<td>Therefore <span class="math inline">\(u\)</span> satisfies Laplace’s
+equation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Wave Equation</strong></p>
+<p><span class="math display">\[
+\frac{\partial^2 u}{\partial t^2} = a^2 \frac{\partial^2 u}{\partial
+x^2}
+\]</span></p>
+<p>describes the motion of a waveform (a sound wave, a light wave, or a
+wave traveling along a vibrating string).</p>
+<p><img src="image-15.png" /></p>
+<p>For instance, if <span class="math inline">\(u(x, t)\)</span>
+represents the displacement of a vibrating violin string at time <span
+class="math inline">\(t\)</span> and at a distance <span
+class="math inline">\(x\)</span> from one end of the string, then <span
+class="math inline">\(u(x, t)\)</span> satisfies the wave equation. Here
+the constant <span class="math inline">\(a\)</span> depends on the
+density of the string and on the tension in the string.</p>
+<p><strong>Example</strong></p>
+<p>Verify that the function <span class="math inline">\(u(x, t) = \sin(x
+- at)\)</span> satisfies the wave equation.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>Solution</strong></p>
+<p><span class="math display">\[
+u_x = \cos(x - at) \quad\quad u_t = -a \cos(x - at)
+\]</span></p>
+<p><span class="math display">\[
+u_{xx} = -\sin(x - at) \quad\quad u_{tt} = -a^2 \sin(x - at) = a^2
+u_{xx}
+\]</span></p>
+<p>So <span class="math inline">\(u\)</span> satisfies the wave
+equation.</p>
+</div>
+</body>
+</html>

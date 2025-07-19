@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example usage of differentials</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE</strong><br />
+(a) If <span class="math inline">\(z = f(x, y) = x^2 + 3xy -
+y^2\)</span>, find the differential <span
+class="math inline">\(dz\)</span>.<br />
+(b) If <span class="math inline">\(x\)</span> changes from 2 to 2.05 and
+<span class="math inline">\(y\)</span> changes from 3 to 2.96, compare
+the values of <span class="math inline">\(\Delta z\)</span> and <span
+class="math inline">\(dz\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong><br />
+(a) Definition 10 gives</p>
+<p><span class="math display">\[
+dz = \frac{\partial z}{\partial x} dx + \frac{\partial z}{\partial y} dy
+= (2x + 3y)\,dx + (3x - 2y)\,dy
+\]</span></p>
+<ol start="2" type="a">
+<li>Putting <span class="math inline">\(x = 2\)</span>, <span
+class="math inline">\(dx = \Delta x = 0.05\)</span>, <span
+class="math inline">\(y = 3\)</span>, and <span class="math inline">\(dy
+= \Delta y = -0.04\)</span>, we get</li>
+</ol>
+<p><span class="math display">\[
+dz = [2(2) + 3(3)](0.05) + [3(2) - 2(3)](-0.04) = 0.65
+\]</span></p>
+<p>The increment of <span class="math inline">\(z\)</span> is</p>
+<p><span class="math display">\[
+\Delta z = f(2.05, 2.96) - f(2, 3)
+\]</span></p>
+<p><span class="math display">\[
+= [(2.05)^2 + 3(2.05)(2.96) - (2.96)^2] - [2^2 + 3(2)(3) - 3^2]
+\]</span></p>
+<p><span class="math display">\[
+= 0.6449
+\]</span></p>
+<p>Notice that <span class="math inline">\(\Delta z \approx dz\)</span>
+but <span class="math inline">\(dz\)</span> is easier to compute.</p>
+</div>
+<hr />
+<p><strong>EXAMPLE</strong><br />
+The base radius and height of a right circular cone are measured as 10
+cm and 25 cm, respectively, with a possible error in measurement of as
+much as 0.1 cm in each. Use differentials to estimate the maximum error
+in the calculated volume of the cone.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong><br />
+The volume <span class="math inline">\(V\)</span> of a cone with base
+radius <span class="math inline">\(r\)</span> and height <span
+class="math inline">\(h\)</span> is <span class="math inline">\(V =
+\frac{\pi r^2 h}{3}\)</span>.<br />
+So the differential of <span class="math inline">\(V\)</span> is</p>
+<p><span class="math display">\[
+dV = \frac{\partial V}{\partial r} dr + \frac{\partial V}{\partial h} dh
+= \frac{2\pi rh}{3} dr + \frac{\pi r^2}{3} dh
+\]</span></p>
+<p>Since each error is at most 0.1 cm, we have <span
+class="math inline">\(|dr| \leq 0.1\)</span>, <span
+class="math inline">\(|dh| \leq 0.1\)</span>.<br />
+To estimate the largest error in the volume we take the largest error in
+the measurement of <span class="math inline">\(r\)</span> and of <span
+class="math inline">\(h\)</span>.<br />
+Therefore we take <span class="math inline">\(dr = 0.1\)</span> and
+<span class="math inline">\(dh = 0.1\)</span> along with <span
+class="math inline">\(r = 10\)</span>, <span class="math inline">\(h =
+25\)</span>. This gives</p>
+<p><span class="math display">\[
+dV = \frac{500\pi}{3}(0.1) + \frac{100\pi}{3}(0.1) = 20\pi
+\]</span></p>
+<p>Thus the maximum error in the calculated volume is about <span
+class="math inline">\(20\pi \,\text{cm}^3 \approx
+63\,\text{cm}^3\)</span>.</p>
+</div>
+</body>
+</html>
