@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gradients and Directional derivatives for functions of Three Variables</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>For functions of three variables we can define directional
+derivatives in a similar manner. Again <span
+class="math inline">\(D_{\mathbf{u}}f(x, y, z)\)</span> can be
+interpreted as the rate of change of the function in the direction of a
+unit vector <strong>u</strong>.</p>
+<p><strong>Definition</strong> The directional derivative of f at <span
+class="math inline">\((x_0, y_0, z_0)\)</span> in the direction of a
+unit vector <span class="math inline">\(\mathbf{u} = \langle a, b, c
+\rangle\)</span> is</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(x_0, y_0, z_0) =
+\lim_{h\to0} \frac{f(x_0 + ha, y_0 + hb, z_0 + hc) - f(x_0, y_0,
+z_0)}{h}\)</span></p>
+<p>if this limit exists.</p>
+<hr />
+<p><strong>Gradients</strong></p>
+<p>For a function f of three variables, the gradient vector, denoted by
+<span class="math inline">\(\nabla f\)</span> or grad f, is</p>
+<p><span class="math display">\[
+\nabla f = \langle f_x, f_y, f_z \rangle = \frac{\partial f}{\partial
+x}\mathbf{i} + \frac{\partial f}{\partial y}\mathbf{j} + \frac{\partial
+f}{\partial z}\mathbf{k}
+\]</span></p>
+<p>Then, just as with functions of two variables, the formula for the
+directional derivative can be rewritten as</p>
+<p><span class="math display">\[
+D_{\mathbf{u}}f(x, y, z) = \nabla f(x, y, z) \cdot \mathbf{u}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE</strong> If <span class="math inline">\(f(x, y, z) =
+x \sin(yz)\)</span>, (a) find the gradient of f and (b) find the
+directional derivative of f at <span class="math inline">\((1, 3,
+0)\)</span> in the direction of <span class="math inline">\(\mathbf{v} =
+\mathbf{i} + 2\mathbf{j} - \mathbf{k}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> (a) The gradient of f is</p>
+<p><span class="math inline">\(\nabla f(x, y, z) = \langle f_x(x, y, z),
+f_y(x, y, z), f_z(x, y, z) \rangle = \langle \sin(yz), xz \cos(yz), xy
+\cos(yz) \rangle\)</span></p>
+<ol start="2" type="a">
+<li>At <span class="math inline">\((1, 3, 0)\)</span> we have <span
+class="math inline">\(\nabla f(1, 3, 0) = \langle 0, 0, 3
+\rangle\)</span>. The unit vector in the direction of <span
+class="math inline">\(\mathbf{v} = \mathbf{i} + 2\mathbf{j} -
+\mathbf{k}\)</span> is</li>
+</ol>
+<p><span class="math inline">\(\mathbf{u} = \frac{1}{\sqrt{6}}\mathbf{i}
++ \frac{2}{\sqrt{6}}\mathbf{j} -
+\frac{1}{\sqrt{6}}\mathbf{k}\)</span></p>
+<p>Therefore the equation gives</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(1, 3, 0) = \nabla f(1, 3,
+0) \cdot \mathbf{u} = 3\mathbf{k} \cdot (\frac{1}{\sqrt{6}}\mathbf{i} +
+\frac{2}{\sqrt{6}}\mathbf{j} - \frac{1}{\sqrt{6}}\mathbf{k}) =
+3(-\frac{1}{\sqrt{6}}) = -\sqrt{\frac{3}{2}}\)</span></p>
+</div>
+</body>
+</html>

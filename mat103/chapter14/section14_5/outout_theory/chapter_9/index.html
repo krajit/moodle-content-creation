@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Implicit Differentiation</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>We suppose that an equation of the form <span
+class="math inline">\(F(x, y) = 0\)</span> defines <span
+class="math inline">\(y\)</span> implicitly as a differentiable function
+of <span class="math inline">\(x\)</span>, that is, <span
+class="math inline">\(y = f(x)\)</span>, where <span
+class="math inline">\(F(x, f(x)) = 0\)</span> for all <span
+class="math inline">\(x\)</span> in the domain of <span
+class="math inline">\(f\)</span>. If <span
+class="math inline">\(F\)</span> is differentiable, we can apply Case 1
+of the Chain Rule to differentiate both sides of the equation <span
+class="math inline">\(F(x, y) = 0\)</span> with respect to <span
+class="math inline">\(x\)</span>. Since both <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> are functions of <span
+class="math inline">\(x\)</span>, we obtain <span
+class="math display">\[ \frac{\partial F}{\partial x} \frac{dx}{dx} +
+\frac{\partial F}{\partial y} \frac{dy}{dx} = 0 \]</span> But <span
+class="math inline">\(dx/dx = 1\)</span>, so if <span
+class="math inline">\(\partial F / \partial y \ne 0\)</span> we solve
+for <span class="math inline">\(dy/dx\)</span> and obtain <span
+class="math display">\[ \frac{dy}{dx} = - \frac{\partial F / \partial
+x}{\partial F / \partial y} = - \frac{F_x}{F_y} \]</span></p>
+<p><strong>Note</strong></p>
+<p>To derive this equation we assumed that <span
+class="math inline">\(F(x, y) = 0\)</span> defines <span
+class="math inline">\(y\)</span> implicitly as a function of <span
+class="math inline">\(x\)</span>. The <strong>Implicit Function
+Theorem</strong>, proved in advanced calculus, gives conditions under
+which this assumption is valid: it states that if <span
+class="math inline">\(F\)</span> is defined on a disk containing <span
+class="math inline">\((a, b)\)</span>, where <span
+class="math inline">\(F(a, b) = 0, F_y(a, b) \ne 0\)</span>, and <span
+class="math inline">\(F_x\)</span> and <span
+class="math inline">\(F_y\)</span> are continuous on the disk, then the
+equation <span class="math inline">\(F(x, y) = 0\)</span> defines <span
+class="math inline">\(y\)</span> as a function of <span
+class="math inline">\(x\)</span> near the point <span
+class="math inline">\((a, b)\)</span> and the derivative of this
+function is given by Equation 6.</p>
+<hr />
+<p><strong>EXAMPLE 8</strong> Find <span
+class="math inline">\(y&#39;\)</span> if <span class="math inline">\(x^3
++ y^3 = 6xy\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The given equation can be written as <span
+class="math display">\[ F(x, y) = x^3 + y^3 - 6xy = 0 \]</span> so
+Equation 6 gives <span class="math display">\[ \frac{dy}{dx} = -
+\frac{F_x}{F_y} = - \frac{3x^2 - 6y}{3y^2 - 6x} = - \frac{x^2 - 2y}{y^2
+- 2x} \]</span></p>
+</div>
+<hr />
+<p>Now we suppose that <span class="math inline">\(z\)</span> is given
+implicitly as a function <span class="math inline">\(z = f(x,
+y)\)</span> by an equation of the form <span class="math inline">\(F(x,
+y, z) = 0\)</span>. This means that <span class="math inline">\(F(x, y,
+f(x, y)) = 0\)</span> for all <span class="math inline">\((x,
+y)\)</span> in the domain of <span class="math inline">\(f\)</span>. If
+<span class="math inline">\(F\)</span> and <span
+class="math inline">\(f\)</span> are differentiable, then we can use the
+Chain Rule to differentiate the equation <span
+class="math inline">\(F(x, y, z) = 0\)</span> as follows: <span
+class="math display">\[ \frac{\partial F}{\partial x} \frac{\partial
+x}{\partial x} + \frac{\partial F}{\partial y} \frac{\partial
+y}{\partial x} + \frac{\partial F}{\partial z} \frac{\partial
+z}{\partial x} = 0 \]</span> But <span class="math display">\[
+\frac{\partial}{\partial x}(x) = 1 \quad \text{and} \quad
+\frac{\partial}{\partial x}(y) = 0 \]</span> so this equation becomes
+<span class="math display">\[ \frac{\partial F}{\partial x} +
+\frac{\partial F}{\partial z} \frac{\partial z}{\partial x} = 0
+\]</span> If <span class="math inline">\(\partial F / \partial z \ne
+0\)</span>, we solve for <span class="math inline">\(\partial z /
+\partial x\)</span> and obtain the first formula in Equations 7. The
+formula for <span class="math inline">\(\partial z / \partial y\)</span>
+is obtained in a similar manner. <span class="math display">\[
+\frac{\partial z}{\partial x} = - \frac{\partial F / \partial
+x}{\partial F / \partial z} \quad \frac{\partial z}{\partial y} = -
+\frac{\partial F / \partial y}{\partial F / \partial z} \]</span></p>
+<p>Again, a version of the Implicit Function Theorem stipulates
+conditions under which our assumption is valid: if <span
+class="math inline">\(F\)</span> is defined within a sphere containing
+<span class="math inline">\((a, b, c)\)</span>, where <span
+class="math inline">\(F(a, b, c) = 0, F_z(a, b, c) \ne 0\)</span>, and
+<span class="math inline">\(F_x, F_y\)</span>, and <span
+class="math inline">\(F_z\)</span> are continuous inside the sphere,
+then the equation <span class="math inline">\(F(x, y, z) = 0\)</span>
+defines <span class="math inline">\(z\)</span> as a function of <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> near the point <span
+class="math inline">\((a, b, c)\)</span> and this function is
+differentiable, with partial derivatives given by (7).</p>
+<hr />
+<p><strong>EXAMPLE 9</strong> Find <span
+class="math inline">\(\frac{\partial z}{\partial x}\)</span> and <span
+class="math inline">\(\frac{\partial z}{\partial y}\)</span> if <span
+class="math inline">\(x^3 + y^3 + z^3 + 6xyz = 1\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Let <span class="math inline">\(F(x, y, z)
+= x^3 + y^3 + z^3 + 6xyz - 1\)</span>. Then, from Equations 7, we have
+<span class="math display">\[ \frac{\partial z}{\partial x} = -
+\frac{F_x}{F_z} = - \frac{3x^2 + 6yz}{3z^2 + 6xy} = - \frac{x^2 +
+2yz}{z^2 + 2xy} \]</span> <span class="math display">\[ \frac{\partial
+z}{\partial y} = - \frac{F_y}{F_z} = - \frac{3y^2 + 6xz}{3z^2 + 6xy} = -
+\frac{y^2 + 2xz}{z^2 + 2xy} \]</span></p>
+</div>
+</body>
+</html>

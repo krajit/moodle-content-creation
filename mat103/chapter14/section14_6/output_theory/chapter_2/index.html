@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Directional Derivatives</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Recall that if <span class="math inline">\(z = f(x, y)\)</span>, then
+the partial derivatives <span class="math inline">\(f_x\)</span> and
+<span class="math inline">\(f_y\)</span> are defined as</p>
+<p><span class="math inline">\(f_x(x_0, y_0) = \lim_{h\to0} \frac{f(x_0
++ h, y_0) - f(x_0, y_0)}{h}\)</span></p>
+<p><span class="math inline">\(f_y(x_0, y_0) = \lim_{h\to0} \frac{f(x_0,
+y_0 + h) - f(x_0, y_0)}{h}\)</span></p>
+<p>and represent the rates of change of <span
+class="math inline">\(z\)</span> in the x- and y-directions, that is, in
+the directions of the unit vectors <strong>i</strong> and
+<strong>j</strong>.</p>
+<p><img src="image-1.png" /></p>
+<p>Suppose that we now wish to find the rate of change of <span
+class="math inline">\(z\)</span> at <span class="math inline">\((x_0,
+y_0)\)</span> in the direction of an arbitrary unit vector <span
+class="math inline">\(\mathbf{u} = \langle a, b \rangle\)</span>. To do
+this we consider the surface S with the equation <span
+class="math inline">\(z = f(x, y)\)</span> (the graph of f) and we let
+<span class="math inline">\(z_0 = f(x_0, y_0)\)</span>.</p>
+<p><img src="image-2.png" /></p>
+<p>Then the point <span class="math inline">\(P(x_0, y_0, z_0)\)</span>
+lies on S. The vertical plane that passes through P in the direction of
+<strong>u</strong> intersects S in a curve C. The slope of the tangent
+line T to C at the point P is the rate of change of z in the direction
+of <strong>u</strong>.</p>
+<p>If <span class="math inline">\(Q(x, y, z)\)</span> is another point
+on C and P’, Q’ are the projections of P, Q onto the xy-plane, then the
+vector <span class="math inline">\(\vec{P&#39;Q&#39;}\)</span> is
+parallel to <strong>u</strong> and so</p>
+<p><span class="math inline">\(\vec{P&#39;Q&#39;} = h\mathbf{u} =
+\langle ha, hb \rangle\)</span></p>
+<p>for some scalar h. Therefore <span class="math inline">\(x - x_0 =
+ha\)</span>, <span class="math inline">\(y - y_0 = hb\)</span>, so <span
+class="math inline">\(x = x_0 + ha\)</span>, <span
+class="math inline">\(y = y_0 + hb\)</span>, and</p>
+<p><span class="math inline">\(\frac{\Delta z}{h} = \frac{z - z_0}{h} =
+\frac{f(x_0 + ha, y_0 + hb) - f(x_0, y_0)}{h}\)</span></p>
+<p>If we take the limit as <span class="math inline">\(h \to 0\)</span>,
+we obtain the rate of change of z (with respect to distance) in the
+direction of <strong>u</strong>, which is called the directional
+derivative of f in the direction of <strong>u</strong>.</p>
+<hr />
+<p><strong>Definition</strong> The directional derivative of <span
+class="math inline">\(f\)</span> at <span class="math inline">\((x_0,
+y_0)\)</span> in the direction of a unit vector <span
+class="math inline">\(\mathbf{u} = \langle a, b \rangle\)</span> is</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(x_0, y_0) = \lim_{h\to0}
+\frac{f(x_0 + ha, y_0 + hb) - f(x_0, y_0)}{h}\)</span></p>
+<p>if this limit exists.</p>
+<hr />
+<p><strong>Theorem</strong> If f is a differentiable function of x and
+y, then f has a directional derivative in the direction of any unit
+vector <span class="math inline">\(\mathbf{u} = \langle a, b
+\rangle\)</span> and</p>
+<p><span class="math display">\[
+D_{\mathbf{u}}f(x, y) = f_x(x, y)a + f_y(x, y)b
+\]</span></p>
+<p><strong>PROOF</strong> If we define a function g of the single
+variable h by</p>
+<p><span class="math inline">\(g(h) = f(x_0 + ha, y_0 + hb)\)</span></p>
+<p>then, by the definition of a derivative, we have</p>
+<p><span class="math inline">\(g&#39;(0) = \lim_{h\to0} \frac{g(h) -
+g(0)}{h} = \lim_{h\to0} \frac{f(x_0 + ha, y_0 + hb) - f(x_0, y_0)}{h} =
+D_{\mathbf{u}}f(x_0, y_0)\)</span></p>
+<p>On the other hand, we can write <span class="math inline">\(g(h) =
+f(x, y)\)</span>, where <span class="math inline">\(x = x_0 +
+ha\)</span>, <span class="math inline">\(y = y_0 + hb\)</span>, so the
+Chain Rule gives</p>
+<p><span class="math inline">\(g&#39;(h) = \frac{\partial f}{\partial
+x}\frac{dx}{dh} + \frac{\partial f}{\partial y}\frac{dy}{dh} = f_x(x,
+y)a + f_y(x, y)b\)</span></p>
+<p>If we now put <span class="math inline">\(h=0\)</span>, then <span
+class="math inline">\(x = x_0\)</span>, <span class="math inline">\(y =
+y_0\)</span>, and</p>
+<p><span class="math inline">\(g&#39;(0) = f_x(x_0, y_0)a + f_y(x_0,
+y_0)b\)</span></p>
+<p>Comparing the equations for <span
+class="math inline">\(g&#39;(0)\)</span>, we see that</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(x_0, y_0) = f_x(x_0,
+y_0)a + f_y(x_0, y_0)b\)</span></p>
+<p>If the unit vector <strong>u</strong> makes an angle <span
+class="math inline">\(\theta\)</span> with the positive x-axis, then we
+can write <span class="math inline">\(\mathbf{u} = \langle \cos\theta,
+\sin\theta \rangle\)</span> and the formula in Theorem 3 becomes</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(x, y) = f_x(x,
+y)\cos\theta + f_y(x, y)\sin\theta\)</span></p>
+<hr />
+<p><strong>EXAMPLE</strong> Find the directional derivative <span
+class="math inline">\(D_{\mathbf{u}}f(x, y)\)</span> if</p>
+<p><span class="math inline">\(f(x, y) = x^3 - 3xy + 4y^2\)</span></p>
+<p>and <strong>u</strong> is the unit vector given by angle <span
+class="math inline">\(\theta = \pi/6\)</span>. What is <span
+class="math inline">\(D_{\mathbf{u}}f(1, 2)\)</span>?</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The formula gives</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(x, y) = f_x(x,
+y)\cos\frac{\pi}{6} + f_y(x, y)\sin\frac{\pi}{6}\)</span> <span
+class="math inline">\(= (3x^2 - 3y)\frac{\sqrt{3}}{2} + (-3x +
+8y)\frac{1}{2}\)</span> <span class="math inline">\(=
+\frac{1}{2}[3\sqrt{3}x^2 - 3x + (8 - 3\sqrt{3})y]\)</span></p>
+<p>Therefore</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(1, 2) =
+\frac{1}{2}[3\sqrt{3}(1)^2 - 3(1) + (8 - 3\sqrt{3})(2)] = \frac{13 -
+3\sqrt{3}}{2}\)</span></p>
+</div>
+</body>
+</html>

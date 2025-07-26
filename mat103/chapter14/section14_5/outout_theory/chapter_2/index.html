@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Chain Rule (Case 1)</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Suppose that <span class="math inline">\(z = f(x, y)\)</span> is a
+differentiable function of <span class="math inline">\(x\)</span> and
+<span class="math inline">\(y\)</span>, where <span
+class="math inline">\(x = g(t)\)</span> and <span
+class="math inline">\(y = h(t)\)</span> are both differentiable
+functions of <span class="math inline">\(t\)</span>. Then <span
+class="math inline">\(z\)</span> is a differentiable function of <span
+class="math inline">\(t\)</span> and <span class="math display">\[
+\frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} +
+\frac{\partial f}{\partial y} \frac{dy}{dt} \]</span></p>
+<hr />
+<p><strong>EXAMPLE 1</strong> If <span class="math inline">\(z = x^2y +
+3xy^4\)</span>, where <span class="math inline">\(x = \sin 2t\)</span>
+and <span class="math inline">\(y = \cos t\)</span>, find <span
+class="math inline">\(dz/dt\)</span> when <span class="math inline">\(t
+= 0\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The Chain Rule gives <span
+class="math display">\[ \frac{dz}{dt} = \frac{\partial z}{\partial x}
+\frac{dx}{dt} + \frac{\partial z}{\partial y} \frac{dy}{dt} \]</span>
+<span class="math display">\[ = (2xy + 3y^4)(2 \cos 2t) + (x^2 +
+12xy^3)(-\sin t) \]</span></p>
+<p>It’s not necessary to substitute the expressions for x and y in terms
+of t. We simply observe that when <span class="math inline">\(t =
+0\)</span>, we have <span class="math inline">\(x = \sin 0 = 0\)</span>
+and <span class="math inline">\(y = \cos 0 = 1\)</span>. Therefore <span
+class="math display">\[ \left. \frac{dz}{dt} \right|_{t=0} = (0 + 3)(2
+\cos 0) + (0 + 0)(-\sin 0) = 6 \]</span></p>
+<p><img src="image-4.png" /></p>
+<p>The derivative in this example can be interpreted as the rate of
+change of <span class="math inline">\(z\)</span> with respect to <span
+class="math inline">\(t\)</span> as the point <span
+class="math inline">\((x, y)\)</span> moves along the curve C with
+parametric equations <span class="math inline">\(x = \sin 2t, y = \cos
+t\)</span>. (See Figure 1). In particular, when <span
+class="math inline">\(t = 0\)</span>, the point <span
+class="math inline">\((x, y)\)</span> is <span class="math inline">\((0,
+1)\)</span> and <span class="math inline">\(dz/dt = 6\)</span> is the
+rate of increase as we move along the curve C through <span
+class="math inline">\((0, 1)\)</span>. If, for instance, <span
+class="math inline">\(z = T(x, y) = x^2y + 3xy^4\)</span> represents the
+temperature at the point <span class="math inline">\((x, y)\)</span>,
+then the composite function <span class="math inline">\(z = T(\sin 2t,
+\cos t)\)</span> represents the temperature at points on C and the
+derivative <span class="math inline">\(dz/dt\)</span> represents the
+rate at which the temperature changes along C.</p>
+</div>
+<p><strong>EXAMPLE 2</strong> The pressure P (in kilopascals), volume V
+(in liters), and temperature T (in kelvins) of a mole of an ideal gas
+are related by the equation <span class="math inline">\(PV =
+8.31T\)</span>. Find the rate at which the pressure is changing when the
+temperature is 300 K and increasing at a rate of 0.1 K/s and the volume
+is 100 L and increasing at a rate of 0.2 L/s.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> If t represents the time elapsed in
+seconds, then at the given instant we have <span class="math inline">\(T
+= 300, dT/dt = 0.1, V = 100, dV/dt = 0.2\)</span>. Since <span
+class="math display">\[ P = 8.31 \frac{T}{V} \]</span> the Chain Rule
+gives <span class="math display">\[ \frac{dP}{dt} = \frac{\partial
+P}{\partial T} \frac{dT}{dt} + \frac{\partial P}{\partial V}
+\frac{dV}{dt} = \frac{8.31}{V} \frac{dT}{dt} - \frac{8.31T}{V^2}
+\frac{dV}{dt} \]</span> <span class="math display">\[ =
+\frac{8.31}{100}(0.1) - \frac{8.31(300)}{100^2}(0.2) \approx -0.04155
+\]</span> The pressure is decreasing at a rate of about 0.042 kPa/s.</p>
+</div>
+<hr />
+</body>
+</html>

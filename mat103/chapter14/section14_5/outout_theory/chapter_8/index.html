@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>If <span class="math inline">\(z = f(x, y)\)</span> has continuous
+second-order partial derivatives and <span class="math inline">\(x = r^2
++ s^2\)</span> and <span class="math inline">\(y = 2rs\)</span>, find
+(a) <span class="math inline">\(\partial z / \partial r\)</span> and (b)
+<span class="math inline">\(\partial^2 z / \partial r^2\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> (a) The Chain Rule gives <span
+class="math display">\[ \frac{\partial z}{\partial r} = \frac{\partial
+z}{\partial x} \frac{\partial x}{\partial r} + \frac{\partial
+z}{\partial y} \frac{\partial y}{\partial r} = \frac{\partial
+z}{\partial x}(2r) + \frac{\partial z}{\partial y}(2s) \]</span> (b)
+Applying the Product Rule to the expression in part (a), we get <span
+class="math display">\[ \frac{\partial^2 z}{\partial r^2} =
+\frac{\partial}{\partial r} \left( 2r \frac{\partial z}{\partial x} + 2s
+\frac{\partial z}{\partial y} \right) \]</span> <span
+class="math display">\[ = 2 \frac{\partial z}{\partial x} + 2r
+\frac{\partial}{\partial r} \left( \frac{\partial z}{\partial x} \right)
++ 2s \frac{\partial}{\partial r} \left( \frac{\partial z}{\partial y}
+\right) \]</span> But, using the Chain Rule again (see Figure 5), we
+have <span class="math display">\[ \frac{\partial}{\partial r} \left(
+\frac{\partial z}{\partial x} \right) = \frac{\partial}{\partial x}
+\left( \frac{\partial z}{\partial x} \right) \frac{\partial x}{\partial
+r} + \frac{\partial}{\partial y} \left( \frac{\partial z}{\partial x}
+\right) \frac{\partial y}{\partial r} = \frac{\partial^2 z}{\partial
+x^2}(2r) + \frac{\partial^2 z}{\partial y \partial x}(2s) \]</span>
+<span class="math display">\[ \frac{\partial}{\partial r} \left(
+\frac{\partial z}{\partial y} \right) = \frac{\partial}{\partial x}
+\left( \frac{\partial z}{\partial y} \right) \frac{\partial x}{\partial
+r} + \frac{\partial}{\partial y} \left( \frac{\partial z}{\partial y}
+\right) \frac{\partial y}{\partial r} = \frac{\partial^2 z}{\partial x
+\partial y}(2r) + \frac{\partial^2 z}{\partial y^2}(2s) \]</span>
+Putting these expressions into Equation 5 and using the equality of the
+mixed second-order derivatives, we obtain <span class="math display">\[
+\frac{\partial^2 z}{\partial r^2} = 2 \frac{\partial z}{\partial x} + 2r
+\left( 2r \frac{\partial^2 z}{\partial x^2} + 2s \frac{\partial^2
+z}{\partial y \partial x} \right) + 2s \left( 2r \frac{\partial^2
+z}{\partial x \partial y} + 2s \frac{\partial^2 z}{\partial y^2} \right)
+\]</span> <span class="math display">\[ = 2 \frac{\partial z}{\partial
+x} + 4r^2 \frac{\partial^2 z}{\partial x^2} + 8rs \frac{\partial^2
+z}{\partial x \partial y} + 4s^2 \frac{\partial^2 z}{\partial y^2}
+\]</span></p>
+</div>
+<hr />
+</body>
+</html>

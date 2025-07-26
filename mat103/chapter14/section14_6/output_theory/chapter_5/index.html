@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Importance of Gradients: Maximizing the Directional Derivative</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Suppose we have a function f of two or three variables and we
+consider all possible directional derivatives of f at a given point.
+These give the rates of change of f in all possible directions. We can
+then ask the questions: in which of these directions does f change
+fastest and what is the maximum rate of change? The answers are provided
+by the following theorem.</p>
+<hr />
+<p><strong>Theorem</strong> Suppose f is a differentiable function of
+two or three variables. The maximum value of the directional derivative
+<span class="math inline">\(D_{\mathbf{u}}f(\mathbf{x})\)</span> is
+<span class="math inline">\(|\nabla f(\mathbf{x})|\)</span> and it
+occurs when <strong>u</strong> has the same direction as the gradient
+vector <span class="math inline">\(\nabla f(\mathbf{x})\)</span>.</p>
+<p><strong>PROOF</strong> From the equations we have</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f = \nabla f \cdot
+\mathbf{u} = |\nabla f||\mathbf{u}|\cos\theta = |\nabla
+f|\cos\theta\)</span></p>
+<p>where <span class="math inline">\(\theta\)</span> is the angle
+between <span class="math inline">\(\nabla f\)</span> and
+<strong>u</strong>. The maximum value of <span
+class="math inline">\(\cos\theta\)</span> is 1 and this occurs when
+<span class="math inline">\(\theta = 0\)</span>. Therefore the maximum
+value of <span class="math inline">\(D_{\mathbf{u}}f\)</span> is <span
+class="math inline">\(|\nabla f|\)</span> and it occurs when <span
+class="math inline">\(\theta = 0\)</span>, that is, when
+<strong>u</strong> has the same direction as <span
+class="math inline">\(\nabla f\)</span>.</p>
+<hr />
+<p><strong>EXAMPLE</strong> (a) If <span class="math inline">\(f(x, y) =
+xe^y\)</span>, find the rate of change of f at the point P(2, 0) in the
+direction from P to Q(1/2, 2). (b) In what direction does f have the
+maximum rate of change? What is this maximum rate of change?</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> (a) We first compute the gradient
+vector:</p>
+<p><span class="math inline">\(\nabla f(x, y) = \langle f_x, f_y \rangle
+= \langle e^y, xe^y \rangle\)</span> <span class="math inline">\(\nabla
+f(2, 0) = \langle 1, 2 \rangle\)</span></p>
+<p>The unit vector in the direction of <span
+class="math inline">\(\vec{PQ} = \langle -3/2, 2 \rangle\)</span> is
+<span class="math inline">\(\mathbf{u} = \langle -3/5, 4/5
+\rangle\)</span>, so the rate of change of f in the direction from P to
+Q is</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(2, 0) = \nabla f(2, 0)
+\cdot \mathbf{u} = \langle 1, 2 \rangle \cdot \langle -3/5, 4/5 \rangle
+= 1(-3/5) + 2(4/5) = 1\)</span></p>
+<ol start="2" type="a">
+<li>According to Theorem 15, f increases fastest in the direction of the
+gradient vector <span class="math inline">\(\nabla f(2, 0) = \langle 1,
+2 \rangle\)</span>. The maximum rate of change is</li>
+</ol>
+<p><span class="math inline">\(|\nabla f(2, 0)| = |\langle 1, 2 \rangle|
+= \sqrt{5}\)</span></p>
+</div>
+<hr />
+<p><strong>EXAMPLE 7</strong> Suppose that the temperature at a point
+(x, y, z) in space is given by <span class="math inline">\(T(x, y, z) =
+80/(1 + x^2 + 2y^2 + 3z^2)\)</span>, where T is measured in degrees
+Celsius and x, y, z in meters. In which direction does the temperature
+increase fastest at the point (1, 1, -2)? What is the maximum rate of
+increase?</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The gradient of T is</p>
+<p><span class="math inline">\(\nabla T = \frac{\partial T}{\partial
+x}\mathbf{i} + \frac{\partial T}{\partial y}\mathbf{j} + \frac{\partial
+T}{\partial z}\mathbf{k}\)</span> <span class="math inline">\(=
+-\frac{160x}{(1 + x^2 + 2y^2 + 3z^2)^2}\mathbf{i} - \frac{320y}{(1 + x^2
++ 2y^2 + 3z^2)^2}\mathbf{j} - \frac{480z}{(1 + x^2 + 2y^2 +
+3z^2)^2}\mathbf{k}\)</span> <span class="math inline">\(= -\frac{160}{(1
++ x^2 + 2y^2 + 3z^2)^2}(x\mathbf{i} + 2y\mathbf{j} +
+3z\mathbf{k})\)</span></p>
+<p>At the point (1, 1, -2) the gradient vector is</p>
+<p><span class="math inline">\(\nabla T(1, 1, -2) =
+-\frac{160}{256}(-\mathbf{i} - 2\mathbf{j} + 6\mathbf{k}) =
+\frac{5}{8}(-\mathbf{i} - 2\mathbf{j} + 6\mathbf{k})\)</span></p>
+<p>By Theorem 15 the temperature increases fastest in the direction of
+the gradient vector <span class="math inline">\(\nabla T(1, 1, -2) =
+\frac{5}{8}(-\mathbf{i} - 2\mathbf{j} + 6\mathbf{k})\)</span> or,
+equivalently, in the direction of <span
+class="math inline">\(-\mathbf{i} - 2\mathbf{j} + 6\mathbf{k}\)</span>
+or the unit vector <span class="math inline">\((-\mathbf{i} -
+2\mathbf{j} + 6\mathbf{k})/\sqrt{41}\)</span>. The maximum rate of
+increase is the length of the gradient vector:</p>
+<p><span class="math inline">\(|\nabla T(1, 1, -2)| =
+\frac{5}{8}|-\mathbf{i} - 2\mathbf{j} + 6\mathbf{k}| =
+\frac{5}{8}\sqrt{41}\)</span></p>
+<p>Therefore the maximum rate of increase of temperature is <span
+class="math inline">\(\frac{5}{8}\sqrt{41} \approx 4^\circ
+C/m\)</span>.</p>
+</div>
+</body>
+</html>

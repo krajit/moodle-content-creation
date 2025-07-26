@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 5</strong> If <span class="math inline">\(u = x^4y +
+y^2z^3\)</span>, where <span class="math inline">\(x = rse^t, y =
+rs^2e^{-t}\)</span>, and <span class="math inline">\(z = r^2s \sin
+t\)</span>, find the value of <span class="math inline">\(\partial u /
+\partial s\)</span> when <span class="math inline">\(r = 2, s = 1, t =
+0\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> With the help of the tree diagram in Figure
+4, we have <span class="math display">\[ \frac{\partial u}{\partial s} =
+\frac{\partial u}{\partial x} \frac{\partial x}{\partial s} +
+\frac{\partial u}{\partial y} \frac{\partial y}{\partial s} +
+\frac{\partial u}{\partial z} \frac{\partial z}{\partial s} \]</span>
+<span class="math display">\[ = (4x^3y)(re^t) + (x^4 + 2yz^3)(2rse^{-t})
++ (3y^2z^2)(r^2 \sin t) \]</span> When <span class="math inline">\(r =
+2, s = 1\)</span>, and <span class="math inline">\(t = 0\)</span>, we
+have <span class="math inline">\(x = 2, y = 2\)</span>, and <span
+class="math inline">\(z = 0\)</span>, so <span class="math display">\[
+\frac{\partial u}{\partial s} = (64)(2) + (16)(4) + (0)(0) = 192
+\]</span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Chain Rule (Case 2)</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Suppose that <span class="math inline">\(z = f(x, y)\)</span> is a
+differentiable function of <span class="math inline">\(x\)</span> and
+<span class="math inline">\(y\)</span>, where <span
+class="math inline">\(x = g(s, t)\)</span> and <span
+class="math inline">\(y = h(s, t)\)</span> are differentiable functions
+of <span class="math inline">\(s\)</span> and <span
+class="math inline">\(t\)</span>. Then <span class="math display">\[
+\frac{\partial z}{\partial s} = \frac{\partial z}{\partial x}
+\frac{\partial x}{\partial s} + \frac{\partial z}{\partial y}
+\frac{\partial y}{\partial s} \]</span> <span class="math display">\[
+\frac{\partial z}{\partial t} = \frac{\partial z}{\partial x}
+\frac{\partial x}{\partial t} + \frac{\partial z}{\partial y}
+\frac{\partial y}{\partial t} \]</span></p>
+<p><strong>EXAMPLE 3</strong> If <span class="math inline">\(z = e^x
+\sin y\)</span>, where <span class="math inline">\(x = st^2\)</span> and
+<span class="math inline">\(y = s^2t\)</span>, find <span
+class="math inline">\(\partial z / \partial s\)</span> and <span
+class="math inline">\(\partial z / \partial t\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Applying Case 2 of the Chain Rule, we get
+<span class="math display">\[ \frac{\partial z}{\partial s} =
+\frac{\partial z}{\partial x} \frac{\partial x}{\partial s} +
+\frac{\partial z}{\partial y} \frac{\partial y}{\partial s} = (e^x \sin
+y)(t^2) + (e^x \cos y)(2st) \]</span> <span class="math display">\[ =
+t^2e^{st^2} \sin(s^2t) + 2ste^{st^2} \cos(s^2t) \]</span> <span
+class="math display">\[ \frac{\partial z}{\partial t} = \frac{\partial
+z}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial
+z}{\partial y} \frac{\partial y}{\partial t} = (e^x \sin y)(2st) + (e^x
+\cos y)(s^2) \]</span> <span class="math display">\[ = 2ste^{st^2}
+\sin(s^2t) + s^2e^{st^2} \cos(s^2t) \]</span></p>
+</div>
+<hr />
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example with Tree Diagram</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 4</strong> Write out the Chain Rule for the case
+where <span class="math inline">\(w = f(x, y, z, t)\)</span> and <span
+class="math inline">\(x = x(u, v), y = y(u, v), z = z(u, v)\)</span>,
+and <span class="math inline">\(t = t(u, v)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-3.png" /></p>
+<p><strong>SOLUTION</strong> Figure shows the tree diagram. Although we
+haven’t written the derivatives on the branches, it’s understood that if
+a branch leads from <span class="math inline">\(y\)</span> to <span
+class="math inline">\(u\)</span>, then the partial derivative for that
+branch is <span class="math inline">\(\partial y / \partial u\)</span>.
+With the aid of the tree diagram, we can now write the required
+expressions: <span class="math display">\[ \frac{\partial w}{\partial u}
+= \frac{\partial w}{\partial x} \frac{\partial x}{\partial u} +
+\frac{\partial w}{\partial y} \frac{\partial y}{\partial u} +
+\frac{\partial w}{\partial z} \frac{\partial z}{\partial u} +
+\frac{\partial w}{\partial t} \frac{\partial t}{\partial u} \]</span>
+<span class="math display">\[ \frac{\partial w}{\partial v} =
+\frac{\partial w}{\partial x} \frac{\partial x}{\partial v} +
+\frac{\partial w}{\partial y} \frac{\partial y}{\partial v} +
+\frac{\partial w}{\partial z} \frac{\partial z}{\partial v} +
+\frac{\partial w}{\partial t} \frac{\partial t}{\partial v}
+\]</span></p>
+</div>
+</body>
+</html>

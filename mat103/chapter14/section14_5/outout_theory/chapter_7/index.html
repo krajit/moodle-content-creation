@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>EXAMPLE</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>If <span class="math inline">\(g(s, t) = f(s^2 - t^2, t^2 -
+s^2)\)</span> and <span class="math inline">\(f\)</span> is
+differentiable, show that <span class="math inline">\(g\)</span>
+satisfies the equation <span class="math display">\[ t \frac{\partial
+g}{\partial s} + s \frac{\partial g}{\partial t} = 0 \]</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Let <span class="math inline">\(x = s^2 -
+t^2\)</span> and <span class="math inline">\(y = t^2 - s^2\)</span>.
+Then <span class="math inline">\(g(s, t) = f(x, y)\)</span> and the
+Chain Rule gives <span class="math display">\[ \frac{\partial
+g}{\partial s} = \frac{\partial f}{\partial x} \frac{\partial
+x}{\partial s} + \frac{\partial f}{\partial y} \frac{\partial
+y}{\partial s} = \frac{\partial f}{\partial x}(2s) + \frac{\partial
+f}{\partial y}(-2s) \]</span> <span class="math display">\[
+\frac{\partial g}{\partial t} = \frac{\partial f}{\partial x}
+\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}
+\frac{\partial y}{\partial t} = \frac{\partial f}{\partial x}(-2t) +
+\frac{\partial f}{\partial y}(2t) \]</span> Therefore <span
+class="math display">\[ t \frac{\partial g}{\partial s} + s
+\frac{\partial g}{\partial t} = t \left( 2s \frac{\partial f}{\partial
+x} - 2s \frac{\partial f}{\partial y} \right) + s \left( -2t
+\frac{\partial f}{\partial x} + 2t \frac{\partial f}{\partial y} \right)
+= 0 \]</span></p>
+</div>
+<hr />
+</body>
+</html>

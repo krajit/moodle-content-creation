@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Gradient Vector</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>Definition</strong> If f is a function of two variables x and
+y, then the gradient of f is the vector function <span
+class="math inline">\(\nabla f\)</span> defined by</p>
+<p><span class="math display">\[
+\nabla f(x, y) = \langle f_x(x, y), f_y(x, y) \rangle = \frac{\partial
+f}{\partial x}\mathbf{i} + \frac{\partial f}{\partial y}\mathbf{j}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE</strong> If <span class="math inline">\(f(x, y) =
+\sin x + e^{xy}\)</span>, then</p>
+<p><span class="math inline">\(\nabla f(x, y) = \langle f_x, f_y \rangle
+= \langle \cos x + ye^{xy}, xe^{xy} \rangle\)</span></p>
+<p>and</p>
+<p><span class="math inline">\(\nabla f(0, 1) = \langle 2, 0
+\rangle\)</span></p>
+<hr />
+<p>With this notation for the gradient vector, we can rewrite the
+equation for the directional derivative of a differentiable function
+as</p>
+<p><span class="math display">\[
+D_{\mathbf{u}}f(x, y) = \nabla f(x, y) \cdot \mathbf{u}
+\]</span></p>
+<p>This expresses the directional derivative in the direction of a unit
+vector <strong>u</strong> as the scalar projection of the gradient
+vector onto <strong>u</strong>.</p>
+<hr />
+<p><strong>EXAMPLE</strong> Find the directional derivative of the
+function <span class="math inline">\(f(x, y) = x^2y^3 - 4y\)</span> at
+the point <span class="math inline">\((2, -1)\)</span> in the direction
+of the vector <span class="math inline">\(\mathbf{v} = 2\mathbf{i} +
+5\mathbf{j}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We first compute the gradient vector at
+<span class="math inline">\((2, -1)\)</span>:</p>
+<p><span class="math inline">\(\nabla f(x, y) = 2xy^3\mathbf{i} +
+(3x^2y^2 - 4)\mathbf{j}\)</span> <span class="math inline">\(\nabla f(2,
+-1) = -4\mathbf{i} + 8\mathbf{j}\)</span></p>
+<p>Note that <strong>v</strong> is not a unit vector, but since <span
+class="math inline">\(|\mathbf{v}| = \sqrt{29}\)</span>, the unit vector
+in the direction of <strong>v</strong> is</p>
+<p><span class="math inline">\(\mathbf{u} =
+\frac{\mathbf{v}}{|\mathbf{v}|} = \frac{2}{\sqrt{29}}\mathbf{i} +
+\frac{5}{\sqrt{29}}\mathbf{j}\)</span></p>
+<p>Therefore, we have</p>
+<p><span class="math inline">\(D_{\mathbf{u}}f(2, -1) = \nabla f(2, -1)
+\cdot \mathbf{u} = (-4\mathbf{i} + 8\mathbf{j}) \cdot
+(\frac{2}{\sqrt{29}}\mathbf{i} + \frac{5}{\sqrt{29}}\mathbf{j}) =
+\frac{-4 \cdot 2 + 8 \cdot 5}{\sqrt{29}} =
+\frac{32}{\sqrt{29}}\)</span></p>
+</div>
+</body>
+</html>

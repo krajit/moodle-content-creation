@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tree Diagram</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>To remember the Chain Rule, it’s helpful to draw the <strong>tree
+diagram</strong>.</p>
+<p><img src="image-2.png" /></p>
+<p>We draw branches from the dependent variable <span
+class="math inline">\(z\)</span> to the intermediate variables <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> to indicate that <span
+class="math inline">\(z\)</span> is a function of <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>. Then we draw branches from <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> to the independent variables <span
+class="math inline">\(s\)</span> and <span
+class="math inline">\(t\)</span>. On each branch we write the
+corresponding partial derivative. To find <span
+class="math inline">\(\partial z / \partial s\)</span>, we find the
+product of the partial derivatives along each path from <span
+class="math inline">\(z\)</span> to <span
+class="math inline">\(s\)</span> and then add these products: <span
+class="math display">\[ \frac{\partial z}{\partial s} = \frac{\partial
+z}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial
+z}{\partial y} \frac{\partial y}{\partial s} \]</span> Similarly, we
+find <span class="math inline">\(\partial z / \partial t\)</span> by
+using the paths from <span class="math inline">\(z\)</span> to <span
+class="math inline">\(t\)</span>.</p>
+<p>Now we consider the general situation in which a dependent variable
+<span class="math inline">\(u\)</span> is a function of <span
+class="math inline">\(n\)</span> intermediate variables <span
+class="math inline">\(x_1, ..., x_n\)</span>, each of which is, in turn,
+a function of <span class="math inline">\(m\)</span> independent
+variables <span class="math inline">\(t_1, ..., t_m\)</span>. Notice
+that there are <span class="math inline">\(n\)</span> terms, one for
+each intermediate variable. The proof is similar to that of Case 1.</p>
+<hr />
+</body>
+</html>
