@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercise 59</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Suppose that a scientist has reason to believe that two quantities x
+and y are related linearly, that is, <span class="math inline">\(y = mx
++ b\)</span>, at least approximately, for some values of m and b. The
+scientist performs an experiment and collects data in the form of points
+<span class="math inline">\((x_1, y_1), (x_2, y_2), ..., (x_n,
+y_n)\)</span>, and then plots these points. The points don’t lie exactly
+on a straight line, so the scientist wants to find constants m and b so
+that the line <span class="math inline">\(y = mx + b\)</span> “fits” the
+points as well as possible.</p>
+<p><img src="image-13.png" /></p>
+<p>Let <span class="math inline">\(d_i = y_i - (mx_i + b)\)</span> be
+the vertical deviation of the point <span class="math inline">\((x_i,
+y_i)\)</span> from the line. The method of least squares determines m
+and b so as to minimize <span class="math inline">\(\sum_{i=1}^n
+d_i^2\)</span>, the sum of the squares of these deviations. Show that,
+according to this method, the line of best fit is obtained when <span
+class="math inline">\(m \sum_{i=1}^n x_i + bn = \sum_{i=1}^n
+y_i\)</span> and <span class="math inline">\(m \sum_{i=1}^n x_i^2 + b
+\sum_{i=1}^n x_i = \sum_{i=1}^n x_i y_i\)</span> Thus the line is found
+by solving these two equations in the two unknowns m and b.</p>
+</body>
+</html>

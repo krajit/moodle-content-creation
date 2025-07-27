@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sample Application Problem</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE</strong> Find the shortest distance from the point
+<span class="math inline">\((1, 0, -2)\)</span> to the plane <span
+class="math inline">\(x + 2y + z = 4\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The distance from any point <span
+class="math inline">\((x, y, z)\)</span> to the point <span
+class="math inline">\((1, 0, -2)\)</span> is <span
+class="math display">\[
+d = \sqrt{(x - 1)^2 + y^2 + (z + 2)^2}
+\]</span> but if <span class="math inline">\((x, y, z)\)</span> lies on
+the plane <span class="math inline">\(x + 2y + z = 4\)</span>, then
+<span class="math inline">\(z = 4 - x - 2y\)</span> and so we have <span
+class="math inline">\(d = \sqrt{(x - 1)^2 + y^2 + (6 - x -
+2y)^2}\)</span>. We can minimize <span class="math inline">\(d\)</span>
+by minimizing the simpler expression <span class="math display">\[
+d^2 = f(x, y) = (x - 1)^2 + y^2 + (6 - x - 2y)^2
+\]</span> By solving the equations <span class="math display">\[
+f_x = 2(x - 1) - 2(6 - x - 2y) = 4x + 4y - 14 = 0
+\]</span> <span class="math display">\[
+f_y = 2y - 4(6 - x - 2y) = 4x + 10y - 24 = 0
+\]</span> we find that the only critical point is <span
+class="math inline">\((11/6, 5/3)\)</span>. Since <span
+class="math inline">\(f_{xx} = 4\)</span>, <span
+class="math inline">\(f_{xy} = 4\)</span>, and <span
+class="math inline">\(f_{yy} = 10\)</span>, we have <span
+class="math inline">\(D(x, y) = f_{xx}f_{yy} - (f_{xy})^2 = 24 &gt;
+0\)</span> and <span class="math inline">\(f_{xx} &gt; 0\)</span>, so by
+the Second Derivatives Test <span class="math inline">\(f\)</span> has a
+local minimum at <span class="math inline">\((11/6, 5/3)\)</span>.
+Intuitively, we can see that this local minimum is actually an absolute
+minimum because there must be a point on the given plane that is closest
+to <span class="math inline">\((1, 0, -2)\)</span>. If <span
+class="math inline">\(x = 11/6\)</span> and <span
+class="math inline">\(y = 5/3\)</span>, then <span
+class="math display">\[
+d = \sqrt{(11/6 - 1)^2 + (5/3)^2 + (6 - 11/6 - 10/3)^2} = \sqrt{(5/6)^2
++ (10/6)^2 + (5/6)^2} = \frac{\sqrt{150}}{6} = \frac{5\sqrt{6}}{6}
+\]</span> The shortest distance from <span class="math inline">\((1, 0,
+-2)\)</span> to the plane <span class="math inline">\(x + 2y + z =
+4\)</span> is <span class="math inline">\(5\sqrt{6}/6\)</span>.</p>
+</div>
+</body>
+</html>

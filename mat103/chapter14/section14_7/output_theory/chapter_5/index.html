@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Second derivative Test</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>We need to be able to determine whether or not a function has an
+extreme value at a critical point. The following test, which is proved
+at the end of this section, is analogous to the Second Derivative Test
+for functions of one variable.</p>
+<p><strong>Second Derivatives Test</strong> Suppose the second partial
+derivatives of <span class="math inline">\(f\)</span> are continuous on
+a disk with center <span class="math inline">\((a, b)\)</span>, and
+suppose that <span class="math inline">\(f_x(a, b) = 0\)</span> and
+<span class="math inline">\(f_y(a, b) = 0\)</span> [that is, <span
+class="math inline">\((a, b)\)</span> is a critical point of <span
+class="math inline">\(f\)</span>]. Let <span class="math display">\[
+D = D(a, b) = f_{xx}(a, b)f_{yy}(a, b) - [f_{xy}(a, b)]^2
+\]</span> (a) If <span class="math inline">\(D &gt; 0\)</span> and <span
+class="math inline">\(f_{xx}(a, b) &gt; 0\)</span>, then <span
+class="math inline">\(f(a, b)\)</span> is a local minimum. (b) If <span
+class="math inline">\(D &gt; 0\)</span> and <span
+class="math inline">\(f_{xx}(a, b) &lt; 0\)</span>, then <span
+class="math inline">\(f(a, b)\)</span> is a local maximum. (c) If <span
+class="math inline">\(D &lt; 0\)</span>, then <span
+class="math inline">\(f(a, b)\)</span> is not a local maximum or
+minimum.</p>
+<hr />
+<p><strong>NOTE 1</strong> In case (c) the point <span
+class="math inline">\((a, b)\)</span> is called a <strong>saddle
+point</strong> of <span class="math inline">\(f\)</span> and the graph
+of <span class="math inline">\(f\)</span> crosses its tangent plane at
+<span class="math inline">\((a, b)\)</span>. <strong>NOTE 2</strong> If
+<span class="math inline">\(D = 0\)</span>, the test gives no
+information: <span class="math inline">\(f\)</span> could have a local
+maximum or local minimum at <span class="math inline">\((a, b)\)</span>,
+or <span class="math inline">\((a, b)\)</span> could be a saddle point
+of <span class="math inline">\(f\)</span>. <strong>NOTE 3</strong> To
+remember the formula for <span class="math inline">\(D\)</span>, it’s
+helpful to write it as a determinant: <span class="math display">\[
+D = \begin{vmatrix} f_{xx} &amp; f_{xy} \\ f_{yx} &amp; f_{yy}
+\end{vmatrix} = f_{xx}f_{yy} - (f_{xy})^2
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE</strong> Find the local maximum and minimum values
+and saddle points of <span class="math inline">\(f(x, y) = x^4 + y^4 -
+4xy + 1\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We first locate the critical points: <span
+class="math display">\[
+f_x = 4x^3 - 4y \quad f_y = 4y^3 - 4x
+\]</span> Setting these partial derivatives equal to 0, we obtain the
+equations <span class="math display">\[
+x^3 - y = 0 \quad \text{and} \quad y^3 - x = 0
+\]</span> To solve these equations we substitute <span
+class="math inline">\(y = x^3\)</span> from the first equation into the
+second one. This gives <span class="math display">\[
+0 = x^9 - x = x(x^8 - 1) = x(x^4 - 1)(x^4 + 1) = x(x^2 - 1)(x^2 + 1)(x^4
++ 1)
+\]</span> so there are three real roots: <span class="math inline">\(x =
+0, 1, -1\)</span>. The three critical points are <span
+class="math inline">\((0, 0)\)</span>, <span class="math inline">\((1,
+1)\)</span>, and <span class="math inline">\((-1, -1)\)</span>.</p>
+<p>Next we calculate the second partial derivatives and <span
+class="math inline">\(D(x, y)\)</span>: <span class="math display">\[
+f_{xx} = 12x^2 \quad f_{xy} = -4 \quad f_{yy} = 12y^2
+\]</span> <span class="math display">\[
+D(x, y) = f_{xx}f_{yy} - (f_{xy})^2 = 144x^2y^2 - 16
+\]</span> Since <span class="math inline">\(D(0, 0) = -16 &lt;
+0\)</span>, it follows from case (c) of the Second Derivatives Test that
+the origin is a saddle point; that is, <span
+class="math inline">\(f\)</span> has no local maximum or minimum at
+<span class="math inline">\((0, 0)\)</span>. Since <span
+class="math inline">\(D(1, 1) = 128 &gt; 0\)</span> and <span
+class="math inline">\(f_{xx}(1, 1) = 12 &gt; 0\)</span>, we see from
+case (a) of the test that <span class="math inline">\(f(1, 1) =
+-1\)</span> is a local minimum. Similarly, we have <span
+class="math inline">\(D(-1, -1) = 128 &gt; 0\)</span> and <span
+class="math inline">\(f_{xx}(-1, -1) = 12 &gt; 0\)</span>, so <span
+class="math inline">\(f(-1, -1) = -1\)</span> is also a local minimum.
+The graph of <span class="math inline">\(f\)</span> is shown in this
+Figure.</p>
+<p><img src="image-3.png" /></p>
+</div>
+<hr />
+<p><strong>EXAMPLE</strong> Find and classify the critical points of the
+function <span class="math display">\[
+f(x, y) = 10x^2y - 5x^2 - 4y^2 - x^4 - 2y^4
+\]</span> Also find the highest point on the graph of <span
+class="math inline">\(f\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The first-order partial derivatives are
+<span class="math display">\[
+f_x = 20xy - 10x - 4x^3 \quad f_y = 10x^2 - 8y - 8y^3
+\]</span> So to find the critical points we need to solve the equations
+<span class="math display">\[
+2x(10y - 5 - 2x^2) = 0
+\]</span> <span class="math display">\[
+5x^2 - 4y - 4y^3 = 0
+\]</span> From the first equation we see that either <span
+class="math display">\[
+x = 0 \quad \text{or} \quad 10y - 5 - 2x^2 = 0
+\]</span> In the first case (<span class="math inline">\(x =
+0\)</span>), the second equation becomes <span
+class="math inline">\(-4y(1 + y^2) = 0\)</span>, so <span
+class="math inline">\(y = 0\)</span> and we have the critical point
+<span class="math inline">\((0, 0)\)</span>.</p>
+<p>In the second case (<span class="math inline">\(10y - 5 - 2x^2 =
+0\)</span>), we get <span class="math display">\[
+x^2 = 5y - 2.5
+\]</span> and, putting this in the second equation, we have <span
+class="math inline">\(25y - 12.5 - 4y - 4y^3 = 0\)</span>. So we have to
+solve the cubic equation <span class="math display">\[
+4y^3 - 21y + 12.5 = 0
+\]</span> Using a graphing calculator or computer to graph the function
+<span class="math display">\[
+g(y) = 4y^3 - 21y + 12.5
+\]</span> as in Figure 6, we see that the equation has three real roots.
+By zooming in, we can find the roots to four decimal places: <span
+class="math display">\[
+y \approx -2.5452 \quad y \approx 0.6468 \quad y \approx 1.8984
+\]</span> From <span class="math inline">\(x^2 = 5y - 2.5\)</span>, the
+corresponding <span class="math inline">\(x\)</span>-values are given by
+<span class="math display">\[
+x = \pm\sqrt{5y - 2.5}
+\]</span> If <span class="math inline">\(y \approx -2.5452\)</span>,
+then <span class="math inline">\(x\)</span> has no corresponding real
+values. If <span class="math inline">\(y \approx 0.6468\)</span>, then
+<span class="math inline">\(x \approx \pm 0.8567\)</span>. If <span
+class="math inline">\(y \approx 1.8984\)</span>, then <span
+class="math inline">\(x \approx \pm 2.6442\)</span>. So we have a total
+of five critical points, which are analyzed in the following chart. All
+quantities are rounded to two decimal places.</p>
+<p><img src="image-6.png" /></p>
+<p><img src="image-4.png" /> <img src="image-5.png" /></p>
+</div>
+</body>
+</html>

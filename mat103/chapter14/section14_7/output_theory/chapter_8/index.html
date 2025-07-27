@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Absolute Maximum and Minimum Values</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>For a function <span class="math inline">\(f\)</span> of one
+variable, the Extreme Value Theorem says that if <span
+class="math inline">\(f\)</span> is continuous on a closed interval
+<span class="math inline">\([a, b]\)</span>, then <span
+class="math inline">\(f\)</span> has an absolute minimum value and an
+absolute maximum value. According to the Closed Interval Method, we
+found these by evaluating <span class="math inline">\(f\)</span> not
+only at the critical numbers but also at the endpoints <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span>.</p>
+<p><img src="image-7.png" /></p>
+<p>There is a similar situation for functions of two variables. Just as
+a closed interval contains its endpoints, a <strong>closed set</strong>
+in <span class="math inline">\(\mathbb{R}^2\)</span> is one that
+contains all its boundary points. [A <strong>boundary point</strong> of
+<span class="math inline">\(D\)</span> is a point <span
+class="math inline">\((a, b)\)</span> such that every disk with center
+<span class="math inline">\((a, b)\)</span> contains points in <span
+class="math inline">\(D\)</span> and also points not in <span
+class="math inline">\(D\)</span>.] For instance, the disk</p>
+<p><span class="math display">\[
+D = \{(x, y) | x^2 + y^2 \le 1\}
+\]</span></p>
+<p>which consists of all points on or inside the circle <span
+class="math inline">\(x^2 + y^2 = 1\)</span>, is a closed set because it
+contains all of its boundary points (which are the points on the circle
+<span class="math inline">\(x^2 + y^2 = 1\)</span>). But if even one
+point on the boundary curve were omitted, the set would not be
+closed.</p>
+<p>A <strong>bounded set</strong> in <span
+class="math inline">\(\mathbb{R}^2\)</span> is one that is contained
+within some disk. In other words, it is finite in extent. Then, in terms
+of closed and bounded sets, we can state the following counterpart of
+the Extreme Value Theorem in two dimensions.</p>
+<hr />
+<p><strong>Extreme Value Theorem for Functions of Two Variables</strong>
+If <span class="math inline">\(f\)</span> is continuous on a closed,
+bounded set <span class="math inline">\(D\)</span> in <span
+class="math inline">\(\mathbb{R}^2\)</span>, then <span
+class="math inline">\(f\)</span> attains an absolute maximum value <span
+class="math inline">\(f(x_1, y_1)\)</span> and an absolute minimum value
+<span class="math inline">\(f(x_2, y_2)\)</span> at some points <span
+class="math inline">\((x_1, y_1)\)</span> and <span
+class="math inline">\((x_2, y_2)\)</span> in <span
+class="math inline">\(D\)</span>.</p>
+<hr />
+<p>To find the extreme values guaranteed by Theorem, we note that, by a
+previous Theorem , if <span class="math inline">\(f\)</span> has an
+extreme value at <span class="math inline">\((x_1, y_1)\)</span>, then
+<span class="math inline">\((x_1, y_1)\)</span> is either a critical
+point of <span class="math inline">\(f\)</span> or a boundary point of
+<span class="math inline">\(D\)</span>. Thus we have the following
+extension of the Closed Interval Method.</p>
+<hr />
+<p><strong>Steps to find Absolute Min-max</strong></p>
+<p>To find the absolute maximum and minimum values of a continuous
+function <span class="math inline">\(f\)</span> on a closed, bounded set
+<span class="math inline">\(D\)</span>: 1. Find the values of <span
+class="math inline">\(f\)</span> at the critical points of <span
+class="math inline">\(f\)</span> in <span
+class="math inline">\(D\)</span>. 2. Find the extreme values of <span
+class="math inline">\(f\)</span> on the boundary of <span
+class="math inline">\(D\)</span>. 3. The largest of the values from
+steps 1 and 2 is the absolute maximum value; the smallest of these
+values is the absolute minimum value.</p>
+</body>
+</html>

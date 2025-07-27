@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>How to find max/min?</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>Theorem</strong> If <span class="math inline">\(f\)</span>
+has a local maximum or minimum at <span class="math inline">\((a,
+b)\)</span> and the first-order partial derivatives of <span
+class="math inline">\(f\)</span> exist there, then <span
+class="math inline">\(f_x(a, b) = 0\)</span> and <span
+class="math inline">\(f_y(a, b) = 0\)</span>.</p>
+<p><strong>PROOF</strong> Let <span class="math inline">\(g(x) = f(x,
+b)\)</span>. If <span class="math inline">\(f\)</span> has a local
+maximum (or minimum) at <span class="math inline">\((a, b)\)</span>,
+then <span class="math inline">\(g\)</span> has a local maximum (or
+minimum) at <span class="math inline">\(a\)</span>, so <span
+class="math inline">\(g&#39;(a) = 0\)</span> by Fermat’s Theorem. But
+<span class="math inline">\(g&#39;(a) = f_x(a, b)\)</span> and so <span
+class="math inline">\(f_x(a, b) = 0\)</span>. Similarly, by applying
+Fermat’s Theorem to the function <span class="math inline">\(G(y) = f(a,
+y)\)</span>, we obtain <span class="math inline">\(f_y(a, b) =
+0\)</span>.</p>
+<hr />
+<p>Notice that the conclusion of Theorem 2 can be stated in the notation
+of gradient vectors as <span class="math inline">\(\nabla f(a, b) =
+\mathbf{0}\)</span>.</p>
+<p>If we put <span class="math inline">\(f_x(a, b) = 0\)</span> and
+<span class="math inline">\(f_y(a, b) = 0\)</span> in the equation of a
+tangent plane, we get <span class="math inline">\(z = z_0\)</span>. Thus
+the geometric interpretation of Theorem 2 is that if the graph of <span
+class="math inline">\(f\)</span> has a tangent plane at a local maximum
+or minimum, then the tangent plane must be horizontal.</p>
+</body>
+</html>

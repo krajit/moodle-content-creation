@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example absolute min-max problem</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE</strong> Find the absolute maximum and minimum values
+of the function <span class="math inline">\(f(x, y) = x^2 - 2xy +
+2y\)</span> on the rectangle <span class="math inline">\(D = \{(x, y) |
+0 \le x \le 3, 0 \le y \le 2\}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-8.png" /></p>
+<p><strong>SOLUTION</strong> Since <span
+class="math inline">\(f\)</span> is a polynomial, it is continuous on
+the closed, bounded rectangle <span class="math inline">\(D\)</span>, so
+Theorem 8 tells us there is both an absolute maximum and an absolute
+minimum. According to step 1, we first find the critical points. These
+occur when <span class="math display">\[
+f_x = 2x - 2y = 0 \quad f_y = -2x + 2 = 0
+\]</span> so the only critical point is <span class="math inline">\((1,
+1)\)</span>, and the value of <span class="math inline">\(f\)</span>
+there is <span class="math inline">\(f(1, 1) = 1\)</span>. In step 2 we
+look at the values of <span class="math inline">\(f\)</span> on the
+boundary of <span class="math inline">\(D\)</span>, which consists of
+the four line segments <span class="math inline">\(L_1, L_2, L_3,
+L_4\)</span>. On <span class="math inline">\(L_1\)</span> we have <span
+class="math inline">\(y = 0\)</span> and <span class="math display">\[
+f(x, 0) = x^2 \quad 0 \le x \le 3
+\]</span> This is an increasing function of <span
+class="math inline">\(x\)</span>, so its minimum value is <span
+class="math inline">\(f(0, 0) = 0\)</span> and its maximum value is
+<span class="math inline">\(f(3, 0) = 9\)</span>. On <span
+class="math inline">\(L_2\)</span> we have <span class="math inline">\(x
+= 3\)</span> and <span class="math display">\[
+f(3, y) = 9 - 4y \quad 0 \le y \le 2
+\]</span> This is a decreasing function of <span
+class="math inline">\(y\)</span>, so its maximum value is <span
+class="math inline">\(f(3, 0) = 9\)</span> and its minimum value is
+<span class="math inline">\(f(3, 2) = 1\)</span>. On <span
+class="math inline">\(L_3\)</span> we have <span class="math inline">\(y
+= 2\)</span> and <span class="math display">\[
+f(x, 2) = x^2 - 4x + 4 \quad 0 \le x \le 3
+\]</span> By observing that <span class="math inline">\(f(x, 2) = (x -
+2)^2\)</span>, we see that the minimum value of this function is <span
+class="math inline">\(f(2, 2) = 0\)</span> and the maximum value is
+<span class="math inline">\(f(0, 2) = 4\)</span>. Finally, on <span
+class="math inline">\(L_4\)</span> we have <span class="math inline">\(x
+= 0\)</span> and <span class="math display">\[
+f(0, y) = 2y \quad 0 \le y \le 2
+\]</span> with maximum value <span class="math inline">\(f(0, 2) =
+4\)</span> and minimum value <span class="math inline">\(f(0, 0) =
+0\)</span>. Thus, on the boundary, the minimum value of <span
+class="math inline">\(f\)</span> is 0 and the maximum is 9. In step 3 we
+compare these values with the value <span class="math inline">\(f(1, 1)
+= 1\)</span> at the critical point and conclude that the absolute
+maximum value of <span class="math inline">\(f\)</span> on <span
+class="math inline">\(D\)</span> is <span class="math inline">\(f(3, 0)
+= 9\)</span> and the absolute minimum value is <span
+class="math inline">\(f(0, 0) = f(2, 2) = 0\)</span>. Figure shows the
+graph of <span class="math inline">\(f\)</span>.</p>
+<p><img src="image-9.png" /></p>
+</div>
+</body>
+</html>
