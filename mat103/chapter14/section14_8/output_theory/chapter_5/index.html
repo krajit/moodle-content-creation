@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example 2</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 2</strong> Find the extreme values of the function
+<span class="math inline">\(f(x, y) = x^2 + 2y^2\)</span> on the circle
+<span class="math inline">\(x^2 + y^2 = 1\)</span>.</p>
+<p><img src="image-1.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We are asked for the extreme values of
+<span class="math inline">\(f\)</span> subject to the constraint <span
+class="math inline">\(g(x, y) = x^2 + y^2 = 1\)</span>. Using Lagrange
+multipliers, we solve the equations <span class="math inline">\(\nabla f
+= \lambda \nabla g\)</span> and <span class="math inline">\(g(x, y) =
+1\)</span>, which can be written as <span class="math display">\[
+f_x = \lambda g_x \quad f_y = \lambda g_y \quad g(x, y) = 1
+\]</span> or as <span class="math display">\[
+2x = 2x\lambda
+\]</span> <span class="math display">\[
+4y = 2y\lambda
+\]</span> <span class="math display">\[
+x^2 + y^2 = 1
+\]</span> From (9) we have <span class="math inline">\(x = 0\)</span> or
+<span class="math inline">\(\lambda = 1\)</span>. If <span
+class="math inline">\(x = 0\)</span>, then (11) gives <span
+class="math inline">\(y = \pm 1\)</span>. If <span
+class="math inline">\(\lambda = 1\)</span>, then <span
+class="math inline">\(y = 0\)</span> from (10), so then (11) gives <span
+class="math inline">\(x = \pm 1\)</span>. Therefore <span
+class="math inline">\(f\)</span> has possible extreme values at the
+points <span class="math inline">\((0, 1), (0, -1), (1, 0),\)</span> and
+<span class="math inline">\((-1, 0)\)</span>. Evaluating <span
+class="math inline">\(f\)</span> at these four points, we find that
+<span class="math display">\[
+f(0, 1) = 2 \quad f(0, -1) = 2 \quad f(1, 0) = 1 \quad f(-1, 0) = 1
+\]</span> Therefore the maximum value of <span
+class="math inline">\(f\)</span> on the circle <span
+class="math inline">\(x^2 + y^2 = 1\)</span> is <span
+class="math inline">\(f(0, \pm 1) = 2\)</span> and the minimum value is
+<span class="math inline">\(f(\pm 1, 0) = 1\)</span>.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example: Optimize a function over bounded domain</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 3</strong> Find the extreme values of <span
+class="math inline">\(f(x, y) = x^2 + 2y^2\)</span> on the disk <span
+class="math inline">\(x^2 + y^2 \le 1\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> According to the procedure of Lagrange
+Multipliers, we compare the values of <span
+class="math inline">\(f\)</span> at the critical points with values at
+the points on the boundary. Since <span class="math inline">\(f_x =
+2x\)</span> and <span class="math inline">\(f_y = 4y\)</span>, the only
+critical point is <span class="math inline">\((0, 0)\)</span>. We
+compare the value of <span class="math inline">\(f\)</span> at that
+point with the extreme values on the boundary from Example 2: <span
+class="math display">\[
+f(0, 0) = 0 \quad f(\pm 1, 0) = 1 \quad f(0, \pm 1) = 2
+\]</span> Therefore the maximum value of <span
+class="math inline">\(f\)</span> on the disk <span
+class="math inline">\(x^2 + y^2 \le 1\)</span> is <span
+class="math inline">\(f(0, \pm 1) = 2\)</span> and the minimum value is
+<span class="math inline">\(f(0, 0) = 0\)</span>.</p>
+</div>
+</body>
+</html>

@@ -4,8 +4,8 @@ import subprocess
 from pathlib import Path
 
 # === Settings ===
-input_md = "source_theory.md"
-output_root = Path("output_theory")
+input_md = "source_exercises.md"
+output_root = Path("output_exercises")
 output_root.mkdir(exist_ok=True)
 
 # === Get the directory where this script resides ===

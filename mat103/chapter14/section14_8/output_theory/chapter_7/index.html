@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example: Optimize a function over bounded domain</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 4</strong> Find the points on the sphere <span
+class="math inline">\(x^2 + y^2 + z^2 = 4\)</span> that are closest to
+and farthest from the point <span class="math inline">\((3, 1,
+-1)\)</span>.</p>
+<p><img src="image-2.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The distance from a point <span
+class="math inline">\((x, y, z)\)</span> to the point <span
+class="math inline">\((3, 1, -1)\)</span> is <span
+class="math display">\[
+d = \sqrt{(x - 3)^2 + (y - 1)^2 + (z + 1)^2}
+\]</span> but the algebra is simpler if we instead maximize and minimize
+the square of the distance: <span class="math display">\[
+d^2 = f(x, y, z) = (x - 3)^2 + (y - 1)^2 + (z + 1)^2
+\]</span> The constraint is that the point <span
+class="math inline">\((x, y, z)\)</span> lies on the sphere, that is,
+<span class="math display">\[
+g(x, y, z) = x^2 + y^2 + z^2 = 4
+\]</span> According to the method of Lagrange multipliers, we solve
+<span class="math inline">\(\nabla f = \lambda \nabla g, g = 4\)</span>.
+This gives <span class="math display">\[
+2(x - 3) = 2x\lambda
+\]</span> <span class="math display">\[
+2(y - 1) = 2y\lambda
+\]</span> <span class="math display">\[
+2(z + 1) = 2z\lambda
+\]</span> <span class="math display">\[
+x^2 + y^2 + z^2 = 4
+\]</span> The simplest way to solve these equations is to solve for
+<span class="math inline">\(x, y,\)</span> and <span
+class="math inline">\(z\)</span> in terms of <span
+class="math inline">\(\lambda\)</span> from (12), (13), and (14), and
+then substitute these values into (15). From (12) we have <span
+class="math display">\[
+x - 3 = x\lambda \implies x(1 - \lambda) = 3 \implies x = \frac{3}{1 -
+\lambda}
+\]</span> [Note that <span class="math inline">\(1 - \lambda \neq
+0\)</span> because <span class="math inline">\(\lambda = 1\)</span> is
+impossible from (12).] Similarly, (13) and (14) give <span
+class="math display">\[
+y = \frac{1}{1 - \lambda} \quad z = \frac{-1}{1 - \lambda}
+\]</span> Therefore, from (15), we have <span class="math display">\[
+\frac{3^2}{(1 - \lambda)^2} + \frac{1^2}{(1 - \lambda)^2} +
+\frac{(-1)^2}{(1 - \lambda)^2} = 4
+\]</span> which gives <span class="math inline">\((1 - \lambda)^2 =
+11/4\)</span>, <span class="math inline">\(1 - \lambda = \pm
+\sqrt{11}/2\)</span>, so <span class="math display">\[
+\lambda = 1 \mp \frac{\sqrt{11}}{2}
+\]</span> These values of <span class="math inline">\(\lambda\)</span>
+then give the corresponding points <span class="math inline">\((x, y,
+z)\)</span>: <span class="math display">\[
+\left(\frac{6}{\sqrt{11}}, \frac{2}{\sqrt{11}},
+-\frac{2}{\sqrt{11}}\right) \quad \text{and} \quad
+\left(-\frac{6}{\sqrt{11}}, -\frac{2}{\sqrt{11}},
+\frac{2}{\sqrt{11}}\right)
+\]</span> It’s easy to see that <span class="math inline">\(f\)</span>
+has a smaller value at the first of these points, so the closest point
+is <span class="math inline">\((6/\sqrt{11}, 2/\sqrt{11},
+-2/\sqrt{11})\)</span> and the farthest is <span
+class="math inline">\((-6/\sqrt{11}, -2/\sqrt{11},
+2/\sqrt{11})\)</span>.</p>
+</div>
+</body>
+</html>

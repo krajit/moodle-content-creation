@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lagrange Multipliers Theory</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>In a previous example, we maximized a volume function <span
+class="math inline">\(V = xyz\)</span> subject to the constraint <span
+class="math inline">\(2xz + 2yz + xy = 12\)</span>, which expressed the
+side condition that the surface area was 12 m<span
+class="math inline">\(^2\)</span>.</p>
+<p>In this section we present Lagrange’s method for maximizing or
+minimizing a general function <span class="math inline">\(f(x, y,
+z)\)</span> subject to a constraint (or side condition) of the form
+<span class="math inline">\(g(x, y, z) = k\)</span>.</p>
+<p>It’s easier to explain the geometric basis of Lagrange’s method for
+functions of two variables. So we start by trying to find the extreme
+values of <span class="math inline">\(f(x, y)\)</span> subject to a
+constraint of the form <span class="math inline">\(g(x, y) = k\)</span>.
+In other words, we seek the extreme values of <span
+class="math inline">\(f(x, y)\)</span> when the point <span
+class="math inline">\((x, y)\)</span> is restricted to lie on the level
+curve <span class="math inline">\(g(x, y) = k\)</span>.</p>
+<p><img src="image.png" /></p>
+<p>Figure 1 shows this curve together with several level curves of <span
+class="math inline">\(f\)</span>. These have the equations <span
+class="math inline">\(f(x, y) = c\)</span>, where <span
+class="math inline">\(c = 7, 8, 9, 10, 11\)</span>. To maximize <span
+class="math inline">\(f(x, y)\)</span> subject to <span
+class="math inline">\(g(x, y) = k\)</span> is to find the largest value
+of <span class="math inline">\(c\)</span> such that the level curve
+<span class="math inline">\(f(x, y) = c\)</span> intersects <span
+class="math inline">\(g(x, y) = k\)</span>. It appears from Figure 1
+that this happens when these curves just touch each other, that is, when
+they have a common tangent line. (Otherwise, the value of <span
+class="math inline">\(c\)</span> could be increased further.) This means
+that the normal lines at the point <span class="math inline">\((x_0,
+y_0)\)</span> where they touch are identical. So the gradient vectors
+are parallel; that is, <span class="math inline">\(\nabla f(x_0, y_0) =
+\lambda \nabla g(x_0, y_0)\)</span> for some scalar <span
+class="math inline">\(\lambda\)</span>.</p>
+<p>This kind of argument also applies to the problem of finding the
+extreme values of <span class="math inline">\(f(x, y, z)\)</span>
+subject to the constraint <span class="math inline">\(g(x, y, z) =
+k\)</span>. Thus the point <span class="math inline">\((x, y,
+z)\)</span> is restricted to lie on the level surface <span
+class="math inline">\(S\)</span> with equation <span
+class="math inline">\(g(x, y, z) = k\)</span>. Instead of the level
+curves in Figure 1, we consider the level surfaces <span
+class="math inline">\(f(x, y, z) = c\)</span> and argue that if the
+maximum value of <span class="math inline">\(f\)</span> is <span
+class="math inline">\(f(x_0, y_0, z_0) = c\)</span>, then the level
+surface <span class="math inline">\(f(x, y, z) = c\)</span> is tangent
+to the level surface <span class="math inline">\(g(x, y, z) = k\)</span>
+and so the corresponding gradient vectors are parallel.</p>
+<p>This intuitive argument can be made precise as follows. Suppose that
+a function <span class="math inline">\(f\)</span> has an extreme value
+at a point <span class="math inline">\(P(x_0, y_0, z_0)\)</span> on the
+surface <span class="math inline">\(S\)</span> and let <span
+class="math inline">\(C\)</span> be a curve with vector equation <span
+class="math inline">\(\mathbf{r}(t) = \langle x(t), y(t), z(t)
+\rangle\)</span> that lies on <span class="math inline">\(S\)</span> and
+passes through <span class="math inline">\(P\)</span>. If <span
+class="math inline">\(t_0\)</span> is the parameter value corresponding
+to the point <span class="math inline">\(P\)</span>, then <span
+class="math inline">\(\mathbf{r}(t_0) = \langle x_0, y_0, z_0
+\rangle\)</span>. The composite function <span
+class="math inline">\(h(t) = f(x(t), y(t), z(t))\)</span> represents the
+values that <span class="math inline">\(f\)</span> takes on the curve
+<span class="math inline">\(C\)</span>. Since <span
+class="math inline">\(f\)</span> has an extreme value at <span
+class="math inline">\((x_0, y_0, z_0)\)</span>, it follows that <span
+class="math inline">\(h\)</span> has an extreme value at <span
+class="math inline">\(t_0\)</span>, so <span
+class="math inline">\(h&#39;(t_0) = 0\)</span>. But if <span
+class="math inline">\(f\)</span> is differentiable, we can use the Chain
+Rule to write <span class="math display">\[
+0 = h&#39;(t_0) = f_x(x_0, y_0, z_0)x&#39;(t_0) + f_y(x_0, y_0,
+z_0)y&#39;(t_0) + f_z(x_0, y_0, z_0)z&#39;(t_0) = \nabla f(x_0, y_0,
+z_0) \cdot \mathbf{r}&#39;(t_0)
+\]</span> This shows that the gradient vector <span
+class="math inline">\(\nabla f(x_0, y_0, z_0)\)</span> is orthogonal to
+the tangent vector <span
+class="math inline">\(\mathbf{r}&#39;(t_0)\)</span> to every such curve
+<span class="math inline">\(C\)</span>. But we already know that the
+gradient vector of <span class="math inline">\(g\)</span>, <span
+class="math inline">\(\nabla g(x_0, y_0, z_0)\)</span>, is also
+orthogonal to <span class="math inline">\(\mathbf{r}&#39;(t_0)\)</span>
+for every such curve. This means that the gradient vectors <span
+class="math inline">\(\nabla f(x_0, y_0, z_0)\)</span> and <span
+class="math inline">\(\nabla g(x_0, y_0, z_0)\)</span> must be parallel.
+Therefore, if <span class="math inline">\(\nabla g(x_0, y_0, z_0) \neq
+\mathbf{0}\)</span>, there is a number <span
+class="math inline">\(\lambda\)</span> such that <span
+class="math display">\[
+\nabla f(x_0, y_0, z_0) = \lambda \nabla g(x_0, y_0, z_0)
+\]</span> The number <span class="math inline">\(\lambda\)</span> in
+Equation 1 is called a <strong>Lagrange multiplier</strong>. The
+procedure is described the next page.</p>
+</body>
+</html>

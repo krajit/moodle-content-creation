@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Method of Lagrange Multipliers</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>Method of Lagrange Multipliers</strong> To find the maximum
+and minimum values of <span class="math inline">\(f(x, y, z)\)</span>
+subject to the constraint <span class="math inline">\(g(x, y, z) =
+k\)</span> [assuming that these extreme values exist and <span
+class="math inline">\(\nabla g \neq \mathbf{0}\)</span> on the surface
+<span class="math inline">\(g(x, y, z) = k\)</span>]: (a) Find all
+values of <span class="math inline">\(x, y, z\)</span>, and <span
+class="math inline">\(\lambda\)</span> such that <span
+class="math display">\[
+\nabla f(x, y, z) = \lambda \nabla g(x, y, z)
+\]</span> and <span class="math display">\[
+g(x, y, z) = k
+\]</span> (b) Evaluate <span class="math inline">\(f\)</span> at all the
+points <span class="math inline">\((x, y, z)\)</span> that result from
+step (a). The largest of these values is the maximum value of <span
+class="math inline">\(f\)</span>; the smallest is the minimum value of
+<span class="math inline">\(f\)</span>.</p>
+<hr />
+<p>If we write the vector equation <span class="math inline">\(\nabla f
+= \lambda \nabla g\)</span> in terms of components, then the equations
+in step (a) become <span class="math display">\[
+f_x = \lambda g_x \quad f_y = \lambda g_y \quad f_z = \lambda g_z \quad
+g(x, y, z) = k
+\]</span> This is a system of four equations in the four unknowns <span
+class="math inline">\(x, y, z\)</span>, and <span
+class="math inline">\(\lambda\)</span>, but it is not necessary to find
+explicit values for <span class="math inline">\(\lambda\)</span>.</p>
+<p>For functions of two variables the method of Lagrange multipliers is
+similar to the method just described. To find the extreme values of
+<span class="math inline">\(f(x, y)\)</span> subject to the constraint
+<span class="math inline">\(g(x, y) = k\)</span>, we look for values of
+<span class="math inline">\(x, y\)</span>, and <span
+class="math inline">\(\lambda\)</span> such that <span
+class="math display">\[
+\nabla f(x, y) = \lambda \nabla g(x, y) \quad \text{and} \quad g(x, y) =
+k
+\]</span> This amounts to solving three equations in three unknowns:
+<span class="math display">\[
+f_x = \lambda g_x \quad f_y = \lambda g_y \quad g(x, y) = k
+\]</span></p>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lagrange Multiplier - Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 1</strong> A rectangular box without a lid is to be
+made from 12 m<span class="math inline">\(^2\)</span> of cardboard. Find
+the maximum volume of such a box.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> As in Example 14.7.6, we let <span
+class="math inline">\(x, y\)</span>, and <span
+class="math inline">\(z\)</span> be the length, width, and height,
+respectively, of the box in meters. Then we wish to maximize <span
+class="math display">\[
+V = xyz
+\]</span> subject to the constraint <span class="math display">\[
+g(x, y, z) = 2xz + 2yz + xy = 12
+\]</span> Using the method of Lagrange multipliers, we look for values
+of <span class="math inline">\(x, y, z\)</span>, and <span
+class="math inline">\(\lambda\)</span> such that <span
+class="math inline">\(\nabla V = \lambda \nabla g\)</span> and <span
+class="math inline">\(g(x, y, z) = 12\)</span>. This gives the equations
+<span class="math display">\[
+V_x = \lambda g_x \quad V_y = \lambda g_y \quad V_z = \lambda g_z \quad
+2xz + 2yz + xy = 12
+\]</span> which become <span class="math display">\[
+yz = \lambda(2z + y)
+\]</span> <span class="math display">\[
+xz = \lambda(2z + x)
+\]</span> <span class="math display">\[
+xy = \lambda(2x + 2y)
+\]</span> <span class="math display">\[
+2xz + 2yz + xy = 12
+\]</span> There are no general rules for solving systems of equations.
+Sometimes some ingenuity is required. In the present example you might
+notice that if we multiply (2) by <span
+class="math inline">\(x\)</span>, (3) by <span
+class="math inline">\(y\)</span>, and (4) by <span
+class="math inline">\(z\)</span>, then the left sides of these equations
+will be identical. Doing this, we have <span class="math display">\[
+xyz = \lambda x(2z + y)
+\]</span> <span class="math display">\[
+xyz = \lambda y(2z + x)
+\]</span> <span class="math display">\[
+xyz = \lambda z(2x + 2y)
+\]</span> We observe that <span class="math inline">\(\lambda \neq
+0\)</span> because <span class="math inline">\(\lambda = 0\)</span>
+would imply <span class="math inline">\(yz = xz = xy = 0\)</span> from
+(2), (3), and (4) and this would contradict (5). Therefore, from (6) and
+(7), we have <span class="math display">\[
+x(2z + y) = y(2z + x) \implies 2xz + xy = 2yz + xy \implies xz = yz
+\]</span> But <span class="math inline">\(z \neq 0\)</span> (since <span
+class="math inline">\(z = 0\)</span> would give <span
+class="math inline">\(V = 0\)</span>), so <span class="math inline">\(x
+= y\)</span>. From (7) and (8) we have <span class="math display">\[
+y(2z + x) = z(2x + 2y) \implies 2yz + xy = 2xz + 2yz \implies xy = 2xz
+\]</span> Since <span class="math inline">\(x \neq 0\)</span>, we have
+<span class="math inline">\(y = 2z\)</span>. If we now put <span
+class="math inline">\(x = y = 2z\)</span> in (5), we get <span
+class="math display">\[
+(2z)(2z) + 2(2z)z + 2(2z)z = 12 \implies 4z^2 + 4z^2 + 4z^2 = 12
+\implies 12z^2 = 12
+\]</span> Since <span class="math inline">\(x, y\)</span>, and <span
+class="math inline">\(z\)</span> are all positive, we therefore have
+<span class="math inline">\(z = 1\)</span> and so <span
+class="math inline">\(x = 2\)</span> and <span class="math inline">\(y =
+2\)</span>. This agrees with our answer in Section 14.7.</p>
+</div>
+</body>
+</html>

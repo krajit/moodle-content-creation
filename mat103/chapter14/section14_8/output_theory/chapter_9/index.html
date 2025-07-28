@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example: Two constraint Lagrange Multipliers</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 5</strong> Find the maximum value of the function
+<span class="math inline">\(f(x, y, z) = x + 2y + 3z\)</span> on the
+curve of intersection of the plane <span class="math inline">\(x - y + z
+= 1\)</span> and the cylinder <span class="math inline">\(x^2 + y^2 =
+1\)</span>.</p>
+<table style="width:31%;">
+<colgroup>
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: left;"><img src="image-4.png" /></td>
+</tr>
+</tbody>
+</table>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We maximize the function <span
+class="math inline">\(f(x, y, z) = x + 2y + 3z\)</span> subject to the
+constraints <span class="math inline">\(g(x, y, z) = x - y + z =
+1\)</span> and <span class="math inline">\(h(x, y, z) = x^2 + y^2 =
+1\)</span>. The Lagrange condition is <span class="math inline">\(\nabla
+f = \lambda \nabla g + \mu \nabla h\)</span>, so we solve the equations
+<span class="math display">\[
+1 = \lambda + 2x\mu
+\]</span> <span class="math display">\[
+2 = -\lambda + 2y\mu
+\]</span> <span class="math display">\[
+3 = \lambda
+\]</span> <span class="math display">\[
+x - y + z = 1
+\]</span> <span class="math display">\[
+x^2 + y^2 = 1
+\]</span> Putting <span class="math inline">\(\lambda = 3\)</span> [from
+(19)] in (17), we get <span class="math inline">\(2x\mu = -2\)</span>,
+so <span class="math inline">\(x = -1/\mu\)</span>. Similarly, (18)
+gives <span class="math inline">\(y = 5/(2\mu)\)</span>. Substitution in
+(21) then gives <span class="math display">\[
+\frac{1}{\mu^2} + \frac{25}{4\mu^2} = 1
+\]</span> and so <span class="math inline">\(\mu^2 = 29/4\)</span>,
+<span class="math inline">\(\mu = \pm \sqrt{29}/2\)</span>. Then <span
+class="math inline">\(x = \mp 2/\sqrt{29}\)</span>, <span
+class="math inline">\(y = \pm 5/\sqrt{29}\)</span>, and, from (20),
+<span class="math inline">\(z = 1 - x + y = 1 \mp (-2/\sqrt{29}) + (\pm
+5/\sqrt{29}) = 1 \pm 7/\sqrt{29}\)</span>. The corresponding values of
+<span class="math inline">\(f\)</span> are <span class="math display">\[
+\left(\mp \frac{2}{\sqrt{29}}\right) + 2\left(\pm
+\frac{5}{\sqrt{29}}\right) + 3\left(1 \pm \frac{7}{\sqrt{29}}\right) = 3
+\pm \sqrt{29}
+\]</span> Therefore the maximum value of <span
+class="math inline">\(f\)</span> on the given curve is <span
+class="math inline">\(3 + \sqrt{29}\)</span>.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Two constraint - Lagrange Multipliers</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image-3.png" /></p>
+<p>Suppose now that we want to find the maximum and minimum values of a
+function <span class="math inline">\(f(x, y, z)\)</span> subject to
+<strong>two</strong> constraints (side conditions) of the form <span
+class="math inline">\(g(x, y, z) = k\)</span> and <span
+class="math inline">\(h(x, y, z) = c\)</span>. Geometrically, this means
+that we are looking for the extreme values of <span
+class="math inline">\(f\)</span> when <span class="math inline">\((x, y,
+z)\)</span> is restricted to lie on the curve of intersection <span
+class="math inline">\(C\)</span> of the level surfaces <span
+class="math inline">\(g(x, y, z) = k\)</span> and <span
+class="math inline">\(h(x, y, z) = c\)</span>. Suppose <span
+class="math inline">\(f\)</span> has such an extreme value at a point
+<span class="math inline">\(P(x_0, y_0, z_0)\)</span>. We know that
+<span class="math inline">\(\nabla f\)</span> is orthogonal to <span
+class="math inline">\(C\)</span> at <span
+class="math inline">\(P\)</span>. But we also know that <span
+class="math inline">\(\nabla g\)</span> and <span
+class="math inline">\(\nabla h\)</span> are orthogonal to <span
+class="math inline">\(C\)</span> at <span
+class="math inline">\(P\)</span>. This means that the gradient vector
+<span class="math inline">\(\nabla f(x_0, y_0, z_0)\)</span> is in the
+plane determined by <span class="math inline">\(\nabla g(x_0, y_0,
+z_0)\)</span> and <span class="math inline">\(\nabla h(x_0, y_0,
+z_0)\)</span>. (We assume that these gradient vectors are not zero and
+not parallel.) So there are numbers <span
+class="math inline">\(\lambda\)</span> and <span
+class="math inline">\(\mu\)</span> (called Lagrange multipliers) such
+that <span class="math display">\[
+\nabla f(x_0, y_0, z_0) = \lambda \nabla g(x_0, y_0, z_0) + \mu \nabla
+h(x_0, y_0, z_0)
+\]</span> In this case Lagrange’s method is to look for extreme values
+by solving five equations in the five unknowns <span
+class="math inline">\(x, y, z, \lambda,\)</span> and <span
+class="math inline">\(\mu\)</span>. These equations are obtained by
+writing Equation 16 in terms of its components and using the constraint
+equations: <span class="math display">\[
+f_x = \lambda g_x + \mu h_x
+\]</span> <span class="math display">\[
+f_y = \lambda g_y + \mu h_y
+\]</span> <span class="math display">\[
+f_z = \lambda g_z + \mu h_z
+\]</span> <span class="math display">\[
+g(x, y, z) = k
+\]</span> <span class="math display">\[
+h(x, y, z) = c
+\]</span></p>
+</body>
+</html>

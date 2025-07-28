@@ -7,8 +7,6 @@
 
 Some dummy content
 
-![](image.png)
-
 </page>
 
 
@@ -21,6 +19,8 @@ Q. What is $f(x) =  x^2?$
 <ans>
 
 A. A parabola
+
+![](image-1.png)
 
 </ans>
 
