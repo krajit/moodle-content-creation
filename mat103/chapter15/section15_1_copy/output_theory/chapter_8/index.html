@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example - Iterated Integrals</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 4</strong> Evaluate the iterated integrals. (a) <span
+class="math inline">\(\int_0^3 \int_1^2 x^2y dy dx\)</span> (b) <span
+class="math inline">\(\int_1^2 \int_0^3 x^2y dx dy\)</span></p>
+<button id="show-ans-1" class="btn btn-primary">
+Show
+</button>
+<div id="ans-div-1" style="display: none;">
+<p><strong>SOLUTION</strong> (a) Regarding <span
+class="math inline">\(x\)</span> as a constant, we obtain <span
+class="math display">\[
+\int_1^2 x^2y dy = \left[ x^2 \frac{y^2}{2} \right]_{y=1}^{y=2} =
+x^2\left(\frac{2^2}{2}\right) - x^2\left(\frac{1^2}{2}\right) =
+\frac{3}{2}x^2
+\]</span> Thus the function <span class="math inline">\(A\)</span> in
+the preceding discussion is given by <span class="math inline">\(A(x) =
+\frac{3}{2}x^2\)</span> in this example. We now integrate this function
+of <span class="math inline">\(x\)</span> from 0 to 3: <span
+class="math display">\[
+\int_0^3 \int_1^2 x^2y dy dx = \int_0^3 \left[ \int_1^2 x^2y dy \right]
+dx = \int_0^3 \frac{3}{2}x^2 dx = \frac{3}{2} \left[ \frac{x^3}{3}
+\right]_0^3 = \frac{3}{2} \frac{27}{3} = \frac{27}{2}
+\]</span> (b) Here we first integrate with respect to <span
+class="math inline">\(x\)</span>: <span class="math display">\[
+\int_1^2 \int_0^3 x^2y dx dy = \int_1^2 \left[ \int_0^3 x^2y dx \right]
+dy = \int_1^2 \left[ \frac{x^3}{3}y \right]_{x=0}^{x=3} dy = \int_1^2 9y
+dy = 9 \left[ \frac{y^2}{2} \right]_1^2 = \frac{27}{2}
+\]</span></p>
+<p>Notice that in Example 4 we obtained the same answer whether we
+integrated with respect to <span class="math inline">\(y\)</span> or
+<span class="math inline">\(x\)</span> first. In general, it turns out
+(see Theorem 10) that the two iterated integrals in Equations (<span
+class="math inline">\(\ref{eq:8}\)</span>) and (<span
+class="math inline">\(\ref{eq:9}\)</span>) are always equal; that is,
+the order of integration does not matter.</p>
+</div>
+<script>
+    document.getElementById("show-ans-1").addEventListener("click", function() {
+      const ans = document.getElementById("ans-div-1");
+      const btn = document.getElementById("show-ans-1");
+
+      if (ans.style.display === "none") {
+        ans.style.display = "block";
+        btn.innerText = "Hide";
+      } else {
+        ans.style.display = "none";
+        btn.innerText = "Show";
+      }
+    });
+  </script>
+</body>
+</html>

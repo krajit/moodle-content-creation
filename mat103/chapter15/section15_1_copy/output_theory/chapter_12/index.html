@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 7</strong> Find the volume of the solid <span
+class="math inline">\(S\)</span> that is bounded by the elliptic
+paraboloid <span class="math inline">\(x^2 + 2y^2 + z = 16\)</span>, the
+planes <span class="math inline">\(x = 2\)</span> and <span
+class="math inline">\(y = 2\)</span>, and the three coordinate
+planes.</p>
+<p><img src="image-7.png" /></p>
+<button id="show-ans-1" class="btn btn-primary">
+Show
+</button>
+<div id="ans-div-1" style="display: none;">
+<p><strong>SOLUTION</strong> We first observe that <span
+class="math inline">\(S\)</span> is the solid that lies under the
+surface <span class="math inline">\(z = 16 - x^2 - 2y^2\)</span> and
+above the square <span class="math inline">\(R = [0, 2] \times [0,
+2]\)</span>. This solid was considered in Example 1, but we are now in a
+position to evaluate the double integral using Fubini’s Theorem.
+Therefore <span class="math display">\[
+V = \iint_R (16 - x^2 - 2y^2) dA = \int_0^2 \int_0^2 (16 - x^2 - 2y^2)
+dy dx
+\]</span> <span class="math display">\[
+= \int_0^2 \left[ 16y - x^2y - \frac{2}{3}y^3 \right]_{y=0}^{y=2} dx =
+\int_0^2 \left( 32 - 2x^2 - \frac{16}{3} \right) dx
+\]</span> <span class="math display">\[
+= \int_0^2 \left( \frac{80}{3} - 2x^2 \right) dx = \left[ \frac{80}{3}x
+- \frac{2}{3}x^3 \right]_0^2 = \frac{160}{3} - \frac{16}{3} =
+\frac{144}{3} = 48
+\]</span></p>
+<p>In the special case where <span class="math inline">\(f(x,
+y)\)</span> can be factored as the product of a function of <span
+class="math inline">\(x\)</span> only and a function of <span
+class="math inline">\(y\)</span> only, the double integral of <span
+class="math inline">\(f\)</span> can be written in a particularly simple
+form. To be specific, suppose that <span class="math inline">\(f(x, y) =
+g(x)h(y)\)</span> and <span class="math inline">\(R = [a, b] \times [c,
+d]\)</span>. Then Fubini’s Theorem gives <span class="math display">\[
+\iint_R f(x, y) dA = \int_c^d \int_a^b g(x)h(y) dx dy = \int_c^d \left[
+\int_a^b g(x)h(y) dx \right] dy
+\]</span> In the inner integral, <span class="math inline">\(y\)</span>
+is a constant, so <span class="math inline">\(h(y)\)</span> is a
+constant and we can write <span class="math display">\[
+\int_a^b g(x)h(y) dx = h(y) \int_a^b g(x) dx
+\]</span> since <span class="math inline">\(\int_a^b g(x) dx\)</span> is
+a constant. Therefore, in this case the double integral of <span
+class="math inline">\(f\)</span> can be written as the product of two
+single integrals: <span class="math display">\[ \tag{eq:11}
+\iint_R g(x)h(y) dA = \left( \int_a^b g(x) dx \right) \left( \int_c^d
+h(y) dy \right) \quad \text{where } R = [a, b] \times [c, d]
+\]</span></p>
+</div>
+<script>
+    document.getElementById("show-ans-1").addEventListener("click", function() {
+      const ans = document.getElementById("ans-div-1");
+      const btn = document.getElementById("show-ans-1");
+
+      if (ans.style.display === "none") {
+        ans.style.display = "block";
+        btn.innerText = "Hide";
+      } else {
+        ans.style.display = "none";
+        btn.innerText = "Show";
+      }
+    });
+  </script>
+</body>
+</html>

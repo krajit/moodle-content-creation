@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Review of the Definite Integral in One variable</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image.png" /></p>
+<p>First let’s recall the basic facts concerning definite integrals of
+functions of a single variable. If <span
+class="math inline">\(f(x)\)</span> is defined for <span
+class="math inline">\(a \le x \le b\)</span>, we start by dividing the
+interval <span class="math inline">\([a, b]\)</span> into <span
+class="math inline">\(n\)</span> subintervals <span
+class="math inline">\([x_{i-1}, x_i]\)</span> of equal width <span
+class="math inline">\(\Delta x = (b - a)/n\)</span> and we choose sample
+points <span class="math inline">\(x_i^*\)</span> in these subintervals.
+Then we form the Riemann sum <span class="math display">\[
+\sum_{i=1}^{n} f(x_i^*) \Delta x
+\tag{1}
+\]</span> and take the limit of such sums as <span
+class="math inline">\(n \to \infty\)</span> to obtain the definite
+integral of <span class="math inline">\(f\)</span> from <span
+class="math inline">\(a\)</span> to <span
+class="math inline">\(b\)</span>:</p>
+<p><span class="math display">\[
+\int_a^b f(x) dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*) \Delta x
+\tag{2}
+\]</span> In the special case where <span class="math inline">\(f(x) \ge
+0\)</span>, the Riemann sum can be interpreted as the sum of the areas
+of the approximating rectangles in Figure 1, and <span
+class="math inline">\(\int_a^b f(x) dx\)</span> represents the area
+under the curve <span class="math inline">\(y = f(x)\)</span> from <span
+class="math inline">\(a\)</span> to <span
+class="math inline">\(b\)</span>.</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example: midpoint rule</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 3</strong> Use the Midpoint Rule with <span
+class="math inline">\(m = n = 2\)</span> to estimate the value of the
+integral <span class="math inline">\(\iint_R (x - 3y^2) dA\)</span>,
+where <span class="math inline">\(R = \{(x, y) | 0 \le x \le 2, 1 \le y
+\le 2\}\)</span>.</p>
+<button id="show-ans-1" class="btn btn-primary">
+Show
+</button>
+<div id="ans-div-1" style="display: none;">
+<p><strong>SOLUTION</strong> In using the Midpoint Rule with <span
+class="math inline">\(m = n = 2\)</span>, we evaluate <span
+class="math inline">\(f(x, y) = x - 3y^2\)</span> at the centers of the
+four subrectangles shown in Figure 10. So <span
+class="math inline">\(\bar{x}_1 = 1/2, \bar{x}_2 = 3/2, \bar{y}_1 =
+5/4,\)</span> and <span class="math inline">\(\bar{y}_2 = 7/4\)</span>.
+The area of each subrectangle is <span class="math inline">\(\Delta A =
+1/2\)</span>. Thus <span class="math display">\[
+\iint_R (x - 3y^2) dA \approx \sum_{i=1}^{2} \sum_{j=1}^{2} f(\bar{x}_i,
+\bar{y}_j) \Delta A
+\]</span> <span class="math display">\[
+= f(\bar{x}_1, \bar{y}_1)\Delta A + f(\bar{x}_1, \bar{y}_2)\Delta A +
+f(\bar{x}_2, \bar{y}_1)\Delta A + f(\bar{x}_2, \bar{y}_2)\Delta A
+\]</span> <span class="math display">\[
+= f(1/2, 5/4)\Delta A + f(1/2, 7/4)\Delta A + f(3/2, 5/4)\Delta A +
+f(3/2, 7/4)\Delta A
+\]</span> <span class="math display">\[
+= \left(-\frac{67}{16}\right)\frac{1}{2} +
+\left(-\frac{139}{16}\right)\frac{1}{2} +
+\left(-\frac{51}{16}\right)\frac{1}{2} +
+\left(-\frac{123}{16}\right)\frac{1}{2} = -\frac{1}{32}(67+139+51+123) =
+-\frac{380}{32} = -11.875
+\]</span> Thus we have <span class="math display">\[
+\iint_R (x - 3y^2) dA \approx -11.875
+\]</span></p>
+</div>
+<script>
+    document.getElementById("show-ans-1").addEventListener("click", function() {
+      const ans = document.getElementById("ans-div-1");
+      const btn = document.getElementById("show-ans-1");
+
+      if (ans.style.display === "none") {
+        ans.style.display = "block";
+        btn.innerText = "Hide";
+      } else {
+        ans.style.display = "none";
+        btn.innerText = "Show";
+      }
+    });
+  </script>
+</body>
+</html>

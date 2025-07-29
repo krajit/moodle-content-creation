@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Midpoint Rule</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The methods that we used for approximating single integrals (the
+Midpoint Rule, the Trapezoidal Rule, Simpson’s Rule) all have
+counterparts for double integrals. Here we consider only the Midpoint
+Rule for double integrals. This means that we use a double Riemann sum
+to approximate the double integral, where the sample point <span
+class="math inline">\((x_{ij}^*, y_{ij}^*)\)</span> in <span
+class="math inline">\(R_{ij}\)</span> is chosen to be the center <span
+class="math inline">\((\bar{x}_i, \bar{y}_j)\)</span> of <span
+class="math inline">\(R_{ij}\)</span>. In other words, <span
+class="math inline">\(\bar{x}_i\)</span> is the midpoint of <span
+class="math inline">\([x_{i-1}, x_i]\)</span> and <span
+class="math inline">\(\bar{y}_j\)</span> is the midpoint of <span
+class="math inline">\([y_{j-1}, y_j]\)</span>.</p>
+<hr />
+<p><strong>Midpoint Rule for Double Integrals</strong> <span
+class="math display">\[
+\iint_R f(x, y) dA \approx \sum_{i=1}^{m} \sum_{j=1}^{n} f(\bar{x}_i,
+\bar{y}_j) \Delta A
+\]</span> where <span class="math inline">\(\bar{x}_i\)</span> is the
+midpoint of <span class="math inline">\([x_{i-1}, x_i]\)</span> and
+<span class="math inline">\(\bar{y}_j\)</span> is the midpoint of <span
+class="math inline">\([y_{j-1}, y_j]\)</span>.</p>
+</body>
+</html>

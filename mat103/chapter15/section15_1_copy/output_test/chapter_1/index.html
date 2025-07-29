@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Title 1</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Question: Who the fuck are you?</p>
+<button id="show-ans-1" class="btn btn-primary">
+Show
+</button>
+<div id="ans-div-1" style="display: none;">
+<p>I am the lord</p>
+</div>
+<script>
+    document.getElementById("show-ans-1").addEventListener("click", function() {
+      const ans = document.getElementById("ans-div-1");
+      const btn = document.getElementById("show-ans-1");
+
+      if (ans.style.display === "none") {
+        ans.style.display = "block";
+        btn.innerText = "Hide";
+      } else {
+        ans.style.display = "none";
+        btn.innerText = "Show";
+      }
+    });
+  </script>
+<p>bla</p>
+<p>Question: Who is this?</p>
+<button id="show-ans-2" class="btn btn-primary">
+Show
+</button>
+<div id="ans-div-2" style="display: none;">
+<p>I am the man</p>
+</div>
+<script>
+    document.getElementById("show-ans-2").addEventListener("click", function() {
+      const ans = document.getElementById("ans-div-2");
+      const btn = document.getElementById("show-ans-2");
+
+      if (ans.style.display === "none") {
+        ans.style.display = "block";
+        btn.innerText = "Hide";
+      } else {
+        ans.style.display = "none";
+        btn.innerText = "Show";
+      }
+    });
+  </script>
+</body>
+</html>
