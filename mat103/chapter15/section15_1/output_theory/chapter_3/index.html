@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Volumes and Double Integrals</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>We consider a function <span class="math inline">\(f\)</span> of two
+variables defined on a closed rectangle <span class="math display">\[
+R = [a, b] \times [c, d] = \{(x, y) \in \mathbb{R}^2 | a \le x \le b, c
+\le y \le d\}
+\]</span> and we first suppose that <span class="math inline">\(f(x, y)
+\ge 0\)</span>. The graph of <span class="math inline">\(f\)</span> is a
+surface with equation <span class="math inline">\(z = f(x,
+y)\)</span>.</p>
+<p><img src="image-1.png" /></p>
+<p>Let <span class="math inline">\(S\)</span> be the solid that lies
+above <span class="math inline">\(R\)</span> and under the graph of
+<span class="math inline">\(f\)</span>, that is, <span
+class="math display">\[
+S = \{(x, y, z) \in \mathbb{R}^3 | 0 \le z \le f(x, y), (x, y) \in R\}
+\]</span> (See Figure 2.) Our goal is to find the volume of <span
+class="math inline">\(S\)</span>.</p>
+<p>The first step is to divide the rectangle <span
+class="math inline">\(R\)</span> into subrectangles. We accomplish this
+by dividing the interval <span class="math inline">\([a, b]\)</span>
+into <span class="math inline">\(m\)</span> subintervals <span
+class="math inline">\([x_{i-1}, x_i]\)</span> of equal width <span
+class="math inline">\(\Delta x = (b - a)/m\)</span> and dividing <span
+class="math inline">\([c, d]\)</span> into <span
+class="math inline">\(n\)</span> subintervals <span
+class="math inline">\([y_{j-1}, y_j]\)</span> of equal width <span
+class="math inline">\(\Delta y = (d - c)/n\)</span>. By drawing lines
+parallel to the coordinate axes through the endpoints of these
+subintervals, as in Figure 3, we form the subrectangles</p>
+<p><img src="image-2.png" /></p>
+<p><span class="math display">\[
+R_{ij} = [x_{i-1}, x_i] \times [y_{j-1}, y_j] = \{(x, y) | x_{i-1} \le x
+\le x_i, y_{j-1} \le y \le y_j\}
+\]</span> each with area <span class="math inline">\(\Delta A = \Delta x
+\Delta y\)</span>.</p>
+<p>If we choose a sample point <span class="math inline">\((x_{ij}^*,
+y_{ij}^*)\)</span> in each <span class="math inline">\(R_{ij}\)</span>,
+then we can approximate the part of <span
+class="math inline">\(S\)</span> that lies above each <span
+class="math inline">\(R_{ij}\)</span> by a thin rectangular box (or
+“column”) with base <span class="math inline">\(R_{ij}\)</span> and
+height <span class="math inline">\(f(x_{ij}^*, y_{ij}^*)\)</span> as
+shown in Figure 4. The volume of this box is the height of the box times
+the area of the base rectangle: <span class="math display">\[
+f(x_{ij}^*, y_{ij}^*) \Delta A
+\]</span></p>
+<p><img src="image-3.png" /></p>
+<p>If we follow this procedure for all the rectangles and add the
+volumes of the corresponding boxes, we get an approximation to the total
+volume of <span class="math inline">\(S\)</span>:</p>
+<p><span class="math display">\[ \tag{3}
+V \approx \sum_{i=1}^{m} \sum_{j=1}^{n} f(x_{ij}^*, y_{ij}^*) \Delta A
+\]</span></p>
+<p>(See Figure 5.) This double sum means that for each subrectangle we
+evaluate <span class="math inline">\(f\)</span> at the chosen point and
+multiply by the area of the subrectangle, and then we add the
+results.</p>
+<p>Our intuition tells us that the approximation given in (Eq 3) becomes
+better as <span class="math inline">\(m\)</span> and <span
+class="math inline">\(n\)</span> become larger and so we would expect
+that</p>
+<p><span class="math display">\[ \tag{4}
+V = \lim_{m, n \to \infty} \sum_{i=1}^{m} \sum_{j=1}^{n} f(x_{ij}^*,
+y_{ij}^*) \Delta A
+\]</span></p>
+<p>We use the expression in Equation (4) to define the volume of the
+solid <span class="math inline">\(S\)</span> that lies under the graph
+of <span class="math inline">\(f\)</span> and above the rectangle <span
+class="math inline">\(R\)</span>.</p>
+<p>This dicussion leads to the following definition.</p>
+<p><strong>Definition</strong> The <strong>double integral</strong> of
+<span class="math inline">\(f\)</span> over the rectangle <span
+class="math inline">\(R\)</span> is <span class="math display">\[
+\tag{5}
+\iint_R f(x, y) dA = \lim_{m, n \to \infty} \sum_{i=1}^{m}
+\sum_{j=1}^{n} f(x_{ij}^*, y_{ij}^*) \Delta A
+\]</span> if this limit exists.</p>
+<hr />
+<p>The precise meaning of the limit in Definition 5 is that for every
+number <span class="math inline">\(\varepsilon &gt; 0\)</span> there is
+an integer <span class="math inline">\(N\)</span> such that <span
+class="math display">\[
+\left| \iint_R f(x, y) dA - \sum_{i=1}^{m} \sum_{j=1}^{n} f(x_{ij}^*,
+y_{ij}^*) \Delta A \right| &lt; \varepsilon
+\]</span> for all integers <span class="math inline">\(m\)</span> and
+<span class="math inline">\(n\)</span> greater than <span
+class="math inline">\(N\)</span> and for any choice of sample points
+<span class="math inline">\((x_{ij}^*, y_{ij}^*)\)</span> in <span
+class="math inline">\(R_{ij}\)</span>.</p>
+<hr />
+<p>A function <span class="math inline">\(f\)</span> is called
+<strong>integrable</strong> if the limit in Definition exists.</p>
+<ul>
+<li>It is shown in courses on advanced calculus that all continuous
+functions are integrable. In fact, the double integral of <span
+class="math inline">\(f\)</span> exists provided that <span
+class="math inline">\(f\)</span> is “not too discontinuous.” In
+particular, if <span class="math inline">\(f\)</span> is bounded on
+<span class="math inline">\(R\)</span>, [that is, there is a constant
+<span class="math inline">\(M\)</span> such that <span
+class="math inline">\(|f(x, y)| \le M\)</span> for all <span
+class="math inline">\((x, y)\)</span> in <span
+class="math inline">\(R\)</span>], and <span
+class="math inline">\(f\)</span> is continuous there, except on a finite
+number of smooth curves, then <span class="math inline">\(f\)</span> is
+integrable over <span class="math inline">\(R\)</span>.</li>
+</ul>
+<p>The sample point <span class="math inline">\((x_{ij}^*,
+y_{ij}^*)\)</span> can be chosen to be any point in the subrectangle
+<span class="math inline">\(R_{ij}\)</span>, but if we choose it to be
+the upper right-hand corner of <span
+class="math inline">\(R_{ij}\)</span> [namely <span
+class="math inline">\((x_i, y_j)\)</span>, see Figure 3], then the
+expression for the double integral looks simpler:</p>
+<p><span class="math display">\[ \tag{6}
+\iint_R f(x, y) dA = \lim_{m, n \to \infty} \sum_{i=1}^{m}
+\sum_{j=1}^{n} f(x_i, y_j) \Delta A
+\]</span></p>
+<hr />
+<p>We see that a volume can be written as a double integral:</p>
+<p>If <span class="math inline">\(f(x, y) \ge 0\)</span>, then the
+volume <span class="math inline">\(V\)</span> of the solid that lies
+above the rectangle <span class="math inline">\(R\)</span> and below the
+surface <span class="math inline">\(z = f(x, y)\)</span> is <span
+class="math display">\[
+V = \iint_R f(x, y) dA
+\]</span></p>
+<p>The sum in Definition 5, <span class="math display">\[
+\sum_{i=1}^{m} \sum_{j=1}^{n} f(x_{ij}^*, y_{ij}^*) \Delta A
+\]</span> is called a <strong>double Riemann sum</strong> and is used as
+an approximation to the value of the double integral. If <span
+class="math inline">\(f\)</span> happens to be a positive function, then
+the double Riemann sum represents the sum of volumes of columns, as in
+Figure 5, and is an approximation to the volume under the graph of <span
+class="math inline">\(f\)</span>.</p>
+<hr />
+</body>
+</html>

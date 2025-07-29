@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Iterated Integrals</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Recall that it is usually difficult to evaluate single integrals
+directly from the definition of an integral, but the Fundamental Theorem
+of Calculus provides a much easier method. The evaluation of double
+integrals from first principles is even more difficult, but here we see
+how to express a double integral as an <strong>iterated
+integral</strong>, which can then be evaluated by calculating two single
+integrals.</p>
+<p>Suppose that <span class="math inline">\(f\)</span> is a function of
+two variables that is integrable on the rectangle <span
+class="math inline">\(R = [a, b] \times [c, d]\)</span>. We use the
+notation <span class="math inline">\(\int_c^d f(x, y) dy\)</span> to
+mean that <span class="math inline">\(x\)</span> is held fixed and <span
+class="math inline">\(f(x, y)\)</span> is integrated with respect to
+<span class="math inline">\(y\)</span> from <span
+class="math inline">\(y = c\)</span> to <span class="math inline">\(y =
+d\)</span>. This procedure is called <strong>partial integration with
+respect to y</strong>. Now <span class="math inline">\(\int_c^d f(x, y)
+dy\)</span> is a number that depends on the value of <span
+class="math inline">\(x\)</span>, so it defines a function of <span
+class="math inline">\(x\)</span>: <span class="math display">\[
+A(x) = \int_c^d f(x, y) dy
+\]</span> If we now integrate the function <span
+class="math inline">\(A\)</span> with respect to <span
+class="math inline">\(x\)</span> from <span class="math inline">\(x =
+a\)</span> to <span class="math inline">\(x = b\)</span>, we get</p>
+<p><span class="math display">\[ \tag{7}
+\int_a^b A(x) dx = \int_a^b \left[ \int_c^d f(x, y) dy \right] dx
+\]</span></p>
+<p>The integral on the right side of Equation (7)) is called an
+<strong>iterated integral</strong>. Usually the brackets are omitted.
+Thus</p>
+<p><span class="math display">\[ \tag{8}
+\int_a^b \int_c^d f(x, y) dy dx = \int_a^b \left[ \int_c^d f(x, y) dy
+\right] dx
+\]</span> means that we first integrate with respect to <span
+class="math inline">\(y\)</span> from <span
+class="math inline">\(c\)</span> to <span
+class="math inline">\(d\)</span> and then with respect to <span
+class="math inline">\(x\)</span> from <span
+class="math inline">\(a\)</span> to <span
+class="math inline">\(b\)</span>.</p>
+<hr />
+<p>Similarly, the iterated integral <span class="math display">\[
+\tag{eq:9}
+\int_c^d \int_a^b f(x, y) dx dy = \int_c^d \left[ \int_a^b f(x, y) dx
+\right] dy
+\]</span> means that we first integrate with respect to <span
+class="math inline">\(x\)</span> (holding <span
+class="math inline">\(y\)</span> fixed) from <span
+class="math inline">\(x = a\)</span> to <span class="math inline">\(x =
+b\)</span> and then we integrate the resulting function of <span
+class="math inline">\(y\)</span> with respect to <span
+class="math inline">\(y\)</span> from <span class="math inline">\(y =
+c\)</span> to <span class="math inline">\(y = d\)</span>.</p>
+<p>Notice that in both Equations (8) and (9) we work from the inside
+out.</p>
+</body>
+</html>

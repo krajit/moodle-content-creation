@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 2</strong> If <span class="math inline">\(R = \{(x,
+y) | -1 \le x \le 1, -2 \le y \le 2\}\)</span>, evaluate the integral
+<span class="math inline">\(\iint_R \sqrt{1 - x^2} dA\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-6.png" /></p>
+<p><strong>SOLUTION</strong> It would be very difficult to evaluate this
+integral directly from Definition 5 but, because <span
+class="math inline">\(\sqrt{1 - x^2} \ge 0\)</span>, we can compute the
+integral by interpreting it as a volume. If <span
+class="math inline">\(z = \sqrt{1 - x^2}\)</span>, then <span
+class="math inline">\(x^2 + z^2 = 1\)</span> and <span
+class="math inline">\(z \ge 0\)</span>, so the given double integral
+represents the volume of the solid <span
+class="math inline">\(S\)</span> that lies below the circular cylinder
+<span class="math inline">\(x^2 + z^2 = 1\)</span> and above the
+rectangle <span class="math inline">\(R\)</span>. The volume of <span
+class="math inline">\(S\)</span> is the area of a semicircle with radius
+1 times the length of the cylinder. Thus <span class="math display">\[
+\iint_R \sqrt{1 - x^2} dA = \frac{1}{2}\pi(1)^2 \times 4 = 2\pi
+\]</span></p>
+</div>
+</body>
+</html>

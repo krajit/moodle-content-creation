@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>More Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 5</strong> Evaluate the double integral <span
+class="math inline">\(\iint_R (x - 3y^2) dA\)</span>, where <span
+class="math inline">\(R = \{(x, y) | 0 \le x \le 2, 1 \le y \le
+2\}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION 1</strong> Fubini’s Theorem gives <span
+class="math display">\[
+\iint_R (x - 3y^2) dA = \int_0^2 \int_1^2 (x - 3y^2) dy dx = \int_0^2
+[xy - y^3]_{y=1}^{y=2} dx
+\]</span> <span class="math display">\[
+= \int_0^2 (2x - 8) - (x - 1) dx = \int_0^2 (x - 7) dx = \left[
+\frac{x^2}{2} - 7x \right]_0^2 = 2 - 14 = -12
+\]</span> <strong>SOLUTION 2</strong> Again applying Fubini’s Theorem,
+but this time integrating with respect to <span
+class="math inline">\(x\)</span> first, we have <span
+class="math display">\[
+\iint_R (x - 3y^2) dA = \int_1^2 \int_0^2 (x - 3y^2) dx dy = \int_1^2
+\left[ \frac{x^2}{2} - 3xy^2 \right]_{x=0}^{x=2} dy
+\]</span> <span class="math display">\[
+= \int_1^2 (2 - 6y^2) dy = \left[ 2y - 2y^3 \right]_1^2 = (4 - 16) - (2
+- 2) = -12
+\]</span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 6</strong> Evaluate <span
+class="math inline">\(\iint_R y \sin(xy) dA\)</span>, where <span
+class="math inline">\(R = [1, 2] \times [0, \pi]\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> If we first integrate with respect to <span
+class="math inline">\(x\)</span>, we get <span class="math display">\[
+\iint_R y \sin(xy) dA = \int_0^\pi \int_1^2 y \sin(xy) dx dy =
+\int_0^\pi [-\cos(xy)]_{x=1}^{x=2} dy
+\]</span> <span class="math display">\[
+= \int_0^\pi (-\cos 2y + \cos y) dy = \left[ -\frac{1}{2}\sin 2y + \sin
+y \right]_0^\pi = 0
+\]</span> NOTE If we reverse the order of integration and first
+integrate with respect to <span class="math inline">\(y\)</span> in
+Example 6, we get <span class="math display">\[
+\iint_R y \sin(xy) dA = \int_1^2 \int_0^\pi y \sin(xy) dy dx
+\]</span> but this order of integration is much more difficult than the
+method given in the example because it involves integration by parts
+twice. Therefore, when we evaluate double integrals it is wise to choose
+the order of integration that gives simpler integrals.</p>
+</div>
+</body>
+</html>
