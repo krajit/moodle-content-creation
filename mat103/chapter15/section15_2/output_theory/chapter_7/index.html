@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 3</strong> Evaluate <span
+class="math inline">\(\iint_D xy dA\)</span>, where <span
+class="math inline">\(D\)</span> is the region bounded by the line <span
+class="math inline">\(y = x - 1\)</span> and the parabola <span
+class="math inline">\(y^2 = 2x + 6\)</span>.</p>
+<p><img src="image-6.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The region <span
+class="math inline">\(D\)</span> is shown in Figure 12. Again <span
+class="math inline">\(D\)</span> is both type I and type II, but the
+description of <span class="math inline">\(D\)</span> as a type I region
+is more complicated because the lower boundary consists of two parts.
+Therefore we prefer to express <span class="math inline">\(D\)</span> as
+a type II region: <span class="math display">\[
+D = \{(x, y) | -2 \le y \le 4, \frac{1}{2}y^2 - 3 \le x \le y + 1\}
+\]</span> Then (5) gives <span class="math display">\[
+\iint_D xy dA = \int_{-2}^4 \int_{\frac{1}{2}y^2-3}^{y+1} xy dx dy =
+\int_{-2}^4 \left[ \frac{x^2}{2}y \right]_{x=\frac{1}{2}y^2-3}^{x=y+1}
+dy
+\]</span> <span class="math display">\[
+= \frac{1}{2} \int_{-2}^4 y[(y+1)^2 - (\frac{1}{2}y^2-3)^2] dy =
+\frac{1}{2} \int_{-2}^4 y\left(y^2+2y+1 - (\frac{1}{4}y^4-3y^2+9)\right)
+dy
+\]</span> <span class="math display">\[
+= \frac{1}{2} \int_{-2}^4 \left(-\frac{1}{4}y^5 + 4y^3 + 2y^2 -
+8y\right) dy = \frac{1}{2} \left[ -\frac{y^6}{24} + y^4 + \frac{2y^3}{3}
+- 4y^2 \right]_{-2}^4 = 36
+\]</span> If we had expressed <span class="math inline">\(D\)</span> as
+a type I region using Figure 12(a), then we would have obtained <span
+class="math display">\[
+\iint_D xy dA = \int_{-3}^{-1} \int_{-\sqrt{2x+6}}^{\sqrt{2x+6}} xy dy
+dx + \int_{-1}^5 \int_{x-1}^{\sqrt{2x+6}} xy dy dx
+\]</span> but this would have involved more work than the other
+method.</p>
+</div>
+</body>
+</html>

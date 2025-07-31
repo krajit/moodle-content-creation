@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Change to Polar Coodinates in a Double Integral</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>If <span class="math inline">\(f\)</span> is continuous on a polar
+rectangle <span class="math inline">\(R\)</span> given by <span
+class="math inline">\(0 \le a \le r \le b, \alpha \le \theta \le
+\beta\)</span>, where <span class="math inline">\(0 \le \beta - \alpha
+\le 2\pi\)</span>, then <span class="math display">\[
+\iint_R f(x, y) dA = \int_\alpha^\beta \int_a^b f(r \cos \theta, r \sin
+\theta) r dr d\theta
+\tag{2}
+\]</span></p>
+<hr />
+<p>The formula in (2) says that we convert from rectangular to polar
+coordinates in a double integral by writing <span
+class="math inline">\(x = r \cos \theta\)</span> and <span
+class="math inline">\(y = r \sin \theta\)</span>, using the appropriate
+limits of integration for <span class="math inline">\(r\)</span> and
+<span class="math inline">\(\theta\)</span>, and replacing <span
+class="math inline">\(dA\)</span> by <span class="math inline">\(r dr
+d\theta\)</span>. Be careful not to forget the additional factor <span
+class="math inline">\(r\)</span> on the right side of Formula 2. A
+classical method for remembering this is shown in Figure 5, where the
+“infinitesimal” polar rectangle can be thought of as an ordinary
+rectangle with dimensions <span class="math inline">\(r d\theta\)</span>
+and <span class="math inline">\(dr\)</span> and therefore has “area”
+<span class="math inline">\(dA = r dr d\theta\)</span>.</p>
+<p><img src="image-3.png" /></p>
+</body>
+</html>

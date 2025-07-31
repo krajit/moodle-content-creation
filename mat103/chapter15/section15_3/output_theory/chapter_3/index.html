@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example: Integration in polar coordinates</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 1</strong> Evaluate <span
+class="math inline">\(\iint_R (3x + 4y^2) dA\)</span>, where <span
+class="math inline">\(R\)</span> is the region in the upper half-plane
+bounded by the circles <span class="math inline">\(x^2 + y^2 =
+1\)</span> and <span class="math inline">\(x^2 + y^2 = 4\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The region <span
+class="math inline">\(R\)</span> can be described as <span
+class="math display">\[
+R = \{(x, y) | y \ge 0, 1 \le x^2 + y^2 \le 4\}
+\]</span> It is the half-ring shown in Figure 1(b), and in polar
+coordinates it is given by <span class="math inline">\(1 \le r \le 2, 0
+\le \theta \le \pi\)</span>. Therefore, by Formula 2, <span
+class="math display">\[
+\iint_R (3x + 4y^2) dA = \int_0^\pi \int_1^2 (3r \cos \theta + 4r^2
+\sin^2 \theta) r dr d\theta
+\]</span> <span class="math display">\[
+= \int_0^\pi \int_1^2 (3r^2 \cos \theta + 4r^3 \sin^2 \theta) dr d\theta
+\]</span></p>
+<p><span class="math display">\[
+= \int_0^{\pi} \left[r^3 \cos \theta + r^4 \sin^2 \theta
+\right]_{r=1}^{r=2} d\theta = \int_0^\pi (7 \cos \theta + 15 \sin^2
+\theta) d\theta
+\]</span> <span class="math display">\[
+= \int_0^\pi \left[ 7 \cos \theta + \frac{15}{2}(1 - \cos 2\theta)
+\right] d\theta
+\]</span> <span class="math display">\[
+= \left[ 7 \sin \theta + \frac{15\theta}{2} - \frac{15}{4}\sin 2\theta
+\right]_0^\pi = \frac{15\pi}{2}
+\]</span></p>
+</div>
+</body>
+</html>

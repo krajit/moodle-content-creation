@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Polar coordinates in non-trival region</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image-5.png" /></p>
+<p>What we have done so far can be extended to the more complicated type
+of region shown in Figure 7. It’s similar to the type II rectangular
+regions considered in Section 15.2. In fact, by combining Formula 2 in
+this section with Formula 15.2.5, we obtain the following formula.</p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr>
+<td>If <span class="math inline">\(f\)</span> is continuous on a polar
+region of the form <span class="math display">\[
+D = \{(r, \theta) | \alpha \le \theta \le \beta, h_1(\theta) \le r \le
+h_2(\theta)\}
+\]</span> then <span class="math display">\[
+\iint_D f(x, y) dA = \int_\alpha^\beta \int_{h_1(\theta)}^{h_2(\theta)}
+f(r \cos \theta, r \sin \theta) r dr d\theta
+\tag{3}
+\]</span></td>
+</tr>
+</tbody>
+</table>
+<p>In particular, taking <span class="math inline">\(f(x, y) = 1,
+h_1(\theta) = 0,\)</span> and <span class="math inline">\(h_2(\theta) =
+h(\theta)\)</span> in this formula, we see that the area of the region
+<span class="math inline">\(D\)</span> bounded by <span
+class="math inline">\(\theta = \alpha, \theta = \beta,\)</span> and
+<span class="math inline">\(r = h(\theta)\)</span> is <span
+class="math display">\[
+A(D) = \iint_D 1 dA = \int_\alpha^\beta \int_0^{h(\theta)} r dr d\theta
+= \int_\alpha^\beta \left[ \frac{r^2}{2} \right]_0^{h(\theta)} d\theta =
+\int_\alpha^\beta \frac{1}{2}[h(\theta)]^2 d\theta
+\]</span> and this agrees with Formula 10.4.3.</p>
+</body>
+</html>

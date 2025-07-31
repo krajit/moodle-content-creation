@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lower and upper bounds on integration</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>If <span class="math inline">\(m \le f(x, y) \le M\)</span> for all
+<span class="math inline">\((x, y) \text{ in } D\)</span> , then</p>
+<p><span class="math display">\[
+mA(D) \le \iint_D f(x, y) dA \le MA(D)
+\tag{11}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 6</strong> Use Property 11 to estimate the integral
+<span class="math inline">\(\iint_D e^{\sin x \cos y} dA\)</span>, where
+<span class="math inline">\(D\)</span> is the disk with center the
+origin and radius 2.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since <span class="math inline">\(-1 \le
+\sin x \le 1\)</span> and <span class="math inline">\(-1 \le \cos y \le
+1\)</span>, we have <span class="math inline">\(-1 \le \sin x \cos y \le
+1\)</span> and therefore <span class="math display">\[
+e^{-1} \le e^{\sin x \cos y} \le e^1 = e
+\]</span> Thus, using <span class="math inline">\(m = e^{-1} =
+1/e\)</span>, <span class="math inline">\(M = e\)</span>, and <span
+class="math inline">\(A(D) = \pi(2)^2 = 4\pi\)</span> in Property 11, we
+obtain <span class="math display">\[
+\frac{4\pi}{e} \le \iint_D e^{\sin x \cos y} dA \le 4\pi e
+\]</span></p>
+</div>
+</body>
+</html>

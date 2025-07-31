@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 2</strong> Find the volume of the solid that lies
+under the paraboloid <span class="math inline">\(z = x^2 + y^2\)</span>
+and above the region <span class="math inline">\(D\)</span> in the <span
+class="math inline">\(xy\)</span>-plane bounded by the line <span
+class="math inline">\(y = 2x\)</span> and the parabola <span
+class="math inline">\(y = x^2\)</span>.</p>
+<p><img src="image-5.png" /></p>
+<p><strong>Type 1 Solution</strong></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION 1</strong> From Figure 9 we see that <span
+class="math inline">\(D\)</span> is a type I region and <span
+class="math display">\[
+D = \{(x, y) | 0 \le x \le 2, x^2 \le y \le 2x\}
+\]</span> Therefore the volume under <span class="math inline">\(z = x^2
++ y^2\)</span> and above <span class="math inline">\(D\)</span> is <span
+class="math display">\[
+V = \iint_D (x^2 + y^2) dA = \int_0^2 \int_{x^2}^{2x} (x^2 + y^2) dy dx
+\]</span> <span class="math display">\[
+= \int_0^2 \left[ x^2y + \frac{y^3}{3} \right]_{y=x^2}^{y=2x} dx =
+\int_0^2 \left[ x^2(2x) + \frac{(2x)^3}{3} - x^2(x^2) -
+\frac{(x^2)^3}{3} \right] dx
+\]</span> <span class="math display">\[
+= \int_0^2 \left( 2x^3 + \frac{8x^3}{3} - x^4 - \frac{x^6}{3} \right) dx
+= \int_0^2 \left( \frac{14x^3}{3} - x^4 - \frac{x^6}{3} \right) dx
+\]</span> <span class="math display">\[
+= \left[ \frac{14}{3}\frac{x^4}{4} - \frac{x^5}{5} - \frac{x^7}{21}
+\right]_0^2 = \frac{7(16)}{6} - \frac{32}{5} - \frac{128}{21} =
+\frac{216}{35}
+\]</span></p>
+</div>
+<hr />
+<p><strong>Type II Solution</strong></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION 2</strong> From Figure 11 we see that <span
+class="math inline">\(D\)</span> can also be written as a type II
+region: <span class="math display">\[
+D = \{(x, y) | 0 \le y \le 4, \frac{y}{2} \le x \le \sqrt{y}\}
+\]</span> Therefore another expression for <span
+class="math inline">\(V\)</span> is <span class="math display">\[
+V = \iint_D (x^2 + y^2) dA = \int_0^4 \int_{y/2}^{\sqrt{y}} (x^2 + y^2)
+dx dy
+\]</span> <span class="math display">\[
+= \int_0^4 \left[ \frac{x^3}{3} + y^2x \right]_{x=y/2}^{x=\sqrt{y}} dy =
+\int_0^4 \left( \frac{y^{3/2}}{3} + y^{5/2} - \frac{y^3}{24} -
+\frac{y^3}{2} \right) dy
+\]</span> <span class="math display">\[
+= \int_0^4 \left( \frac{y^{3/2}}{3} + y^{5/2} - \frac{13y^3}{24} \right)
+dy = \left[ \frac{2y^{5/2}}{15} + \frac{2y^{7/2}}{7} - \frac{13y^4}{96}
+\right]_0^4 = \frac{216}{35}
+\]</span></p>
+</div>
+</body>
+</html>

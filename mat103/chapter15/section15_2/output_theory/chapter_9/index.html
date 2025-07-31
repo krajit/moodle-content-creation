@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example - Change order of integration</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 5</strong> Evaluate the iterated integral <span
+class="math inline">\(\int_0^1 \int_x^1 \sin(y^2) dy dx\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-8.png" /></p>
+<p><strong>SOLUTION</strong> If we try to evaluate the integral as it
+stands, we are faced with the task of first evaluating <span
+class="math inline">\(\int \sin(y^2) dy\)</span>. But it’s impossible to
+do so in finite terms since <span class="math inline">\(\int \sin(y^2)
+dy\)</span> is not an elementary function. So we must change the order
+of integration. This is accomplished by first expressing the given
+iterated integral as a double integral. Using (3) backward, we have
+<span class="math display">\[
+\int_0^1 \int_x^1 \sin(y^2) dy dx = \iint_D \sin(y^2) dA
+\]</span> where <span class="math display">\[
+D = \{(x, y) | 0 \le x \le 1, x \le y \le 1\}
+\]</span> We sketch this region <span class="math inline">\(D\)</span>
+in Figure 15. Then from Figure 16 we see that an alternative description
+of <span class="math inline">\(D\)</span> is <span
+class="math display">\[
+D = \{(x, y) | 0 \le y \le 1, 0 \le x \le y\}
+\]</span> This enables us to use (5) to express the double integral as
+an iterated integral in the reverse order: <span class="math display">\[
+\int_0^1 \int_x^1 \sin(y^2) dy dx = \iint_D \sin(y^2) dA = \int_0^1
+\int_0^y \sin(y^2) dx dy
+\]</span> <span class="math display">\[
+= \int_0^1 [x \sin(y^2)]_{x=0}^{x=y} dy = \int_0^1 y \sin(y^2) dy =
+\left[ -\frac{1}{2}\cos(y^2) \right]_0^1 = \frac{1}{2}(1 - \cos 1)
+\]</span></p>
+</div>
+</body>
+</html>

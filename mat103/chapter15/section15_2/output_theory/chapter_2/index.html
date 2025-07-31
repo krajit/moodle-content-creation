@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Definition of integral over general region</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>For single integrals, the region over which we integrate is always an
+interval. But for double integrals, we want to be able to integrate a
+function <span class="math inline">\(f\)</span> not just over rectangles
+but also over regions <span class="math inline">\(D\)</span> of more
+general shape, such as the one illustrated in Figure 1.</p>
+<p><img src="image.png" /></p>
+<p>We suppose that <span class="math inline">\(D\)</span> is a bounded
+region, which means that <span class="math inline">\(D\)</span> can be
+enclosed in a rectangular region <span class="math inline">\(R\)</span>
+as in Figure 2. Then we define a new function <span
+class="math inline">\(F\)</span> with domain <span
+class="math inline">\(R\)</span> by <span class="math display">\[
+F(x, y) =
+\begin{cases}
+f(x, y) &amp; \text{if } (x, y) \text{ is in } D \\
+0 &amp; \text{if } (x, y) \text{ is in } R \text{ but not in } D
+\end{cases}
+\tag{1}
+\]</span></p>
+<p>If <span class="math inline">\(F\)</span> is integrable over <span
+class="math inline">\(R\)</span>, then we define the <strong>double
+integral of f over D</strong> by <span class="math display">\[
+\iint_D f(x, y) dA = \iint_R F(x, y) dA
+\tag{2}
+\]</span> where F is given by Equation 1.</p>
+<p>In the case where <span class="math inline">\(f(x, y) \ge 0\)</span>,
+we can still interpret <span class="math inline">\(\iint_D f(x, y)
+dA\)</span> as the volume of the solid that lies above <span
+class="math inline">\(D\)</span> and under the surface <span
+class="math inline">\(z = f(x, y)\)</span> (the graph of <span
+class="math inline">\(f\)</span>). You can see that this is reasonable
+by comparing the graphs of <span class="math inline">\(f\)</span> and
+<span class="math inline">\(F\)</span> in Figures 3 and 4 and
+remembering that <span class="math inline">\(\iint_R F(x, y) dA\)</span>
+is the volume under the graph of <span
+class="math inline">\(F\)</span>.</p>
+<p><img src="image-1.png" /></p>
+<p>Figure 4 also shows that <span class="math inline">\(F\)</span> is
+likely to have discontinuities at the boundary points of <span
+class="math inline">\(D\)</span>. Nonetheless, if <span
+class="math inline">\(f\)</span> is continuous on <span
+class="math inline">\(D\)</span> and the boundary curve of <span
+class="math inline">\(D\)</span> is “well behaved” (in a sense outside
+the scope of this book), then it can be shown that <span
+class="math inline">\(\iint_R F(x, y) dA\)</span> exists and therefore
+<span class="math inline">\(\iint_D f(x, y) dA\)</span> exists. In
+particular, this is the case for the following two types of regions.</p>
+</body>
+</html>

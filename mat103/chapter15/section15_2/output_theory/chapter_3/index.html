@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Type 1 - region</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>A plane region <span class="math inline">\(D\)</span> is said to be
+of <strong>type I</strong> if it lies between the graphs of two
+continuous functions of <span class="math inline">\(x\)</span>, that is,
+<span class="math display">\[
+D = \{(x, y) | a \le x \le b, g_1(x) \le y \le g_2(x)\}
+\]</span> where <span class="math inline">\(g_1\)</span> and <span
+class="math inline">\(g_2\)</span> are continuous on <span
+class="math inline">\([a, b]\)</span>. Some examples of type I regions
+are shown in Figure below.</p>
+<p><img src="image-2.png" /></p>
+<p>In order to evaluate <span class="math inline">\(\iint_D f(x, y)
+dA\)</span> when <span class="math inline">\(D\)</span> is a region of
+type I, we choose a rectangle <span class="math inline">\(R = [a, b]
+\times [c, d]\)</span> that contains <span
+class="math inline">\(D\)</span>, as in Figure 6, and we let <span
+class="math inline">\(F\)</span> be the function given by Equation 1;
+that is, <span class="math inline">\(F\)</span> agrees with <span
+class="math inline">\(f\)</span> on <span
+class="math inline">\(D\)</span> and <span
+class="math inline">\(F\)</span> is 0 outside <span
+class="math inline">\(D\)</span>. Then, by Fubini’s Theorem, <span
+class="math display">\[
+\iint_D f(x, y) dA = \iint_R F(x, y) dA = \int_a^b \int_c^d F(x, y) dy
+dx
+\]</span> Observe that <span class="math inline">\(F(x, y) = 0\)</span>
+if <span class="math inline">\(y &lt; g_1(x)\)</span> or <span
+class="math inline">\(y &gt; g_2(x)\)</span> because <span
+class="math inline">\((x, y)\)</span> then lies outside <span
+class="math inline">\(D\)</span>. Therefore <span
+class="math display">\[
+\int_c^d F(x, y) dy = \int_{g_1(x)}^{g_2(x)} F(x, y) dy =
+\int_{g_1(x)}^{g_2(x)} f(x, y) dy
+\]</span> because <span class="math inline">\(F(x, y) = f(x, y)\)</span>
+when <span class="math inline">\(g_1(x) \le y \le g_2(x)\)</span>. Thus
+we have the following formula that enables us to evaluate the double
+integral as an iterated integral.</p>
+<p>If f is continuous on a type I region <span
+class="math inline">\(D\)</span> such that</p>
+<p><span class="math display">\[
+D = \{(x, y) | a \le x \le b, g_1(x) \le y \le g_2(x)\},
+\]</span> then <span class="math display">\[
+\iint_D f(x, y) dA = \int_a^b \int_{g_1(x)}^{g_2(x)} f(x, y) dy dx
+\tag{3}
+\]</span> The integral on the right side of (3) is an iterated integral
+that is similar to the ones we considered in the preceding section,
+except that in the inner integral we regard <span
+class="math inline">\(x\)</span> as being constant not only in <span
+class="math inline">\(f(x, y)\)</span> but also in the limits of
+integration, <span class="math inline">\(g_1(x)\)</span> and <span
+class="math inline">\(g_2(x)\)</span>.</p>
+</body>
+</html>

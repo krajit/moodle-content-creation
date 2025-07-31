@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 3</strong> Use a double integral to find the area
+enclosed by one loop of the four-leaved rose <span
+class="math inline">\(r = \cos 2\theta\)</span>.</p>
+<p><img src="image-6.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> From the sketch of the curve in Figure 8,
+we see that a loop is given by the region <span class="math display">\[
+D = \{(r, \theta) | -\pi/4 \le \theta \le \pi/4, 0 \le r \le \cos
+2\theta\}
+\]</span> So the area is <span class="math display">\[
+A(D) = \iint_D dA = \int_{-\pi/4}^{\pi/4} \int_0^{\cos 2\theta} r dr
+d\theta = \int_{-\pi/4}^{\pi/4} \left[ \frac{r^2}{2} \right]_0^{\cos
+2\theta} d\theta
+\]</span> <span class="math display">\[
+= \frac{1}{2} \int_{-\pi/4}^{\pi/4} \cos^2 2\theta d\theta = \frac{1}{4}
+\int_{-\pi/4}^{\pi/4} (1 + \cos 4\theta) d\theta = \frac{1}{4} \left[
+\theta + \frac{1}{4}\sin 4\theta \right]_{-\pi/4}^{\pi/4} =
+\frac{\pi}{8}
+\]</span></p>
+</div>
+</body>
+</html>
