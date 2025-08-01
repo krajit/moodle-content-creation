@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Other Applications of Triple integrations</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>All the applications of double integrals in Section 15.4 can be
+immediately extended to triple integrals. For example, if the density
+function of a solid object that occupies the region <span
+class="math inline">\(E\)</span> is <span class="math inline">\(\rho(x,
+y, z)\)</span>, in units of mass per unit volume, at any given point
+<span class="math inline">\((x, y, z)\)</span>, then its
+<strong>mass</strong> is <span class="math display">\[
+m = \iiint_E \rho(x, y, z) dV
+\tag{13}
+\]</span> and its <strong>moments</strong> about the three coordinate
+planes are <span class="math display">\[
+M_{yz} = \iiint_E x\rho(x, y, z) dV \quad M_{xz} = \iiint_E y\rho(x, y,
+z) dV
+\tag{14}
+\]</span> <span class="math display">\[
+M_{xy} = \iiint_E z\rho(x, y, z) dV
+\]</span> The <strong>center of mass</strong> is located at the point
+<span class="math inline">\((\bar{x}, \bar{y}, \bar{z})\)</span>, where
+<span class="math display">\[
+\bar{x} = \frac{M_{yz}}{m} \quad \bar{y} = \frac{M_{xz}}{m} \quad
+\bar{z} = \frac{M_{xy}}{m}
+\tag{15}
+\]</span> If the density is constant, the center of mass of the solid is
+called the <strong>centroid</strong> of <span
+class="math inline">\(E\)</span>. The <strong>moments of
+inertia</strong> about the three coordinate axes are <span
+class="math display">\[
+I_x = \iiint_E (y^2 + z^2)\rho(x, y, z) dV \quad I_y = \iiint_E (x^2 +
+z^2)\rho(x, y, z) dV
+\tag{16}
+\]</span> <span class="math display">\[
+I_z = \iiint_E (x^2 + y^2)\rho(x, y, z) dV
+\]</span> As in Section 15.4, the total <strong>electric charge</strong>
+on a solid object occupying a region <span
+class="math inline">\(E\)</span> and having charge density <span
+class="math inline">\(\sigma(x, y, z)\)</span> is <span
+class="math display">\[
+Q = \iiint_E \sigma(x, y, z) dV
+\]</span> If we have three continuous random variables <span
+class="math inline">\(X, Y,\)</span> and <span
+class="math inline">\(Z\)</span>, their <strong>joint density
+function</strong> is a function of three variables such that the
+probability that <span class="math inline">\((X, Y, Z)\)</span> lies in
+<span class="math inline">\(E\)</span> is <span class="math display">\[
+P((X, Y, Z) \in E) = \iiint_E f(x, y, z) dV
+\]</span> In particular, <span class="math display">\[
+P(a \le X \le b, c \le Y \le d, r \le Z \le s) = \int_a^b \int_c^d
+\int_r^s f(x, y, z) dz dy dx
+\]</span> The joint density function satisfies <span
+class="math display">\[
+f(x, y, z) \ge 0 \quad \int_{-\infty}^\infty \int_{-\infty}^\infty
+\int_{-\infty}^\infty f(x, y, z) dz dy dx = 1
+\]</span></p>
+</body>
+</html>

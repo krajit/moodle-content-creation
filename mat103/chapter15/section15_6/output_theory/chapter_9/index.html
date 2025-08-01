@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 4</strong> Express the iterated integral <span
+class="math inline">\(\int_0^1 \int_0^{x^2} \int_0^y f(x, y, z) dz dy
+dx\)</span> as a triple integral and then rewrite it as an iterated
+integral in a different order, integrating first with respect to <span
+class="math inline">\(x\)</span>, then <span
+class="math inline">\(z\)</span>, and then <span
+class="math inline">\(y\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-11.png" /></p>
+<p><img src="image-12.png" /></p>
+<p><strong>SOLUTION</strong> We can write <span class="math display">\[
+\int_0^1 \int_0^{x^2} \int_0^y f(x, y, z) dz dy dx = \iiint_E f(x, y, z)
+dV
+\]</span> where <span class="math inline">\(E = \{(x, y, z) | 0 \le x
+\le 1, 0 \le y \le x^2, 0 \le z \le y\}\)</span>. This description of
+<span class="math inline">\(E\)</span> enables us to write projections
+onto the three coordinate planes as follows: on the <span
+class="math inline">\(xy\)</span>-plane: <span class="math inline">\(D_1
+= \{(x, y) | 0 \le x \le 1, 0 \le y \le x^2\} = \{(x, y) | 0 \le y \le
+1, \sqrt{y} \le x \le 1\}\)</span> on the <span
+class="math inline">\(yz\)</span>-plane: <span class="math inline">\(D_2
+= \{(y, z) | 0 \le y \le 1, 0 \le z \le y\}\)</span> on the <span
+class="math inline">\(xz\)</span>-plane: <span class="math inline">\(D_3
+= \{(x, z) | 0 \le x \le 1, 0 \le z \le x^2\}\)</span> From the
+resulting sketches of the projections in Figure 12 we sketch the solid
+<span class="math inline">\(E\)</span> in Figure 13. We see that it is
+the solid enclosed by the planes <span class="math inline">\(z = 0, x =
+1, y = z\)</span> and the parabolic cylinder <span
+class="math inline">\(y = x^2\)</span> (or <span class="math inline">\(x
+= \sqrt{y}\)</span>). If we integrate first with respect to <span
+class="math inline">\(x\)</span>, then <span
+class="math inline">\(z\)</span>, and then <span
+class="math inline">\(y\)</span>, we use an alternate description of
+<span class="math inline">\(E\)</span>: <span class="math display">\[
+E = \{(x, y, z) | 0 \le y \le 1, 0 \le z \le y, \sqrt{y} \le x \le 1\}
+\]</span> Thus <span class="math display">\[
+\iiint_E f(x, y, z) dV = \int_0^1 \int_0^y \int_{\sqrt{y}}^1 f(x, y, z)
+dx dz dy
+\]</span></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example - Triple Integration</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 1</strong> Evaluate the triple integral <span
+class="math inline">\(\iiint_B xyz^2 dV\)</span>, where <span
+class="math inline">\(B\)</span> is the rectangular box given by <span
+class="math display">\[
+B = \{(x, y, z) | 0 \le x \le 1, -1 \le y \le 2, 0 \le z \le 3\}
+\]</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We could use any of the six possible orders
+of integration. If we choose to integrate with respect to <span
+class="math inline">\(x\)</span>, then <span
+class="math inline">\(y\)</span>, and then <span
+class="math inline">\(z\)</span>, we obtain <span
+class="math display">\[
+\iiint_B xyz^2 dV = \int_0^3 \int_{-1}^2 \int_0^1 xyz^2 dx dy dz =
+\int_0^3 \int_{-1}^2 \left[ \frac{x^2yz^2}{2} \right]_{x=0}^{x=1} dy dz
+\]</span> <span class="math display">\[
+= \int_0^3 \int_{-1}^2 \frac{yz^2}{2} dy dz = \int_0^3 \left[
+\frac{y^2z^2}{4} \right]_{y=-1}^{y=2} dz = \int_0^3 \frac{3z^2}{4} dz =
+\left[ \frac{z^3}{4} \right]_0^3 = \frac{27}{4}
+\]</span></p>
+</div>
+</body>
+</html>

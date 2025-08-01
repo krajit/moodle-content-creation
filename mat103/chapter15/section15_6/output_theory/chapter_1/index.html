@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Triple Integrals - Integration over volume</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image.png" /></p>
+<p>Just as we defined single integrals for functions of one variable and
+double integrals for functions of two variables, so we can define triple
+integrals for functions of three variables. Let’s first deal with the
+simplest case where <span class="math inline">\(f\)</span> is defined on
+a rectangular box: <span class="math display">\[
+B = \{(x, y, z) | a \le x \le b, c \le y \le d, r \le z \le s\}
+\tag{1}
+\]</span> The first step is to divide <span
+class="math inline">\(B\)</span> into sub-boxes. We do this by dividing
+the interval <span class="math inline">\([a, b]\)</span> into <span
+class="math inline">\(l\)</span> subintervals <span
+class="math inline">\([x_{i-1}, x_i]\)</span> of equal width <span
+class="math inline">\(\Delta x\)</span>, dividing <span
+class="math inline">\([c, d]\)</span> into <span
+class="math inline">\(m\)</span> subintervals of width <span
+class="math inline">\(\Delta y\)</span>, and dividing <span
+class="math inline">\([r, s]\)</span> into <span
+class="math inline">\(n\)</span> subintervals of width <span
+class="math inline">\(\Delta z\)</span>. The planes through the
+endpoints of these subintervals parallel to the coordinate planes divide
+the box <span class="math inline">\(B\)</span> into <span
+class="math inline">\(lmn\)</span> sub-boxes <span
+class="math display">\[
+B_{ijk} = [x_{i-1}, x_i] \times [y_{j-1}, y_j] \times [z_{k-1}, z_k]
+\]</span> which are shown in Figure 1. Each sub-box has volume <span
+class="math inline">\(\Delta V = \Delta x \Delta y \Delta
+z\)</span>.</p>
+<p>Then we form the <strong>triple Riemann sum</strong> <span
+class="math display">\[
+\sum_{i=1}^l \sum_{j=1}^m \sum_{k=1}^n f(x_{ijk}^*, y_{ijk}^*,
+z_{ijk}^*) \Delta V
+\tag{2}
+\]</span> where the sample point <span class="math inline">\((x_{ijk}^*,
+y_{ijk}^*, z_{ijk}^*)\)</span> is in <span
+class="math inline">\(B_{ijk}\)</span>. By analogy with the definition
+of a double integral (15.1.5), we define the triple integral as the
+limit of the triple Riemann sums in (2).</p>
+<p><strong>Definition 3</strong> The <strong>triple integral</strong> of
+<span class="math inline">\(f\)</span> over the box <span
+class="math inline">\(B\)</span> is <span class="math display">\[
+\iiint_B f(x, y, z) dV = \lim_{l,m,n \to \infty} \sum_{i=1}^l
+\sum_{j=1}^m \sum_{k=1}^n f(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*) \Delta V
+\]</span> if this limit exists.</p>
+<hr />
+<p>Again, the triple integral always exists if <span
+class="math inline">\(f\)</span> is continuous. We can choose the sample
+point to be any point in the sub-box, but if we choose it to be the
+point <span class="math inline">\((x_i, y_j, z_k)\)</span> we get a
+simpler-looking expression for the triple integral: <span
+class="math display">\[
+\iiint_B f(x, y, z) dV = \lim_{l,m,n \to \infty} \sum_{i=1}^l
+\sum_{j=1}^m \sum_{k=1}^n f(x_i, y_j, z_k) \Delta V
+\]</span> Just as for double integrals, the practical method for
+evaluating triple integrals is to express them as iterated integrals as
+follows.</p>
+</body>
+</html>

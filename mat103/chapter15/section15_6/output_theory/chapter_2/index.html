@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Working Rule - Fubini’s Theorem for Triple Integrals</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>If <span class="math inline">\(f\)</span> is continuous on the
+rectangular box <span class="math inline">\(B = [a, b] \times [c, d]
+\times [r, s]\)</span>, then <span class="math display">\[
+\iiint_B f(x, y, z) dV = \int_r^s \int_c^d \int_a^b f(x, y, z) dx dy dz
+\]</span></p>
+<hr />
+<p>The iterated integral on the right side of Fubini’s Theorem means
+that we integrate first with respect to <span
+class="math inline">\(x\)</span> (keeping <span
+class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span> fixed), then we integrate with respect
+to <span class="math inline">\(y\)</span> (keeping <span
+class="math inline">\(z\)</span> fixed), and finally we integrate with
+respect to <span class="math inline">\(z\)</span>. There are five other
+possible orders in which we can integrate, all of which give the same
+value. For instance, if we integrate with respect to <span
+class="math inline">\(y\)</span>, then <span
+class="math inline">\(z\)</span>, and then <span
+class="math inline">\(x\)</span>, we have <span class="math display">\[
+\iiint_B f(x, y, z) dV = \int_a^b \int_r^s \int_c^d f(x, y, z) dy dz dx
+\]</span></p>
+</body>
+</html>

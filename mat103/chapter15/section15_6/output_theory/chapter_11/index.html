@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 5</strong> Use a triple integral to find the volume
+of the tetrahedron <span class="math inline">\(T\)</span> bounded by the
+planes <span class="math inline">\(x + 2y + z = 2, x = 2y, x =
+0,\)</span> and <span class="math inline">\(z = 0\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The tetrahedron <span
+class="math inline">\(T\)</span> and its projection <span
+class="math inline">\(D\)</span> onto the <span
+class="math inline">\(xy\)</span>-plane are shown in Figures 14 and 15.
+The lower boundary of <span class="math inline">\(T\)</span> is the
+plane <span class="math inline">\(z = 0\)</span> and the upper boundary
+is the plane <span class="math inline">\(x + 2y + z = 2\)</span>, that
+is, <span class="math inline">\(z = 2 - x - 2y\)</span>. Therefore we
+have <span class="math display">\[
+V(T) = \iiint_T dV = \int_0^1 \int_{x/2}^{1-x/2} \int_0^{2-x-2y} dz dy
+dx
+\]</span> <span class="math display">\[
+= \int_0^1 \int_{x/2}^{1-x/2} (2 - x - 2y) dy dx = \frac{1}{3}
+\]</span> by the same calculation as in Example 15.2.4.</p>
+</div>
+</body>
+</html>

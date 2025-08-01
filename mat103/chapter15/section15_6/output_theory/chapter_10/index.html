@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Applications of Triple Integrals</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Recall that if <span class="math inline">\(f(x) \ge 0\)</span>, then
+the single integral <span class="math inline">\(\int_a^b f(x)
+dx\)</span> represents the area under the curve <span
+class="math inline">\(y = f(x)\)</span> from <span
+class="math inline">\(a\)</span> to <span
+class="math inline">\(b\)</span>, and if <span
+class="math inline">\(f(x, y) \ge 0\)</span>, then the double integral
+<span class="math inline">\(\iint_D f(x, y) dA\)</span> represents the
+volume under the surface <span class="math inline">\(z = f(x,
+y)\)</span> and above <span class="math inline">\(D\)</span>. The
+corresponding interpretation of a triple integral <span
+class="math inline">\(\iiint_E f(x, y, z) dV\)</span>, where <span
+class="math inline">\(f(x, y, z) \ge 0\)</span>, is not very useful
+because it would be the “hypervolume” of a four-dimensional object and,
+of course, that is very difficult to visualize. Nonetheless, the triple
+integral <span class="math inline">\(\iiint_E f(x, y, z) dV\)</span> can
+be interpreted in different ways in different physical situations,
+depending on the physical interpretations of <span
+class="math inline">\(x, y, z,\)</span> and <span
+class="math inline">\(f(x, y, z)\)</span>.</p>
+<p>Let’s begin with the special case where <span
+class="math inline">\(f(x, y, z) = 1\)</span> for all points in <span
+class="math inline">\(E\)</span>. Then the triple integral does
+represent the volume of <span class="math inline">\(E\)</span>: <span
+class="math display">\[
+V(E) = \iiint_E dV
+\tag{12}
+\]</span> For example, you can see this in the case of a type 1 region
+by putting <span class="math inline">\(f(x, y, z) = 1\)</span> in
+Formula 6: <span class="math display">\[
+\iiint_E 1 dV = \iint_D \left[ \int_{u_1(x,y)}^{u_2(x,y)} dz \right] dA
+= \iint_D [u_2(x, y) - u_1(x, y)] dA
+\]</span> and from Section 15.2 we know this represents the volume that
+lies between the surfaces <span class="math inline">\(z = u_1(x,
+y)\)</span> and <span class="math inline">\(z = u_2(x, y)\)</span>.</p>
+</body>
+</html>

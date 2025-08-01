@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 6</strong> Find the center of mass of a solid of
+constant density that is bounded by the parabolic cylinder <span
+class="math inline">\(x = y^2\)</span> and the planes <span
+class="math inline">\(x = z, z = 0,\)</span> and <span
+class="math inline">\(x = 1\)</span>.</p>
+<p><img src="image-13.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-14.png" /></p>
+<p><strong>SOLUTION</strong> The solid <span
+class="math inline">\(E\)</span> and its projection onto the <span
+class="math inline">\(xy\)</span>-plane are shown in Figure 16. The
+lower and upper surfaces of <span class="math inline">\(E\)</span> are
+the planes <span class="math inline">\(z = 0\)</span> and <span
+class="math inline">\(z = x\)</span>, so we describe <span
+class="math inline">\(E\)</span> as a type 1 region: <span
+class="math display">\[
+E = \{(x, y, z) | -1 \le y \le 1, y^2 \le x \le 1, 0 \le z \le x\}
+\]</span> Then, if the density is <span class="math inline">\(\rho(x, y,
+z) = \rho\)</span>, the mass is <span class="math display">\[
+m = \iiint_E \rho dV = \int_{-1}^1 \int_{y^2}^1 \int_0^x \rho dz dx dy =
+\rho \int_{-1}^1 \int_{y^2}^1 x dx dy
+\]</span> <span class="math display">\[
+= \rho \int_{-1}^1 \left[ \frac{x^2}{2} \right]_{x=y^2}^{x=1} dy =
+\frac{\rho}{2} \int_{-1}^1 (1 - y^4) dy = \rho \int_0^1 (1 - y^4) dy =
+\rho \left[ y - \frac{y^5}{5} \right]_0^1 = \frac{4\rho}{5}
+\]</span> Because of the symmetry of <span
+class="math inline">\(E\)</span> and <span
+class="math inline">\(\rho\)</span> about the <span
+class="math inline">\(xz\)</span>-plane, we can immediately say that
+<span class="math inline">\(M_{xz} = 0\)</span> and therefore <span
+class="math inline">\(\bar{y} = 0\)</span>. The other moments are <span
+class="math display">\[
+M_{yz} = \iiint_E x\rho dV = \int_{-1}^1 \int_{y^2}^1 \int_0^x x\rho dz
+dx dy = \rho \int_{-1}^1 \int_{y^2}^1 x^2 dx dy
+\]</span> <span class="math display">\[
+= \rho \int_{-1}^1 \left[ \frac{x^3}{3} \right]_{x=y^2}^{x=1} dy =
+\frac{2\rho}{3} \int_0^1 (1 - y^6) dy = \frac{2\rho}{3} \left[ y -
+\frac{y^7}{7} \right]_0^1 = \frac{4\rho}{7}
+\]</span> <span class="math display">\[
+M_{xy} = \iiint_E z\rho dV = \int_{-1}^1 \int_{y^2}^1 \int_0^x z\rho dz
+dx dy = \rho \int_{-1}^1 \int_{y^2}^1 \left[ \frac{z^2}{2}
+\right]_{z=0}^{z=x} dx dy
+\]</span> <span class="math display">\[
+= \frac{\rho}{2} \int_{-1}^1 \int_{y^2}^1 x^2 dx dy = \frac{\rho}{2}
+\frac{4}{7} = \frac{2\rho}{7}
+\]</span> Therefore the center of mass is <span class="math display">\[
+(\bar{x}, \bar{y}, \bar{z}) = \left( \frac{M_{yz}}{m}, \frac{M_{xz}}{m},
+\frac{M_{xy}}{m} \right) = \left( \frac{4\rho/7}{4\rho/5}, 0,
+\frac{2\rho/7}{4\rho/5} \right) = \left( \frac{5}{7}, 0, \frac{5}{14}
+\right)
+\]</span></p>
+</div>
+</body>
+</html>

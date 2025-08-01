@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Theory: Triple Integration over general region</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>We define the triple integral over a general bounded region <span
+class="math inline">\(E\)</span> in three-dimensional space (a solid) by
+much the same procedure that we used for double integrals (15.2.2). We
+enclose <span class="math inline">\(E\)</span> in a box <span
+class="math inline">\(B\)</span> of the type given by Equation 1. Then
+we define <span class="math inline">\(F\)</span> so that it agrees with
+<span class="math inline">\(f\)</span> on <span
+class="math inline">\(E\)</span> but is 0 for points in <span
+class="math inline">\(B\)</span> that are outside <span
+class="math inline">\(E\)</span>. By definition, <span
+class="math display">\[
+\iiint_E f(x, y, z) dV = \iiint_B F(x, y, z) dV
+\]</span> This integral exists if <span class="math inline">\(f\)</span>
+is continuous and the boundary of <span class="math inline">\(E\)</span>
+is “reasonably smooth.” The triple integral has essentially the same
+properties as the double integral (Properties 6–9 in Section 15.2).</p>
+<p>We restrict our attention to continuous functions <span
+class="math inline">\(f\)</span> and to certain simple types of regions.
+A solid region <span class="math inline">\(E\)</span> is said to be of
+<strong>type 1</strong> if it lies between the graphs of two continuous
+functions of <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>, that is, <span class="math display">\[
+E = \{(x, y, z) | (x, y) \in D, u_1(x, y) \le z \le u_2(x, y)\}
+\tag{5}
+\]</span></p>
+<p><img src="image-1.png" /></p>
+<p>where <span class="math inline">\(D\)</span> is the projection of
+<span class="math inline">\(E\)</span> onto the <span
+class="math inline">\(xy\)</span>-plane as shown in Figure 2. Notice
+that the upper boundary of the solid <span
+class="math inline">\(E\)</span> is the surface with equation <span
+class="math inline">\(z = u_2(x, y)\)</span>, while the lower boundary
+is the surface <span class="math inline">\(z = u_1(x, y)\)</span>.</p>
+<p>By the same sort of argument that led to (15.2.3), it can be shown
+that if <span class="math inline">\(E\)</span> is a type 1 region given
+by Equation 5, then <span class="math display">\[
+\iiint_E f(x, y, z) dV = \iint_D \left[ \int_{u_1(x,y)}^{u_2(x,y)} f(x,
+y, z) dz \right] dA
+\tag{6}
+\]</span> The meaning of the inner integral on the right side of
+Equation 6 is that <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> are held fixed, and therefore <span
+class="math inline">\(u_1(x, y)\)</span> and <span
+class="math inline">\(u_2(x, y)\)</span> are regarded as constants,
+while <span class="math inline">\(f(x, y, z)\)</span> is integrated with
+respect to <span class="math inline">\(z\)</span>.</p>
+<p>In particular, if the projection <span
+class="math inline">\(D\)</span> of <span
+class="math inline">\(E\)</span> onto the <span
+class="math inline">\(xy\)</span>-plane is a type I plane region (as in
+Figure 3), then</p>
+<p><img src="image-2.png" /></p>
+<p><span class="math display">\[
+E = \{(x, y, z) | a \le x \le b, g_1(x) \le y \le g_2(x), u_1(x, y) \le
+z \le u_2(x, y)\}
+\]</span> and Equation 6 becomes <span class="math display">\[
+\iiint_E f(x, y, z) dV = \int_a^b \int_{g_1(x)}^{g_2(x)}
+\int_{u_1(x,y)}^{u_2(x,y)} f(x, y, z) dz dy dx
+\tag{7}
+\]</span> If, on the other hand, <span class="math inline">\(D\)</span>
+is a type II plane region (as in Figure 4), then</p>
+<p><img src="image-3.png" /></p>
+<p><span class="math display">\[
+E = \{(x, y, z) | c \le y \le d, h_1(y) \le x \le h_2(y), u_1(x, y) \le
+z \le u_2(x, y)\}
+\]</span> and Equation 6 becomes <span class="math display">\[
+\iiint_E f(x, y, z) dV = \int_c^d \int_{h_1(y)}^{h_2(y)}
+\int_{u_1(x,y)}^{u_2(x,y)} f(x, y, z) dz dx dy
+\tag{8}
+\]</span></p>
+</body>
+</html>
