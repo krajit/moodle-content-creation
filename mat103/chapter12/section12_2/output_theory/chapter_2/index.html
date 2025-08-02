@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Combining Vectors - Vector Addition</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Suppose a particle moves from A to B, so its displacement vector is
+<span class="math inline">\(\vec{AB}\)</span>. Then the particle changes
+direction and moves from B to C, with displacement vector <span
+class="math inline">\(\vec{BC}\)</span> as in Figure 2.</p>
+<p><img src="image-1.png" /></p>
+<p>The combined effect of these displacements is that the particle has
+moved from A to C. The resulting displacement vector <span
+class="math inline">\(\vec{AC}\)</span> is called the
+<strong>sum</strong> of <span class="math inline">\(\vec{AB}\)</span>
+and <span class="math inline">\(\vec{BC}\)</span> and we write <span
+class="math display">\[
+\vec{AC} = \vec{AB} + \vec{BC}
+\]</span> In general, if we start with vectors <strong>u</strong> and
+<strong>v</strong>, we first move <strong>v</strong> so that its tail
+coincides with the tip of <strong>u</strong> and define the sum of
+<strong>u</strong> and <strong>v</strong> as follows.</p>
+<hr />
+<p><strong>Definition of Vector Addition</strong> If <strong>u</strong>
+and <strong>v</strong> are vectors positioned so the initial point of
+<strong>v</strong> is at the terminal point of <strong>u</strong>, then
+the <strong>sum</strong> <span class="math inline">\(\mathbf{u} +
+\mathbf{v}\)</span> is the vector from the initial point of
+<strong>u</strong> to the terminal point of <strong>v</strong>.</p>
+<hr />
+<p>The definition of vector addition is illustrated in Figure 3. You can
+see why this definition is sometimes called the <strong>Triangle
+Law</strong>.</p>
+<p><img src="image-2.png" /></p>
+<hr />
+<p>In Figure 4 we start with the same vectors <strong>u</strong> and
+<strong>v</strong> as in Figure 3 and draw another copy of
+<strong>v</strong> with the same initial point as <strong>u</strong>.
+Completing the parallelogram, we see that <span
+class="math inline">\(\mathbf{u} + \mathbf{v} = \mathbf{v} +
+\mathbf{u}\)</span>. This also gives another way to construct the sum:
+if we place <strong>u</strong> and <strong>v</strong> so they start at
+the same point, then <span class="math inline">\(\mathbf{u} +
+\mathbf{v}\)</span> lies along the diagonal of the parallelogram with
+<strong>u</strong> and <strong>v</strong> as sides. (This is called the
+<strong>Parallelogram Law</strong>.)</p>
+<p><img src="image-3.png" /></p>
+<hr />
+<p><strong>EXAMPLE 1</strong> Draw the sum of the vectors
+<strong>a</strong> and <strong>b</strong> shown in Figure 5.</p>
+<p><img src="image-4.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-5.png" /></p>
+<p><strong>SOLUTION</strong> First we move <strong>b</strong> and place
+its tail at the tip of <strong>a</strong>, being careful to draw a copy
+of <strong>b</strong> that has the same length and direction. Then we
+draw the vector <span class="math inline">\(\mathbf{a} +
+\mathbf{b}\)</span> [see Figure 6(a)] starting at the initial point of
+<strong>a</strong> and ending at the terminal point of the copy of
+<strong>b</strong>.</p>
+<p>Alternatively, we could place <strong>b</strong> so it starts where
+<strong>a</strong> starts and construct <span
+class="math inline">\(\mathbf{a} + \mathbf{b}\)</span> by the
+Parallelogram Law as in Figure 6(b).</p>
+</div>
+</body>
+</html>

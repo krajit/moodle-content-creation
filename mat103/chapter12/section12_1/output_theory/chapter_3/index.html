@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Distance and Spheres</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The familiar formula for the distance between two points in a plane
+is easily extended to the following three-dimensional formula.</p>
+<p><strong>Distance Formula in Three Dimensions</strong> The distance
+<span class="math inline">\(|P_1P_2|\)</span> between the points <span
+class="math inline">\(P_1(x_1, y_1, z_1)\)</span> and <span
+class="math inline">\(P_2(x_2, y_2, z_2)\)</span> is <span
+class="math display">\[
+|P_1P_2| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}
+\]</span></p>
+<p><img src="image-8.png" /></p>
+<p>To see why this formula is true, we construct a rectangular box as in
+Figure 11, where <span class="math inline">\(P_1\)</span> and <span
+class="math inline">\(P_2\)</span> are opposite vertices and the faces
+of the box are parallel to the coordinate planes. If <span
+class="math inline">\(A(x_2, y_1, z_1)\)</span> and <span
+class="math inline">\(B(x_2, y_2, z_1)\)</span> are the vertices of the
+box indicated in the figure, then <span class="math display">\[
+|P_1A| = |x_2 - x_1| \quad |AB| = |y_2 - y_1| \quad |BP_2| = |z_2 - z_1|
+\]</span> Because triangles <span class="math inline">\(P_1BP_2\)</span>
+and <span class="math inline">\(P_1AB\)</span> are both right-angled,
+two applications of the Pythagorean Theorem give <span
+class="math display">\[
+|P_1P_2|^2 = |P_1B|^2 + |BP_2|^2
+\]</span> and <span class="math display">\[
+|P_1B|^2 = |P_1A|^2 + |AB|^2
+\]</span> Combining these equations, we get <span
+class="math display">\[
+|P_1P_2|^2 = |P_1A|^2 + |AB|^2 + |BP_2|^2 = |x_2 - x_1|^2 + |y_2 -
+y_1|^2 + |z_2 - z_1|^2
+\]</span> <span class="math display">\[
+= (x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2
+\]</span> Therefore <span class="math display">\[
+|P_1P_2| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 4</strong> The distance from the point <span
+class="math inline">\(P(2, -1, 7)\)</span> to the point <span
+class="math inline">\(Q(1, -3, 5)\)</span> is <span
+class="math display">\[
+|PQ| = \sqrt{(1 - 2)^2 + (-3 - (-1))^2 + (5 - 7)^2} = \sqrt{1 + 4 + 4} =
+3
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 5</strong> Find an equation of a sphere with radius
+<span class="math inline">\(r\)</span> and center <span
+class="math inline">\(C(h, k, l)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong></p>
+<p><img src="image-10.png" /></p>
+<p>By definition, a sphere is the set of all points <span
+class="math inline">\(P(x, y, z)\)</span> whose distance from <span
+class="math inline">\(C\)</span> is <span
+class="math inline">\(r\)</span>. (See Figure 12.) Thus <span
+class="math inline">\(P\)</span> is on the sphere if and only if <span
+class="math inline">\(|PC| = r\)</span>. Squaring both sides, we have
+<span class="math inline">\(|PC|^2 = r^2\)</span> or <span
+class="math display">\[
+(x - h)^2 + (y - k)^2 + (z - l)^2 = r^2
+\]</span></p>
+</div>
+<hr />
+<p><strong>Equation of a Sphere</strong> An equation of a sphere with
+center <span class="math inline">\(C(h, k, l)\)</span> and radius <span
+class="math inline">\(r\)</span> is <span class="math display">\[
+(x - h)^2 + (y - k)^2 + (z - l)^2 = r^2
+\]</span> In particular, if the center is the origin <span
+class="math inline">\(O\)</span>, then an equation of the sphere is
+<span class="math display">\[
+x^2 + y^2 + z^2 = r^2
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 6</strong> Show that <span class="math inline">\(x^2
++ y^2 + z^2 + 4x - 6y + 2z + 6 = 0\)</span> is the equation of a sphere,
+and find its center and radius.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We can rewrite the given equation in the
+form of an equation of a sphere if we complete squares: <span
+class="math display">\[
+(x^2 + 4x + 4) + (y^2 - 6y + 9) + (z^2 + 2z + 1) = -6 + 4 + 9 + 1
+\]</span> <span class="math display">\[
+(x + 2)^2 + (y - 3)^2 + (z + 1)^2 = 8
+\]</span> Comparing this equation with the standard form, we see that it
+is the equation of a sphere with center <span class="math inline">\((-2,
+3, -1)\)</span> and radius <span class="math inline">\(\sqrt{8} =
+2\sqrt{2}\)</span>.</p>
+</div>
+<hr />
+<p><strong>EXAMPLE 7</strong> What region in <span
+class="math inline">\(\mathbb{R}^3\)</span> is represented by the
+following inequalities? <span class="math display">\[
+1 \le x^2 + y^2 + z^2 \le 4 \quad z \le 0
+\]</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The inequalities <span
+class="math inline">\(1 \le x^2 + y^2 + z^2 \le 4\)</span> can be
+rewritten as <span class="math display">\[
+1 \le \sqrt{x^2 + y^2 + z^2} \le 2
+\]</span> so they represent the points <span class="math inline">\((x,
+y, z)\)</span> whose distance from the origin is at least 1 and at most
+2. But we are also given that <span class="math inline">\(z \le
+0\)</span>, so the points lie on or below the xy-plane. Thus the given
+inequalities represent the region that lies between (or on) the spheres
+<span class="math inline">\(x^2 + y^2 + z^2 = 1\)</span> and <span
+class="math inline">\(x^2 + y^2 + z^2 = 4\)</span> and beneath (or on)
+the xy-plane. It is sketched in Figure 13.</p>
+<p><img src="image-9.png" /></p>
+</div>
+</body>
+</html>

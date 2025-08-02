@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Unit Vector</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>A <strong>unit vector</strong> is a vector whose length is 1. For
+instance, <strong>i</strong>, <strong>j</strong>, and <strong>k</strong>
+are all unit vectors. In general, if <span
+class="math inline">\(\mathbf{a} \ne \mathbf{0}\)</span>, then the unit
+vector that has the same direction as <strong>a</strong> is <span
+class="math display">\[
+\mathbf{u} = \frac{1}{|\mathbf{a}|}\mathbf{a} =
+\frac{\mathbf{a}}{|\mathbf{a}|}
+\tag{4}
+\]</span> In order to verify this, we let <span class="math inline">\(c
+= 1/|\mathbf{a}|\)</span>. Then <span class="math inline">\(\mathbf{u} =
+c\mathbf{a}\)</span> and <span class="math inline">\(c\)</span> is a
+positive scalar, so <strong>u</strong> has the same direction as
+<strong>a</strong>. Also <span class="math display">\[
+|\mathbf{u}| = |c\mathbf{a}| = |c||\mathbf{a}| =
+\frac{1}{|\mathbf{a}|}|\mathbf{a}| = 1
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 6</strong> Find the unit vector in the direction of
+the vector <span class="math inline">\(2\mathbf{i} - \mathbf{j} -
+2\mathbf{k}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The given vector has length <span
+class="math display">\[
+|2\mathbf{i} - \mathbf{j} - 2\mathbf{k}| = \sqrt{2^2 + (-1)^2 + (-2)^2}
+= \sqrt{9} = 3
+\]</span> so, by Equation 4, the unit vector with the same direction is
+<span class="math display">\[
+\frac{1}{3}(2\mathbf{i} - \mathbf{j} - 2\mathbf{k}) =
+\frac{2}{3}\mathbf{i} - \frac{1}{3}\mathbf{j} - \frac{2}{3}\mathbf{k}
+\]</span></p>
+</div>
+</body>
+</html>

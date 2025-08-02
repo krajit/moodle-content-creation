@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Surfaces</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>In two-dimensional analytic geometry, the graph of an equation
+involving <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> is a curve in <span
+class="math inline">\(\mathbb{R}^2\)</span>. In three-dimensional
+analytic geometry, an equation in <span class="math inline">\(x,
+y,\)</span> and <span class="math inline">\(z\)</span> represents a
+<strong>surface</strong> in <span
+class="math inline">\(\mathbb{R}^3\)</span>.</p>
+<hr />
+<p><strong>EXAMPLE 1</strong> What surfaces in <span
+class="math inline">\(\mathbb{R}^3\)</span> are represented by the
+following equations? (a) <span class="math inline">\(z = 3\)</span> (b)
+<span class="math inline">\(y = 5\)</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> (a) The equation <span
+class="math inline">\(z = 3\)</span> represents the set <span
+class="math inline">\(\{(x, y, z) | z = 3\}\)</span>, which is the set
+of all points in <span class="math inline">\(\mathbb{R}^3\)</span> whose
+z-coordinate is 3 (<span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> can each be any value). This is the
+horizontal plane that is parallel to the xy-plane and three units above
+it as in Figure 7(a).</p>
+<p><img src="image-5.png" /></p>
+<ol start="2" type="a">
+<li>The equation <span class="math inline">\(y = 5\)</span> represents
+the set of all points in <span
+class="math inline">\(\mathbb{R}^3\)</span> whose y-coordinate is 5.
+This is the vertical plane that is parallel to the xz-plane and five
+units to the right of it as in Figure 7(b).</li>
+</ol>
+<p><strong>NOTE</strong> When an equation is given, we must understand
+from the context whether it represents a curve in <span
+class="math inline">\(\mathbb{R}^2\)</span> or a surface in <span
+class="math inline">\(\mathbb{R}^3\)</span>. In Example 1, <span
+class="math inline">\(y = 5\)</span> represents a plane in <span
+class="math inline">\(\mathbb{R}^3\)</span>, but of course <span
+class="math inline">\(y = 5\)</span> can also represent a line in <span
+class="math inline">\(\mathbb{R}^2\)</span> if we are dealing with
+two-dimensional analytic geometry. See Figure 7(b) and (c).</p>
+</div>
+<hr />
+<p>In general, if <span class="math inline">\(k\)</span> is a constant,
+then <span class="math inline">\(x = k\)</span> represents a plane
+parallel to the yz-plane, <span class="math inline">\(y = k\)</span> is
+a plane parallel to the xz-plane, and <span class="math inline">\(z =
+k\)</span> is a plane parallel to the xy-plane. In Figure 5, the faces
+of the rectangular box are formed by the three coordinate planes <span
+class="math inline">\(x = 0\)</span> (the yz-plane), <span
+class="math inline">\(y = 0\)</span> (the xz-plane), and <span
+class="math inline">\(z = 0\)</span> (the xy-plane), and the planes
+<span class="math inline">\(x = a, y = b,\)</span> and <span
+class="math inline">\(z = c\)</span>.</p>
+<hr />
+<p><strong>EXAMPLE 2</strong> (a) Which points <span
+class="math inline">\((x, y, z)\)</span> satisfy the equations <span
+class="math inline">\(x^2 + y^2 = 1\)</span> and <span
+class="math inline">\(z = 3\)</span>? (b) What does the equation <span
+class="math inline">\(x^2 + y^2 = 1\)</span> represent as a surface in
+<span class="math inline">\(\mathbb{R}^3\)</span>?</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-6.png" /></p>
+<p><strong>SOLUTION</strong> (a) Because <span class="math inline">\(z =
+3\)</span>, the points lie in the horizontal plane <span
+class="math inline">\(z = 3\)</span> from Example 1(a). Because <span
+class="math inline">\(x^2 + y^2 = 1\)</span>, the points lie on the
+circle with radius 1 and center on the z-axis. See Figure 8. (b) Given
+that <span class="math inline">\(x^2 + y^2 = 1\)</span>, with no
+restrictions on <span class="math inline">\(z\)</span>, we see that the
+point <span class="math inline">\((x, y, z)\)</span> could lie on a
+circle in any horizontal plane <span class="math inline">\(z =
+k\)</span>. So the surface <span class="math inline">\(x^2 + y^2 =
+1\)</span> in <span class="math inline">\(\mathbb{R}^3\)</span> consists
+of all possible horizontal circles <span class="math inline">\(x^2 + y^2
+= 1, z = k\)</span>, and is therefore the circular cylinder with radius
+1 whose axis is the z-axis. See Figure 9.</p>
+</div>
+<hr />
+<p><strong>EXAMPLE 3</strong> Describe and sketch the surface in <span
+class="math inline">\(\mathbb{R}^3\)</span> represented by the equation
+<span class="math inline">\(y = x\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The equation represents the set of all
+points in <span class="math inline">\(\mathbb{R}^3\)</span> whose x- and
+y-coordinates are equal, that is, <span class="math inline">\(\{(x, x,
+z) | x \in \mathbb{R}, z \in \mathbb{R}\}\)</span>. This is a vertical
+plane that intersects the xy-plane in the line <span
+class="math inline">\(y = x, z = 0\)</span>. The portion of this plane
+that lies in the first octant is sketched in Figure 10.</p>
+<p><img src="image-7.png" /></p>
+</div>
+</body>
+</html>

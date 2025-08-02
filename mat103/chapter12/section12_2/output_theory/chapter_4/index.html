@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Difference of two vectors</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Recall, the vector <span class="math inline">\(-\mathbf{v} =
+(-1)\mathbf{v}\)</span> has the same length as <strong>v</strong> but
+points in the opposite direction. We call it the
+<strong>negative</strong> of <strong>v</strong>.</p>
+<p>By the <strong>difference</strong> <span
+class="math inline">\(\mathbf{u} - \mathbf{v}\)</span> of two vectors we
+mean <span class="math display">\[
+\mathbf{u} - \mathbf{v} = \mathbf{u} + (-\mathbf{v})
+\]</span></p>
+<p><img src="image-7.png" /></p>
+<p>So we can construct <span class="math inline">\(\mathbf{u} -
+\mathbf{v}\)</span> by first drawing the negative of <strong>v</strong>,
+<span class="math inline">\(-\mathbf{v}\)</span>, and then adding it to
+<strong>u</strong> by the Parallelogram Law as in Figure 8(a).
+Alternatively, since <span class="math inline">\(\mathbf{v} +
+(\mathbf{u} - \mathbf{v}) = \mathbf{u}\)</span>, the vector <span
+class="math inline">\(\mathbf{u} - \mathbf{v}\)</span>, when added to
+<strong>v</strong>, gives <strong>u</strong>. So we could construct
+<span class="math inline">\(\mathbf{u} - \mathbf{v}\)</span> as in
+Figure 8(b) by means of the Triangle Law. Notice that if
+<strong>u</strong> and <strong>v</strong> both start from the same
+initial point, then <span class="math inline">\(\mathbf{u} -
+\mathbf{v}\)</span> connects the tip of <strong>v</strong> to the tip of
+<strong>u</strong>.</p>
+<hr />
+<p><strong>EXAMPLE 2</strong> If <strong>a</strong> and
+<strong>b</strong> are the vectors shown in Figure 9, draw <span
+class="math inline">\(\mathbf{a} - 2\mathbf{b}\)</span>. <img
+src="image-9.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We first draw the vector <span
+class="math inline">\(-2\mathbf{b}\)</span> pointing in the direction
+opposite to <strong>b</strong> and twice as long. We place it with its
+tail at the tip of <strong>a</strong> and then use the Triangle Law to
+draw <span class="math inline">\(\mathbf{a} + (-2\mathbf{b})\)</span> as
+in Figure 10.</p>
+<p><img src="image-8.png" /></p>
+</div>
+</body>
+</html>

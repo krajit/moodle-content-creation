@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Components of vector</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>For some purposes it’s best to introduce a coordinate system and
+treat vectors algebraically. If we place the initial point of a vector
+<strong>a</strong> at the origin of a rectangular coordinate system,
+then the terminal point of <strong>a</strong> has coordinates of the
+form <span class="math inline">\((a_1, a_2)\)</span> or <span
+class="math inline">\((a_1, a_2, a_3)\)</span>, depending on whether our
+coordinate system is two- or three-dimensional (see Figure 11).</p>
+<p><img src="image-10.png" /></p>
+<p>These coordinates are called the <strong>components</strong> of
+<strong>a</strong> and we write <span class="math display">\[
+\mathbf{a} = \langle a_1, a_2 \rangle \quad \text{or} \quad \mathbf{a} =
+\langle a_1, a_2, a_3 \rangle
+\]</span></p>
+<hr />
+<p>We use the notation <span class="math inline">\(\langle a_1, a_2
+\rangle\)</span> for the ordered pair that refers to a vector so as not
+to confuse it with the ordered pair <span class="math inline">\((a_1,
+a_2)\)</span> that refers to a point in the plane.</p>
+<p><img src="image-11.png" /></p>
+<p>For instance, the vectors shown in Figure 12 are all equivalent to
+the vector <span class="math inline">\(\vec{OP} = \langle 3, 2
+\rangle\)</span> whose terminal point is <span
+class="math inline">\(P(3, 2)\)</span>. What they have in common is that
+the terminal point is reached from the initial point by a displacement
+of three units to the right and two upward. We can think of all these
+geometric vectors as representations of the algebraic vector <span
+class="math inline">\(\mathbf{a} = \langle 3, 2 \rangle\)</span>. The
+particular representation <span class="math inline">\(\vec{OP}\)</span>
+from the origin to the point <span class="math inline">\(P(3,
+2)\)</span> is called the <strong>position vector</strong> of the point
+<span class="math inline">\(P\)</span>.</p>
+<p>In three dimensions, the vector <span
+class="math inline">\(\mathbf{a} = \vec{OP} = \langle a_1, a_2, a_3
+\rangle\)</span> is the <strong>position vector</strong> of the point
+<span class="math inline">\(P(a_1, a_2, a_3)\)</span>. (See Figure
+13.)</p>
+<p><img src="image-12.png" /></p>
+<p>Let’s consider any other representation <span
+class="math inline">\(\vec{AB}\)</span> of <strong>a</strong>, where the
+initial point is <span class="math inline">\(A(x_1, y_1, z_1)\)</span>
+and the terminal point is <span class="math inline">\(B(x_2, y_2,
+z_2)\)</span>. Then we must have <span class="math inline">\(x_1 + a_1 =
+x_2, y_1 + a_2 = y_2,\)</span> and <span class="math inline">\(z_1 + a_3
+= z_2\)</span> and so <span class="math inline">\(a_1 = x_2 - x_1, a_2 =
+y_2 - y_1,\)</span> and <span class="math inline">\(a_3 = z_2 -
+z_1\)</span>. Thus we have the following result.</p>
+<hr />
+<p>Given the points <span class="math inline">\(A(x_1, y_1,
+z_1)\)</span> and <span class="math inline">\(B(x_2, y_2, z_2)\)</span>,
+the vector <strong>a</strong> with representation <span
+class="math inline">\(\vec{AB}\)</span> is <span class="math display">\[
+\mathbf{a} = \langle x_2 - x_1, y_2 - y_1, z_2 - z_1 \rangle
+\tag{1}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 3</strong> Find the vector represented by the
+directed line segment with initial point <span
+class="math inline">\(A(2, -3, 4)\)</span> and terminal point <span
+class="math inline">\(B(-2, 1, 1)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> By (1), the vector corresponding to <span
+class="math inline">\(\vec{AB}\)</span> is <span class="math display">\[
+\mathbf{a} = \langle -2 - 2, 1 - (-3), 1 - 4 \rangle = \langle -4, 4, -3
+\rangle
+\]</span></p>
+</div>
+</body>
+</html>

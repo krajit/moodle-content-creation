@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Applications of vectors</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Vectors are useful in many aspects of physics and engineering. In
+Chapter 13 we will see how they describe the velocity and acceleration
+of objects moving in space. Here we look at forces.</p>
+<p>A <strong>force</strong> is represented by a vector because it has
+both a magnitude (measured in pounds or newtons) and a direction. If
+several forces are acting on an object, the <strong>resultant
+force</strong> experienced by the object is the vector sum of these
+forces.</p>
+<hr />
+<p><strong>EXAMPLE 7</strong> A 100-lb weight hangs from two wires as
+shown in Figure 19. Find the tensions (forces) <span
+class="math inline">\(\mathbf{T}_1\)</span> and <span
+class="math inline">\(\mathbf{T}_2\)</span> in both wires and the
+magnitudes of the tensions.</p>
+<p><img src="image-17.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We first express <span
+class="math inline">\(\mathbf{T}_1\)</span> and <span
+class="math inline">\(\mathbf{T}_2\)</span> in terms of their horizontal
+and vertical components. From Figure 20 we see that</p>
+<p><img src="image-18.png" /></p>
+<p><span class="math display">\[
+\mathbf{T}_1 = -|\mathbf{T}_1|\cos 50^\circ \mathbf{i} +
+|\mathbf{T}_1|\sin 50^\circ \mathbf{j}
+\tag{5}
+\]</span> <span class="math display">\[
+\mathbf{T}_2 = |\mathbf{T}_2|\cos 32^\circ \mathbf{i} +
+|\mathbf{T}_2|\sin 32^\circ \mathbf{j}
+\tag{6}
+\]</span> The resultant <span class="math inline">\(\mathbf{T}_1 +
+\mathbf{T}_2\)</span> of the tensions counterbalances the weight <span
+class="math inline">\(\mathbf{w} = -100\mathbf{j}\)</span> and so we
+must have <span class="math display">\[
+\mathbf{T}_1 + \mathbf{T}_2 = -\mathbf{w} = 100\mathbf{j}
+\]</span> Thus <span class="math display">\[
+(-|\mathbf{T}_1|\cos 50^\circ + |\mathbf{T}_2|\cos 32^\circ)\mathbf{i} +
+(|\mathbf{T}_1|\sin 50^\circ + |\mathbf{T}_2|\sin 32^\circ)\mathbf{j} =
+100\mathbf{j}
+\]</span> Equating components, we get <span class="math display">\[
+-|\mathbf{T}_1|\cos 50^\circ + |\mathbf{T}_2|\cos 32^\circ = 0
+\]</span> <span class="math display">\[
+|\mathbf{T}_1|\sin 50^\circ + |\mathbf{T}_2|\sin 32^\circ = 100
+\]</span> Solving the first of these equations for <span
+class="math inline">\(|\mathbf{T}_2|\)</span> and substituting into the
+second, we get <span class="math display">\[
+|\mathbf{T}_1|\sin 50^\circ + \frac{|\mathbf{T}_1|\cos 50^\circ}{\cos
+32^\circ}\sin 32^\circ = 100
+\]</span> <span class="math display">\[
+|\mathbf{T}_1|\left(\sin 50^\circ + \cos 50^\circ \frac{\sin
+32^\circ}{\cos 32^\circ}\right) = 100
+\]</span> So the magnitudes of the tensions are <span
+class="math display">\[
+|\mathbf{T}_1| = \frac{100}{\sin 50^\circ + \tan 32^\circ \cos 50^\circ}
+\approx 85.64 \text{ lb}
+\]</span> and <span class="math display">\[
+|\mathbf{T}_2| = \frac{|\mathbf{T}_1|\cos 50^\circ}{\cos 32^\circ}
+\approx 64.91 \text{ lb}
+\]</span> Substituting these values in (5) and (6), we obtain the
+tension vectors <span class="math display">\[
+\mathbf{T}_1 \approx -55.05\mathbf{i} + 65.60\mathbf{j} \quad
+\mathbf{T}_2 \approx 55.05\mathbf{i} + 34.40\mathbf{j}
+\]</span></p>
+</div>
+</body>
+</html>
