@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example exercise</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 3</strong> Find a vector perpendicular to the plane
+that passes through the points <span class="math inline">\(P(1, 4, 6),
+Q(-2, 5, -1),\)</span> and <span class="math inline">\(R(1, -1,
+1)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The vector <span
+class="math inline">\(\vec{PQ} \times \vec{PR}\)</span> is perpendicular
+to both <span class="math inline">\(\vec{PQ}\)</span> and <span
+class="math inline">\(\vec{PR}\)</span> and is therefore perpendicular
+to the plane through P, Q, and R. We know from (12.2.1) that <span
+class="math display">\[
+\vec{PQ} = (-2 - 1)\mathbf{i} + (5 - 4)\mathbf{j} + (-1 - 6)\mathbf{k} =
+-3\mathbf{i} + \mathbf{j} - 7\mathbf{k}
+\]</span> <span class="math display">\[
+\vec{PR} = (1 - 1)\mathbf{i} + (-1 - 4)\mathbf{j} + (1 - 6)\mathbf{k} =
+-5\mathbf{j} - 5\mathbf{k}
+\]</span> We compute the cross product of these vectors: <span
+class="math display">\[
+\vec{PQ} \times \vec{PR} = \begin{vmatrix} \mathbf{i} &amp; \mathbf{j}
+&amp; \mathbf{k} \\ -3 &amp; 1 &amp; -7 \\ 0 &amp; -5 &amp; -5
+\end{vmatrix}
+\]</span> <span class="math display">\[
+= (-5 - 35)\mathbf{i} - (15 - 0)\mathbf{j} + (15 - 0)\mathbf{k} =
+-40\mathbf{i} - 15\mathbf{j} + 15\mathbf{k}
+\]</span></p>
+<p>So the vector <span class="math inline">\(\langle -40, -15, 15
+\rangle\)</span> is perpendicular to the given plane. Any nonzero scalar
+multiple of this vector, such as <span class="math inline">\(\langle -8,
+-3, 3 \rangle\)</span>, is also perpendicular to the plane.</p>
+</div>
+</body>
+</html>

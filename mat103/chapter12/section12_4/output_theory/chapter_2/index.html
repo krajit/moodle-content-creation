@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example: Cross product with parallel vectors</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 2</strong> Show that <span
+class="math inline">\(\mathbf{a} \times \mathbf{a} = \mathbf{0}\)</span>
+for any vector <strong>a</strong> in <span
+class="math inline">\(V_3\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> If <span class="math inline">\(\mathbf{a} =
+\langle a_1, a_2, a_3 \rangle\)</span>, then <span
+class="math display">\[
+\mathbf{a} \times \mathbf{a} = \begin{vmatrix} \mathbf{i} &amp;
+\mathbf{j} &amp; \mathbf{k} \\ a_1 &amp; a_2 &amp; a_3 \\ a_1 &amp; a_2
+&amp; a_3 \end{vmatrix} = (a_2a_3 - a_3a_2)\mathbf{i} - (a_1a_3 -
+a_3a_1)\mathbf{j} + (a_1a_2 - a_2a_1)\mathbf{k} = 0\mathbf{i} -
+0\mathbf{j} + 0\mathbf{k} = \mathbf{0}
+\]</span></p>
+</div>
+</body>
+</html>

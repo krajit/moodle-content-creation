@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Triple Products</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The product <span class="math inline">\(\mathbf{a} \cdot (\mathbf{b}
+\times \mathbf{c})\)</span> that occurs in Property 5 is called the
+<strong>scalar triple product</strong> of the vectors
+<strong>a</strong>, <strong>b</strong>, and <strong>c</strong>. Notice
+from Equation 12 that we can write the scalar triple product as a
+determinant: <span class="math display">\[
+\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \begin{vmatrix} a_1
+&amp; a_2 &amp; a_3 \\ b_1 &amp; b_2 &amp; b_3 \\ c_1 &amp; c_2 &amp;
+c_3 \end{vmatrix}
+\tag{13}
+\]</span></p>
+<hr />
+<p><img src="image-2.png" /></p>
+<hr />
+<p>The geometric significance of the scalar triple product can be seen
+by considering the parallelepiped determined by the vectors
+<strong>a</strong>, <strong>b</strong>, and <strong>c</strong>. (See
+Figure 3.) The area of the base parallelogram is <span
+class="math inline">\(A = |\mathbf{b} \times \mathbf{c}|\)</span>. If
+<span class="math inline">\(\theta\)</span> is the angle between
+<strong>a</strong> and <span class="math inline">\(\mathbf{b} \times
+\mathbf{c}\)</span>, then the height <span
+class="math inline">\(h\)</span> of the parallelepiped is <span
+class="math inline">\(h = |\mathbf{a}||\cos\theta|\)</span>. (We must
+use <span class="math inline">\(|\cos\theta|\)</span> instead of <span
+class="math inline">\(\cos\theta\)</span> in case <span
+class="math inline">\(\theta &gt; \pi/2\)</span>.) Therefore the volume
+of the parallelepiped is <span class="math display">\[
+V = Ah = |\mathbf{b} \times \mathbf{c}||\mathbf{a}||\cos\theta| =
+|\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})|
+\]</span> Thus we have proved the following formula.</p>
+<hr />
+<p>The volume of the parallelepiped determined by the vectors
+<strong>a</strong>, <strong>b</strong>, and <strong>c</strong> is the
+magnitude of their scalar triple product: <span class="math display">\[
+V = |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})| \tag{14}
+\]</span></p>
+<hr />
+<p>If we use the formula in (14) and discover that the volume of the
+parallelepiped determined by <strong>a</strong>, <strong>b</strong>, and
+<strong>c</strong> is 0, then the vectors must lie in the same plane;
+that is, they are <strong>coplanar</strong>.</p>
+<hr />
+<p><strong>EXAMPLE 5</strong> Use the scalar triple product to show that
+the vectors <span class="math inline">\(\mathbf{a} = \langle 1, 4, -7
+\rangle, \mathbf{b} = \langle 2, -1, 4 \rangle,\)</span> and <span
+class="math inline">\(\mathbf{c} = \langle 0, -9, 18 \rangle\)</span>
+are coplanar.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We use Equation 13 to compute their scalar
+triple product: <span class="math display">\[
+\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = \begin{vmatrix} 1
+&amp; 4 &amp; -7 \\ 2 &amp; -1 &amp; 4 \\ 0 &amp; -9 &amp; 18
+\end{vmatrix}
+\]</span> <span class="math display">\[
+= 1\begin{vmatrix} -1 &amp; 4 \\ -9 &amp; 18 \end{vmatrix} -
+4\begin{vmatrix} 2 &amp; 4 \\ 0 &amp; 18 \end{vmatrix} +
+(-7)\begin{vmatrix} 2 &amp; -1 \\ 0 &amp; -9 \end{vmatrix}
+\]</span> <span class="math display">\[
+= 1(-18 - (-36)) - 4(36 - 0) - 7(-18 - 0) = 18 - 144 + 126 = 0
+\]</span> Therefore, by (14), the volume of the parallelepiped
+determined by <strong>a</strong>, <strong>b</strong>, and
+<strong>c</strong> is 0. This means that <strong>a</strong>,
+<strong>b</strong>, and <strong>c</strong> are coplanar.</p>
+</div>
+</body>
+</html>

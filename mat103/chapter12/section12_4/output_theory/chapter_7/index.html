@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example Exercise</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 4</strong> Find the area of the triangle with
+vertices <span class="math inline">\(P(1, 4, 6), Q(-2, 5, -1),\)</span>
+and <span class="math inline">\(R(1, -1, 1)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> In Example 3 we computed that <span
+class="math inline">\(\vec{PQ} \times \vec{PR} = \langle -40, -15, 15
+\rangle\)</span>. The area of the parallelogram with adjacent sides PQ
+and PR is the length of this cross product: <span
+class="math display">\[
+|\vec{PQ} \times \vec{PR}| = \sqrt{(-40)^2 + (-15)^2 + 15^2} =
+\sqrt{1600 + 225 + 225} = \sqrt{2050} = 5\sqrt{82}
+\]</span> The area A of the triangle PQR is half the area of this
+parallelogram, that is, <span
+class="math inline">\(\frac{5}{2}\sqrt{82}\)</span>.</p>
+</div>
+</body>
+</html>

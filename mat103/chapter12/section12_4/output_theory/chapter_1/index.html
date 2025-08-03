@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Cross Product</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Given two nonzero vectors <span class="math inline">\(\mathbf{a} =
+\langle a_1, a_2, a_3 \rangle\)</span> and <span
+class="math inline">\(\mathbf{b} = \langle b_1, b_2, b_3
+\rangle\)</span>, it is very useful to be able to find a nonzero vector
+<strong>c</strong> that is perpendicular to both <strong>a</strong> and
+<strong>b</strong>. If <span class="math inline">\(\mathbf{c} = \langle
+c_1, c_2, c_3 \rangle\)</span> is such a vector, then <span
+class="math inline">\(\mathbf{a} \cdot \mathbf{c} = 0\)</span> and <span
+class="math inline">\(\mathbf{b} \cdot \mathbf{c} = 0\)</span> and so
+<span class="math display">\[ a_1c_1 + a_2c_2 + a_3c_3 = 0 \tag{1}
+\]</span> <span class="math display">\[ b_1c_1 + b_2c_2 + b_3c_3 = 0
+\tag{2} \]</span> To eliminate <span class="math inline">\(c_3\)</span>
+we multiply (1) by <span class="math inline">\(b_3\)</span> and (2) by
+<span class="math inline">\(a_3\)</span> and subtract: <span
+class="math display">\[ (a_1b_3 - a_3b_1)c_1 + (a_2b_3 - a_3b_2)c_2 = 0
+\tag{3} \]</span> Equation 3 has the form <span
+class="math inline">\(pc_1 + qc_2 = 0\)</span>, for which an obvious
+solution is <span class="math inline">\(c_1 = q\)</span> and <span
+class="math inline">\(c_2 = -p\)</span>. So a solution of (3) is <span
+class="math display">\[ c_1 = a_2b_3 - a_3b_2 \qquad c_2 = a_3b_1 -
+a_1b_3 \]</span> Substituting these values into (1) and (2), we then get
+<span class="math display">\[ c_3 = a_1b_2 - a_2b_1 \]</span> This means
+that a vector perpendicular to both <strong>a</strong> and
+<strong>b</strong> is <span class="math display">\[ \mathbf{c} = \langle
+c_1, c_2, c_3 \rangle = \langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2
+- a_2b_1 \rangle \]</span> The resulting vector is called the
+<strong>cross product</strong> of <strong>a</strong> and
+<strong>b</strong> and is denoted by <span
+class="math inline">\(\mathbf{a} \times \mathbf{b}\)</span>.</p>
+<hr />
+<p><strong>Definition 4</strong> If <span
+class="math inline">\(\mathbf{a} = \langle a_1, a_2, a_3
+\rangle\)</span> and <span class="math inline">\(\mathbf{b} = \langle
+b_1, b_2, b_3 \rangle\)</span>, then the <strong>cross product</strong>
+of <strong>a</strong> and <strong>b</strong> is the vector <span
+class="math display">\[ \mathbf{a} \times \mathbf{b} = \langle a_2b_3 -
+a_3b_2, a_3b_1 - a_1b_3, a_1b_2 - a_2b_1 \rangle \]</span></p>
+<hr />
+<p>Notice that the cross product <span class="math inline">\(\mathbf{a}
+\times \mathbf{b}\)</span> of two vectors <strong>a</strong> and
+<strong>b</strong>, unlike the dot product, is a vector. For this reason
+it is also called the <strong>vector product</strong>. Note that <span
+class="math inline">\(\mathbf{a} \times \mathbf{b}\)</span> is defined
+only when <strong>a</strong> and <strong>b</strong> are
+three-dimensional vectors.</p>
+<p>In order to make Definition 4 easier to remember, we use the notation
+of determinants. A <strong>determinant of order 2</strong> is defined by
+<span class="math display">\[
+\begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix} = ad - bc
+\]</span> (Multiply across the diagonals and subtract.) For example,
+<span class="math display">\[
+\begin{vmatrix} 2 &amp; 1 \\ -6 &amp; 4 \end{vmatrix} = 2(4) - 1(-6) =
+14
+\]</span> A <strong>determinant of order 3</strong> can be defined in
+terms of second-order determinants as follows: <span
+class="math display">\[
+\begin{vmatrix} a_1 &amp; a_2 &amp; a_3 \\ b_1 &amp; b_2 &amp; b_3 \\
+c_1 &amp; c_2 &amp; c_3 \end{vmatrix} = a_1 \begin{vmatrix} b_2 &amp;
+b_3 \\ c_2 &amp; c_3 \end{vmatrix} - a_2 \begin{vmatrix} b_1 &amp; b_3
+\\ c_1 &amp; c_3 \end{vmatrix} + a_3 \begin{vmatrix} b_1 &amp; b_2 \\
+c_1 &amp; c_2 \end{vmatrix} \tag{5}
+\]</span> Observe that each term on the right side of Equation 5
+involves a number <span class="math inline">\(a_i\)</span> in the first
+row of the determinant, and <span class="math inline">\(a_i\)</span> is
+multiplied by the second-order determinant obtained from the left side
+by deleting the row and column in which <span
+class="math inline">\(a_i\)</span> appears. Notice also the minus sign
+in the second term. For example, <span class="math display">\[
+\begin{vmatrix} 1 &amp; 2 &amp; -1 \\ 3 &amp; 0 &amp; 1 \\ -5 &amp; 4
+&amp; 2 \end{vmatrix} = 1 \begin{vmatrix} 0 &amp; 1 \\ 4 &amp; 2
+\end{vmatrix} - 2 \begin{vmatrix} 3 &amp; 1 \\ -5 &amp; 2 \end{vmatrix}
++ (-1) \begin{vmatrix} 3 &amp; 0 \\ -5 &amp; 4 \end{vmatrix}
+\]</span> <span class="math display">\[
+= 1(0 - 4) - 2(6 - (-5)) + (-1)(12 - 0) = -4 - 22 - 12 = -38
+\]</span> If we now rewrite Definition 4 using second-order determinants
+and the standard basis vectors <strong>i</strong>, <strong>j</strong>,
+and <strong>k</strong>, we see that the cross product of the vectors
+<span class="math inline">\(\mathbf{a} = a_1\mathbf{i} + a_2\mathbf{j} +
+a_3\mathbf{k}\)</span> and <span class="math inline">\(\mathbf{b} =
+b_1\mathbf{i} + b_2\mathbf{j} + b_3\mathbf{k}\)</span> is <span
+class="math display">\[
+\mathbf{a} \times \mathbf{b} = \begin{vmatrix} a_2 &amp; a_3 \\ b_2
+&amp; b_3 \end{vmatrix} \mathbf{i} - \begin{vmatrix} a_1 &amp; a_3 \\
+b_1 &amp; b_3 \end{vmatrix} \mathbf{j} + \begin{vmatrix} a_1 &amp; a_2
+\\ b_1 &amp; b_2 \end{vmatrix} \mathbf{k} \tag{6}
+\]</span> In view of the similarity between Equations 5 and 6, we often
+write <span class="math display">\[
+\mathbf{a} \times \mathbf{b} = \begin{vmatrix} \mathbf{i} &amp;
+\mathbf{j} &amp; \mathbf{k} \\ a_1 &amp; a_2 &amp; a_3 \\ b_1 &amp; b_2
+&amp; b_3 \end{vmatrix} \tag{7}
+\]</span> Although the first row of the symbolic determinant in Equation
+7 consists of vectors, if we expand it as if it were an ordinary
+determinant using the rule in Equation 5, we obtain Equation 6. The
+symbolic formula in Equation 7 is probably the easiest way of
+remembering and computing cross products.</p>
+<hr />
+<p><strong>EXAMPLE 1</strong> If <span class="math inline">\(\mathbf{a}
+= \langle 1, 3, 4 \rangle\)</span> and <span
+class="math inline">\(\mathbf{b} = \langle 2, 7, -5 \rangle\)</span>,
+then <span class="math display">\[
+\mathbf{a} \times \mathbf{b} = \begin{vmatrix} \mathbf{i} &amp;
+\mathbf{j} &amp; \mathbf{k} \\ 1 &amp; 3 &amp; 4 \\ 2 &amp; 7 &amp; -5
+\end{vmatrix} = \begin{vmatrix} 3 &amp; 4 \\ 7 &amp; -5 \end{vmatrix}
+\mathbf{i} - \begin{vmatrix} 1 &amp; 4 \\ 2 &amp; -5 \end{vmatrix}
+\mathbf{j} + \begin{vmatrix} 1 &amp; 3 \\ 2 &amp; 7 \end{vmatrix}
+\mathbf{k}
+\]</span> <span class="math display">\[
+= (-15 - 28)\mathbf{i} - (-5 - 8)\mathbf{j} + (7 - 6)\mathbf{k} =
+-43\mathbf{i} + 13\mathbf{j} + \mathbf{k}
+\]</span></p>
+</body>
+</html>

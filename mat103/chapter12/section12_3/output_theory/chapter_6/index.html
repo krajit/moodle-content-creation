@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Projections</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image-3.png" /></p>
+<p>Figure 4 shows representations <span
+class="math inline">\(\vec{PQ}\)</span> and <span
+class="math inline">\(\vec{PR}\)</span> of two vectors
+<strong>a</strong> and <strong>b</strong> with the same initial point
+<span class="math inline">\(P\)</span>. If <span
+class="math inline">\(S\)</span> is the foot of the perpendicular from
+<span class="math inline">\(R\)</span> to the line containing <span
+class="math inline">\(\vec{PQ}\)</span>, then the vector with
+representation <span class="math inline">\(\vec{PS}\)</span> is called
+the <strong>vector projection</strong> of <strong>b</strong> onto
+<strong>a</strong> and is denoted by proj<span
+class="math inline">\(_\mathbf{a}\)</span><strong>b</strong>.</p>
+<p><img src="image-4.png" /></p>
+<p>The <strong>scalar projection</strong> of <strong>b</strong> onto
+<strong>a</strong> (also called the <strong>component</strong> of
+<strong>b</strong> along <strong>a</strong>) is defined to be the signed
+magnitude of the vector projection, which is the number <span
+class="math inline">\(|\mathbf{b}|\cos\theta\)</span>, where <span
+class="math inline">\(\theta\)</span> is the angle between
+<strong>a</strong> and <strong>b</strong>. (See Figure 5.) This is
+denoted by comp<span
+class="math inline">\(_\mathbf{a}\)</span><strong>b</strong>. Observe
+that it is negative if <span class="math inline">\(\pi/2 &lt; \theta \le
+\pi\)</span>. The equation <span class="math display">\[
+\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}||\mathbf{b}|\cos\theta =
+|\mathbf{a}|(|\mathbf{b}|\cos\theta)
+\]</span> shows that the dot product of <strong>a</strong> and
+<strong>b</strong> can be interpreted as the length of
+<strong>a</strong> times the scalar projection of <strong>b</strong>
+onto <strong>a</strong>. Since <span class="math display">\[
+|\mathbf{b}|\cos\theta = \frac{\mathbf{a} \cdot
+\mathbf{b}}{|\mathbf{a}|} = \frac{\mathbf{a}}{|\mathbf{a}|} \cdot
+\mathbf{b}
+\]</span> the component of <strong>b</strong> along <strong>a</strong>
+can be computed by taking the dot product of <strong>b</strong> with the
+unit vector in the direction of <strong>a</strong>. We summarize these
+ideas as follows.</p>
+<p>Scalar projection of <strong>b</strong> onto <strong>a</strong>:
+<span class="math inline">\(\text{comp}_\mathbf{a}\mathbf{b} =
+\frac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}|}\)</span> Vector
+projection of <strong>b</strong> onto <strong>a</strong>: <span
+class="math inline">\(\text{proj}_\mathbf{a}\mathbf{b} =
+\left(\frac{\mathbf{a} \cdot
+\mathbf{b}}{|\mathbf{a}|}\right)\frac{\mathbf{a}}{|\mathbf{a}|} =
+\frac{\mathbf{a} \cdot
+\mathbf{b}}{|\mathbf{a}|^2}\mathbf{a}\)</span></p>
+<p>Notice that the vector projection is the scalar projection times the
+unit vector in the direction of <strong>a</strong>.</p>
+<hr />
+<p><strong>EXAMPLE 6</strong> Find the scalar projection and vector
+projection of <span class="math inline">\(\mathbf{b} = \langle 1, 1, 2
+\rangle\)</span> onto <span class="math inline">\(\mathbf{a} = \langle
+-2, 3, 1 \rangle\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since <span
+class="math inline">\(|\mathbf{a}| = \sqrt{(-2)^2 + 3^2 + 1^2} =
+\sqrt{14}\)</span>, the scalar projection of <strong>b</strong> onto
+<strong>a</strong> is <span class="math display">\[
+\text{comp}_\mathbf{a}\mathbf{b} = \frac{\mathbf{a} \cdot
+\mathbf{b}}{|\mathbf{a}|} = \frac{(-2)(1) + 3(1) + 1(2)}{\sqrt{14}} =
+\frac{3}{\sqrt{14}}
+\]</span> The vector projection is this scalar projection times the unit
+vector in the direction of <strong>a</strong>: <span
+class="math display">\[
+\text{proj}_\mathbf{a}\mathbf{b} =
+\frac{3}{\sqrt{14}}\frac{\mathbf{a}}{|\mathbf{a}|} =
+\frac{3}{14}\mathbf{a} = \left\langle -\frac{6}{14}, \frac{9}{14},
+\frac{3}{14} \right\rangle = \left\langle -\frac{3}{7}, \frac{9}{14},
+\frac{3}{14} \right\rangle
+\]</span></p>
+</div>
+</body>
+</html>

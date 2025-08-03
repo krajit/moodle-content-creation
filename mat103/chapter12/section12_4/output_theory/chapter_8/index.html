@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Some common identities</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>If we apply Theorems 8 and 9 to the standard basis vectors
+<strong>i</strong>, <strong>j</strong>, and <strong>k</strong> using
+<span class="math inline">\(\theta = \pi/2\)</span>, we obtain <span
+class="math display">\[
+\mathbf{i} \times \mathbf{j} = \mathbf{k} \qquad \mathbf{j} \times
+\mathbf{k} = \mathbf{i} \qquad \mathbf{k} \times \mathbf{i} = \mathbf{j}
+\]</span> <span class="math display">\[
+\mathbf{j} \times \mathbf{i} = -\mathbf{k} \qquad \mathbf{k} \times
+\mathbf{j} = -\mathbf{i} \qquad \mathbf{i} \times \mathbf{k} =
+-\mathbf{j}
+\]</span> Observe that <span class="math display">\[
+\mathbf{i} \times \mathbf{j} \ne \mathbf{j} \times \mathbf{i}
+\]</span> Thus the cross product is not commutative. Also <span
+class="math display">\[
+\mathbf{i} \times (\mathbf{i} \times \mathbf{j}) = \mathbf{i} \times
+\mathbf{k} = -\mathbf{j}
+\]</span> whereas <span class="math display">\[
+(\mathbf{i} \times \mathbf{i}) \times \mathbf{j} = \mathbf{0} \times
+\mathbf{j} = \mathbf{0}
+\]</span> So the associative law for multiplication does not usually
+hold; that is, in general, <span class="math display">\[
+(\mathbf{a} \times \mathbf{b}) \times \mathbf{c} \ne \mathbf{a} \times
+(\mathbf{b} \times \mathbf{c})
+\]</span> However, some of the usual laws of algebra do hold for cross
+products. The following theorem summarizes the properties of vector
+products.</p>
+<hr />
+<p><strong>Properties of the Cross Product 11</strong> If
+<strong>a</strong>, <strong>b</strong>, and <strong>c</strong> are
+vectors and <span class="math inline">\(c\)</span> is a scalar, then 1.
+<span class="math inline">\(\mathbf{a} \times \mathbf{b} = -\mathbf{b}
+\times \mathbf{a}\)</span> 2. <span class="math inline">\((c\mathbf{a})
+\times \mathbf{b} = c(\mathbf{a} \times \mathbf{b}) = \mathbf{a} \times
+(c\mathbf{b})\)</span> 3. <span class="math inline">\(\mathbf{a} \times
+(\mathbf{b} + \mathbf{c}) = \mathbf{a} \times \mathbf{b} + \mathbf{a}
+\times \mathbf{c}\)</span> 4. <span class="math inline">\((\mathbf{a} +
+\mathbf{b}) \times \mathbf{c} = \mathbf{a} \times \mathbf{c} +
+\mathbf{b} \times \mathbf{c}\)</span> 5. <span
+class="math inline">\(\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) =
+(\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}\)</span> 6. <span
+class="math inline">\(\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) =
+(\mathbf{a} \cdot \mathbf{c})\mathbf{b} - (\mathbf{a} \cdot
+\mathbf{b})\mathbf{c}\)</span></p>
+<hr />
+<p>These properties can be proved by writing the vectors in terms of
+their components and using the definition of a cross product. We give
+the proof of Property 5 and leave the remaining proofs as exercises.</p>
+<p><strong>PROOF OF PROPERTY 5</strong> If <span
+class="math inline">\(\mathbf{a} = \langle a_1, a_2, a_3 \rangle,
+\mathbf{b} = \langle b_1, b_2, b_3 \rangle,\)</span> and <span
+class="math inline">\(\mathbf{c} = \langle c_1, c_2, c_3
+\rangle\)</span>, then <span class="math display">\[
+\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) = a_1(b_2c_3 - b_3c_2) +
+a_2(b_3c_1 - b_1c_3) + a_3(b_1c_2 - b_2c_1)
+\tag{12}
+\]</span> <span class="math display">\[
+= a_1b_2c_3 - a_1b_3c_2 + a_2b_3c_1 - a_2b_1c_3 + a_3b_1c_2 - a_3b_2c_1
+\]</span> <span class="math display">\[
+= (a_2b_3 - a_3b_2)c_1 + (a_3b_1 - a_1b_3)c_2 + (a_1b_2 - a_2b_1)c_3
+\]</span> <span class="math display">\[
+= (\mathbf{a} \times \mathbf{b}) \cdot \mathbf{c}
+\]</span></p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Use of dot product to check perpendicularity of two vectors</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Two nonzero vectors <strong>a</strong> and <strong>b</strong> are
+called <strong>perpendicular</strong> or <strong>orthogonal</strong> if
+the angle between them is <span class="math inline">\(\theta =
+\pi/2\)</span>. Then Theorem 3 gives <span class="math display">\[
+\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}||\mathbf{b}|\cos(\pi/2) = 0
+\]</span> and conversely if <span class="math inline">\(\mathbf{a} \cdot
+\mathbf{b} = 0\)</span>, then <span class="math inline">\(\cos\theta =
+0\)</span>, so <span class="math inline">\(\theta = \pi/2\)</span>. The
+zero vector <strong>0</strong> is considered to be perpendicular to all
+vectors. Therefore we have the following method for determining whether
+two vectors are orthogonal.</p>
+<hr />
+<p><strong>Theorem 7</strong>: Two vectors <strong>a</strong> and
+<strong>b</strong> are orthogonal if and only if</p>
+<p><span class="math display">\[\mathbf{a} \cdot \mathbf{b} =
+0\]</span>.</p>
+<hr />
+<p><strong>EXAMPLE 4</strong> Show that <span
+class="math inline">\(2\mathbf{i} + 2\mathbf{j} - \mathbf{k}\)</span> is
+perpendicular to <span class="math inline">\(5\mathbf{i} - 4\mathbf{j} +
+2\mathbf{k}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since <span class="math display">\[
+(2\mathbf{i} + 2\mathbf{j} - \mathbf{k}) \cdot (5\mathbf{i} -
+4\mathbf{j} + 2\mathbf{k}) = 2(5) + 2(-4) + (-1)(2) = 0
+\]</span> these vectors are perpendicular by (7).</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Direction Angles and Direction Cosine</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image-1.png" /></p>
+<p>Because <span class="math inline">\(\cos\theta &gt; 0\)</span> if
+<span class="math inline">\(0 \le \theta &lt; \pi/2\)</span> and <span
+class="math inline">\(\cos\theta &lt; 0\)</span> if <span
+class="math inline">\(\pi/2 &lt; \theta \le \pi\)</span>, we see that
+<span class="math inline">\(\mathbf{a} \cdot \mathbf{b}\)</span> is
+positive for <span class="math inline">\(\theta &lt; \pi/2\)</span> and
+negative for <span class="math inline">\(\theta &gt; \pi/2\)</span>. We
+can think of <span class="math inline">\(\mathbf{a} \cdot
+\mathbf{b}\)</span> as measuring the extent to which <strong>a</strong>
+and <strong>b</strong> point in the same direction. The dot product
+<span class="math inline">\(\mathbf{a} \cdot \mathbf{b}\)</span> is
+positive if <strong>a</strong> and <strong>b</strong> point in the same
+general direction, 0 if they are perpendicular, and negative if they
+point in generally opposite directions (see Figure 2). In the extreme
+case where <strong>a</strong> and <strong>b</strong> point in exactly
+the same direction, we have <span class="math inline">\(\theta =
+0\)</span>, so <span class="math inline">\(\cos\theta = 1\)</span> and
+<span class="math display">\[
+\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}||\mathbf{b}|
+\]</span> If <strong>a</strong> and <strong>b</strong> point in exactly
+opposite directions, then we have <span class="math inline">\(\theta =
+\pi\)</span> and so <span class="math inline">\(\cos\theta = -1\)</span>
+and <span class="math inline">\(\mathbf{a} \cdot \mathbf{b} =
+-|\mathbf{a}||\mathbf{b}|\)</span>.</p>
+<h3 id="direction-angles-and-direction-cosines">Direction Angles and
+Direction Cosines</h3>
+<p>The <strong>direction angles</strong> of a nonzero vector
+<strong>a</strong> are the angles <span class="math inline">\(\alpha,
+\beta,\)</span> and <span class="math inline">\(\gamma\)</span> (in the
+interval <span class="math inline">\([0, \pi]\)</span>) that
+<strong>a</strong> makes with the positive x-, y-, and z-axes,
+respectively. (See Figure 3.)</p>
+<p><img src="image-2.png" /></p>
+<p>The cosines of these direction angles, <span
+class="math inline">\(\cos\alpha, \cos\beta,\)</span> and <span
+class="math inline">\(\cos\gamma\)</span>, are called the
+<strong>direction cosines</strong> of the vector <strong>a</strong>.
+Using Corollary 6 with <strong>b</strong> replaced by
+<strong>i</strong>, we obtain <span class="math display">\[
+\cos\alpha = \frac{\mathbf{a} \cdot
+\mathbf{i}}{|\mathbf{a}||\mathbf{i}|} = \frac{a_1}{|\mathbf{a}|}
+\tag{8}
+\]</span> (This can also be seen directly from Figure 3.) Similarly, we
+also have <span class="math display">\[
+\cos\beta = \frac{a_2}{|\mathbf{a}|} \quad \cos\gamma =
+\frac{a_3}{|\mathbf{a}|}
+\tag{9}
+\]</span> By squaring the expressions in Equations 8 and 9 and adding,
+we see that <span class="math display">\[
+\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1
+\tag{10}
+\]</span> We can also use Equations 8 and 9 to write <span
+class="math display">\[
+\mathbf{a} = \langle a_1, a_2, a_3 \rangle = \langle
+|\mathbf{a}|\cos\alpha, |\mathbf{a}|\cos\beta, |\mathbf{a}|\cos\gamma
+\rangle = |\mathbf{a}|\langle \cos\alpha, \cos\beta, \cos\gamma \rangle
+\]</span> Therefore <span class="math display">\[
+\frac{1}{|\mathbf{a}|}\mathbf{a} = \langle \cos\alpha, \cos\beta,
+\cos\gamma \rangle
+\tag{11}
+\]</span> which says that the direction cosines of <strong>a</strong>
+are the components of the unit vector in the direction of
+<strong>a</strong>.</p>
+<hr />
+<p><strong>EXAMPLE 5</strong> Find the direction angles of the vector
+<span class="math inline">\(\mathbf{a} = \langle 1, 2, 3
+\rangle\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since <span
+class="math inline">\(|\mathbf{a}| = \sqrt{1^2 + 2^2 + 3^2} =
+\sqrt{14}\)</span>, Equations 8 and 9 give <span class="math display">\[
+\cos\alpha = \frac{1}{\sqrt{14}} \quad \cos\beta = \frac{2}{\sqrt{14}}
+\quad \cos\gamma = \frac{3}{\sqrt{14}}
+\]</span> and so <span class="math display">\[
+\alpha = \cos^{-1}\left(\frac{1}{\sqrt{14}}\right) \approx 74^\circ
+\quad \beta = \cos^{-1}\left(\frac{2}{\sqrt{14}}\right) \approx 58^\circ
+\quad \gamma = \cos^{-1}\left(\frac{3}{\sqrt{14}}\right) \approx
+37^\circ
+\]</span></p>
+</div>
+</body>
+</html>

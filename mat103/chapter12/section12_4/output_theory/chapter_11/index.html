@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Torque</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image-3.png" /></p>
+<p>The idea of a cross product occurs often in physics. In particular,
+we consider a force <strong>F</strong> acting on a rigid body at a point
+given by a position vector <strong>r</strong>. The
+<strong>torque</strong> <span
+class="math inline">\(\mathbf{\tau}\)</span> (relative to the origin) is
+defined to be the cross product of the position and force vectors <span
+class="math display">\[
+\mathbf{\tau} = \mathbf{r} \times \mathbf{F}
+\]</span> and measures the tendency of the body to rotate about the
+origin. The direction of the torque vector indicates the axis of
+rotation. According to Theorem 9, the magnitude of the torque vector is
+<span class="math display">\[
+|\mathbf{\tau}| = |\mathbf{r} \times \mathbf{F}| =
+|\mathbf{r}||\mathbf{F}|\sin\theta
+\]</span> where <span class="math inline">\(\theta\)</span> is the angle
+between the position and force vectors. Observe that the only component
+of <strong>F</strong> that can cause a rotation is the one perpendicular
+to <strong>r</strong>, that is, <span
+class="math inline">\(|\mathbf{F}|\sin\theta\)</span>. The magnitude of
+the torque is equal to the area of the parallelogram determined by
+<strong>r</strong> and <strong>F</strong>.</p>
+<hr />
+<p><strong>EXAMPLE 6</strong> A bolt is tightened by applying a 40-N
+force to a 0.25-m wrench as shown in Figure 5. Find the magnitude of the
+torque about the center of the bolt.</p>
+<p><img src="image-4.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The magnitude of the torque vector is <span
+class="math display">\[
+|\mathbf{\tau}| = |\mathbf{r} \times \mathbf{F}| =
+|\mathbf{r}||\mathbf{F}|\sin 75^\circ = (0.25)(40)\sin 75^\circ = 10
+\sin 75^\circ \approx 9.66 \text{ N}\cdot\text{m}
+\]</span> If the bolt is right-threaded, then the torque vector itself
+is <span class="math display">\[
+\mathbf{\tau} = |\mathbf{\tau}|\mathbf{n} \approx 9.66\mathbf{n}
+\]</span> where <strong>n</strong> is a unit vector directed down into
+the page (by the right-hand rule).</p>
+</div>
+</body>
+</html>

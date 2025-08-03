@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Use of Projection in Physics: Force & Work</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image-5.png" /></p>
+<p>One use of projections occurs in physics in calculating
+<strong>work</strong>. We know that the work done by a constant force
+<span class="math inline">\(F\)</span> in moving an object through a
+distance <span class="math inline">\(d\)</span> as <span
+class="math inline">\(W = Fd\)</span>, but this applies only when the
+force is directed along the line of motion of the object. Suppose,
+however, that the constant force is a vector <span
+class="math inline">\(\mathbf{F} = \vec{PR}\)</span> pointing in some
+other direction, as in Figure 6. If the force moves the object from
+<span class="math inline">\(P\)</span> to <span
+class="math inline">\(Q\)</span>, then the displacement vector is <span
+class="math inline">\(\mathbf{D} = \vec{PQ}\)</span>. The work done by
+this force is defined to be the product of the component of the force
+along <strong>D</strong> and the distance moved: <span
+class="math display">\[
+W = (|\mathbf{F}|\cos\theta)|\mathbf{D}|
+\]</span> But then, from Theorem 3, we have <span
+class="math display">\[
+W = |\mathbf{F}||\mathbf{D}|\cos\theta = \mathbf{F} \cdot \mathbf{D}
+\tag{12}
+\]</span> Thus the work done by a constant force <strong>F</strong> is
+the dot product <span class="math inline">\(\mathbf{F} \cdot
+\mathbf{D}\)</span>, where <strong>D</strong> is the displacement
+vector.</p>
+<hr />
+<p><strong>EXAMPLE 7</strong> A wagon is pulled a distance of 100 m
+along a horizontal path by a constant force of 70 N. The handle of the
+wagon is held at an angle of <span
+class="math inline">\(35^\circ\)</span> above the horizontal. Find the
+work done by the force.</p>
+<p><img src="image-6.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> If <strong>F</strong> and
+<strong>D</strong> are the force and displacement vectors, as pictured
+in Figure 7, then the work done is <span class="math display">\[
+W = \mathbf{F} \cdot \mathbf{D} = |\mathbf{F}||\mathbf{D}|\cos 35^\circ
+= (70)(100)\cos 35^\circ \approx 5734 \text{ N} \cdot \text{m} = 5734
+\text{ J}
+\]</span></p>
+<p><ans></p>
+<p><strong>EXAMPLE 8</strong> A force is given by a vector <span
+class="math inline">\(\mathbf{F} = 3\mathbf{i} + 4\mathbf{j} +
+5\mathbf{k}\)</span> and moves a particle from the point <span
+class="math inline">\(P(2, 1, 0)\)</span> to the point <span
+class="math inline">\(Q(4, 6, 2)\)</span>. Find the work done.
+<strong>SOLUTION</strong> The displacement vector is <span
+class="math inline">\(\mathbf{D} = \vec{PQ} = \langle 2, 5, 2
+\rangle\)</span>, so by Equation 12, the work done is <span
+class="math display">\[
+W = \mathbf{F} \cdot \mathbf{D} = \langle 3, 4, 5 \rangle \cdot \langle
+2, 5, 2 \rangle = 6 + 20 + 10 = 36
+\]</span> If the unit of length is meters and the magnitude of the force
+is measured in newtons, then the work done is 36 J.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Right Hand Rule</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><img src="image.png" /></p>
+<p>If <strong>a</strong> and <strong>b</strong> are represented by
+directed line segments with the same initial point (as in Figure 1),
+then Theorem 8 says that the cross product <span
+class="math inline">\(\mathbf{a} \times \mathbf{b}\)</span> points in a
+direction perpendicular to the plane through <strong>a</strong> and
+<strong>b</strong>. It turns out that the direction of <span
+class="math inline">\(\mathbf{a} \times \mathbf{b}\)</span> is given by
+the <strong>right-hand rule</strong>: if the fingers of your right hand
+curl in the direction of a rotation (through an angle less than <span
+class="math inline">\(180^\circ\)</span>) from <strong>a</strong> to
+<strong>b</strong>, then your thumb points in the direction of <span
+class="math inline">\(\mathbf{a} \times \mathbf{b}\)</span>.</p>
+<p>Now that we know the direction of the vector <span
+class="math inline">\(\mathbf{a} \times \mathbf{b}\)</span>, the
+remaining thing we need to complete its geometric description is its
+length <span class="math inline">\(|\mathbf{a} \times
+\mathbf{b}|\)</span>. This is given by the following theorem.</p>
+<hr />
+<p><strong>Theorem 9</strong> If <span
+class="math inline">\(\theta\)</span> is the angle between
+<strong>a</strong> and <strong>b</strong> (so <span
+class="math inline">\(0 \le \theta \le \pi\)</span>), then <span
+class="math display">\[ |\mathbf{a} \times \mathbf{b}| =
+|\mathbf{a}||\mathbf{b}|\sin\theta \]</span></p>
+<hr />
+<p><strong>PROOF</strong> From the definitions of the cross product and
+length of a vector, we have <span class="math display">\[
+|\mathbf{a} \times \mathbf{b}|^2 = (a_2b_3 - a_3b_2)^2 + (a_3b_1 -
+a_1b_3)^2 + (a_1b_2 - a_2b_1)^2
+\]</span> <span class="math display">\[
+= a_2^2b_3^2 - 2a_2a_3b_2b_3 + a_3^2b_2^2 + a_3^2b_1^2 - 2a_1a_3b_1b_3 +
+a_1^2b_3^2 + a_1^2b_2^2 - 2a_1a_2b_1b_2 + a_2^2b_1^2
+\]</span> <span class="math display">\[
+= (a_1^2 + a_2^2 + a_3^2)(b_1^2 + b_2^2 + b_3^2) - (a_1b_1 + a_2b_2 +
+a_3b_3)^2
+\]</span> <span class="math display">\[
+= |\mathbf{a}|^2|\mathbf{b}|^2 - (\mathbf{a} \cdot \mathbf{b})^2 =
+|\mathbf{a}|^2|\mathbf{b}|^2 - |\mathbf{a}|^2|\mathbf{b}|^2\cos^2\theta
+\quad (\text{by Theorem 12.3.3})
+\]</span> <span class="math display">\[
+= |\mathbf{a}|^2|\mathbf{b}|^2(1 - \cos^2\theta) =
+|\mathbf{a}|^2|\mathbf{b}|^2\sin^2\theta
+\]</span> Taking square roots and observing that <span
+class="math inline">\(\sqrt{\sin^2\theta} = \sin\theta\)</span> because
+<span class="math inline">\(\sin\theta \ge 0\)</span> when <span
+class="math inline">\(0 \le \theta \le \pi\)</span>, we have <span
+class="math display">\[
+|\mathbf{a} \times \mathbf{b}| = |\mathbf{a}||\mathbf{b}|\sin\theta
+\]</span> Since a vector is completely determined by its magnitude and
+direction, we can now say that <span class="math inline">\(\mathbf{a}
+\times \mathbf{b}\)</span> is the vector that is perpendicular to both
+<strong>a</strong> and <strong>b</strong>, whose orientation is
+determined by the right-hand rule, and whose length is <span
+class="math inline">\(|\mathbf{a}||\mathbf{b}|\sin\theta\)</span>. In
+fact, that is exactly how physicists define <span
+class="math inline">\(\mathbf{a} \times \mathbf{b}\)</span>.</p>
+<hr />
+<p><strong>Corollary 10</strong> Two nonzero vectors <strong>a</strong>
+and <strong>b</strong> are parallel if and only if <span
+class="math display">\[ \mathbf{a} \times \mathbf{b} = \mathbf{0}
+\]</span></p>
+<p><strong>PROOF</strong> Two nonzero vectors <strong>a</strong> and
+<strong>b</strong> are parallel if and only if <span
+class="math inline">\(\theta = 0\)</span> or <span
+class="math inline">\(\pi\)</span>. In either case <span
+class="math inline">\(\sin\theta = 0\)</span>, so <span
+class="math inline">\(|\mathbf{a} \times \mathbf{b}| = 0\)</span> and
+therefore <span class="math inline">\(\mathbf{a} \times \mathbf{b} =
+\mathbf{0}\)</span>.</p>
+<p>The geometric interpretation of Theorem 9 can be seen by looking at
+Figure 2. If <strong>a</strong> and <strong>b</strong> are represented
+by directed line segments with the same initial point, then they
+determine a parallelogram with base <span
+class="math inline">\(|\mathbf{a}|\)</span>, altitude <span
+class="math inline">\(|\mathbf{b}|\sin\theta\)</span>, and area <span
+class="math display">\[
+A = |\mathbf{a}|(|\mathbf{b}|\sin\theta) = |\mathbf{a} \times
+\mathbf{b}|
+\]</span> Thus we have the following way of interpreting the magnitude
+of a cross product.</p>
+<hr />
+</body>
+</html>

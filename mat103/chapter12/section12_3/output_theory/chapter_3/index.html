@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Geometric Intepretation of Dot Product</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The dot product <span class="math inline">\(\mathbf{a} \cdot
+\mathbf{b}\)</span> can be given a geometric interpretation in terms of
+the angle <span class="math inline">\(\theta\)</span> between
+<strong>a</strong> and <strong>b</strong>, which is defined to be the
+angle between the representations of <strong>a</strong> and
+<strong>b</strong> that start at the origin, where <span
+class="math inline">\(0 \le \theta \le \pi\)</span>. In other words,
+<span class="math inline">\(\theta\)</span> is the angle between the
+line segments <span class="math inline">\(\vec{OA}\)</span> and <span
+class="math inline">\(\vec{OB}\)</span> in Figure 1.</p>
+<p><img src="image.png" /></p>
+<p>Note that if <strong>a</strong> and <strong>b</strong> are parallel
+vectors, then <span class="math inline">\(\theta = 0\)</span> or <span
+class="math inline">\(\theta = \pi\)</span>.</p>
+<p>The formula in the following theorem is used by physicists as the
+definition of the dot product.</p>
+<hr />
+<p><strong>Theorem 3</strong> If <span
+class="math inline">\(\theta\)</span> is the angle between the vectors
+<strong>a</strong> and <strong>b</strong>, then <span
+class="math display">\[
+\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}||\mathbf{b}|\cos\theta
+\]</span></p>
+<hr />
+<p><strong>PROOF</strong> If we apply the Law of Cosines to triangle OAB
+in Figure 1, we get <span class="math display">\[
+|\vec{AB}|^2 = |\vec{OA}|^2 + |\vec{OB}|^2 -
+2|\vec{OA}||\vec{OB}|\cos\theta
+\tag{4}
+\]</span> (Observe that the Law of Cosines still applies in the limiting
+cases when <span class="math inline">\(\theta = 0\)</span> or <span
+class="math inline">\(\pi\)</span>, or <span
+class="math inline">\(\mathbf{a} = \mathbf{0}\)</span> or <span
+class="math inline">\(\mathbf{b} = \mathbf{0}\)</span>.) But <span
+class="math inline">\(|\vec{OA}| = |\mathbf{a}|, |\vec{OB}| =
+|\mathbf{b}|\)</span>, and <span class="math inline">\(|\vec{AB}| =
+|\mathbf{a} - \mathbf{b}|\)</span>, so Equation 4 becomes <span
+class="math display">\[
+|\mathbf{a} - \mathbf{b}|^2 = |\mathbf{a}|^2 + |\mathbf{b}|^2 -
+2|\mathbf{a}||\mathbf{b}|\cos\theta
+\tag{5}
+\]</span> Using Properties 1, 2, and 3 of the dot product, we can
+rewrite the left side of this equation as follows: <span
+class="math display">\[
+|\mathbf{a} - \mathbf{b}|^2 = (\mathbf{a} - \mathbf{b}) \cdot
+(\mathbf{a} - \mathbf{b}) = \mathbf{a} \cdot \mathbf{a} - \mathbf{a}
+\cdot \mathbf{b} - \mathbf{b} \cdot \mathbf{a} + \mathbf{b} \cdot
+\mathbf{b} = |\mathbf{a}|^2 - 2\mathbf{a} \cdot \mathbf{b} +
+|\mathbf{b}|^2
+\]</span> Therefore Equation 5 gives <span class="math display">\[
+|\mathbf{a}|^2 - 2\mathbf{a} \cdot \mathbf{b} + |\mathbf{b}|^2 =
+|\mathbf{a}|^2 + |\mathbf{b}|^2 - 2|\mathbf{a}||\mathbf{b}|\cos\theta
+\]</span> Thus <span class="math display">\[
+-2\mathbf{a} \cdot \mathbf{b} = -2|\mathbf{a}||\mathbf{b}|\cos\theta
+\]</span> or <span class="math display">\[
+\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}||\mathbf{b}|\cos\theta
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 2</strong> If the vectors <strong>a</strong> and
+<strong>b</strong> have lengths 4 and 6, and the angle between them is
+<span class="math inline">\(\pi/3\)</span>, find <span
+class="math inline">\(\mathbf{a} \cdot \mathbf{b}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Using Theorem 3, we have <span
+class="math display">\[
+\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}||\mathbf{b}|\cos(\pi/3) = 4
+\cdot 6 \cdot \frac{1}{2} = 12
+\]</span> The formula in Theorem 3 also enables us to find the angle
+between two vectors.</p>
+<hr />
+<p><strong>Corollary 6</strong> If <span
+class="math inline">\(\theta\)</span> is the angle between the nonzero
+vectors <strong>a</strong> and <strong>b</strong>, then <span
+class="math display">\[
+\cos\theta = \frac{\mathbf{a} \cdot
+\mathbf{b}}{|\mathbf{a}||\mathbf{b}|}
+\]</span></p>
+</div>
+<hr />
+<p><strong>EXAMPLE 3</strong> Find the angle between the vectors <span
+class="math inline">\(\mathbf{a} = \langle 2, 2, -1 \rangle\)</span> and
+<span class="math inline">\(\mathbf{b} = \langle 5, -3, 2
+\rangle\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since <span class="math display">\[
+|\mathbf{a}| = \sqrt{2^2 + 2^2 + (-1)^2} = 3 \quad \text{and} \quad
+|\mathbf{b}| = \sqrt{5^2 + (-3)^2 + 2^2} = \sqrt{38}
+\]</span> and since <span class="math display">\[
+\mathbf{a} \cdot \mathbf{b} = 2(5) + 2(-3) + (-1)(2) = 2
+\]</span> we have, from Corollary 6, <span class="math display">\[
+\cos\theta = \frac{\mathbf{a} \cdot
+\mathbf{b}}{|\mathbf{a}||\mathbf{b}|} = \frac{2}{3\sqrt{38}}
+\]</span> So the angle between <strong>a</strong> and <strong>b</strong>
+is <span class="math display">\[
+\theta = \cos^{-1}\left(\frac{2}{3\sqrt{38}}\right) \approx 1.46 \text{
+(or } 84^\circ)
+\]</span></p>
+</div>
+</body>
+</html>
