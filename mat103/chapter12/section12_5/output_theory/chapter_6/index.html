@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>When are planes called parallel? If they are not parallel, What is the angle between two non-parallel planes?</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Two planes are <strong>parallel</strong> if their normal vectors are
+parallel. For instance, the planes <span class="math inline">\(x + 2y -
+3z = 4\)</span> and <span class="math inline">\(2x + 4y - 6z =
+3\)</span> are parallel because their normal vectors are <span
+class="math inline">\(\mathbf{n}_1 = \langle 1, 2, -3 \rangle\)</span>
+and <span class="math inline">\(\mathbf{n}_2 = \langle 2, 4, -6
+\rangle\)</span> and <span class="math inline">\(\mathbf{n}_2 =
+2\mathbf{n}_1\)</span>. If two planes are not parallel, then they
+intersect in a straight line and the <strong>angle between the two
+planes</strong> is defined as the acute angle between their normal
+vectors (see angle <span class="math inline">\(\theta\)</span> in Figure
+9).</p>
+<p><img src="image-8.png" /></p>
+<hr />
+<p><strong>EXAMPLE 7</strong> (a) Find the angle between the planes
+<span class="math inline">\(x + y + z = 1\)</span> and <span
+class="math inline">\(x - 2y + 3z = 1\)</span>. (b) Find symmetric
+equations for the line of intersection L of these two planes.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> (a) The normal vectors of these planes are
+<span class="math display">\[
+\mathbf{n}_1 = \langle 1, 1, 1 \rangle \quad \mathbf{n}_2 = \langle 1,
+-2, 3 \rangle
+\]</span> and so, if <span class="math inline">\(\theta\)</span> is the
+angle between the planes, Corollary 12.3.6 gives <span
+class="math display">\[
+\cos\theta = \frac{\mathbf{n}_1 \cdot
+\mathbf{n}_2}{|\mathbf{n}_1||\mathbf{n}_2|} = \frac{1(1) + 1(-2) +
+1(3)}{\sqrt{1+1+1}\sqrt{1+4+9}} = \frac{2}{\sqrt{3}\sqrt{14}} =
+\frac{2}{\sqrt{42}}
+\]</span> <span class="math display">\[
+\theta = \cos^{-1}\left(\frac{2}{\sqrt{42}}\right) \approx 72^\circ
+\]</span> (b) We first need to find a point on L. For instance, we can
+find the point where the line intersects the xy-plane by setting <span
+class="math inline">\(z = 0\)</span> in the equations of both planes.
+This gives the equations <span class="math inline">\(x + y = 1\)</span>
+and <span class="math inline">\(x - 2y = 1\)</span>, whose solution is
+<span class="math inline">\(x = 1, y = 0\)</span>. So the point <span
+class="math inline">\((1, 0, 0)\)</span> lies on L.</p>
+<p>Now we observe that, since L lies in both planes, it is perpendicular
+to both of the normal vectors. Thus a vector <strong>v</strong> parallel
+to L is given by the cross product <span class="math display">\[
+\mathbf{v} = \mathbf{n}_1 \times \mathbf{n}_2 = \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 1 &amp; 1 &amp; 1 \\ 1
+&amp; -2 &amp; 3 \end{vmatrix} = 5\mathbf{i} - 2\mathbf{j} - 3\mathbf{k}
+\]</span> and so the symmetric equations of L can be written as <span
+class="math display">\[
+\frac{x - 1}{5} = \frac{y}{-2} = \frac{z}{-3}
+\]</span> NOTE Since a linear equation in <span class="math inline">\(x,
+y,\)</span> and <span class="math inline">\(z\)</span> represents a
+plane and two nonparallel planes intersect in a line, it follows that
+two linear equations can represent a line. The points <span
+class="math inline">\((x, y, z)\)</span> that satisfy both <span
+class="math inline">\(a_1x + b_1y + c_1z + d_1 = 0\)</span> and <span
+class="math inline">\(a_2x + b_2y + c_2z + d_2 = 0\)</span> lie on both
+of these planes, and so the pair of linear equations represents the line
+of intersection of the planes (if they are not parallel). For instance,
+in Example 7 the line L was given as the line of intersection of the
+planes <span class="math inline">\(x + y + z = 1\)</span> and <span
+class="math inline">\(x - 2y + 3z = 1\)</span>. The symmetric equations
+that we found for L could be written as <span class="math display">\[
+\frac{x - 1}{5} = \frac{y}{-2} \quad \text{and} \quad \frac{y}{-2} =
+\frac{z}{-3}
+\]</span> which is again a pair of linear equations. They exhibit L as
+the line of intersection of the planes <span class="math inline">\((x -
+1)/5 = y/(-2)\)</span> and <span class="math inline">\(y/(-2) =
+z/(-3)\)</span>.</p>
+</div>
+</body>
+</html>

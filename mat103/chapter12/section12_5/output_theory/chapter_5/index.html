@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example Problems</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 6</strong> Find the point at which the line with
+parametric equations <span class="math inline">\(x = 2 + 3t, y = -4t, z
+= 5 + t\)</span> intersects the plane <span class="math inline">\(4x +
+5y - 2z = 18\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We substitute the expressions for <span
+class="math inline">\(x, y,\)</span> and <span
+class="math inline">\(z\)</span> from the parametric equations into the
+equation of the plane: <span class="math display">\[
+4(2 + 3t) + 5(-4t) - 2(5 + t) = 18
+\]</span> This simplifies to <span class="math inline">\(-10t =
+20\)</span>, so <span class="math inline">\(t = -2\)</span>. Therefore
+the point of intersection occurs when the parameter value is <span
+class="math inline">\(t = -2\)</span>. Then <span
+class="math inline">\(x = 2 + 3(-2) = -4, y = -4(-2) = 8, z = 5 - 2 =
+3\)</span> and so the point of intersection is <span
+class="math inline">\((-4, 8, 3)\)</span>.</p>
+</div>
+</body>
+</html>

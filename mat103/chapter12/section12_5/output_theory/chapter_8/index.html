@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Distance between two skew lines</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 10</strong> In Example 3 we showed that the lines
+<span class="math display">\[
+L_1: x = 1 + t \quad y = -2 + 3t \quad z = 4 - t
+\]</span> <span class="math display">\[
+L_2: x = 2s \quad y = 3 + s \quad z = -3 + 4s
+\]</span> are skew. Find the distance between them.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-10.png" /></p>
+<p><strong>SOLUTION</strong> Since the two lines <span
+class="math inline">\(L_1\)</span> and <span
+class="math inline">\(L_2\)</span> are skew, they can be viewed as lying
+on two parallel planes <span class="math inline">\(P_1\)</span> and
+<span class="math inline">\(P_2\)</span>. The distance between <span
+class="math inline">\(L_1\)</span> and <span
+class="math inline">\(L_2\)</span> is the same as the distance between
+<span class="math inline">\(P_1\)</span> and <span
+class="math inline">\(P_2\)</span>, which can be computed as in Example
+9. The common normal vector to both planes must be orthogonal to both
+<span class="math inline">\(\mathbf{v}_1 = \langle 1, 3, -1
+\rangle\)</span> (the direction of <span
+class="math inline">\(L_1\)</span>) and <span
+class="math inline">\(\mathbf{v}_2 = \langle 2, 1, 4 \rangle\)</span>
+(the direction of <span class="math inline">\(L_2\)</span>). So a normal
+vector is <span class="math display">\[
+\mathbf{n} = \mathbf{v}_1 \times \mathbf{v}_2 = \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 1 &amp; 3 &amp; -1 \\ 2
+&amp; 1 &amp; 4 \end{vmatrix} = 13\mathbf{i} - 6\mathbf{j} - 5\mathbf{k}
+\]</span> If we put <span class="math inline">\(s = 0\)</span> in the
+equations of <span class="math inline">\(L_2\)</span>, we get the point
+<span class="math inline">\((0, 3, -3)\)</span> on <span
+class="math inline">\(L_2\)</span> and so an equation for <span
+class="math inline">\(P_2\)</span> is <span class="math display">\[
+13(x - 0) - 6(y - 3) - 5(z + 3) = 0 \quad \text{or} \quad 13x - 6y - 5z
++ 3 = 0
+\]</span> If we now set <span class="math inline">\(t = 0\)</span> in
+the equations for <span class="math inline">\(L_1\)</span>, we get the
+point <span class="math inline">\((1, -2, 4)\)</span> on <span
+class="math inline">\(P_1\)</span>. So the distance between <span
+class="math inline">\(L_1\)</span> and <span
+class="math inline">\(L_2\)</span> is the same as the distance from
+<span class="math inline">\((1, -2, 4)\)</span> to <span
+class="math inline">\(13x - 6y - 5z + 3 = 0\)</span>. By Formula 9, this
+distance is <span class="math display">\[
+D = \frac{|13(1) - 6(-2) - 5(4) + 3|}{\sqrt{13^2 + (-6)^2 + (-5)^2}} =
+\frac{|13 + 12 - 20 + 3|}{\sqrt{169 + 36 + 25}} = \frac{8}{\sqrt{230}}
+\approx 0.53
+\]</span></p>
+</div>
+</body>
+</html>

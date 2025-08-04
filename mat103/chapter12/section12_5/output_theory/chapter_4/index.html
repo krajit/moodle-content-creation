@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Planes</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Although a line in space is determined by a point and a direction, a
+plane in space is more difficult to describe. A single vector parallel
+to a plane is not enough to convey the “direction” of the plane, but a
+vector perpendicular to the plane does completely specify its direction.
+Thus a plane in space is determined by a point <span
+class="math inline">\(P_0(x_0, y_0, z_0)\)</span> in the plane and a
+vector <strong>n</strong> that is orthogonal to the plane. This
+orthogonal vector <strong>n</strong> is called a <strong>normal
+vector</strong>.</p>
+<p><img src="image-5.png" /></p>
+<p>Let <span class="math inline">\(P(x, y, z)\)</span> be an arbitrary
+point in the plane, and let <span
+class="math inline">\(\mathbf{r}_0\)</span> and <strong>r</strong> be
+the position vectors of <span class="math inline">\(P_0\)</span> and
+<span class="math inline">\(P\)</span>. Then the vector <span
+class="math inline">\(\mathbf{r} - \mathbf{r}_0\)</span> is represented
+by <span class="math inline">\(\vec{P_0P}\)</span>. The normal vector
+<strong>n</strong> is orthogonal to every vector in the given plane. In
+particular, <strong>n</strong> is orthogonal to <span
+class="math inline">\(\mathbf{r} - \mathbf{r}_0\)</span> and so we have
+<span class="math display">\[
+\mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_0) = 0
+\tag{5}
+\]</span> which can be rewritten as <span class="math display">\[
+\mathbf{n} \cdot \mathbf{r} = \mathbf{n} \cdot \mathbf{r}_0
+\tag{6}
+\]</span> Either Equation 5 or Equation 6 is called a <strong>vector
+equation of the plane</strong>.</p>
+<p>To obtain a scalar equation for the plane, we write <span
+class="math inline">\(\mathbf{n} = \langle a, b, c \rangle, \mathbf{r} =
+\langle x, y, z \rangle,\)</span> and <span
+class="math inline">\(\mathbf{r}_0 = \langle x_0, y_0, z_0
+\rangle\)</span>. Then the vector equation (5) becomes <span
+class="math display">\[
+\langle a, b, c \rangle \cdot \langle x - x_0, y - y_0, z - z_0 \rangle
+= 0
+\]</span> or <span class="math display">\[
+a(x - x_0) + b(y - y_0) + c(z - z_0) = 0
+\]</span></p>
+<hr />
+<p>A <strong>scalar equation</strong> of the plane through point <span
+class="math inline">\(P_0(x_0, y_0, z_0)\)</span> with normal vector
+<span class="math inline">\(\mathbf{n} = \langle a, b, c
+\rangle\)</span> is <span class="math display">\[
+a(x - x_0) + b(y - y_0) + c(z - z_0) = 0
+\tag{7}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 4</strong> Find an equation of the plane through the
+point <span class="math inline">\((2, 4, -1)\)</span> with normal vector
+<span class="math inline">\(\mathbf{n} = \langle 2, 3, 4
+\rangle\)</span>. Find the intercepts and sketch the plane.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Putting <span class="math inline">\(a = 2,
+b = 3, c = 4, x_0 = 2, y_0 = 4,\)</span> and <span
+class="math inline">\(z_0 = -1\)</span> in Equation 7, we see that an
+equation of the plane is <span class="math display">\[
+2(x - 2) + 3(y - 4) + 4(z + 1) = 0
+\]</span> or <span class="math display">\[
+2x + 3y + 4z = 12
+\]</span> To find the x-intercept we set <span class="math inline">\(y =
+z = 0\)</span> in this equation and obtain <span class="math inline">\(x
+= 6\)</span>. Similarly, the y-intercept is 4 and the z-intercept is 3.
+This enables us to sketch the portion of the plane that lies in the
+first octant (see Figure 7).</p>
+<p><img src="image-6.png" /></p>
+</div>
+<hr />
+<p>By collecting terms in Equation 7 as we did in Example 4, we can
+rewrite the equation of a plane as <span class="math display">\[
+ax + by + cz + d = 0
+\tag{8}
+\]</span> where <span class="math inline">\(d = -(ax_0 + by_0 +
+cz_0)\)</span>. Equation 8 is called a <strong>linear equation</strong>
+in <span class="math inline">\(x, y,\)</span> and <span
+class="math inline">\(z\)</span>. Conversely, it can be shown that if
+<span class="math inline">\(a, b,\)</span> and <span
+class="math inline">\(c\)</span> are not all 0, then the linear equation
+(8) represents a plane with normal vector <span
+class="math inline">\(\langle a, b, c \rangle\)</span>.</p>
+<hr />
+<p><strong>EXAMPLE 5</strong> Find an equation of the plane that passes
+through the points <span class="math inline">\(P(1, 3, 2), Q(3, -1,
+6),\)</span> and <span class="math inline">\(R(5, 2, 0)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-7.png" /></p>
+<p><strong>SOLUTION</strong> The vectors <strong>a</strong> and
+<strong>b</strong> corresponding to <span
+class="math inline">\(\vec{PQ}\)</span> and <span
+class="math inline">\(\vec{PR}\)</span> are <span
+class="math display">\[
+\mathbf{a} = \langle 2, -4, 4 \rangle \quad \mathbf{b} = \langle 4, -1,
+-2 \rangle
+\]</span> Since both <strong>a</strong> and <strong>b</strong> lie in
+the plane, their cross product <span class="math inline">\(\mathbf{a}
+\times \mathbf{b}\)</span> is orthogonal to the plane and can be taken
+as the normal vector. Thus <span class="math display">\[
+\mathbf{n} = \mathbf{a} \times \mathbf{b} = \begin{vmatrix} \mathbf{i}
+&amp; \mathbf{j} &amp; \mathbf{k} \\ 2 &amp; -4 &amp; 4 \\ 4 &amp; -1
+&amp; -2 \end{vmatrix} = 12\mathbf{i} + 20\mathbf{j} + 14\mathbf{k}
+\]</span> With the point <span class="math inline">\(P(1, 3, 2)\)</span>
+and the normal vector <strong>n</strong>, an equation of the plane is
+<span class="math display">\[
+12(x - 1) + 20(y - 3) + 14(z - 2) = 0
+\]</span> or <span class="math display">\[
+6x + 10y + 7z = 50
+\]</span></p>
+</div>
+</body>
+</html>

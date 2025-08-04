@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lines</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>A line in the xy-plane is determined when a point on the line and the
+direction of the line (its slope or angle of inclination) are given. The
+equation of the line can then be written using the point-slope form.</p>
+<p><img src="image.png" /></p>
+<p>Likewise, a line L in three-dimensional space is determined when we
+know a point <span class="math inline">\(P_0(x_0, y_0, z_0)\)</span> on
+L and the direction of L. In three dimensions the direction of a line is
+conveniently described by a vector, so we let <strong>v</strong> be a
+vector parallel to L. Let <span class="math inline">\(P(x, y,
+z)\)</span> be an arbitrary point on L and let <span
+class="math inline">\(\mathbf{r}_0\)</span> and <strong>r</strong> be
+the position vectors of <span class="math inline">\(P_0\)</span> and
+<span class="math inline">\(P\)</span> (that is, they have
+representations <span class="math inline">\(\vec{OP_0}\)</span> and
+<span class="math inline">\(\vec{OP}\)</span>). If <strong>a</strong> is
+the vector with representation <span
+class="math inline">\(\vec{P_0P}\)</span>, as in Figure 1, then the
+Triangle Law for vector addition gives <span
+class="math inline">\(\mathbf{r} = \mathbf{r}_0 + \mathbf{a}\)</span>.
+But, since <strong>a</strong> and <strong>v</strong> are parallel
+vectors, there is a scalar <span class="math inline">\(t\)</span> such
+that <span class="math inline">\(\mathbf{a} = t\mathbf{v}\)</span>. Thus
+<span class="math display">\[
+\mathbf{r} = \mathbf{r}_0 + t\mathbf{v}
+\tag{1}
+\]</span> which is a <strong>vector equation</strong> of L. Each value
+of the parameter <span class="math inline">\(t\)</span> gives the
+position vector <strong>r</strong> of a point on L. In other words, as
+<span class="math inline">\(t\)</span> varies, the line is traced out by
+the tip of the vector <strong>r</strong>. As Figure 2 indicates,
+positive values of <span class="math inline">\(t\)</span> correspond to
+points on L that lie on one side of <span
+class="math inline">\(P_0\)</span>, whereas negative values of <span
+class="math inline">\(t\)</span> correspond to points that lie on the
+other side of <span class="math inline">\(P_0\)</span>.</p>
+<p><img src="image-1.png" /></p>
+<p>If the vector <strong>v</strong> that gives the direction of the line
+L is written in component form as <span class="math inline">\(\mathbf{v}
+= \langle a, b, c \rangle\)</span>, then we have <span
+class="math inline">\(t\mathbf{v} = \langle ta, tb, tc \rangle\)</span>.
+We can also write <span class="math inline">\(\mathbf{r} = \langle x, y,
+z \rangle\)</span> and <span class="math inline">\(\mathbf{r}_0 =
+\langle x_0, y_0, z_0 \rangle\)</span>, so the vector equation (1)
+becomes <span class="math display">\[
+\langle x, y, z \rangle = \langle x_0 + ta, y_0 + tb, z_0 + tc \rangle
+\]</span> Two vectors are equal if and only if corresponding components
+are equal. Therefore we have the three scalar equations: <span
+class="math display">\[
+x = x_0 + at \quad y = y_0 + bt \quad z = z_0 + ct
+\]</span> where <span class="math inline">\(t \in \mathbb{R}\)</span>.
+These equations are called <strong>parametric equations</strong> of the
+line L through the point <span class="math inline">\(P_0(x_0, y_0,
+z_0)\)</span> and parallel to the vector <span
+class="math inline">\(\mathbf{v} = \langle a, b, c \rangle\)</span>.
+Each value of the parameter <span class="math inline">\(t\)</span> gives
+a point <span class="math inline">\((x, y, z)\)</span> on L.</p>
+<hr />
+<p><strong>Parametric equations</strong> for a line through the point
+<span class="math inline">\((x_0, y_0, z_0)\)</span> and parallel to the
+direction vector <span class="math inline">\(\langle a, b, c
+\rangle\)</span> are <span class="math display">\[
+x = x_0 + at \quad y = y_0 + bt \quad z = z_0 + ct
+\tag{2}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 1</strong> (a) Find a vector equation and parametric
+equations for the line that passes through the point <span
+class="math inline">\((5, 1, 3)\)</span> and is parallel to the vector
+<span class="math inline">\(\mathbf{i} + 4\mathbf{j} -
+2\mathbf{k}\)</span>. (b) Find two other points on the line.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-2.png" /></p>
+<p><strong>SOLUTION</strong> (a) Here <span
+class="math inline">\(\mathbf{r}_0 = \langle 5, 1, 3 \rangle =
+5\mathbf{i} + \mathbf{j} + 3\mathbf{k}\)</span> and <span
+class="math inline">\(\mathbf{v} = \mathbf{i} + 4\mathbf{j} -
+2\mathbf{k}\)</span>, so the vector equation (1) becomes <span
+class="math display">\[
+\mathbf{r} = (5\mathbf{i} + \mathbf{j} + 3\mathbf{k}) + t(\mathbf{i} +
+4\mathbf{j} - 2\mathbf{k})
+\]</span> or <span class="math display">\[
+\mathbf{r} = (5 + t)\mathbf{i} + (1 + 4t)\mathbf{j} + (3 - 2t)\mathbf{k}
+\]</span> Parametric equations are <span class="math display">\[
+x = 5 + t \quad y = 1 + 4t \quad z = 3 - 2t
+\]</span> (b) Choosing the parameter value <span class="math inline">\(t
+= 1\)</span> gives <span class="math inline">\(x = 6, y = 5,\)</span>
+and <span class="math inline">\(z = 1\)</span>, so <span
+class="math inline">\((6, 5, 1)\)</span> is a point on the line.
+Similarly, <span class="math inline">\(t = -1\)</span> gives the point
+<span class="math inline">\((4, -3, 5)\)</span>.</p>
+</div>
+<p>The vector equation and parametric equations of a line are not
+unique. If we change the point or the parameter or choose a different
+parallel vector, then the equations change. For instance, if, instead of
+<span class="math inline">\((5, 1, 3)\)</span>, we choose the point
+<span class="math inline">\((6, 5, 1)\)</span> in Example 1, then the
+parametric equations of the line become <span class="math display">\[
+x = 6 + t \quad y = 5 + 4t \quad z = 1 - 2t
+\]</span> Or, if we stay with the point <span class="math inline">\((5,
+1, 3)\)</span> but choose the parallel vector <span
+class="math inline">\(2\mathbf{i} + 8\mathbf{j} - 4\mathbf{k}\)</span>,
+we arrive at the equations <span class="math display">\[
+x = 5 + 2t \quad y = 1 + 8t \quad z = 3 - 4t
+\]</span> In general, if a vector <span class="math inline">\(\mathbf{v}
+= \langle a, b, c \rangle\)</span> is used to describe the direction of
+a line L, then the numbers <span class="math inline">\(a, b,\)</span>
+and <span class="math inline">\(c\)</span> are called <strong>direction
+numbers</strong> of L. Since any vector parallel to <strong>v</strong>
+could also be used, we see that any three numbers proportional to <span
+class="math inline">\(a, b,\)</span> and <span
+class="math inline">\(c\)</span> could also be used as a set of
+direction numbers for L.</p>
+<p>Another way of describing a line L is to eliminate the parameter
+<span class="math inline">\(t\)</span> from Equations 2. If none of
+<span class="math inline">\(a, b,\)</span> or <span
+class="math inline">\(c\)</span> is 0, we can solve each of these
+equations for <span class="math inline">\(t\)</span>: <span
+class="math display">\[
+t = \frac{x - x_0}{a} \quad t = \frac{y - y_0}{b} \quad t = \frac{z -
+z_0}{c}
+\]</span> Equating the results, we obtain <span class="math display">\[
+\frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}
+\tag{3}
+\]</span> These equations are called <strong>symmetric
+equations</strong> of L. Notice that the numbers <span
+class="math inline">\(a, b,\)</span> and <span
+class="math inline">\(c\)</span> that appear in the denominators of
+Equations 3 are direction numbers of L, that is, components of a vector
+parallel to L. If one of <span class="math inline">\(a, b,\)</span> or
+<span class="math inline">\(c\)</span> is 0, we can still eliminate
+<span class="math inline">\(t\)</span>. For instance, if <span
+class="math inline">\(a = 0\)</span>, we could write the equations of L
+as <span class="math display">\[
+x = x_0 \quad \frac{y - y_0}{b} = \frac{z - z_0}{c}
+\]</span> This means that L lies in the vertical plane <span
+class="math inline">\(x = x_0\)</span>.</p>
+<hr />
+<p><strong>EXAMPLE 2</strong> (a) Find parametric equations and
+symmetric equations of the line that passes through the points <span
+class="math inline">\(A(2, 4, -3)\)</span> and <span
+class="math inline">\(B(3, -1, 1)\)</span>. (b) At what point does this
+line intersect the xy-plane?</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-3.png" /></p>
+<p><strong>SOLUTION</strong> (a) We are not explicitly given a vector
+parallel to the line, but observe that the vector <strong>v</strong>
+with representation <span class="math inline">\(\vec{AB}\)</span> is
+parallel to the line and <span class="math display">\[
+\mathbf{v} = \langle 3 - 2, -1 - 4, 1 - (-3) \rangle = \langle 1, -5, 4
+\rangle
+\]</span> Thus direction numbers are <span class="math inline">\(a = 1,
+b = -5,\)</span> and <span class="math inline">\(c = 4\)</span>. Taking
+the point <span class="math inline">\((2, 4, -3)\)</span> as <span
+class="math inline">\(P_0\)</span>, we see that parametric equations (2)
+are <span class="math display">\[
+x = 2 + t \quad y = 4 - 5t \quad z = -3 + 4t
+\]</span> and symmetric equations (3) are <span class="math display">\[
+\frac{x - 2}{1} = \frac{y - 4}{-5} = \frac{z + 3}{4}
+\]</span> (b) The line intersects the xy-plane when <span
+class="math inline">\(z = 0\)</span>, so we put <span
+class="math inline">\(z = 0\)</span> in the symmetric equations and
+obtain <span class="math display">\[
+\frac{x - 2}{1} = \frac{y - 4}{-5} = \frac{3}{4}
+\]</span> This gives <span class="math inline">\(x =
+\frac{11}{4}\)</span> and <span class="math inline">\(y =
+\frac{1}{4}\)</span>, so the line intersects the xy-plane at the point
+<span class="math inline">\((\frac{11}{4}, \frac{1}{4}, 0)\)</span>.</p>
+<p>In general, the procedure of Example 2 shows that direction numbers
+of the line L through the points <span class="math inline">\(P_0(x_0,
+y_0, z_0)\)</span> and <span class="math inline">\(P_1(x_1, y_1,
+z_1)\)</span> are <span class="math inline">\(x_1 - x_0, y_1 -
+y_0,\)</span> and <span class="math inline">\(z_1 - z_0\)</span> and so
+symmetric equations of L are <span class="math display">\[
+\frac{x - x_0}{x_1 - x_0} = \frac{y - y_0}{y_1 - y_0} = \frac{z -
+z_0}{z_1 - z_0}
+\]</span></p>
+</div>
+</body>
+</html>

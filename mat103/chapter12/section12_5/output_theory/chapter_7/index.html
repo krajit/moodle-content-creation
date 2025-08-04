@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Distance between a point and a plane</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 8</strong> Find a formula for the distance <span
+class="math inline">\(D\)</span> from a point <span
+class="math inline">\(P_1(x_1, y_1, z_1)\)</span> to the plane <span
+class="math inline">\(ax + by + cz + d = 0\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-9.png" /></p>
+<p><strong>SOLUTION</strong> Let <span class="math inline">\(P_0(x_0,
+y_0, z_0)\)</span> be any point in the given plane and let
+<strong>b</strong> be the vector corresponding to <span
+class="math inline">\(\vec{P_0P_1}\)</span>. Then <span
+class="math display">\[
+\mathbf{b} = \langle x_1 - x_0, y_1 - y_0, z_1 - z_0 \rangle
+\]</span> From Figure 12 you can see that the distance <span
+class="math inline">\(D\)</span> from <span
+class="math inline">\(P_1\)</span> to the plane is equal to the absolute
+value of the scalar projection of <strong>b</strong> onto the normal
+vector <span class="math inline">\(\mathbf{n} = \langle a, b, c
+\rangle\)</span>. Thus <span class="math display">\[
+D = |\text{comp}_\mathbf{n}\mathbf{b}| = \frac{|\mathbf{n} \cdot
+\mathbf{b}|}{|\mathbf{n}|} = \frac{|a(x_1 - x_0) + b(y_1 - y_0) + c(z_1
+- z_0)|}{\sqrt{a^2 + b^2 + c^2}}
+\]</span> <span class="math display">\[
+= \frac{|(ax_1 + by_1 + cz_1) - (ax_0 + by_0 + cz_0)|}{\sqrt{a^2 + b^2 +
+c^2}}
+\]</span> Since <span class="math inline">\(P_0\)</span> lies in the
+plane, its coordinates satisfy the equation of the plane and so we have
+<span class="math inline">\(ax_0 + by_0 + cz_0 + d = 0\)</span>. Thus
+the formula for <span class="math inline">\(D\)</span> can be written as
+<span class="math display">\[
+D = \frac{|ax_1 + by_1 + cz_1 + d|}{\sqrt{a^2 + b^2 + c^2}}
+\tag{9}
+\]</span></p>
+</div>
+<hr />
+<p><strong>EXAMPLE 9</strong> Find the distance between the parallel
+planes <span class="math inline">\(10x + 2y - 2z = 5\)</span> and <span
+class="math inline">\(5x + y - z = 1\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> First we note that the planes are parallel
+because their normal vectors <span class="math inline">\(\langle 10, 2,
+-2 \rangle\)</span> and <span class="math inline">\(\langle 5, 1, -1
+\rangle\)</span> are parallel. To find the distance <span
+class="math inline">\(D\)</span> between the planes, we choose any point
+on one plane and calculate its distance to the other plane. In
+particular, if we put <span class="math inline">\(y = z = 0\)</span> in
+the equation of the first plane, we get <span class="math inline">\(10x
+= 5\)</span> and so <span class="math inline">\((\frac{1}{2}, 0,
+0)\)</span> is a point in this plane. By Formula 9, the distance between
+<span class="math inline">\((\frac{1}{2}, 0, 0)\)</span> and the plane
+<span class="math inline">\(5x + y - z - 1 = 0\)</span> is <span
+class="math display">\[
+D = \frac{|5(\frac{1}{2}) + 1(0) - 1(0) - 1|}{\sqrt{5^2 + 1^2 + (-1)^2}}
+= \frac{|\frac{3}{2}|}{\sqrt{27}} = \frac{3}{2\sqrt{27}} =
+\frac{3}{6\sqrt{3}} = \frac{\sqrt{3}}{6}
+\]</span> So the distance between the planes is <span
+class="math inline">\(\sqrt{3}/6\)</span>.</p>
+</div>
+</body>
+</html>
