@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Combined discussion</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The idea of using traces to draw a surface is employed in
+three-dimensional graphing software. In most such software, traces in
+the vertical planes <span class="math inline">\(x = k\)</span> and <span
+class="math inline">\(y = k\)</span> are drawn for equally spaced values
+of <span class="math inline">\(k\)</span>, and parts of the graph are
+eliminated using hidden line removal. Table 1 shows computer-drawn
+graphs of the six basic types of quadric surfaces in standard form. All
+surfaces are symmetric with respect to the z-axis. If a quadric surface
+is symmetric about a different axis, its equation changes
+accordingly.</p>
+<figure>
+<img src="image-8.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<hr />
+<p><strong>EXAMPLE 7</strong> Identify and sketch the surface <span
+class="math inline">\(4x^2 - y^2 + 2z^2 + 4 = 0\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Dividing by <span
+class="math inline">\(-4\)</span>, we first put the equation in standard
+form: <span class="math display">\[-x^2 + \frac{y^2}{4} - \frac{z^2}{2}
+= 1\]</span> Comparing this equation with Table 1, we see that it
+represents a hyperboloid of two sheets, the only difference being that
+in this case the axis of the hyperboloid is the y-axis. The traces in
+the xy- and yz-planes are the hyperbolas <span
+class="math display">\[-x^2 + \frac{y^2}{4} = 1, \quad z=0 \quad
+\text{and} \quad \frac{y^2}{4} - \frac{z^2}{2} = 1, \quad x=0\]</span>
+The surface has no trace in the xz-plane, but traces in the vertical
+planes <span class="math inline">\(y = k\)</span> for <span
+class="math inline">\(|k| &gt; 2\)</span> are the ellipses <span
+class="math display">\[x^2 + \frac{z^2}{2} = \frac{k^2}{4} - 1, \quad
+y=k\]</span> which can be written as <span
+class="math display">\[\frac{x^2}{\frac{k^2}{4}-1} +
+\frac{z^2}{2(\frac{k^2}{4}-1)} = 1, \quad y=k\]</span> These traces are
+used to make the sketch in Figure 10.</p>
+<figure>
+<img src="image-9.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+</div>
+<hr />
+<p><strong>EXAMPLE 8</strong> Classify the quadric surface <span
+class="math inline">\(x^2 + 2z^2 - 6x - y + 10 = 0\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> By completing the square we rewrite the
+equation as <span class="math display">\[y - 1 = (x-3)^2 + 2z^2\]</span>
+Comparing this equation with Table 1, we see that it represents an
+elliptic paraboloid. Here, however, the axis of the paraboloid is
+parallel to the y-axis, and it has been shifted so that its vertex is
+the point <span class="math inline">\((3, 1, 0)\)</span>. The traces in
+the plane <span class="math inline">\(y = k\)</span> (<span
+class="math inline">\(k &gt; 1\)</span>) are the ellipses <span
+class="math display">\[(x-3)^2 + 2z^2 = k-1, \quad y=k\]</span> The
+trace in the xy-plane is the parabola with equation <span
+class="math inline">\(y = 1 + (x-3)^2\)</span>, <span
+class="math inline">\(z=0\)</span>. The paraboloid is sketched in Figure
+11.</p>
+<figure>
+<img src="image-10.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+</div>
+</body>
+</html>

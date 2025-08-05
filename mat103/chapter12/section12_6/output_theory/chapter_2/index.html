@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quadric Surfaces</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>A <strong>quadric surface</strong> is the graph of a second-degree
+equation in three variables <span class="math inline">\(x\)</span>,
+<span class="math inline">\(y\)</span>, and <span
+class="math inline">\(z\)</span>. The most general such equation is
+<span class="math display">\[Ax^2 + By^2 + Cz^2 + Dxy + Eyz + Fxz + Gx +
+Hy + Iz + J = 0\]</span> where A, B, C, …, J are constants, but by
+translation and rotation it can be brought into one of the two standard
+forms <span class="math display">\[Ax^2 + By^2 + Cz^2 + J = 0 \quad
+\text{or} \quad Ax^2 + By^2 + Iz = 0\]</span></p>
+<blockquote>
+<p>Quadric surfaces are the counterparts in three dimensions of the
+conic sections in the plane.</p>
+</blockquote>
+<hr />
+<p><strong>EXAMPLE 3</strong> Use traces to sketch the quadric surface
+with equation <span class="math display">\[x^2 + \frac{y^2}{9} +
+\frac{z^2}{4} = 1\]</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> By substituting <span
+class="math inline">\(z = 0\)</span>, we find that the trace in the
+xy-plane is <span class="math inline">\(x^2 + y^2/9 = 1\)</span>, which
+we recognize as an equation of an ellipse. In general, the horizontal
+trace in the plane <span class="math inline">\(z = k\)</span> is <span
+class="math display">\[x^2 + \frac{y^2}{9} = 1 - \frac{k^2}{4}, \quad
+z=k\]</span> which is an ellipse, provided that <span
+class="math inline">\(k^2 &lt; 4\)</span>, that is, <span
+class="math inline">\(-2 &lt; k &lt; 2\)</span>. Similarly, vertical
+traces parallel to the yz- and xz-planes are also ellipses: <span
+class="math display">\[\frac{y^2}{9} + \frac{z^2}{4} = 1 - k^2, \quad
+x=k \quad (\text{if } -1 &lt; k &lt; 1)\]</span> <span
+class="math display">\[x^2 + \frac{z^2}{4} = 1 - \frac{k^2}{9}, \quad
+y=k \quad (\text{if } -3 &lt; k &lt; 3)\]</span></p>
+<figure>
+<img src="image-2.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<p>Figure 4 shows how drawing some traces indicates the shape of the
+surface. It’s called an <strong>ellipsoid</strong> because all of its
+traces are ellipses. Notice that it is symmetric with respect to each
+coordinate plane; this is a reflection of the fact that its equation
+involves only even powers of <span class="math inline">\(x\)</span>,
+<span class="math inline">\(y\)</span>, and <span
+class="math inline">\(z\)</span>.</p>
+</div>
+<hr />
+<p><strong>EXAMPLE 4</strong> Use traces to sketch the surface <span
+class="math inline">\(z = 4x^2 + y^2\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<figure>
+<img src="image-3.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<p><strong>SOLUTION</strong> If we put <span class="math inline">\(x =
+0\)</span>, we get <span class="math inline">\(z = y^2\)</span>, so the
+yz-plane intersects the surface in a parabola. If we put <span
+class="math inline">\(x = k\)</span> (a constant), we get <span
+class="math inline">\(z = y^2 + 4k^2\)</span>. This means that if we
+slice the graph with any plane parallel to the yz-plane, we obtain a
+parabola that opens upward. Similarly, if <span class="math inline">\(y
+= k\)</span>, the trace is <span class="math inline">\(z = 4x^2 +
+k^2\)</span>, which is again a parabola that opens upward. If we put
+<span class="math inline">\(z = k\)</span>, we get the horizontal traces
+<span class="math inline">\(4x^2 + y^2 = k\)</span>, which we recognize
+as a family of ellipses. Knowing the shapes of the traces, we can sketch
+the graph in Figure 5. Because of the elliptical and parabolic traces,
+the quadric surface <span class="math inline">\(z = 4x^2 + y^2\)</span>
+is called an <strong>elliptic paraboloid</strong>.</p>
+</div>
+<hr />
+<p><strong>EXAMPLE 5</strong> Sketch the surface <span
+class="math inline">\(z = y^2 - x^2\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The traces in the vertical planes <span
+class="math inline">\(x = k\)</span> are the parabolas <span
+class="math inline">\(z = y^2 - k^2\)</span>, which open upward. The
+traces in <span class="math inline">\(y = k\)</span> are the parabolas
+<span class="math inline">\(z = -x^2 + k^2\)</span>, which open
+downward. The horizontal traces are <span class="math inline">\(y^2 -
+x^2 = k\)</span>, a family of hyperbolas. We draw the families of traces
+in Figure 6, and we show how the traces appear when placed in their
+correct planes in Figure 7.</p>
+<table style="width:15%;">
+<colgroup>
+<col style="width: 15%" />
+</colgroup>
+<tbody>
+<tr>
+<td><img src="image-4.png" alt="alt text" /></td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="image-5.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<hr />
+<figure>
+<img src="image-6.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<hr />
+<p>In Figure 8 we fit together the traces from Figure 7 to form the
+surface <span class="math inline">\(z = y^2 - x^2\)</span>, a
+<strong>hyperbolic paraboloid</strong>. Notice that the shape of the
+surface near the origin resembles that of a saddle. This surface will be
+investigated further in Section 14.7 when we discuss saddle points.</p>
+</div>
+<hr />
+<p><strong>EXAMPLE 6</strong> Sketch the surface <span
+class="math inline">\(\frac{x^2}{4} + y^2 - \frac{z^2}{4} =
+1\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The trace in any horizontal plane <span
+class="math inline">\(z = k\)</span> is the ellipse <span
+class="math display">\[\frac{x^2}{4} + y^2 = 1 + \frac{k^2}{4}, \quad
+z=k\]</span> but the traces in the xz- and yz-planes are the hyperbolas
+<span class="math display">\[\frac{x^2}{4} - \frac{z^2}{4} = 1, \quad
+y=0 \quad \text{and} \quad y^2 - \frac{z^2}{4} = 1, \quad x=0\]</span>
+This surface is called a <strong>hyperboloid of one sheet</strong> and
+is sketched in Figure 9.</p>
+<figure>
+<img src="image-7.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+</div>
+</body>
+</html>

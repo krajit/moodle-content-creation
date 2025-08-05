@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cylinders</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>We have already looked at two special types of surfaces: planes (in
+Section 12.5) and spheres (in Section 12.1). Here we investigate two
+other types of surfaces: cylinders and quadric surfaces.</p>
+<p>In order to sketch the graph of a surface, it is useful to determine
+the curves of intersection of the surface with planes parallel to the
+coordinate planes. These curves are called <strong>traces</strong> (or
+<strong>cross-sections</strong>) of the surface.</p>
+<h3 id="cylinders">Cylinders</h3>
+<hr />
+<p>A <strong>cylinder</strong> is a surface that consists of all lines
+(called <strong>rulings</strong>) that are parallel to a given line and
+pass through a given plane curve.</p>
+<hr />
+<p><strong>EXAMPLE 1</strong> Sketch the graph of the surface <span
+class="math inline">\(z = x^2\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<figure>
+<img src="image.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<p><strong>SOLUTION</strong> Notice that the equation of the graph,
+<span class="math inline">\(z = x^2\)</span>, doesn’t involve <span
+class="math inline">\(y\)</span>. This means that any vertical plane
+with equation <span class="math inline">\(y = k\)</span> (parallel to
+the xz-plane) intersects the graph in a curve with equation <span
+class="math inline">\(z = x^2\)</span>. So these vertical traces are
+parabolas. Figure 1 shows how the graph is formed by taking the parabola
+<span class="math inline">\(z = x^2\)</span> in the xz-plane and moving
+it in the direction of the y-axis. The graph is a surface, called a
+<strong>parabolic cylinder</strong>, made up of infinitely many shifted
+copies of the same parabola. Here the rulings of the cylinder are
+parallel to the y-axis.</p>
+<p>We noticed that the variable <span class="math inline">\(y\)</span>
+is missing from the equation of the cylinder in Example 1. This is
+typical of a surface whose rulings are parallel to one of the coordinate
+axes. If one of the variables <span class="math inline">\(x\)</span>,
+<span class="math inline">\(y\)</span>, or <span
+class="math inline">\(z\)</span> is missing from the equation of a
+surface, then the surface is a cylinder.</p>
+</div>
+<hr />
+<p><strong>EXAMPLE 2</strong> Identify and sketch the surfaces. (a)
+<span class="math inline">\(x^2 + y^2 = 1\)</span> (b) <span
+class="math inline">\(y^2 + z^2 = 1\)</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> (a) Since <span
+class="math inline">\(z\)</span> is missing and the equations <span
+class="math inline">\(x^2 + y^2 = 1\)</span>, <span
+class="math inline">\(z = k\)</span> represent a circle with radius 1 in
+the plane <span class="math inline">\(z = k\)</span>, the surface <span
+class="math inline">\(x^2 + y^2 = 1\)</span> is a circular cylinder
+whose axis is the z-axis. (See Figure 2.) Here the rulings are vertical
+lines.</p>
+<figure>
+<img src="image-1.png" alt="alt text" />
+<figcaption aria-hidden="true">alt text</figcaption>
+</figure>
+<ol start="2" type="a">
+<li>In this case <span class="math inline">\(x\)</span> is missing and
+the surface is a circular cylinder whose axis is the x-axis. (See Figure
+3.) It is obtained by taking the circle <span class="math inline">\(y^2
++ z^2 = 1\)</span>, <span class="math inline">\(x = 0\)</span> in the
+yz-plane and moving it parallel to the x-axis.</li>
+</ol>
+</div>
+<hr />
+<blockquote>
+<p><strong>NOTE</strong> When you are dealing with surfaces, it is
+important to recognize that an equation like <span
+class="math inline">\(x^2 + y^2 = 1\)</span> represents a cylinder and
+not a circle. The trace of the cylinder <span class="math inline">\(x^2
++ y^2 = 1\)</span> in the xy-plane is the circle with equations <span
+class="math inline">\(x^2 + y^2 = 1\)</span>, <span
+class="math inline">\(z = 0\)</span>.</p>
+</blockquote>
+</body>
+</html>
