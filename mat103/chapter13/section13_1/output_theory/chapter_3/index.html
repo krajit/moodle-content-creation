@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Space Curves</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>There is a close connection between continuous vector functions and
+space curves. Suppose that <span class="math inline">\(f\)</span>, <span
+class="math inline">\(g\)</span>, and <span
+class="math inline">\(h\)</span> are continuous real-valued functions on
+an interval <span class="math inline">\(I\)</span>. Then the set <span
+class="math inline">\(C\)</span> of all points <span
+class="math inline">\((x, y, z)\)</span> in space, where <span
+class="math display">\[ x = f(t) \quad y = g(t) \quad z = h(t) \tag{2}
+\]</span> and <span class="math inline">\(t\)</span> varies throughout
+the interval <span class="math inline">\(I\)</span>, is called a
+<strong>space curve</strong>. The equations in (2) are called
+<strong>parametric equations</strong> of <span
+class="math inline">\(C\)</span> and <span
+class="math inline">\(t\)</span> is called a <strong>parameter</strong>.
+We can think of <span class="math inline">\(C\)</span> as being traced
+out by a moving particle whose position at time <span
+class="math inline">\(t\)</span> is <span class="math inline">\((f(t),
+g(t), h(t))\)</span>. If we now consider the vector function <span
+class="math inline">\(\mathbf{r}(t) = \langle f(t), g(t), h(t)
+\rangle\)</span>, then <span
+class="math inline">\(\mathbf{r}(t)\)</span> is the position vector of
+the point <span class="math inline">\(P(f(t), g(t), h(t))\)</span> on
+<span class="math inline">\(C\)</span>. Thus any continuous vector
+function <strong>r</strong> defines a space curve <span
+class="math inline">\(C\)</span> that is traced out by the tip of the
+moving vector <span class="math inline">\(\mathbf{r}(t)\)</span>, as
+shown in Figure 1.</p>
+<p><img src="image.png" /></p>
+<hr />
+<p><strong>EXAMPLE 3</strong> Describe the curve defined by the vector
+function <span class="math display">\[ \mathbf{r}(t) = \langle 1+t,
+2+5t, -1+6t \rangle \]</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The corresponding parametric equations are
+<span class="math display">\[ x = 1+t \qquad y = 2+5t \qquad z = -1+6t
+\]</span> which we recognize from Equations 12.5.2 as parametric
+equations of a line passing through the point <span
+class="math inline">\((1, 2, -1)\)</span> and parallel to the vector
+<span class="math inline">\(\langle 1, 5, 6 \rangle\)</span>.
+Alternatively, we could observe that the function can be written as
+<span class="math inline">\(\mathbf{r} = \mathbf{r}_0 +
+t\mathbf{v}\)</span>, where <span class="math inline">\(\mathbf{r}_0 =
+\langle 1, 2, -1 \rangle\)</span> and <span
+class="math inline">\(\mathbf{v} = \langle 1, 5, 6 \rangle\)</span>, and
+this is the vector equation of a line as given by Equation 12.5.1.</p>
+</div>
+<hr />
+<p>Plane curves can also be represented in vector notation. For
+instance, the curve given by the parametric equations <span
+class="math inline">\(x = t^2 - 2t\)</span> and <span
+class="math inline">\(y = t+1\)</span> could also be described by the
+vector equation <span class="math display">\[ \mathbf{r}(t) = \langle
+t^2 - 2t, t+1 \rangle = (t^2 - 2t)\mathbf{i} + (t+1)\mathbf{j} \]</span>
+where <span class="math inline">\(\mathbf{i} = \langle 1, 0
+\rangle\)</span> and <span class="math inline">\(\mathbf{j} = \langle 0,
+1 \rangle\)</span>.</p>
+<hr />
+<p><strong>EXAMPLE 4</strong> Sketch the curve whose vector equation is
+<span class="math display">\[ \mathbf{r}(t) = \cos t \mathbf{i} + \sin t
+\mathbf{j} + t \mathbf{k} \]</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The parametric equations for this curve are
+<span class="math display">\[ x = \cos t \qquad y = \sin t \qquad z = t
+\]</span> Since <span class="math inline">\(x^2 + y^2 = \cos^2 t +
+\sin^2 t = 1\)</span> for all values of <span
+class="math inline">\(t\)</span>, the curve must lie on the circular
+cylinder <span class="math inline">\(x^2 + y^2 = 1\)</span>. The point
+<span class="math inline">\((x, y, z)\)</span> lies directly above the
+point <span class="math inline">\((x, y, 0)\)</span>, which moves
+counterclockwise around the circle <span class="math inline">\(x^2 + y^2
+= 1\)</span> in the xy-plane. Since <span
+class="math inline">\(z=t\)</span>, the curve spirals upward around the
+cylinder as <span class="math inline">\(t\)</span> increases. The curve,
+shown in Figure 2, is called a <strong>helix</strong>.</p>
+<p><img src="image-1.png" /></p>
+</div>
+<hr />
+<p>The corkscrew shape of the helix in Example 4 is familiar from its
+occurrence in coiled springs. It also occurs in the model of DNA
+(deoxyribonucleic acid, the genetic material of living cells). In 1953
+James Watson and Francis Crick showed that the structure of the DNA
+molecule is that of two linked, parallel helixes that are intertwined as
+in Figure 3.</p>
+<p><img src="image-2.png" /></p>
+</body>
+</html>

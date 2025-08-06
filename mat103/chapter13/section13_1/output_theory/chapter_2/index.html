@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Limits and Continuity of vector function</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The limit of a vector function <strong>r</strong> is defined by
+taking the limits of its component functions as follows.</p>
+<blockquote>
+<ol type="1">
+<li>If <span class="math inline">\(\mathbf{r}(t) = \langle f(t), g(t),
+h(t) \rangle\)</span>, then <span class="math display">\[ \lim_{t \to a}
+\mathbf{r}(t) = \left\langle \lim_{t \to a} f(t), \lim_{t \to a} g(t),
+\lim_{t \to a} h(t) \right\rangle \]</span> provided the limits of the
+component functions exist.</li>
+</ol>
+</blockquote>
+<p>If <span class="math inline">\(\lim_{t \to a} \mathbf{r}(t) =
+\mathbf{L}\)</span>, this definition is equivalent to saying that the
+length and direction of the vector <span
+class="math inline">\(\mathbf{r}(t)\)</span> approach the length and
+direction of the vector <strong>L</strong>.</p>
+<p>Equivalently, we could have used an <span
+class="math inline">\(\epsilon-\delta\)</span> definition (see Exercise
+54). Limits of vector functions obey the same rules as limits of
+real-valued functions (see Exercise 53).</p>
+<hr />
+<p><strong>EXAMPLE 2</strong> Find <span class="math inline">\(\lim_{t
+\to 0} \mathbf{r}(t)\)</span>, where <span
+class="math inline">\(\mathbf{r}(t) = (1+t^3)\mathbf{i} +
+te^{-t}\mathbf{j} + \frac{\sin t}{t}\mathbf{k}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> According to Definition 1, the limit of
+<strong>r</strong> is the vector whose components are the limits of the
+component functions of <strong>r</strong>: <span class="math display">\[
+\lim_{t \to 0} \mathbf{r}(t) = \left[ \lim_{t \to 0} (1+t^3)
+\right]\mathbf{i} + \left[ \lim_{t \to 0} te^{-t} \right]\mathbf{j} +
+\left[ \lim_{t \to 0} \frac{\sin t}{t} \right]\mathbf{k} \]</span> <span
+class="math display">\[ = \mathbf{i} + \mathbf{k} \quad (\text{by
+Equation 3.3.2}) \]</span></p>
+</div>
+<hr />
+<p>A vector function <strong>r</strong> is continuous at
+<strong>a</strong> if <span class="math display">\[ \lim_{t \to a}
+\mathbf{r}(t) = \mathbf{r}(a) \]</span> In view of Definition 1, we see
+that <strong>r</strong> is continuous at <span
+class="math inline">\(a\)</span> if and only if its component functions
+<span class="math inline">\(f\)</span>, <span
+class="math inline">\(g\)</span>, and <span
+class="math inline">\(h\)</span> are continuous at <span
+class="math inline">\(a\)</span>.</p>
+</body>
+</html>

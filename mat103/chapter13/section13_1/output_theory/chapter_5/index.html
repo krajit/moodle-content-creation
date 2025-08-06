@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Using Computers to Draw Space Curves</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Space curves are inherently more difficult to draw by hand than plane
+curves; for an accurate representation we need to use technology. For
+instance, Figure 7 shows a computer-generated graph of the curve with
+parametric equations <span class="math display">\[ x = (4 + \sin
+20t)\cos t \qquad y = (4 + \sin 20t)\sin t \qquad z = \cos 20t
+\]</span></p>
+<p><img src="image-5.png" /></p>
+<p>It’s called a <strong>toroidal spiral</strong> because it lies on a
+torus. Another interesting curve, the <strong>trefoil knot</strong>,
+with equations <span class="math display">\[ x = (2 + \cos 1.5t)\cos t
+\qquad y = (2 + \cos 1.5t)\sin t \qquad z = \sin 1.5t \]</span> is
+graphed in Figure 8. It wouldn’t be easy to plot either of these curves
+by hand.</p>
+<p>Even when a computer is used to draw a space curve, optical illusions
+make it difficult to get a good impression of what the curve really
+looks like. (This is especially true in Figure 8. See Exercise 52.) The
+next example shows how to cope with this problem.</p>
+<hr />
+<p><strong>EXAMPLE 7</strong> Use a computer to draw the curve with
+vector equation <span class="math inline">\(\mathbf{r}(t) = \langle t,
+t^2, t^3 \rangle\)</span>. This curve is called a <strong>twisted
+cubic</strong>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We start by using the computer to plot the
+curve with parametric equations <span class="math inline">\(x=t, y=t^2,
+z=t^3\)</span> for <span class="math inline">\(-2 \le t \le 2\)</span>.
+The result is shown in Figure 9(a), but it’s hard to see the true nature
+of the curve from that graph alone. Most three-dimensional computer
+graphing programs allow the user to enclose a curve or surface in a box
+instead of displaying the coordinate axes. When we look at the same
+curve in a box in Figure 9(b), we have a much clearer picture of the
+curve. We can see that it climbs from a lower corner of the box to the
+upper corner nearest us, and it twists as it climbs.</p>
+<p><img src="image-6.png" /></p>
+<p>We get an even better idea of the curve when we view it from
+different vantage points. Part (c) shows the result of rotating the box
+to give another viewpoint. Parts (d), (e), and (f) show the views we get
+when we look directly at a face of the box. In particular, part (d)
+shows the view from directly above the box. It is the projection of the
+curve onto the xy-plane, namely, the parabola <span
+class="math inline">\(y=x^2\)</span>. Part (e) shows the projection onto
+the xz-plane, the cubic curve <span
+class="math inline">\(z=x^3\)</span>. It’s now obvious why the given
+curve is called a twisted cubic.</p>
+<p>Another method of visualizing a space curve is to draw it on a
+surface. For instance, the twisted cubic in Example 7 lies on the
+parabolic cylinder <span class="math inline">\(y=x^2\)</span>.
+(Eliminate the parameter from the first two parametric equations, <span
+class="math inline">\(x=t\)</span> and <span
+class="math inline">\(y=t^2\)</span>.) Figure 10 shows both the cylinder
+and the twisted cubic, and we see that the curve moves upward from the
+origin along the surface of the cylinder.</p>
+<p><img src="image-7.png" /></p>
+<p>A third method for visualizing the twisted cubic is to realize that
+it also lies on the cylinder <span class="math inline">\(z=x^3\)</span>.
+So it can be viewed as the curve of intersection of the cylinders <span
+class="math inline">\(y=x^2\)</span> and <span
+class="math inline">\(z=x^3\)</span>. (See Figure 11.)</p>
+<p><img src="image-8.png" /></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example problem</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>In Examples 3 and 4 we were given vector equations of curves and
+asked for a geometric description or sketch. In the next two examples we
+are given a geometric description of a curve and are asked to find
+parametric equations for the curve.</p>
+<hr />
+<p><strong>EXAMPLE 5</strong> Find a vector equation and parametric
+equations for the line segment that joins the point <span
+class="math inline">\(P(1, 3, -2)\)</span> to the point <span
+class="math inline">\(Q(2, -1, 3)\)</span>.</p>
+<p><img src="image-3.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> In Section 12.5 we found a vector equation
+for the line segment that joins the tip of the vector <span
+class="math inline">\(\mathbf{r}_0\)</span> to the tip of the vector
+<span class="math inline">\(\mathbf{r}_1\)</span>: <span
+class="math display">\[ \mathbf{r}(t) = (1-t)\mathbf{r}_0 +
+t\mathbf{r}_1 \qquad 0 \le t \le 1 \]</span> (See Equation 12.5.4.) Here
+we take <span class="math inline">\(\mathbf{r}_0 = \langle 1, 3, -2
+\rangle\)</span> and <span class="math inline">\(\mathbf{r}_1 = \langle
+2, -1, 3 \rangle\)</span> to obtain a vector equation of the line
+segment from <span class="math inline">\(P\)</span> to <span
+class="math inline">\(Q\)</span>: <span class="math display">\[
+\mathbf{r}(t) = (1-t)\langle 1, 3, -2 \rangle + t\langle 2, -1, 3
+\rangle \qquad 0 \le t \le 1 \]</span> or <span class="math display">\[
+\mathbf{r}(t) = \langle 1+t, 3-4t, -2+5t \rangle \qquad 0 \le t \le 1
+\]</span> The corresponding parametric equations are <span
+class="math display">\[ x = 1+t \qquad y = 3-4t \qquad z = -2+5t \qquad
+0 \le t \le 1 \]</span></p>
+</div>
+<hr />
+<p><strong>EXAMPLE 6</strong> Find a vector function that represents the
+curve of intersection of the cylinder <span class="math inline">\(x^2 +
+y^2 = 1\)</span> and the plane <span
+class="math inline">\(y+z=2\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong></p>
+<p><img src="image-4.png" /></p>
+<p>Figure 5 shows how the plane and the cylinder intersect, and Figure 6
+shows the curve of intersection <span class="math inline">\(C\)</span>,
+which is an ellipse. The projection of <span
+class="math inline">\(C\)</span> onto the xy-plane is the circle <span
+class="math inline">\(x^2 + y^2 = 1, z=0\)</span>. So we know from
+Example 10.1.2 that we can write <span class="math display">\[ x = \cos
+t \qquad y = \sin t \qquad 0 \le t \le 2\pi \]</span> From the equation
+of the plane, we have <span class="math display">\[ z = 2-y = 2 - \sin t
+\]</span> So we can write parametric equations for <span
+class="math inline">\(C\)</span> as <span class="math display">\[ x =
+\cos t \qquad y = \sin t \qquad z = 2 - \sin t \qquad 0 \le t \le 2\pi
+\]</span> The corresponding vector equation is <span
+class="math display">\[ \mathbf{r}(t) = \cos t \mathbf{i} + \sin t
+\mathbf{j} + (2-\sin t)\mathbf{k} \qquad 0 \le t \le 2\pi \]</span> This
+equation is called a <strong>parametrization</strong> of the curve <span
+class="math inline">\(C\)</span>. The arrows in Figure 6 indicate the
+direction in which <span class="math inline">\(C\)</span> is traced as
+the parameter <span class="math inline">\(t\)</span> increases.</p>
+</div>
+</body>
+</html>
