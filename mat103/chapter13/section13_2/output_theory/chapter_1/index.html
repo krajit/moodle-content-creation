@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Derivatives of Vector Functions</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Later in this chapter we are going to use vector functions to
+describe the motion of planets and other objects through space. Here we
+prepare the way by developing the calculus of vector functions.</p>
+<h2 id="derivatives">Derivatives</h2>
+<p>The derivative <span class="math inline">\(\mathbf{r}&#39;\)</span>
+of a vector function <span class="math inline">\(\mathbf{r}\)</span> is
+defined in much the same way as for real-valued functions:</p>
+<p><span class="math display">\[
+\frac{d\mathbf{r}}{dt} = \mathbf{r}&#39;(t) = \lim_{h \to 0}
+\frac{\mathbf{r}(t+h) - \mathbf{r}(t)}{h} \tag{1}
+\]</span></p>
+<p><img src="image.png" /></p>
+<p>if this limit exists. The geometric significance of this definition
+is shown in Figure 1. If the points P and Q have position vectors <span
+class="math inline">\(\mathbf{r}(t)\)</span> and <span
+class="math inline">\(\mathbf{r}(t+h)\)</span>, then <span
+class="math inline">\(\vec{PQ}\)</span> represents the vector <span
+class="math inline">\(\mathbf{r}(t+h) - \mathbf{r}(t)\)</span>, which
+can therefore be regarded as a secant vector. If <span
+class="math inline">\(h &gt; 0\)</span>, the scalar multiple <span
+class="math inline">\((1/h)(\mathbf{r}(t+h) - \mathbf{r}(t))\)</span>
+has the same direction as <span class="math inline">\(\mathbf{r}(t+h) -
+\mathbf{r}(t)\)</span>. As <span class="math inline">\(h \to 0\)</span>,
+it appears that this vector approaches a vector that lies on the tangent
+line. For this reason, the vector <span
+class="math inline">\(\mathbf{r}&#39;(t)\)</span> is called the
+<strong>tangent vector</strong> to the curve defined by <span
+class="math inline">\(\mathbf{r}\)</span> at the point P, provided that
+<span class="math inline">\(\mathbf{r}&#39;(t)\)</span> exists and <span
+class="math inline">\(\mathbf{r}&#39;(t) \neq \mathbf{0}\)</span>. The
+<strong>tangent line</strong> to C at P is defined to be the line
+through P parallel to the tangent vector <span
+class="math inline">\(\mathbf{r}&#39;(t)\)</span>. We will also have
+occasion to consider the <strong>unit tangent vector</strong>, which
+is</p>
+<p><span class="math display">\[
+\mathbf{T}(t) = \frac{\mathbf{r}&#39;(t)}{|\mathbf{r}&#39;(t)|}
+\]</span></p>
+<p>The following theorem gives us a convenient method for computing the
+derivative of a vector function <span
+class="math inline">\(\mathbf{r}\)</span>: just differentiate each
+component of <span class="math inline">\(\mathbf{r}\)</span>.</p>
+<blockquote>
+<p><strong>Theorem 2</strong> If <span
+class="math inline">\(\mathbf{r}(t) = \langle f(t), g(t), h(t) \rangle =
+f(t)\mathbf{i} + g(t)\mathbf{j} + h(t)\mathbf{k}\)</span>, where f, g,
+and h are differentiable functions, then <span class="math display">\[
+\mathbf{r}&#39;(t) = \langle f&#39;(t), g&#39;(t), h&#39;(t) \rangle =
+f&#39;(t)\mathbf{i} + g&#39;(t)\mathbf{j} + h&#39;(t)\mathbf{k}
+\]</span></p>
+</blockquote>
+<p><strong>PROOF</strong> <span class="math display">\[
+\mathbf{r}&#39;(t) = \lim_{\Delta t \to 0} \frac{1}{\Delta
+t}[\mathbf{r}(t+\Delta t) - \mathbf{r}(t)]
+\]</span> <span class="math display">\[
+= \lim_{\Delta t \to 0} \frac{1}{\Delta t}[\langle f(t+\Delta t),
+g(t+\Delta t), h(t+\Delta t) \rangle - \langle f(t), g(t), h(t) \rangle]
+\]</span> <span class="math display">\[
+= \lim_{\Delta t \to 0} \left\langle \frac{f(t+\Delta t) - f(t)}{\Delta
+t}, \frac{g(t+\Delta t) - g(t)}{\Delta t}, \frac{h(t+\Delta t) -
+h(t)}{\Delta t} \right\rangle
+\]</span> <span class="math display">\[
+= \left\langle \lim_{\Delta t \to 0} \frac{f(t+\Delta t) - f(t)}{\Delta
+t}, \lim_{\Delta t \to 0} \frac{g(t+\Delta t) - g(t)}{\Delta t},
+\lim_{\Delta t \to 0} \frac{h(t+\Delta t) - h(t)}{\Delta t}
+\right\rangle
+\]</span> <span class="math display">\[
+= \langle f&#39;(t), g&#39;(t), h&#39;(t) \rangle
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 1</strong> (a) Find the derivative of <span
+class="math inline">\(\mathbf{r}(t) = (1+t^3)\mathbf{i} +
+te^{-t}\mathbf{j} + \sin 2t \mathbf{k}\)</span>. (b) Find the unit
+tangent vector at the point where <span
+class="math inline">\(t=0\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> (a) According to Theorem 2, we
+differentiate each component of <span
+class="math inline">\(\mathbf{r}\)</span>: <span class="math display">\[
+\mathbf{r}&#39;(t) = 3t^2\mathbf{i} + (1-t)e^{-t}\mathbf{j} + 2\cos 2t
+\mathbf{k}
+\]</span> (b) Since <span class="math inline">\(\mathbf{r}(0) =
+\mathbf{i}\)</span> and <span class="math inline">\(\mathbf{r}&#39;(0) =
+\mathbf{j} + 2\mathbf{k}\)</span>, the unit tangent vector at the point
+(1, 0, 0) is <span class="math display">\[
+\mathbf{T}(0) = \frac{\mathbf{r}&#39;(0)}{|\mathbf{r}&#39;(0)|} =
+\frac{\mathbf{j} + 2\mathbf{k}}{\sqrt{1+4}} =
+\frac{1}{\sqrt{5}}\mathbf{j} + \frac{2}{\sqrt{5}}\mathbf{k}
+\]</span></p>
+</div>
+<hr />
+<p><strong>EXAMPLE 2</strong> For the curve <span
+class="math inline">\(\mathbf{r}(t) = \sqrt{t}\mathbf{i} +
+(2-t)\mathbf{j}\)</span>, find <span
+class="math inline">\(\mathbf{r}&#39;(t)\)</span> and sketch the
+position vector <span class="math inline">\(\mathbf{r}(1)\)</span> and
+the tangent vector <span
+class="math inline">\(\mathbf{r}&#39;(1)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We have <span class="math display">\[
+\mathbf{r}&#39;(t) = \frac{1}{2\sqrt{t}}\mathbf{i} - \mathbf{j} \quad
+\text{and} \quad \mathbf{r}&#39;(1) = \frac{1}{2}\mathbf{i} - \mathbf{j}
+\]</span> The curve is a plane curve and elimination of the parameter
+from the equations <span class="math inline">\(x=\sqrt{t},
+y=2-t\)</span> gives <span class="math inline">\(y=2-x^2, x \ge
+0\)</span>. In Figure 2 we draw the position vector <span
+class="math inline">\(\mathbf{r}(1) = \mathbf{i}+\mathbf{j}\)</span>
+starting at the origin and the tangent vector <span
+class="math inline">\(\mathbf{r}&#39;(1)\)</span> starting at the
+corresponding point (1, 1).</p>
+<p><img src="image-1.png" /></p>
+</div>
+<hr />
+<p><strong>EXAMPLE 3</strong> Find parametric equations for the tangent
+line to the helix with parametric equations <span
+class="math display">\[
+x = 2\cos t \quad y = \sin t \quad z=t
+\]</span> at the point <span class="math inline">\((0, 1,
+\pi/2)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-2.png" /></p>
+<p><strong>SOLUTION</strong> The vector equation of the helix is <span
+class="math inline">\(\mathbf{r}(t) = \langle 2\cos t, \sin t, t
+\rangle\)</span>, so <span class="math display">\[
+\mathbf{r}&#39;(t) = \langle -2\sin t, \cos t, 1 \rangle
+\]</span> The parameter value corresponding to the point <span
+class="math inline">\((0, 1, \pi/2)\)</span> is <span
+class="math inline">\(t=\pi/2\)</span>, so the tangent vector there is
+<span class="math inline">\(\mathbf{r}&#39;(\pi/2) = \langle -2, 0, 1
+\rangle\)</span>. The tangent line is the line through <span
+class="math inline">\((0, 1, \pi/2)\)</span> parallel to the vector
+<span class="math inline">\(\langle -2, 0, 1 \rangle\)</span>, so by
+Equations 12.5.2 its parametric equations are <span
+class="math display">\[
+x = -2t \quad y=1 \quad z = \frac{\pi}{2} + t
+\]</span></p>
+</div>
+</body>
+</html>

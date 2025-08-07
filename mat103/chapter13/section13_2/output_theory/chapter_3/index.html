@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Differentiation Rules</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The next theorem shows that the differentiation formulas for
+real-valued functions have their counterparts for vector-valued
+functions.</p>
+<blockquote>
+<p><strong>Theorem 3</strong> Suppose <span
+class="math inline">\(\mathbf{u}\)</span> and <span
+class="math inline">\(\mathbf{v}\)</span> are differentiable vector
+functions, c is a scalar, and f is a real-valued function. Then 1. <span
+class="math inline">\(\frac{d}{dt}[\mathbf{u}(t) + \mathbf{v}(t)] =
+\mathbf{u}&#39;(t) + \mathbf{v}&#39;(t)\)</span> 2. <span
+class="math inline">\(\frac{d}{dt}[c\mathbf{u}(t)] =
+c\mathbf{u}&#39;(t)\)</span> 3. <span
+class="math inline">\(\frac{d}{dt}[f(t)\mathbf{u}(t)] =
+f&#39;(t)\mathbf{u}(t) + f(t)\mathbf{u}&#39;(t)\)</span> 4. <span
+class="math inline">\(\frac{d}{dt}[\mathbf{u}(t) \cdot \mathbf{v}(t)] =
+\mathbf{u}&#39;(t) \cdot \mathbf{v}(t) + \mathbf{u}(t) \cdot
+\mathbf{v}&#39;(t)\)</span> 5. <span
+class="math inline">\(\frac{d}{dt}[\mathbf{u}(t) \times \mathbf{v}(t)] =
+\mathbf{u}&#39;(t) \times \mathbf{v}(t) + \mathbf{u}(t) \times
+\mathbf{v}&#39;(t)\)</span> 6. <span
+class="math inline">\(\frac{d}{dt}[\mathbf{u}(f(t))] =
+f&#39;(t)\mathbf{u}&#39;(f(t))\)</span> (Chain Rule)</p>
+</blockquote>
+<p>This theorem can be proved either directly from Definition 1 or by
+using Theorem 2 and the corresponding differentiation formulas for
+real-valued functions. The proof of Formula 4 follows; the remaining
+formulas are left as exercises.</p>
+<p><strong>PROOF OF FORMULA 4</strong> Let <span class="math display">\[
+\mathbf{u}(t) = \langle f_1(t), f_2(t), f_3(t) \rangle \quad
+\mathbf{v}(t) = \langle g_1(t), g_2(t), g_3(t) \rangle
+\]</span> Then <span class="math display">\[
+\mathbf{u}(t) \cdot \mathbf{v}(t) = f_1(t)g_1(t) + f_2(t)g_2(t) +
+f_3(t)g_3(t) = \sum_{i=1}^3 f_i(t)g_i(t)
+\]</span> so the ordinary Product Rule gives <span
+class="math display">\[
+\frac{d}{dt}[\mathbf{u}(t) \cdot \mathbf{v}(t)] = \frac{d}{dt}
+\sum_{i=1}^3 f_i(t)g_i(t) = \sum_{i=1}^3 \frac{d}{dt}[f_i(t)g_i(t)]
+\]</span> <span class="math display">\[
+= \sum_{i=1}^3 [f_i&#39;(t)g_i(t) + f_i(t)g_i&#39;(t)]
+\]</span> <span class="math display">\[
+= \sum_{i=1}^3 f_i&#39;(t)g_i(t) + \sum_{i=1}^3 f_i(t)g_i&#39;(t)
+\]</span> <span class="math display">\[
+= \mathbf{u}&#39;(t) \cdot \mathbf{v}(t) + \mathbf{u}(t) \cdot
+\mathbf{v}&#39;(t)
+\]</span></p>
+</body>
+</html>

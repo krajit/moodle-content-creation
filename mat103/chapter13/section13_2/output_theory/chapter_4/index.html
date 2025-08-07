@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><strong>EXAMPLE 4</strong> Show that if <span
+class="math inline">\(|\mathbf{r}(t)| = c\)</span> (a constant), then
+<span class="math inline">\(\mathbf{r}&#39;(t)\)</span> is orthogonal to
+<span class="math inline">\(\mathbf{r}(t)\)</span> for all t.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since</p>
+<p><span class="math display">\[
+\mathbf{r}(t) \cdot \mathbf{r}(t) = |\mathbf{r}(t)|^2 = c^2
+\]</span> and <span class="math inline">\(c^2\)</span> is a constant,
+Formula 4 of Theorem 3 gives <span class="math display">\[
+0 = \frac{d}{dt}[\mathbf{r}(t) \cdot \mathbf{r}(t)] = \mathbf{r}&#39;(t)
+\cdot \mathbf{r}(t) + \mathbf{r}(t) \cdot \mathbf{r}&#39;(t) =
+2\mathbf{r}&#39;(t) \cdot \mathbf{r}(t)
+\]</span> Thus <span class="math inline">\(\mathbf{r}&#39;(t) \cdot
+\mathbf{r}(t) = 0\)</span>, which says that <span
+class="math inline">\(\mathbf{r}&#39;(t)\)</span> is orthogonal to <span
+class="math inline">\(\mathbf{r}(t)\)</span>.</p>
+<p><img src="image-3.png" /></p>
+<p>Geometrically, this result says that if a curve lies on a sphere with
+center the origin, then the tangent vector <span
+class="math inline">\(\mathbf{r}&#39;(t)\)</span> is always
+perpendicular to the position vector <span
+class="math inline">\(\mathbf{r}(t)\)</span>. (See Figure 4.)</p>
+</div>
+</body>
+</html>

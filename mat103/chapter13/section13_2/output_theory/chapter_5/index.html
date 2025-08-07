@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Integrals</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The <strong>definite integral</strong> of a continuous vector
+function <span class="math inline">\(\mathbf{r}(t)\)</span> can be
+defined in much the same way as for real-valued functions except that
+the integral is a vector. But then we can express the integral of <span
+class="math inline">\(\mathbf{r}\)</span> in terms of the integrals of
+its component functions f, g, and h as follows.</p>
+<p><span class="math display">\[
+\int_a^b \mathbf{r}(t) dt = \lim_{n \to \infty} \sum_{i=1}^n
+\mathbf{r}(t_i^*) \Delta t
+\]</span> <span class="math display">\[
+= \lim_{n \to \infty} \left[ \left( \sum_{i=1}^n f(t_i^*) \Delta t
+\right)\mathbf{i} + \left( \sum_{i=1}^n g(t_i^*) \Delta t
+\right)\mathbf{j} + \left( \sum_{i=1}^n h(t_i^*) \Delta t
+\right)\mathbf{k} \right]
+\]</span> and so <span class="math display">\[
+\int_a^b \mathbf{r}(t) dt = \left( \int_a^b f(t) dt \right)\mathbf{i} +
+\left( \int_a^b g(t) dt \right)\mathbf{j} + \left( \int_a^b h(t) dt
+\right)\mathbf{k}
+\]</span> This means that we can evaluate an integral of a vector
+function by integrating each component function. We can extend the
+Fundamental Theorem of Calculus to continuous vector functions as
+follows: <span class="math display">\[
+\int_a^b \mathbf{r}(t) dt = \mathbf{R}(t) \Big]_a^b = \mathbf{R}(b) -
+\mathbf{R}(a)
+\]</span> where <span class="math inline">\(\mathbf{R}\)</span> is an
+antiderivative of <span class="math inline">\(\mathbf{r}\)</span>, that
+is, <span class="math inline">\(\mathbf{R}&#39;(t) =
+\mathbf{r}(t)\)</span>. We use the notation <span
+class="math inline">\(\int \mathbf{r}(t) dt\)</span> for indefinite
+integrals (antiderivatives).</p>
+<hr />
+<p><strong>EXAMPLE 5</strong> If <span
+class="math inline">\(\mathbf{r}(t) = 2\cos t \mathbf{i} + \sin t
+\mathbf{j} + 2t \mathbf{k}\)</span>, then <span class="math display">\[
+\int \mathbf{r}(t) dt = \left( \int 2\cos t dt \right)\mathbf{i} +
+\left( \int \sin t dt \right)\mathbf{j} + \left( \int 2t dt
+\right)\mathbf{k}
+\]</span> <span class="math display">\[
+= 2\sin t \mathbf{i} - \cos t \mathbf{j} + t^2 \mathbf{k} + \mathbf{C}
+\]</span> where <span class="math inline">\(\mathbf{C}\)</span> is a
+vector constant of integration, and <span class="math display">\[
+\int_0^{\pi/2} \mathbf{r}(t) dt = [2\sin t \mathbf{i} - \cos t
+\mathbf{j} + t^2 \mathbf{k}]_0^{\pi/2} = 2\mathbf{i} + \mathbf{j} +
+\frac{\pi^2}{4}\mathbf{k}
+\]</span></p>
+</body>
+</html>
