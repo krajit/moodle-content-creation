@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Curvature</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>A parametrization <span class="math inline">\(\mathbf{r}(t)\)</span>
+is called <strong>smooth</strong> on an interval I if <span
+class="math inline">\(\mathbf{r}&#39;\)</span> is continuous and <span
+class="math inline">\(\mathbf{r}&#39;(t) \neq \mathbf{0}\)</span> on I.
+A curve is called <strong>smooth</strong> if it has a smooth
+parametrization. A smooth curve has no sharp corners or cusps; when the
+tangent vector turns, it does so continuously.</p>
+<p>If C is a smooth curve defined by the vector function <span
+class="math inline">\(\mathbf{r}\)</span>, recall that the unit tangent
+vector <span class="math inline">\(\mathbf{T}(t)\)</span> is given by
+<span class="math display">\[
+\mathbf{T}(t) = \frac{\mathbf{r}&#39;(t)}{|\mathbf{r}&#39;(t)|}
+\]</span></p>
+<p><img src="image-3.png" /></p>
+<p>and indicates the direction of the curve. From Figure 4 you can see
+that <span class="math inline">\(\mathbf{T}(t)\)</span> changes
+direction very slowly when C is fairly straight, but it changes
+direction more quickly when C bends or twists more sharply.</p>
+<p>The <strong>curvature</strong> of C at a given point is a measure of
+how quickly the curve changes direction at that point. Specifically, we
+define it to be the magnitude of the rate of change of the unit tangent
+vector with respect to arc length. (We use arc length so that the
+curvature will be independent of the parametrization.) Because the unit
+tangent vector has constant length, only changes in direction contribute
+to the rate of change of <span
+class="math inline">\(\mathbf{T}\)</span>.</p>
+<blockquote>
+<p><strong>Definition 8</strong> The <strong>curvature</strong> of a
+curve is <span class="math display">\[
+\kappa = \left| \frac{d\mathbf{T}}{ds} \right|
+\]</span> where T is the unit tangent vector.</p>
+</blockquote>
+<p>The curvature is easier to compute if it is expressed in terms of the
+parameter <span class="math inline">\(t\)</span> instead of <span
+class="math inline">\(s\)</span>, so we use the Chain Rule (Theorem
+13.2.3, Formula 6) to write <span class="math display">\[
+\frac{d\mathbf{T}}{dt} = \frac{d\mathbf{T}}{ds} \frac{ds}{dt} \quad
+\text{and} \quad \kappa = \left| \frac{d\mathbf{T}}{ds} \right| = \left|
+\frac{d\mathbf{T}/dt}{ds/dt} \right|
+\]</span> But <span class="math inline">\(ds/dt =
+|\mathbf{r}&#39;(t)|\)</span> from Equation 7, so</p>
+<p><span class="math display">\[
+\kappa(t) = \frac{|\mathbf{T}&#39;(t)|}{|\mathbf{r}&#39;(t)|} \tag{9}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 3</strong> Show that the curvature of a circle of
+radius <span class="math inline">\(a\)</span> is <span
+class="math inline">\(1/a\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We can take the circle to have center the
+origin, and then a parametrization is <span class="math display">\[
+\mathbf{r}(t) = a\cos t \mathbf{i} + a\sin t \mathbf{j}
+\]</span> Therefore <span class="math display">\[
+\mathbf{r}&#39;(t) = -a\sin t \mathbf{i} + a\cos t \mathbf{j} \quad
+\text{and} \quad |\mathbf{r}&#39;(t)| = a
+\]</span> so <span class="math display">\[
+\mathbf{T}(t) = \frac{\mathbf{r}&#39;(t)}{|\mathbf{r}&#39;(t)|} = -\sin
+t \mathbf{i} + \cos t \mathbf{j}
+\]</span> and <span class="math display">\[
+\mathbf{T}&#39;(t) = -\cos t \mathbf{i} - \sin t \mathbf{j}
+\]</span> This gives <span class="math inline">\(|\mathbf{T}&#39;(t)| =
+1\)</span>, so using Formula 9, we have <span class="math display">\[
+\kappa(t) = \frac{|\mathbf{T}&#39;(t)|}{|\mathbf{r}&#39;(t)|} =
+\frac{1}{a}
+\]</span></p>
+</div>
+<hr />
+<p>The result of Example 3 shows that small circles have large curvature
+and large circles have small curvature, in accordance with our
+intuition. We can see directly from the definition of curvature that the
+curvature of a straight line is always 0 because the tangent vector is
+constant.</p>
+<p>Although Formula 9 can be used in all cases to compute the curvature,
+the formula given by the following theorem is often more convenient to
+apply.</p>
+<hr />
+<blockquote>
+<p><strong>Theorem 10</strong> The curvature of the curve given by the
+vector function <span class="math inline">\(\mathbf{r}\)</span> is <span
+class="math display">\[
+\kappa(t) = \frac{|\mathbf{r}&#39;(t) \times
+\mathbf{r}&#39;&#39;(t)|}{|\mathbf{r}&#39;(t)|^3}
+\]</span></p>
+</blockquote>
+<p><strong>PROOF</strong> Since <span class="math inline">\(\mathbf{T} =
+\mathbf{r}&#39;/|\mathbf{r}&#39;|\)</span> and <span
+class="math inline">\(|\mathbf{r}&#39;| = ds/dt\)</span>, we have <span
+class="math display">\[
+\mathbf{r}&#39; = |\mathbf{r}&#39;|\mathbf{T} = \frac{ds}{dt}\mathbf{T}
+\]</span> so the Product Rule (Theorem 13.2.3, Formula 3) gives <span
+class="math display">\[
+\mathbf{r}&#39;&#39; = \frac{d^2s}{dt^2}\mathbf{T} +
+\frac{ds}{dt}\mathbf{T}&#39;
+\]</span> Using the fact that <span class="math inline">\(\mathbf{T}
+\times \mathbf{T} = \mathbf{0}\)</span>, we have <span
+class="math display">\[
+\mathbf{r}&#39; \times \mathbf{r}&#39;&#39; =
+\left(\frac{ds}{dt}\right)^2(\mathbf{T} \times \mathbf{T}&#39;)
+\]</span> Now <span class="math inline">\(|\mathbf{T}(t)| = 1\)</span>
+for all <span class="math inline">\(t\)</span>, so <span
+class="math inline">\(\mathbf{T}\)</span> and <span
+class="math inline">\(\mathbf{T}&#39;\)</span> are orthogonal by Example
+13.2.4. Therefore, by Theorem 12.4.9, <span class="math display">\[
+|\mathbf{r}&#39; \times \mathbf{r}&#39;&#39;| =
+\left(\frac{ds}{dt}\right)^2 |\mathbf{T} \times \mathbf{T}&#39;| =
+\left(\frac{ds}{dt}\right)^2 |\mathbf{T}||\mathbf{T}&#39;| =
+\left(\frac{ds}{dt}\right)^2 |\mathbf{T}&#39;|
+\]</span> Thus <span class="math display">\[
+|\mathbf{T}&#39;| = \frac{|\mathbf{r}&#39; \times
+\mathbf{r}&#39;&#39;|}{(ds/dt)^2} = \frac{|\mathbf{r}&#39; \times
+\mathbf{r}&#39;&#39;|}{|\mathbf{r}&#39;|^2}
+\]</span> and <span class="math display">\[
+\kappa = \frac{|\mathbf{T}&#39;|}{|\mathbf{r}&#39;|} =
+\frac{|\mathbf{r}&#39; \times
+\mathbf{r}&#39;&#39;|}{|\mathbf{r}&#39;|^3}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 4</strong> Find the curvature of the twisted cubic
+<span class="math inline">\(\mathbf{r}(t) = \langle t, t^2, t^3
+\rangle\)</span> at a general point and at <span
+class="math inline">\((0, 0, 0)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We first compute the required ingredients:
+<span class="math display">\[
+\mathbf{r}&#39;(t) = \langle 1, 2t, 3t^2 \rangle \qquad
+\mathbf{r}&#39;&#39;(t) = \langle 0, 2, 6t \rangle
+\]</span> <span class="math display">\[
+|\mathbf{r}&#39;(t)| = \sqrt{1 + 4t^2 + 9t^4}
+\]</span> <span class="math display">\[
+\mathbf{r}&#39;(t) \times \mathbf{r}&#39;&#39;(t) = \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 1 &amp; 2t &amp; 3t^2 \\
+0 &amp; 2 &amp; 6t \end{vmatrix} = 6t^2\mathbf{i} - 6t\mathbf{j} +
+2\mathbf{k}
+\]</span> <span class="math display">\[
+|\mathbf{r}&#39;(t) \times \mathbf{r}&#39;&#39;(t)| = \sqrt{36t^4 +
+36t^2 + 4} = 2\sqrt{9t^4 + 9t^2 + 1}
+\]</span> Theorem 10 then gives <span class="math display">\[
+\kappa(t) = \frac{|\mathbf{r}&#39;(t) \times
+\mathbf{r}&#39;&#39;(t)|}{|\mathbf{r}&#39;(t)|^3} =
+\frac{2\sqrt{1+9t^2+9t^4}}{(1+4t^2+9t^4)^{3/2}}
+\]</span> At the origin, where <span class="math inline">\(t=0\)</span>,
+the curvature is <span class="math inline">\(\kappa(0) = 2\)</span>.</p>
+</div>
+<hr />
+<h2 id="curvature-of-graphs">Curvature of graphs</h2>
+<p>For the special case of a plane curve with equation <span
+class="math inline">\(y=f(x)\)</span>, we choose <span
+class="math inline">\(x\)</span> as the parameter and write <span
+class="math inline">\(\mathbf{r}(x) = x\mathbf{i} +
+f(x)\mathbf{j}\)</span>. Then <span
+class="math inline">\(\mathbf{r}&#39;(x) = \mathbf{i} +
+f&#39;(x)\mathbf{j}\)</span> and <span
+class="math inline">\(\mathbf{r}&#39;&#39;(x) =
+f&#39;&#39;(x)\mathbf{j}\)</span>. Since <span
+class="math inline">\(\mathbf{i} \times \mathbf{j} = \mathbf{k}\)</span>
+and <span class="math inline">\(\mathbf{j} \times \mathbf{j} =
+\mathbf{0}\)</span>, it follows that <span
+class="math inline">\(\mathbf{r}&#39;(x) \times \mathbf{r}&#39;&#39;(x)
+= f&#39;&#39;(x)\mathbf{k}\)</span>. We also have <span
+class="math inline">\(|\mathbf{r}&#39;(x)| =
+\sqrt{1+[f&#39;(x)]^2}\)</span> and so, by Theorem 10,</p>
+<p><span class="math display">\[
+\kappa(x) = \frac{|f&#39;&#39;(x)|}{[1+(f&#39;(x))^2]^{3/2}} \tag{11}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 5</strong> Find the curvature of the parabola <span
+class="math inline">\(y=x^2\)</span> at the points <span
+class="math inline">\((0, 0)\)</span>, <span class="math inline">\((1,
+1)\)</span>, and <span class="math inline">\((2, 4)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since <span class="math inline">\(y&#39; =
+2x\)</span> and <span class="math inline">\(y&#39;&#39; = 2\)</span>,
+Formula 11 gives <span class="math display">\[
+\kappa(x) = \frac{|y&#39;&#39;|}{[1+(y&#39;)^2]^{3/2}} =
+\frac{2}{(1+4x^2)^{3/2}}
+\]</span> The curvature at <span class="math inline">\((0, 0)\)</span>
+is <span class="math inline">\(\kappa(0) = 2\)</span>. At <span
+class="math inline">\((1, 1)\)</span> it is <span
+class="math inline">\(\kappa(1) = 2/5^{3/2} \approx 0.18\)</span>. At
+<span class="math inline">\((2, 4)\)</span> it is <span
+class="math inline">\(\kappa(2) = 2/17^{3/2} \approx 0.03\)</span>.
+Observe from the expression for <span
+class="math inline">\(\kappa(x)\)</span> or the graph of <span
+class="math inline">\(\kappa\)</span> in Figure 5 that <span
+class="math inline">\(\kappa(x) \to 0\)</span> as <span
+class="math inline">\(x \to \pm\infty\)</span>. This corresponds to the
+fact that the parabola appears to become flatter as <span
+class="math inline">\(x \to \pm\infty\)</span>.</p>
+<p><img src="image-4.png" /></p>
+</div>
+</body>
+</html>

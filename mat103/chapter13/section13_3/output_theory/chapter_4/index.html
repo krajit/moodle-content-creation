@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>The Normal and Binormal Vectors</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>At a given point on a smooth space curve <span
+class="math inline">\(\mathbf{r}(t)\)</span>, there are many vectors
+that are orthogonal to the unit tangent vector <span
+class="math inline">\(\mathbf{T}(t)\)</span>. We single out one by
+observing that, because <span
+class="math inline">\(|\mathbf{T}(t)|=1\)</span> for all <span
+class="math inline">\(t\)</span>, we have <span
+class="math inline">\(\mathbf{T}(t) \cdot \mathbf{T}&#39;(t) =
+0\)</span> by Example 13.2.4, so <span
+class="math inline">\(\mathbf{T}&#39;(t)\)</span> is orthogonal to <span
+class="math inline">\(\mathbf{T}(t)\)</span>. Note that, typically,
+<span class="math inline">\(\mathbf{T}&#39;(t)\)</span> is itself not a
+unit vector. But at any point where <span class="math inline">\(\kappa
+\neq 0\)</span> we can define the <strong>principal unit normal
+vector</strong> <span class="math inline">\(\mathbf{N}(t)\)</span> (or
+simply <strong>unit normal</strong>) as <span class="math display">\[
+\mathbf{N}(t) = \frac{\mathbf{T}&#39;(t)}{|\mathbf{T}&#39;(t)|}
+\]</span> We can think of the unit normal vector as indicating the
+direction in which the curve is turning at each point. The vector <span
+class="math inline">\(\mathbf{B}(t) = \mathbf{T}(t) \times
+\mathbf{N}(t)\)</span> is called the <strong>binormal vector</strong>.
+It is perpendicular to both <span
+class="math inline">\(\mathbf{T}\)</span> and <span
+class="math inline">\(\mathbf{N}\)</span> and is also a unit vector.
+(See Figure 6.)</p>
+<p><img src="image-5.png" /></p>
+<hr />
+<p><strong>EXAMPLE 6</strong> Find the unit normal and binormal vectors
+for the circular helix <span class="math display">\[
+\mathbf{r}(t) = \cos t \mathbf{i} + \sin t \mathbf{j} + t \mathbf{k}
+\]</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> We first compute the ingredients needed for
+the unit normal vector: <span class="math display">\[
+\mathbf{r}&#39;(t) = -\sin t \mathbf{i} + \cos t \mathbf{j} + \mathbf{k}
+\qquad |\mathbf{r}&#39;(t)| = \sqrt{2}
+\]</span> <span class="math display">\[
+\mathbf{T}(t) = \frac{\mathbf{r}&#39;(t)}{|\mathbf{r}&#39;(t)|} =
+\frac{1}{\sqrt{2}}(-\sin t \mathbf{i} + \cos t \mathbf{j} + \mathbf{k})
+\]</span> <span class="math display">\[
+\mathbf{T}&#39;(t) = \frac{1}{\sqrt{2}}(-\cos t \mathbf{i} - \sin t
+\mathbf{j}) \qquad |\mathbf{T}&#39;(t)| = \frac{1}{\sqrt{2}}
+\]</span> <span class="math display">\[
+\mathbf{N}(t) = \frac{\mathbf{T}&#39;(t)}{|\mathbf{T}&#39;(t)|} = -\cos
+t \mathbf{i} - \sin t \mathbf{j} = \langle -\cos t, -\sin t, 0 \rangle
+\]</span> This shows that the normal vector at any point on the helix is
+horizontal and points toward the z-axis. The binormal vector is <span
+class="math display">\[
+\mathbf{B}(t) = \mathbf{T}(t) \times \mathbf{N}(t) = \frac{1}{\sqrt{2}}
+\begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ -\sin t
+&amp; \cos t &amp; 1 \\ -\cos t &amp; -\sin t &amp; 0 \end{vmatrix} =
+\frac{1}{\sqrt{2}}\langle \sin t, -\cos t, 1 \rangle
+\]</span></p>
+</div>
+<hr />
+<h1 id="normal-plane-osculating-plane">Normal Plane &amp; Osculating
+Plane</h1>
+<p>The plane determined by the normal and binormal vectors <span
+class="math inline">\(\mathbf{N}\)</span> and <span
+class="math inline">\(\mathbf{B}\)</span> at a point P on a curve C is
+called the <strong>normal plane</strong> of C at P. It consists of all
+lines that are orthogonal to the tangent vector <span
+class="math inline">\(\mathbf{T}\)</span>. The plane determined by the
+vectors <span class="math inline">\(\mathbf{T}\)</span> and <span
+class="math inline">\(\mathbf{N}\)</span> is called the
+<strong>osculating plane</strong> of C at P. The name comes from the
+Latin <em>osculum</em>, meaning “kiss.” It is the plane that comes
+closest to containing the part of the curve near P. (For a plane curve,
+the osculating plane is simply the plane that contains the curve.)</p>
+<p>The circle that lies in the osculating plane of C at P, has the same
+tangent as C at P, lies on the concave side of C (toward which <span
+class="math inline">\(\mathbf{N}\)</span> points), and has radius <span
+class="math inline">\(\rho = 1/\kappa\)</span> (the reciprocal of the
+curvature) is called the <strong>osculating circle</strong> (or the
+<strong>circle of curvature</strong>) of C at P. It is the circle that
+best describes how C behaves near P; it shares the same tangent, normal,
+and curvature at P.</p>
+<hr />
+<p><strong>EXAMPLE 7</strong> Find equations of the normal plane and
+osculating plane of the helix in Example 6 at the point <span
+class="math inline">\(P(0, 1, \pi/2)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-6.png" /></p>
+<p><strong>SOLUTION</strong> The point P corresponds to <span
+class="math inline">\(t=\pi/2\)</span> and the normal plane there has
+normal vector <span class="math inline">\(\mathbf{r}&#39;(\pi/2) =
+\langle -1, 0, 1 \rangle\)</span>, so an equation is <span
+class="math display">\[
+-1(x-0) + 0(y-1) + 1(z-\pi/2) = 0 \quad \text{or} \quad z = x + \pi/2
+\]</span> The osculating plane at P contains the vectors <span
+class="math inline">\(\mathbf{T}\)</span> and <span
+class="math inline">\(\mathbf{N}\)</span>, so its normal vector is <span
+class="math inline">\(\mathbf{T} \times \mathbf{N} =
+\mathbf{B}\)</span>. From Example 6 we have <span
+class="math display">\[
+\mathbf{B}(t) = \frac{1}{\sqrt{2}}\langle \sin t, -\cos t, 1 \rangle
+\qquad \mathbf{B}(\pi/2) = \langle \frac{1}{\sqrt{2}}, 0,
+\frac{1}{\sqrt{2}} \rangle
+\]</span> A simpler normal vector is <span class="math inline">\(\langle
+1, 0, 1 \rangle\)</span>, so an equation of the osculating plane is
+<span class="math display">\[
+1(x-0) + 0(y-1) + 1(z-\pi/2) = 0 \quad \text{or} \quad z = -x + \pi/2
+\]</span></p>
+</div>
+<hr />
+<p><strong>EXAMPLE 8</strong> Find and graph the osculating circle of
+the parabola <span class="math inline">\(y=x^2\)</span> at the
+origin.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-7.png" /></p>
+<p><strong>SOLUTION</strong> From Example 5, the curvature of the
+parabola at the origin is <span
+class="math inline">\(\kappa(0)=2\)</span>. So the radius of the
+osculating circle at the origin is <span class="math inline">\(1/\kappa
+= 1/2\)</span> and its center is <span class="math inline">\((0,
+1/2)\)</span>. Its equation is therefore <span class="math display">\[
+x^2 + (y - 1/2)^2 = 1/4
+\]</span> For the graph in Figure 9 we use parametric equations of this
+circle: <span class="math display">\[
+x = \frac{1}{2}\cos t \qquad y = \frac{1}{2} + \frac{1}{2}\sin t
+\]</span></p>
+</div>
+</body>
+</html>

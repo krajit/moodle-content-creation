@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Length of a Curve</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>In Section 10.2 we defined the length of a plane curve with
+parametric equations <span class="math inline">\(x = f(t)\)</span>,
+<span class="math inline">\(y = g(t)\)</span>, <span
+class="math inline">\(a \le t \le b\)</span>, as the limit of lengths of
+inscribed polygons and, for the case where <span
+class="math inline">\(f&#39;\)</span> and <span
+class="math inline">\(g&#39;\)</span> are continuous, we arrived at the
+formula</p>
+<p><span class="math display">\[
+L = \int_a^b \sqrt{[f&#39;(t)]^2 + [g&#39;(t)]^2} dt = \int_a^b
+\sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} dt
+\tag{1}
+\]</span></p>
+<p><img src="image.png" /></p>
+<p>The length of a space curve is defined in exactly the same way (see
+Figure 1). Suppose that the curve has the vector equation <span
+class="math inline">\(\mathbf{r}(t) = \langle f(t), g(t), h(t)
+\rangle\)</span>, <span class="math inline">\(a \le t \le b\)</span>,
+or, equivalently, the parametric equations <span class="math inline">\(x
+= f(t)\)</span>, <span class="math inline">\(y = g(t)\)</span>, <span
+class="math inline">\(z = h(t)\)</span>, where <span
+class="math inline">\(f&#39;\)</span>, <span
+class="math inline">\(g&#39;\)</span>, and <span
+class="math inline">\(h&#39;\)</span> are continuous. If the curve is
+traversed exactly once as <span class="math inline">\(t\)</span>
+increases from <span class="math inline">\(a\)</span> to <span
+class="math inline">\(b\)</span>, then it can be shown that its length
+is</p>
+<p><span class="math display">\[
+L = \int_a^b \sqrt{[f&#39;(t)]^2 + [g&#39;(t)]^2 + [h&#39;(t)]^2} dt
+\tag{2}
+\]</span></p>
+<p><span class="math display">\[
+= \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 +
+\left(\frac{dy}{dt}\right)^2 + \left(\frac{dz}{dt}\right)^2} dt
+\]</span></p>
+<p>Notice that both of the arc length formulas (1) and (2) can be put
+into the more compact form</p>
+<p><span class="math display">\[
+L = \int_a^b |\mathbf{r}&#39;(t)| dt \tag{3}
+\]</span></p>
+<p>because, for plane curves <span class="math inline">\(\mathbf{r}(t) =
+f(t)\mathbf{i} + g(t)\mathbf{j}\)</span>, <span class="math display">\[
+|\mathbf{r}&#39;(t)| = |f&#39;(t)\mathbf{i} + g&#39;(t)\mathbf{j}| =
+\sqrt{[f&#39;(t)]^2 + [g&#39;(t)]^2}
+\]</span> and for space curves <span class="math inline">\(\mathbf{r}(t)
+= f(t)\mathbf{i} + g(t)\mathbf{j} + h(t)\mathbf{k}\)</span>, <span
+class="math display">\[
+|\mathbf{r}&#39;(t)| = |f&#39;(t)\mathbf{i} + g&#39;(t)\mathbf{j} +
+h&#39;(t)\mathbf{k}| = \sqrt{[f&#39;(t)]^2 + [g&#39;(t)]^2 +
+[h&#39;(t)]^2}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 1</strong> Find the length of the arc of the circular
+helix with vector equation <span class="math inline">\(\mathbf{r}(t) =
+\cos t \mathbf{i} + \sin t \mathbf{j} + t \mathbf{k}\)</span> from the
+point <span class="math inline">\((1, 0, 0)\)</span> to the point <span
+class="math inline">\((1, 0, 2\pi)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-1.png" /></p>
+<p><strong>SOLUTION</strong> Since <span
+class="math inline">\(\mathbf{r}&#39;(t) = -\sin t \mathbf{i} + \cos t
+\mathbf{j} + \mathbf{k}\)</span>, we have <span class="math display">\[
+|\mathbf{r}&#39;(t)| = \sqrt{(-\sin t)^2 + \cos^2 t + 1} = \sqrt{2}
+\]</span> The arc from <span class="math inline">\((1, 0, 0)\)</span> to
+<span class="math inline">\((1, 0, 2\pi)\)</span> is described by the
+parameter interval <span class="math inline">\(0 \le t \le 2\pi\)</span>
+and so, from Formula 3, we have <span class="math display">\[
+L = \int_0^{2\pi} |\mathbf{r}&#39;(t)| dt = \int_0^{2\pi} \sqrt{2} dt =
+2\sqrt{2}\pi
+\]</span></p>
+</div>
+</body>
+</html>

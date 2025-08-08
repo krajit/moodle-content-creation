@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Arc Length Function</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>A single curve C can be represented by more than one vector function.
+For instance, the twisted cubic <span class="math display">\[
+\mathbf{r}_1(t) = \langle t, t^2, t^3 \rangle \qquad 1 \le t \le 2
+\tag{4}
+\]</span> could also be represented by the function <span
+class="math display">\[
+\mathbf{r}_2(u) = \langle e^u, e^{2u}, e^{3u} \rangle \qquad 0 \le u \le
+\ln 2 \tag{5}
+\]</span> where the connection between the parameters <span
+class="math inline">\(t\)</span> and <span
+class="math inline">\(u\)</span> is given by <span
+class="math inline">\(t=e^u\)</span>. We say that Equations 4 and 5 are
+<strong>parametrizations</strong> of the curve C. If we were to use
+Equation 3 to compute the length of C using Equations 4 and 5, we would
+get the same answer. In general, it can be shown that when Equation 3 is
+used to compute arc length, the answer is independent of the
+parametrization that is used.</p>
+<h3 id="the-arc-length-function">The Arc Length Function</h3>
+<p>Now we suppose that C is a curve given by a vector function <span
+class="math display">\[
+\mathbf{r}(t) = f(t)\mathbf{i} + g(t)\mathbf{j} + h(t)\mathbf{k} \qquad
+a \le t \le b
+\]</span> where <span class="math inline">\(\mathbf{r}&#39;\)</span> is
+continuous and C is traversed exactly once as <span
+class="math inline">\(t\)</span> increases from <span
+class="math inline">\(a\)</span> to <span
+class="math inline">\(b\)</span>. We define its <strong>arc length
+function</strong> s by</p>
+<p><span class="math display">\[
+s(t) = \int_a^t |\mathbf{r}&#39;(u)| du = \int_a^t
+\sqrt{\left(\frac{dx}{du}\right)^2 + \left(\frac{dy}{du}\right)^2 +
+\left(\frac{dz}{du}\right)^2} du \tag{6}
+\]</span></p>
+<p>Thus <span class="math inline">\(s(t)\)</span> is the length of the
+part of C between <span class="math inline">\(\mathbf{r}(a)\)</span> and
+<span class="math inline">\(\mathbf{r}(t)\)</span>. (See Figure 3.) If
+we differentiate both sides of Equation 6 using Part 1 of the
+Fundamental Theorem of Calculus, we obtain</p>
+<p><img src="image-2.png" /></p>
+<p><span class="math display">\[
+\frac{ds}{dt} = |\mathbf{r}&#39;(t)| \tag{7}
+\]</span></p>
+<p>It is often useful to <strong>parametrize a curve with respect to arc
+length</strong> because arc length arises naturally from the shape of
+the curve and does not depend on a particular coordinate system. If a
+curve <span class="math inline">\(\mathbf{r}(t)\)</span> is already
+given in terms of a parameter <span class="math inline">\(t\)</span> and
+<span class="math inline">\(s(t)\)</span> is the arc length function
+given by Equation 6, then we may be able to solve for <span
+class="math inline">\(t\)</span> as a function of <span
+class="math inline">\(s\)</span>: <span class="math inline">\(t =
+t(s)\)</span>. Then the curve can be reparametrized in terms of <span
+class="math inline">\(s\)</span> by substituting for <span
+class="math inline">\(t\)</span>: <span class="math inline">\(\mathbf{r}
+= \mathbf{r}(t(s))\)</span>. Thus, if <span
+class="math inline">\(s=3\)</span> for instance, <span
+class="math inline">\(\mathbf{r}(t(3))\)</span> is the position vector
+of the point 3 units of length along the curve from its starting
+point.</p>
+<hr />
+<p><strong>EXAMPLE 2</strong> Reparametrize the helix <span
+class="math inline">\(\mathbf{r}(t) = \cos t \mathbf{i} + \sin t
+\mathbf{j} + t \mathbf{k}\)</span> with respect to arc length measured
+from <span class="math inline">\((1, 0, 0)\)</span> in the direction of
+increasing <span class="math inline">\(t\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> The initial point <span
+class="math inline">\((1, 0, 0)\)</span> corresponds to the parameter
+value <span class="math inline">\(t=0\)</span>. From Example 1 we have
+<span class="math display">\[
+\frac{ds}{dt} = |\mathbf{r}&#39;(t)| = \sqrt{2}
+\]</span> and so <span class="math display">\[
+s = s(t) = \int_0^t |\mathbf{r}&#39;(u)| du = \int_0^t \sqrt{2} du =
+\sqrt{2}t
+\]</span> Therefore <span class="math inline">\(t = s/\sqrt{2}\)</span>
+and the required reparametrization is obtained by substituting for <span
+class="math inline">\(t\)</span>: <span class="math display">\[
+\mathbf{r}(t(s)) = \cos(s/\sqrt{2})\mathbf{i} +
+\sin(s/\sqrt{2})\mathbf{j} + (s/\sqrt{2})\mathbf{k}
+\]</span></p>
+</div>
+</body>
+</html>
