@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cylindrical Coordinates</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>In plane geometry the polar coordinate system is used to give a
+convenient description of certain curves and regions. (See Section
+10.3.)</p>
+<p><img src="image.png" /></p>
+<p>Figure 1 enables us to recall the connection between polar and
+Cartesian coordinates. If the point P has Cartesian coordinates <span
+class="math inline">\((x, y)\)</span> and polar coordinates <span
+class="math inline">\((r, \theta)\)</span>, then, from the figure,</p>
+<p><span class="math display">\[
+x = r \cos \theta \qquad y = r \sin \theta
+\]</span></p>
+<p><span class="math display">\[
+r^2 = x^2 + y^2 \qquad \tan \theta = \frac{y}{x}
+\]</span></p>
+<p>In three dimensions there is a coordinate system, called
+<strong>cylindrical coordinates</strong>, that is similar to polar
+coordinates and gives convenient descriptions of some commonly occurring
+surfaces and solids. As we will see, some triple integrals are much
+easier to evaluate in cylindrical coordinates.</p>
+<h2 id="cylindrical-coordinates">Cylindrical Coordinates</h2>
+<p>In the cylindrical coordinate system, a point P in three-dimensional
+space is represented by the ordered triple <span
+class="math inline">\((r, \theta, z)\)</span>, where r and <span
+class="math inline">\(\theta\)</span> are polar coordinates of the
+projection of P onto the xy-plane and z is the directed distance from
+the xy-plane to P. (See Figure 2.)</p>
+<p><img src="image-1.png" /></p>
+<p>To convert from cylindrical to rectangular coordinates, we use the
+equations</p>
+<p><span class="math display">\[
+x = r \cos \theta \qquad y = r \sin \theta \qquad z = z \tag{1}
+\]</span></p>
+<p>whereas to convert from rectangular to cylindrical coordinates, we
+use</p>
+<p><span class="math display">\[
+r^2 = x^2 + y^2 \qquad \tan \theta = \frac{y}{x} \qquad z = z \tag{2}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 1</strong> (a) Plot the point with cylindrical
+coordinates <span class="math inline">\((2, 2\pi/3, 1)\)</span> and find
+its rectangular coordinates. (b) Find cylindrical coordinates of the
+point with rectangular coordinates <span class="math inline">\((3, -3,
+-7)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong></p>
+<p><img src="image-2.png" /></p>
+<ol type="a">
+<li>The point with cylindrical coordinates <span
+class="math inline">\((2, 2\pi/3, 1)\)</span> is plotted in Figure 3.
+From Equations 1, its rectangular coordinates are <span
+class="math display">\[
+x = 2 \cos \frac{2\pi}{3} = 2\left(-\frac{1}{2}\right) = -1
+\]</span> <span class="math display">\[
+y = 2 \sin \frac{2\pi}{3} = 2\left(\frac{\sqrt{3}}{2}\right) = \sqrt{3}
+\]</span> <span class="math display">\[
+z = 1
+\]</span> So the point is <span class="math inline">\((-1, \sqrt{3},
+1)\)</span> in rectangular coordinates.</li>
+<li>From Equations 2 we have <span class="math display">\[
+r = \sqrt{3^2 + (-3)^2} = 3\sqrt{2}
+\]</span> <span class="math display">\[
+\tan \theta = \frac{-3}{3} = -1 \quad \text{so} \quad \theta =
+\frac{7\pi}{4} + 2n\pi
+\]</span> <span class="math display">\[
+z = -7
+\]</span> Therefore one set of cylindrical coordinates is <span
+class="math inline">\((3\sqrt{2}, 7\pi/4, -7)\)</span>. Another is <span
+class="math inline">\((3\sqrt{2}, -\pi/4, -7)\)</span>. As with polar
+coordinates, there are infinitely many choices.</li>
+</ol>
+</div>
+</body>
+</html>

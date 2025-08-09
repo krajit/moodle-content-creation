@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Equation of surfaces in Cylindrical Coordinates</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Cylindrical coordinates are useful in problems that involve symmetry
+about an axis, and the z-axis is chosen to coincide with this axis of
+symmetry. For instance, the axis of the circular cylinder with Cartesian
+equation <span class="math inline">\(x^2 + y^2 = c^2\)</span> is the
+z-axis. In cylindrical coordinates this cylinder has the very simple
+equation <span class="math inline">\(r=c\)</span>. (See Figure 4.) This
+is the reason for the name “cylindrical” coordinates.</p>
+<p><img src="image-3.png" /></p>
+<hr />
+<p><strong>EXAMPLE 2</strong> Describe the surface whose equation in
+cylindrical coordinates is <span class="math inline">\(z=r\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong></p>
+<p><img src="image-4.png" /></p>
+<p>The equation says that the z-value, or height, of each point on the
+surface is the same as r, the distance from the point to the z-axis.
+Because <span class="math inline">\(\theta\)</span> doesn’t appear, it
+can vary. So any horizontal trace in the plane <span
+class="math inline">\(z=k\)</span> (<span
+class="math inline">\(k&gt;0\)</span>) is a circle of radius k. These
+traces suggest that the surface is a cone. This prediction can be
+confirmed by converting the equation into rectangular coordinates. From
+the first equation in (2) we have <span class="math display">\[
+z^2 = r^2 = x^2 + y^2
+\]</span> We recognize the equation <span class="math inline">\(z^2 =
+x^2 + y^2\)</span> (by comparison with Table 1 in Section 12.6) as being
+a circular cone whose axis is the z-axis (see Figure 5).</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Evaluating Triple Integrals with Cylindrical Coordinates</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Suppose that E is a type 1 region whose projection D onto the
+xy-plane is conveniently described in polar coordinates (see Figure
+6).</p>
+<p><img src="image-5.png" /></p>
+<p>In particular, suppose that f is continuous and <span
+class="math display">\[
+E = \{(x, y, z) | (x, y) \in D, u_1(x, y) \le z \le u_2(x, y)\}
+\]</span> where D is given in polar coordinates by <span
+class="math display">\[
+D = \{(r, \theta) | \alpha \le \theta \le \beta, h_1(\theta) \le r \le
+h_2(\theta)\}
+\]</span> We know from Equation 15.6.6 that</p>
+<p><span class="math display">\[
+\iiint_E f(x, y, z) dV = \iint_D \left[ \int_{u_1(x,y)}^{u_2(x,y)} f(x,
+y, z) dz \right] dA \tag{3}
+\]</span></p>
+<p>But we also know how to evaluate double integrals in polar
+coordinates. In fact, combining Equation 3 with Equation 15.3.3, we
+obtain</p>
+<blockquote>
+<p><span class="math display">\[
+\iiint_E f(x, y, z) dV = \int_\alpha^\beta
+\int_{h_1(\theta)}^{h_2(\theta)} \int_{u_1(r\cos\theta,
+r\sin\theta)}^{u_2(r\cos\theta, r\sin\theta)} f(r\cos\theta,
+r\sin\theta, z) r dz dr d\theta \tag{4}
+\]</span></p>
+</blockquote>
+<p>Formula 4 is the formula for triple integration in cylindrical
+coordinates. It says that we convert a triple integral from rectangular
+to cylindrical coordinates by writing <span class="math inline">\(x =
+r\cos\theta\)</span>, <span class="math inline">\(y =
+r\sin\theta\)</span>, leaving z as it is, using the appropriate limits
+of integration for z, r, and <span
+class="math inline">\(\theta\)</span>, and replacing dV by <span
+class="math inline">\(r dz dr d\theta\)</span>. (Figure 7 shows how to
+remember this.) It is worthwhile to use this formula when E is a solid
+region easily described in cylindrical coordinates, and especially when
+the function <span class="math inline">\(f(x, y, z)\)</span> involves
+the expression <span class="math inline">\(x^2 + y^2\)</span>.</p>
+<p><img src="image-6.png" /></p>
+<hr />
+<p><strong>EXAMPLE 3</strong> A solid E lies within the cylinder <span
+class="math inline">\(x^2 + y^2 = 1\)</span>, below the plane <span
+class="math inline">\(z=4\)</span>, and above the paraboloid <span
+class="math inline">\(z = 1 - x^2 - y^2\)</span>. (See Figure 8.) The
+density at any point is proportional to its distance from the axis of
+the cylinder. Find the mass of E.</p>
+<p><img src="image-7.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> In cylindrical coordinates the cylinder is
+<span class="math inline">\(r=1\)</span> and the paraboloid is <span
+class="math inline">\(z = 1 - r^2\)</span>, so we can write <span
+class="math display">\[
+E = \{(r, \theta, z) | 0 \le \theta \le 2\pi, 0 \le r \le 1, 1-r^2 \le z
+\le 4\}
+\]</span> Since the density at <span class="math inline">\((x, y,
+z)\)</span> is proportional to the distance from the z-axis, the density
+function is <span class="math display">\[
+f(x, y, z) = K\sqrt{x^2+y^2} = Kr
+\]</span> where K is the proportionality constant. Therefore, from
+Formula 15.6.13, the mass of E is <span class="math display">\[
+m = \iiint_E K\sqrt{x^2+y^2} dV = \int_0^{2\pi} \int_0^1 \int_{1-r^2}^4
+(Kr) r dz dr d\theta
+\]</span> <span class="math display">\[
+= \int_0^{2\pi} \int_0^1 Kr^2[z]_{1-r^2}^4 dr d\theta = \int_0^{2\pi}
+\int_0^1 Kr^2[4-(1-r^2)] dr d\theta
+\]</span> <span class="math display">\[
+= K \int_0^{2\pi} d\theta \int_0^1 (3r^2+r^4) dr = 2\pi K \left[r^3 +
+\frac{r^5}{5}\right]_0^1 = 2\pi K \left(1 + \frac{1}{5}\right) =
+\frac{12\pi K}{5}
+\]</span></p>
+</div>
+<hr />
+<p><strong>EXAMPLE 4</strong> Evaluate <span
+class="math inline">\(\int_{-2}^2 \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}
+\int_{\sqrt{x^2+y^2}}^2 (x^2+y^2) dz dy dx\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> This iterated integral is a triple integral
+over the solid region <span class="math display">\[
+E = \{(x, y, z) | -2 \le x \le 2, -\sqrt{4-x^2} \le y \le \sqrt{4-x^2},
+\sqrt{x^2+y^2} \le z \le 2\}
+\]</span> and the projection of E onto the xy-plane is the disk <span
+class="math inline">\(x^2+y^2 \le 4\)</span>. The lower surface of E is
+the cone <span class="math inline">\(z = \sqrt{x^2+y^2}\)</span> and its
+upper surface is the plane <span class="math inline">\(z=2\)</span>.
+(See Figure 9.)</p>
+<p><img src="image-8.png" /></p>
+<p>This region has a much simpler description in cylindrical
+coordinates: <span class="math display">\[
+E = \{(r, \theta, z) | 0 \le \theta \le 2\pi, 0 \le r \le 2, r \le z \le
+2\}
+\]</span> Therefore we have <span class="math display">\[
+\int_{-2}^2 \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}} \int_{\sqrt{x^2+y^2}}^2
+(x^2+y^2) dz dy dx = \iiint_E (x^2+y^2) dV
+\]</span> <span class="math display">\[
+= \int_0^{2\pi} \int_0^2 \int_r^2 r^2 r dz dr d\theta = \int_0^{2\pi}
+\int_0^2 r^3[z]_r^2 dr d\theta
+\]</span> <span class="math display">\[
+= \int_0^{2\pi} d\theta \int_0^2 r^3(2-r) dr = 2\pi \left[
+\frac{1}{2}r^4 - \frac{1}{5}r^5 \right]_0^2 = 2\pi\left(8 -
+\frac{32}{5}\right) = \frac{16\pi}{5}
+\]</span></p>
+</div>
+</body>
+</html>
