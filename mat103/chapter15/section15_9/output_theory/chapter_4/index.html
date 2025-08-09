@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Change of Variables in Triple Integrals</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>There is a similar change of variables formula for triple integrals.
+Let T be a transformation that maps a region S in uvw-space onto a
+region R in xyz-space by means of the equations <span
+class="math display">\[
+x = g(u, v, w) \qquad y = h(u, v, w) \qquad z = k(u, v, w)
+\]</span> The <strong>Jacobian</strong> of T is the following <span
+class="math inline">\(3 \times 3\)</span> determinant:</p>
+<p><span class="math display">\[
+\frac{\partial(x, y, z)}{\partial(u, v, w)} = \begin{vmatrix}
+\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial v} &amp;
+\frac{\partial x}{\partial w} \\ \frac{\partial y}{\partial u} &amp;
+\frac{\partial y}{\partial v} &amp; \frac{\partial y}{\partial w} \\
+\frac{\partial z}{\partial u} &amp; \frac{\partial z}{\partial v} &amp;
+\frac{\partial z}{\partial w} \end{vmatrix} \tag{12}
+\]</span></p>
+<p>Under hypotheses similar to those in Theorem 9, we have the following
+formula for triple integrals:</p>
+<p><span class="math display">\[
+\iiint_R f(x, y, z) dV = \iiint_S f(x(u,v,w), y(u,v,w), z(u,v,w)) \left|
+\frac{\partial(x,y,z)}{\partial(u,v,w)} \right| du dv dw \tag{13}
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 4</strong> Use Formula 13 to derive the formula for
+triple integration in spherical coordinates.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Here the change of variables is given by
+<span class="math display">\[
+x = \rho\sin\phi\cos\theta \qquad y = \rho\sin\phi\sin\theta \qquad z =
+\rho\cos\phi
+\]</span> We compute the Jacobian as follows: <span
+class="math display">\[
+\frac{\partial(x, y, z)}{\partial(\rho, \theta, \phi)} = \begin{vmatrix}
+\sin\phi\cos\theta &amp; -\rho\sin\phi\sin\theta &amp;
+\rho\cos\phi\cos\theta \\ \sin\phi\sin\theta &amp;
+\rho\sin\phi\cos\theta &amp; \rho\cos\phi\sin\theta \\ \cos\phi &amp; 0
+&amp; -\rho\sin\phi \end{vmatrix}
+\]</span> <span class="math display">\[
+= \cos\phi \begin{vmatrix} -\rho\sin\phi\sin\theta &amp;
+\rho\cos\phi\cos\theta \\ \rho\sin\phi\cos\theta &amp;
+\rho\cos\phi\sin\theta \end{vmatrix} - \rho\sin\phi \begin{vmatrix}
+\sin\phi\cos\theta &amp; -\rho\sin\phi\sin\theta \\ \sin\phi\sin\theta
+&amp; \rho\sin\phi\cos\theta \end{vmatrix}
+\]</span> <span class="math display">\[
+= \cos\phi(-\rho^2\sin\phi\cos\phi\sin^2\theta -
+\rho^2\sin\phi\cos\phi\cos^2\theta) -
+\rho\sin\phi(\rho\sin^2\phi\cos^2\theta + \rho\sin^2\phi\sin^2\theta)
+\]</span> <span class="math display">\[
+= -\rho^2\sin\phi\cos^2\phi - \rho^2\sin^3\phi = -\rho^2\sin\phi
+\]</span> Since <span class="math inline">\(0 \le \phi \le \pi\)</span>,
+we have <span class="math inline">\(\sin\phi \ge 0\)</span>. Therefore
+<span class="math display">\[
+\left| \frac{\partial(x, y, z)}{\partial(\rho, \theta, \phi)} \right| =
+|-\rho^2\sin\phi| = \rho^2\sin\phi
+\]</span> and Formula 13 gives <span class="math display">\[
+\iiint_R f(x, y, z) dV = \iiint_S f(\rho\sin\phi\cos\theta,
+\rho\sin\phi\sin\theta, \rho\cos\phi) \rho^2\sin\phi d\rho d\theta d\phi
+\]</span> which is equivalent to Formula 15.8.3.</p>
+</div>
+</body>
+</html>

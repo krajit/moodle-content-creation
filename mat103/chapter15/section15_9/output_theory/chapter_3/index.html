@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jacobian</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>Now let’s see how a change of variables affects a double integral. We
+start with a small rectangle S in the uv-plane whose lower left corner
+is the point <span class="math inline">\((u_0, v_0)\)</span> and whose
+dimensions are <span class="math inline">\(\Delta u\)</span> and <span
+class="math inline">\(\Delta v\)</span>. (See Figure 3.)</p>
+<p><img src="image-2.png" /></p>
+<p>The image of S is a region R in the xy-plane, one of whose boundary
+points is <span class="math inline">\((x_0, y_0) = T(u_0, v_0)\)</span>.
+The vector <span class="math display">\[
+\mathbf{r}(u, v) = g(u, v)\mathbf{i} + h(u, v)\mathbf{j}
+\]</span> is the position vector of the image of the point <span
+class="math inline">\((u, v)\)</span>. The equation of the lower side of
+S is <span class="math inline">\(v=v_0\)</span>, whose image curve is
+given by the vector function <span class="math inline">\(\mathbf{r}(u,
+v_0)\)</span>. The tangent vector at <span class="math inline">\((x_0,
+y_0)\)</span> to this image curve is <span class="math display">\[
+\mathbf{r}_u = g_u(u_0, v_0)\mathbf{i} + h_u(u_0, v_0)\mathbf{j} =
+\frac{\partial x}{\partial u}\mathbf{i} + \frac{\partial y}{\partial
+u}\mathbf{j}
+\]</span> Similarly, the tangent vector at <span
+class="math inline">\((x_0, y_0)\)</span> to the image curve of the left
+side of S (namely, <span class="math inline">\(u=u_0\)</span>) is <span
+class="math display">\[
+\mathbf{r}_v = g_v(u_0, v_0)\mathbf{i} + h_v(u_0, v_0)\mathbf{j} =
+\frac{\partial x}{\partial v}\mathbf{i} + \frac{\partial y}{\partial
+v}\mathbf{j}
+\]</span> We can approximate the image region <span
+class="math inline">\(R = T(S)\)</span> by a parallelogram determined by
+the secant vectors <span class="math display">\[
+\mathbf{a} = \mathbf{r}(u_0+\Delta u, v_0) - \mathbf{r}(u_0, v_0) \qquad
+\mathbf{b} = \mathbf{r}(u_0, v_0+\Delta v) - \mathbf{r}(u_0, v_0)
+\]</span> shown in Figure 4. But</p>
+<hr />
+<p><img src="image-3.png" /></p>
+<hr />
+<p><span class="math display">\[
+\mathbf{r}_u = \lim_{\Delta u \to 0} \frac{\mathbf{r}(u_0+\Delta u, v_0)
+- \mathbf{r}(u_0, v_0)}{\Delta u}
+\]</span> and so <span class="math display">\[
+\mathbf{r}(u_0+\Delta u, v_0) - \mathbf{r}(u_0, v_0) \approx \Delta u
+\mathbf{r}_u
+\]</span> Similarly <span class="math display">\[
+\mathbf{r}(u_0, v_0+\Delta v) - \mathbf{r}(u_0, v_0) \approx \Delta v
+\mathbf{r}_v
+\]</span> This means that we can approximate R by a parallelogram
+determined by the vectors <span class="math inline">\(\Delta u
+\mathbf{r}_u\)</span> and <span class="math inline">\(\Delta v
+\mathbf{r}_v\)</span>. (See Figure 5.)</p>
+<p><img src="image-4.png" /></p>
+<p>Therefore we can approximate the area of R by the area of this
+parallelogram, which, from Section 12.4, is</p>
+<p><span class="math display">\[
+|(\Delta u \mathbf{r}_u) \times (\Delta v \mathbf{r}_v)| = |\mathbf{r}_u
+\times \mathbf{r}_v| \Delta u \Delta v \tag{6}
+\]</span></p>
+<p>Computing the cross product, we obtain <span class="math display">\[
+\mathbf{r}_u \times \mathbf{r}_v = \begin{vmatrix} \mathbf{i} &amp;
+\mathbf{j} &amp; \mathbf{k} \\ \frac{\partial x}{\partial u} &amp;
+\frac{\partial y}{\partial u} &amp; 0 \\ \frac{\partial x}{\partial v}
+&amp; \frac{\partial y}{\partial v} &amp; 0 \end{vmatrix} =
+\begin{vmatrix} \frac{\partial x}{\partial u} &amp; \frac{\partial
+y}{\partial u} \\ \frac{\partial x}{\partial v} &amp; \frac{\partial
+y}{\partial v} \end{vmatrix} \mathbf{k} = \left( \frac{\partial
+x}{\partial u}\frac{\partial y}{\partial v} - \frac{\partial y}{\partial
+u}\frac{\partial x}{\partial v} \right) \mathbf{k}
+\]</span> The determinant that arises in this calculation is called the
+<strong>Jacobian</strong> of the transformation and is given a special
+notation.</p>
+<blockquote>
+<p><strong>Definition 7</strong> The <strong>Jacobian</strong> of the
+transformation T given by <span class="math inline">\(x=g(u, v)\)</span>
+and <span class="math inline">\(y=h(u, v)\)</span> is <span
+class="math display">\[
+\frac{\partial(x, y)}{\partial(u, v)} = \begin{vmatrix} \frac{\partial
+x}{\partial u} &amp; \frac{\partial x}{\partial v} \\ \frac{\partial
+y}{\partial u} &amp; \frac{\partial y}{\partial v} \end{vmatrix} =
+\frac{\partial x}{\partial u}\frac{\partial y}{\partial v} -
+\frac{\partial x}{\partial v}\frac{\partial y}{\partial u}
+\]</span></p>
+</blockquote>
+<p>With this notation we can use Equation 6 to give an approximation to
+the area <span class="math inline">\(\Delta A\)</span> of R:</p>
+<p><span class="math display">\[
+\Delta A \approx \left| \frac{\partial(x, y)}{\partial(u, v)} \right|
+\Delta u \Delta v \tag{8}
+\]</span></p>
+<p>where the Jacobian is evaluated at <span class="math inline">\((u_0,
+v_0)\)</span>.</p>
+<p>Next we divide a region S in the uv-plane into rectangles <span
+class="math inline">\(S_{ij}\)</span> and call their images in the
+xy-plane <span class="math inline">\(R_{ij}\)</span>. (See Figure
+6.)</p>
+<p><img src="image-5.png" /></p>
+<p>Applying the approximation (8) to each <span
+class="math inline">\(R_{ij}\)</span>, we approximate the double
+integral of f over R as follows: <span class="math display">\[
+\iint_R f(x, y) dA \approx \sum_{i=1}^m \sum_{j=1}^n f(x_i, y_j) \Delta
+A_{ij}
+\]</span> <span class="math display">\[
+\approx \sum_{i=1}^m \sum_{j=1}^n f(g(u_i, v_j), h(u_i, v_j)) \left|
+\frac{\partial(x, y)}{\partial(u, v)} \right| \Delta u \Delta v
+\]</span> where the Jacobian is evaluated at <span
+class="math inline">\((u_i, v_j)\)</span>. Notice that this double sum
+is a Riemann sum for the integral <span class="math display">\[
+\iint_S f(g(u, v), h(u, v)) \left| \frac{\partial(x, y)}{\partial(u, v)}
+\right| du dv
+\]</span> The foregoing argument suggests that the following theorem is
+true. (A full proof is given in books on advanced calculus.)</p>
+<blockquote>
+<p><strong>9 Change of Variables in a Double Integral</strong> Suppose
+that T is a <span class="math inline">\(C^1\)</span> transformation
+whose Jacobian is nonzero and that T maps a region S in the uv-plane
+onto a region R in the xy-plane. Suppose that f is continuous on R and
+that R and S are type I or type II plane regions. Suppose also that T is
+one-to-one, except perhaps on the boundary of S. Then <span
+class="math display">\[
+\iint_R f(x, y) dA = \iint_S f(x(u, v), y(u, v)) \left|
+\frac{\partial(x, y)}{\partial(u, v)} \right| du dv
+\]</span></p>
+</blockquote>
+<p>Theorem 9 says that we change from an integral in x and y to an
+integral in u and v by expressing x and y in terms of u and v and
+writing <span class="math display">\[
+dA = \left| \frac{\partial(x, y)}{\partial(u, v)} \right| du dv
+\]</span> Notice the similarity between Theorem 9 and the
+one-dimensional formula in Equation 2. Instead of the derivative <span
+class="math inline">\(dx/du\)</span>, we have the absolute value of the
+Jacobian, that is, <span class="math inline">\(|\partial(x,
+y)/\partial(u, v)|\)</span>.</p>
+<p>As a first illustration of Theorem 9, we show that the formula for
+integration in polar coordinates is just a special case. Here the
+transformation T from the <span
+class="math inline">\(r\theta\)</span>-plane to the xy-plane is given by
+<span class="math display">\[
+x = g(r, \theta) = r\cos\theta \qquad y = h(r, \theta) = r\sin\theta
+\]</span> and the geometry of the transformation is shown in Figure 7. T
+maps an ordinary rectangle in the <span
+class="math inline">\(r\theta\)</span>-plane to a polar rectangle in the
+xy-plane. The Jacobian of T is <span class="math display">\[
+\frac{\partial(x, y)}{\partial(r, \theta)} = \begin{vmatrix}
+\frac{\partial x}{\partial r} &amp; \frac{\partial x}{\partial \theta}
+\\ \frac{\partial y}{\partial r} &amp; \frac{\partial y}{\partial
+\theta} \end{vmatrix} = \begin{vmatrix} \cos\theta &amp; -r\sin\theta \\
+\sin\theta &amp; r\cos\theta \end{vmatrix} = r\cos^2\theta +
+r\sin^2\theta = r &gt; 0
+\]</span></p>
+<p><img src="image-6.png" /></p>
+<p>Thus Theorem 9 gives <span class="math display">\[
+\iint_R f(x, y) dx dy = \iint_S f(r\cos\theta, r\sin\theta) \left|
+\frac{\partial(x, y)}{\partial(r, \theta)} \right| dr d\theta
+\]</span> <span class="math display">\[
+= \int_\alpha^\beta \int_a^b f(r\cos\theta, r\sin\theta) r dr d\theta
+\]</span> which is the same as Formula 15.3.2.</p>
+<hr />
+<p><strong>EXAMPLE 2</strong> Use the change of variables <span
+class="math inline">\(x = u^2 - v^2, y = 2uv\)</span> to evaluate the
+integral <span class="math inline">\(\iint_R y dA\)</span>, where R is
+the region bounded by the x-axis and the parabolas <span
+class="math inline">\(y^2 = 4-4x\)</span> and <span
+class="math inline">\(y^2 = 4+4x, y \ge 0\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<strong>SOLUTION</strong> The region R is pictured in Figure 2 (on page
+1054). In Example 1 we discovered that <span class="math inline">\(T(S)
+= R\)</span>, where S is the square $ <span class="math inline">\(.
+Indeed, the reason for making the change of variables to evaluate the
+integral is that S is a much simpler region than R. First we need to
+compute the Jacobian:\)</span>$ =
+<span class="math display">\[\begin{vmatrix} \frac{\partial x}{\partial
+u} &amp; \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u}
+&amp; \frac{\partial y}{\partial v} \end{vmatrix}\]</span>
+=
+<span class="math display">\[\begin{vmatrix} 2u &amp; -2v \\ 2v &amp; 2u
+\end{vmatrix}\]</span>
+<p>= 4u^2 + 4v^2 &gt; 0 <span class="math display">\[
+Therefore, by Theorem 9,
+\]</span> _R y dA = _S 2uv | | dA = _0^1 _0^1 (2uv)4(u<sup>2+v</sup>2)
+du dv <span class="math display">\[
+\]</span> = 8 _0^1 _0^1 (u^3v + uv^3) du dv = 8 <em>0^1 </em>{u=0}^{u=1}
+dv <span class="math display">\[
+\]</span> = 8 _0^1 (v + v^3) dv = 8 _0^1 = 2 $$</p>
+<blockquote>
+<p><strong>NOTE</strong> Example 2 was not a very difficult problem to
+solve because we were given a suitable change of variables. If we are
+not supplied with a transformation, then the first step is to think of
+an appropriate change of variables. If <span class="math inline">\(f(x,
+y)\)</span> is difficult to integrate, then the form of <span
+class="math inline">\(f(x, y)\)</span> may suggest a transformation. If
+the region of integration R is awkward, then the transformation should
+be chosen so that the corresponding region S in the uv-plane has a
+convenient description.</p>
+</blockquote>
+</div>
+<hr />
+<p><strong>EXAMPLE 3</strong> Evaluate the integral <span
+class="math inline">\(\iint_R e^{(x+y)/(x-y)} dA\)</span>, where R is
+the trapezoidal region with vertices <span class="math inline">\((1, 0),
+(2, 0), (0, -2),\)</span> and <span class="math inline">\((0,
+-1)\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since it isn’t easy to integrate <span
+class="math inline">\(e^{(x+y)/(x-y)}\)</span>, we make a change of
+variables suggested by the form of this function:</p>
+<p><span class="math display">\[
+u = x+y \qquad v = x-y \tag{10}
+\]</span></p>
+<p>These equations define a transformation <span
+class="math inline">\(T^{-1}\)</span> from the xy-plane to the uv-plane.
+Theorem 9 talks about a transformation T from the uv-plane to the
+xy-plane. It is obtained by solving Equations 10 for x and y:</p>
+<p><span class="math display">\[
+x = \frac{1}{2}(u+v) \qquad y = \frac{1}{2}(u-v) \tag{11}
+\]</span></p>
+<p>The Jacobian of T is <span class="math display">\[
+\frac{\partial(x, y)}{\partial(u, v)} = \begin{vmatrix} \frac{\partial
+x}{\partial u} &amp; \frac{\partial x}{\partial v} \\ \frac{\partial
+y}{\partial u} &amp; \frac{\partial y}{\partial v} \end{vmatrix} =
+\begin{vmatrix} 1/2 &amp; 1/2 \\ 1/2 &amp; -1/2 \end{vmatrix} =
+-\frac{1}{2}
+\]</span> To find the region S in the uv-plane corresponding to R, we
+note that the sides of R lie on the lines <span class="math display">\[
+y=0 \qquad x-y=2 \qquad x=0 \qquad x-y=1
+\]</span> and, from either Equations 10 or Equations 11, the image lines
+in the uv-plane are <span class="math display">\[
+u=v \qquad v=2 \qquad u=-v \qquad v=1
+\]</span> Thus the region S is the trapezoidal region with vertices
+<span class="math inline">\((1, 1), (2, 2), (-2, 2),\)</span> and <span
+class="math inline">\((-1, 1)\)</span> shown in Figure 8.</p>
+<p><img src="image-7.png" /></p>
+<p>Since <span class="math display">\[
+S = \{(u, v) | 1 \le v \le 2, -v \le u \le v\}
+\]</span> Theorem 9 gives <span class="math display">\[
+\iint_R e^{(x+y)/(x-y)} dA = \iint_S e^{u/v} \left| \frac{\partial(x,
+y)}{\partial(u, v)} \right| du dv
+\]</span> <span class="math display">\[
+= \int_1^2 \int_{-v}^v e^{u/v} (\frac{1}{2}) du dv = \frac{1}{2}
+\int_1^2 [ve^{u/v}]_{-v}^v dv = \frac{1}{2} \int_1^2 v(e-e^{-1}) dv =
+\frac{1}{2}(e-e^{-1})[\frac{v^2}{2}]_1^2 = \frac{3}{4}(e-e^{-1})
+\]</span></p>
+</div>
+</body>
+</html>

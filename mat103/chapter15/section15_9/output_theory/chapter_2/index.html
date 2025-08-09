@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Shape transformation map</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>More generally, we consider a change of variables that is given by a
+transformation T from the uv-plane to the xy-plane: <span
+class="math display">\[
+T(u, v) = (x, y)
+\]</span> where x and y are related to u and v by the equations</p>
+<p><span class="math display">\[
+x = g(u, v) \qquad y = h(u, v) \tag{3}
+\]</span></p>
+<p>or, as we sometimes write, <span class="math display">\[
+x = x(u, v) \qquad y = y(u, v)
+\]</span> We usually assume that T is a <span
+class="math inline">\(C^1\)</span> transformation, which means that g
+and h have continuous first-order partial derivatives.</p>
+<p>A transformation T is really just a function whose domain and range
+are both subsets of <span class="math inline">\(\mathbb{R}^2\)</span>.
+If <span class="math inline">\(T(u_1, v_1) = (x_1, y_1)\)</span>, then
+the point <span class="math inline">\((x_1, y_1)\)</span> is called the
+image of the point <span class="math inline">\((u_1, v_1)\)</span>. If
+no two points have the same image, T is called one-to-one.</p>
+<p><img src="image.png" /></p>
+<p>Figure 1 shows the effect of a transformation T on a region S in the
+uv-plane. T transforms S into a region R in the xy-plane called the
+image of S, consisting of the images of all points in S.</p>
+<p>If T is a one-to-one transformation, then it has an inverse
+transformation <span class="math inline">\(T^{-1}\)</span> from the
+xy-plane to the uv-plane and it may be possible to solve Equations 3 for
+u and v in terms of x and y: <span class="math display">\[
+u = G(x, y) \qquad v = H(x, y)
+\]</span></p>
+<hr />
+<p><strong>EXAMPLE 1</strong> A transformation is defined by the
+equations <span class="math display">\[
+x = u^2 - v^2 \qquad y = 2uv
+\]</span> Find the image of the square <span class="math inline">\(S =
+\{(u, v) | 0 \le u \le 1, 0 \le v \le 1\}\)</span>.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-1.png" /></p>
+<p><strong>SOLUTION</strong> The transformation maps the boundary of S
+into the boundary of the image. So we begin by finding the images of the
+sides of S. The first side, <span class="math inline">\(S_1\)</span>, is
+given by <span class="math inline">\(v=0\)</span> (<span
+class="math inline">\(0 \le u \le 1\)</span>). (See Figure 2.) From the
+given equations we have <span class="math inline">\(x = u^2, y =
+0\)</span>, and so <span class="math inline">\(0 \le x \le 1\)</span>.
+Thus <span class="math inline">\(S_1\)</span> is mapped into the line
+segment from <span class="math inline">\((0, 0)\)</span> to <span
+class="math inline">\((1, 0)\)</span> in the xy-plane. The second side,
+<span class="math inline">\(S_2\)</span>, is <span
+class="math inline">\(u=1\)</span> (<span class="math inline">\(0 \le v
+\le 1\)</span>) and, putting <span class="math inline">\(u=1\)</span> in
+the given equations, we get <span class="math display">\[
+x = 1 - v^2 \qquad y = 2v
+\]</span> Eliminating v, we obtain <span class="math display">\[
+x = 1 - \frac{y^2}{4} \qquad 0 \le x \le 1 \tag{4}
+\]</span> which is part of a parabola. Similarly, <span
+class="math inline">\(S_3\)</span> is given by <span
+class="math inline">\(v=1\)</span> (<span class="math inline">\(0 \le u
+\le 1\)</span>), whose image is the parabolic arc <span
+class="math display">\[
+x = u^2 - 1 \qquad y = 2u \quad \text{or} \quad x = \frac{y^2}{4} - 1
+\qquad -1 \le x \le 0 \tag{5}
+\]</span> Finally, <span class="math inline">\(S_4\)</span> is given by
+<span class="math inline">\(u=0\)</span> (<span class="math inline">\(0
+\le v \le 1\)</span>) whose image is <span class="math inline">\(x =
+-v^2, y = 0\)</span>, that is, <span class="math inline">\(-1 \le x \le
+0\)</span>. (Notice that as we move around the square in the
+counterclockwise direction, we also move around the parabolic region in
+the counterclockwise direction.) The image of S is the region R (shown
+in Figure 2) bounded by the x-axis and the parabolas given by Equations
+4 and 5.</p>
+</div>
+</body>
+</html>
