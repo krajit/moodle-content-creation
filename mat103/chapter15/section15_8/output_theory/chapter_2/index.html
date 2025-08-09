@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Relationship between Spherical and Rectangular coordinates</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>The relationship between rectangular and spherical coordinates can be
+seen from Figure 5.</p>
+<p><img src="image-3.png" /></p>
+<p>From triangles OPQ and OPP’ we have <span class="math display">\[
+z = \rho \cos \phi \qquad r = \rho \sin \phi
+\]</span> But <span class="math inline">\(x = r \cos \theta\)</span> and
+<span class="math inline">\(y = r \sin \theta\)</span>, so to convert
+from spherical to rectangular coordinates, we use the equations</p>
+<p><span class="math display">\[
+x = \rho \sin \phi \cos \theta \qquad y = \rho \sin \phi \sin \theta
+\qquad z = \rho \cos \phi \tag{1}
+\]</span></p>
+<p>Also, the distance formula shows that</p>
+<p><span class="math display">\[
+\rho^2 = x^2 + y^2 + z^2 \tag{2}
+\]</span></p>
+<p>We use this equation in converting from rectangular to spherical
+coordinates.</p>
+<hr />
+<p><strong>EXAMPLE 1</strong> The point <span class="math inline">\((2,
+\pi/4, \pi/3)\)</span> is given in spherical coordinates. Plot the point
+and find its rectangular coordinates.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><img src="image-4.png" /></p>
+<p><strong>SOLUTION</strong> We plot the point in Figure 6. From
+Equations 1 we have <span class="math display">\[
+x = \rho \sin \phi \cos \theta = 2 \sin \frac{\pi}{3} \cos \frac{\pi}{4}
+= 2\left(\frac{\sqrt{3}}{2}\right)\left(\frac{1}{\sqrt{2}}\right) =
+\sqrt{\frac{3}{2}}
+\]</span> <span class="math display">\[
+y = \rho \sin \phi \sin \theta = 2 \sin \frac{\pi}{3} \sin \frac{\pi}{4}
+= 2\left(\frac{\sqrt{3}}{2}\right)\left(\frac{1}{\sqrt{2}}\right) =
+\sqrt{\frac{3}{2}}
+\]</span> <span class="math display">\[
+z = \rho \cos \phi = 2 \cos \frac{\pi}{3} = 2\left(\frac{1}{2}\right) =
+1
+\]</span> Thus the point <span class="math inline">\((2, \pi/4,
+\pi/3)\)</span> is <span class="math inline">\((\sqrt{3/2}, \sqrt{3/2},
+1)\)</span> in rectangular coordinates.</p>
+</div>
+<hr />
+<p><strong>EXAMPLE 2</strong> The point <span class="math inline">\((0,
+2\sqrt{3}, -2)\)</span> is given in rectangular coordinates. Find
+spherical coordinates for this point.</p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> From Equation 2 we have <span
+class="math display">\[
+\rho = \sqrt{x^2+y^2+z^2} = \sqrt{0 + 12 + 4} = 4
+\]</span> and so Equations 1 give <span class="math display">\[
+\cos \phi = \frac{z}{\rho} = \frac{-2}{4} = -\frac{1}{2} \qquad \phi =
+\frac{2\pi}{3}
+\]</span> <span class="math display">\[
+\cos \theta = \frac{x}{\rho \sin \phi} = 0 \qquad \theta = \frac{\pi}{2}
+\]</span> (Note that <span class="math inline">\(\theta \neq
+3\pi/2\)</span> because <span class="math inline">\(y = 2\sqrt{3} &gt;
+0\)</span>.) Therefore spherical coordinates of the given point are
+<span class="math inline">\((4, \pi/2, 2\pi/3)\)</span>.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Triple Integrals with Spherical Coordinates</title>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p>In the spherical coordinate system the counterpart of a rectangular
+box is a <strong>spherical wedge</strong> <span class="math display">\[
+E = \{(\rho, \theta, \phi) | a \le \rho \le b, \alpha \le \theta \le
+\beta, c \le \phi \le d\}
+\]</span> where <span class="math inline">\(a \ge 0\)</span> and <span
+class="math inline">\(\beta - \alpha \le 2\pi\)</span>, and <span
+class="math inline">\(d-c \le \pi\)</span>. Although we defined triple
+integrals by dividing solids into small boxes, it can be shown that
+dividing a solid into small spherical wedges always gives the same
+result. So we divide E into smaller spherical wedges <span
+class="math inline">\(E_{ijk}\)</span> by means of equally spaced
+spheres <span class="math inline">\(\rho = \rho_i\)</span>, half-planes
+<span class="math inline">\(\theta = \theta_j\)</span>, and half-cones
+<span class="math inline">\(\phi = \phi_k\)</span>.</p>
+<p><img src="image-5.png" /></p>
+<p>Figure 7 shows that <span class="math inline">\(E_{ijk}\)</span> is
+approximately a rectangular box with dimensions <span
+class="math inline">\(\Delta\rho\)</span>, <span
+class="math inline">\(\rho_i \Delta\phi\)</span> (arc of a circle with
+radius <span class="math inline">\(\rho_i\)</span>, angle <span
+class="math inline">\(\Delta\phi\)</span>), and <span
+class="math inline">\(\rho_i \sin\phi_k \Delta\theta\)</span> (arc of a
+circle with radius <span class="math inline">\(\rho_i
+\sin\phi_k\)</span>, angle <span
+class="math inline">\(\Delta\theta\)</span>). So an approximation to the
+volume of <span class="math inline">\(E_{ijk}\)</span> is given by <span
+class="math display">\[
+\Delta V_{ijk} \approx (\Delta\rho)(\rho_i \Delta\phi)(\rho_i \sin\phi_k
+\Delta\theta) = \rho_i^2 \sin\phi_k \Delta\rho \Delta\theta \Delta\phi
+\]</span> In fact, it can be shown, with the aid of the Mean Value
+Theorem (Exercise 49), that the volume of <span
+class="math inline">\(E_{ijk}\)</span> is given exactly by <span
+class="math display">\[
+\Delta V_{ijk} = \tilde{\rho_i}^2 \sin\tilde{\phi_k} \Delta\rho
+\Delta\theta \Delta\phi
+\]</span> where <span class="math inline">\((\tilde{\rho_i},
+\tilde{\theta_j}, \tilde{\phi_k})\)</span> is some point in <span
+class="math inline">\(E_{ijk}\)</span>. Let <span
+class="math inline">\((x_{ijk}, y_{ijk}, z_{ijk})\)</span> be the
+rectangular coordinates of this point. Then <span
+class="math display">\[
+\iiint_E f(x, y, z) dV = \lim_{l,m,n \to \infty} \sum_{i=1}^l
+\sum_{j=1}^m \sum_{k=1}^n f(x_{ijk}, y_{ijk}, z_{ijk}) \Delta V_{ijk}
+\]</span> <span class="math display">\[
+= \lim_{l,m,n \to \infty} \sum_{i=1}^l \sum_{j=1}^m \sum_{k=1}^n
+f(\tilde{\rho_i}\sin\tilde{\phi_k}\cos\tilde{\theta_j},
+\tilde{\rho_i}\sin\tilde{\phi_k}\sin\tilde{\theta_j},
+\tilde{\rho_i}\cos\tilde{\phi_k}) \tilde{\rho_i}^2 \sin\tilde{\phi_k}
+\Delta\rho \Delta\theta \Delta\phi
+\]</span> But this sum is a Riemann sum for the function <span
+class="math display">\[
+F(\rho, \theta, \phi) = f(\rho\sin\phi\cos\theta,
+\rho\sin\phi\sin\theta, \rho\cos\phi)\rho^2\sin\phi
+\]</span></p>
+<blockquote>
+<p>Consequently, we have arrived at the following formula for triple
+integration in spherical coordinates. <span class="math display">\[
+\iiint_E f(x, y, z) dV = \int_c^d \int_\alpha^\beta \int_a^b
+f(\rho\sin\phi\cos\theta, \rho\sin\phi\sin\theta,
+\rho\cos\phi)\rho^2\sin\phi d\rho d\theta d\phi \tag{3}
+\]</span> where E is a spherical wedge given by <span
+class="math display">\[
+E = \{(\rho, \theta, \phi) | a \le \rho \le b, \alpha \le \theta \le
+\beta, c \le \phi \le d\}
+\]</span></p>
+</blockquote>
+<p>Formula 3 says that we convert a triple integral from rectangular
+coordinates to spherical coordinates by writing <span
+class="math display">\[
+x = \rho\sin\phi\cos\theta \qquad y = \rho\sin\phi\sin\theta \qquad z =
+\rho\cos\phi
+\]</span> using the appropriate limits of integration, and replacing dV
+by <span class="math inline">\(\rho^2\sin\phi d\rho d\theta
+d\phi\)</span>. This is illustrated in Figure 8.</p>
+<p><img src="image-6.png" /></p>
+<hr />
+<p>This formula can be extended to include more general spherical
+regions such as <span class="math display">\[
+E = \{(\rho, \theta, \phi) | \alpha \le \theta \le \beta, c \le \phi \le
+d, g_1(\theta, \phi) \le \rho \le g_2(\theta, \phi)\}
+\]</span> In this case the formula is the same as in (3) except that the
+limits of integration for <span class="math inline">\(\rho\)</span> are
+<span class="math inline">\(g_1(\theta, \phi)\)</span> and <span
+class="math inline">\(g_2(\theta, \phi)\)</span>. Usually, spherical
+coordinates are used in triple integrals when surfaces such as cones and
+spheres form the boundary of the region of integration.</p>
+<hr />
+<p><strong>EXAMPLE 3</strong> Evaluate <span
+class="math inline">\(\iiint_B e^{(x^2+y^2+z^2)^{3/2}} dV\)</span>,
+where B is the unit ball: <span class="math display">\[
+B = \{(x, y, z) | x^2+y^2+z^2 \le 1\}
+\]</span></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Since the boundary of B is a sphere, we use
+spherical coordinates: <span class="math display">\[
+B = \{(\rho, \theta, \phi) | 0 \le \rho \le 1, 0 \le \theta \le 2\pi, 0
+\le \phi \le \pi\}
+\]</span> In addition, spherical coordinates are appropriate because
+<span class="math display">\[
+x^2+y^2+z^2 = \rho^2
+\]</span> Thus (3) gives <span class="math display">\[
+\iiint_B e^{(x^2+y^2+z^2)^{3/2}} dV = \int_0^\pi \int_0^{2\pi} \int_0^1
+e^{(\rho^2)^{3/2}} \rho^2 \sin\phi d\rho d\theta d\phi
+\]</span> <span class="math display">\[
+= \int_0^\pi \sin\phi d\phi \int_0^{2\pi} d\theta \int_0^1 \rho^2
+e^{\rho^3} d\rho
+\]</span> <span class="math display">\[
+= [-\cos\phi]_0^\pi (2\pi) [\frac{1}{3}e^{\rho^3}]_0^1 =
+2(2\pi)\frac{1}{3}(e-1) = \frac{4\pi}{3}(e-1)
+\]</span></p>
+<blockquote>
+<p><strong>NOTE</strong> It would have been extremely awkward to
+evaluate the integral in Example 3 without spherical coordinates. In
+rectangular coordinates the iterated integral would have been <span
+class="math display">\[
+\int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}
+\int_{-\sqrt{1-x^2-y^2}}^{\sqrt{1-x^2-y^2}} e^{(x^2+y^2+z^2)^{3/2}} dz
+dy dx
+\]</span></p>
+</blockquote>
+</div>
+<hr />
+<p><strong>EXAMPLE 4</strong> Use spherical coordinates to find the
+volume of the solid that lies above the cone <span
+class="math inline">\(z = \sqrt{x^2+y^2}\)</span> and below the sphere
+<span class="math inline">\(x^2+y^2+z^2=z\)</span>. (See Figure 9.)</p>
+<p><img src="image-7.png" /></p>
+<button class="btn btn-info" onclick="
+  const ans = this.nextElementSibling;
+  const isVisible = ans.style.display !== &#39;none&#39;;
+  ans.style.display = isVisible ? &#39;none&#39; : &#39;block&#39;;
+  this.innerText = isVisible ? &#39;Show Answer&#39; : &#39;Hide Answer&#39;;
+">
+Show Answer
+</button>
+<div class="answer-block" style="display: none;">
+<p><strong>SOLUTION</strong> Notice that the sphere passes through the
+origin and has center <span class="math inline">\((0, 0, 1/2)\)</span>.
+We write the equation of the sphere in spherical coordinates as <span
+class="math display">\[
+\rho^2 = \rho\cos\phi \quad \text{or} \quad \rho = \cos\phi
+\]</span> The equation of the cone can be written as <span
+class="math display">\[
+\rho\cos\phi = \sqrt{\rho^2\sin^2\phi\cos^2\theta +
+\rho^2\sin^2\phi\sin^2\theta} = \rho\sin\phi
+\]</span> This gives <span class="math inline">\(\sin\phi =
+\cos\phi\)</span>, or <span class="math inline">\(\phi = \pi/4\)</span>.
+Therefore the description of the solid E in spherical coordinates is
+<span class="math display">\[
+E = \{(\rho, \theta, \phi) | 0 \le \theta \le 2\pi, 0 \le \phi \le
+\pi/4, 0 \le \rho \le \cos\phi\}
+\]</span></p>
+<p><img src="image-8.png" /></p>
+<p>Figure 11 shows how E is swept out if we integrate first with respect
+to <span class="math inline">\(\rho\)</span>, then <span
+class="math inline">\(\phi\)</span>, and then <span
+class="math inline">\(\theta\)</span>. The volume of E is <span
+class="math display">\[
+V(E) = \iiint_E dV = \int_0^{2\pi} \int_0^{\pi/4} \int_0^{\cos\phi}
+\rho^2 \sin\phi d\rho d\phi d\theta
+\]</span> <span class="math display">\[
+= \int_0^{2\pi} d\theta \int_0^{\pi/4} \sin\phi \left[ \frac{\rho^3}{3}
+\right]_0^{\cos\phi} d\phi = 2\pi \int_0^{\pi/4} \sin\phi
+\frac{\cos^3\phi}{3} d\phi
+\]</span> <span class="math display">\[
+= \frac{2\pi}{3} \left[ -\frac{\cos^4\phi}{4} \right]_0^{\pi/4} =
+\frac{2\pi}{3} \left( -\frac{1}{4}(\frac{1}{\sqrt{2}})^4 + \frac{1}{4}
+\right) = \frac{2\pi}{3}\left(-\frac{1}{16}+\frac{1}{4}\right) =
+\frac{\pi}{8}
+\]</span></p>
+</div>
+</body>
+</html>
